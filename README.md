@@ -11,9 +11,17 @@ Welcome to Capitol Battle Royale, a thrilling first-person shooter (FPS) that pi
 
 **Game Environment:**
 - Fully immersive 3D world.
+- Seperate maps: 
+  - Capitol Building from January 6th, 2023
+    - In this case, the two teams would be the police vs Republicans
+  - The Senate   
 
 **Multiplayer:**
 - Engage in intense battles with other players.
+- Communicate with teammates
+- Drop items
+- Emotes
+  - 
 
 **Battle Map:**
 - The primary battleground will be the Capitol Rotunda, featuring strategically placed crates and walls to provide cover and enhance gameplay.
@@ -26,6 +34,9 @@ Welcome to Capitol Battle Royale, a thrilling first-person shooter (FPS) that pi
 - Engage in epic 5v5 battles with the following politicians:
   - **Republicans:** Trump, Ted Cruz, Marjorie Taylor Greene, DeSantis, McConnell.
   - **Democrats:** Bernie, Hillary, AOC, Biden, Liz Warren.
+- Different size teams: 3x3, 5x5, 10x10
+- Could also have 3x3x3 and 5x5x5 teams
+  - The three parties could be the Democrats, Republicans, and the Green Party
 
 **Avatar Outlines:**
 - To easily differentiate the two teams, all Republican avatars will have a red outline, while Democrats will have a blue outline.
