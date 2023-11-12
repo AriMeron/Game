@@ -23,9 +23,9 @@ Welcome to Capitol Battle Royale, a thrilling first-person shooter (FPS) that pi
 - Players will embody prominent politicians, adding a unique twist to the game.
 
 **Weapons**
-- Both parties have party-specific weapons that have different advantages, but should have the same strength.
-- Republicans: semi-autonomatic weapons. 
-- Democrats: killer drones that periodically hit the Republicans without fail, but they only have throwing knives.
+- Both parties have party-specific weapons that have different advantages, but should have the same strength. Each player starts with 100 health.
+- Republicans: semi-autonomatic weapons. Each hit is -1 health.
+- Democrats: killer drones that periodically hit the Republicans without fail (-3 health), but they only have throwing knives (-1 point, but less range and firing time).
 
 **Teams:**
 - Engage in epic 5v5 battles with the following politicians:
@@ -37,6 +37,10 @@ Welcome to Capitol Battle Royale, a thrilling first-person shooter (FPS) that pi
 
 **Aiming:**
 - Players will have a crosshair at the center of their screen to assist with aiming.
+
+**Power-ups**
+- Democrats can pick up Plan B to gain back half their health
+- Republicans can pick up MAGA hats to gain back half their health
 
 ## Audio
 
