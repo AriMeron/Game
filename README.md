@@ -1,7 +1,6 @@
 # Capitol Battle Royale
 
 ## Overview
-
 Welcome to Capitol Battle Royale, a thrilling first-person shooter (FPS) that pits the "Democrats" against the "Republicans" in the iconic Capitol Building. Players will assume the avatars of prominent politicians, such as Bernie Sanders or Donald Trump. Both teams will be armed with weapons and have an equal level of health, creating a fair and intense competition.
 
 ## Visual Elements
@@ -18,6 +17,8 @@ Welcome to Capitol Battle Royale, a thrilling first-person shooter (FPS) that pi
 **Battle Map:**
 - The primary battleground will be the Capitol Rotunda, featuring strategically placed crates and walls to provide cover and enhance gameplay.
 - Possibly, additional rooms within the Capitol Building can be included in the map.
+- Battle states: extra single-player side quests with special power ups you can attain if you win
+- Each level has a storyline based on a prominent event in history, i.e. January 6 capitol raid.
 
 **Player Avatars:**
 - Players will embody prominent politicians, adding a unique twist to the game.
