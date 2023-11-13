@@ -28,6 +28,7 @@ Welcome to Capitol Battle Royale, a thrilling first-person shooter (FPS) that pi
 
 **Player Avatars:**
 
+<<<<<<< HEAD
 - Players will embody politicians, adding a unique twist to the game.
 - Player will start with relatively unknown politicions.
 - As they continue to play the game they will be able to unlock more and more famous politicians.
@@ -35,6 +36,9 @@ Welcome to Capitol Battle Royale, a thrilling first-person shooter (FPS) that pi
   - Trump: Ability to build walls.
   - Obama: Player and teammates heal faster.
   - Biden: Upgrades are more expensive for the other teams.
+=======
+- Players will embody prominent politicians, adding a unique twist to the game.
+>>>>>>> 445364d8e3f175c354d30709fe522bae25279b71
 
 **Teams:**
 
