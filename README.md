@@ -49,6 +49,11 @@ Welcome to Capitol Battle Royale, a thrilling first-person shooter (FPS) that pi
 
 -   Players will have a crosshair at the center of their screen to assist with aiming.
 
+**Cosmetics:**
+
+-   Players will be able to purchase loot boxes that contain different cosmetic items and skins for their character
+    -   these loot boxes can only be purchased with real money but are purely cosmetic
+
 ## Audio
 
 **Background Music:**
