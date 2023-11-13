@@ -17,15 +17,24 @@ Welcome to Capitol Battle Royale, a thrilling first-person shooter (FPS) that pi
 **Multiplayer:**
 
 - Engage in intense battles with other players.
+- Battle Royale, Teams, and Storm the Capitol Modes
 
 **Battle Map:**
 
 - The primary battleground will be the Capitol Rotunda, featuring strategically placed crates and walls to provide cover and enhance gameplay.
 - Possibly, additional rooms within the Capitol Building can be included in the map.
+  - Including the house or senate chambers.
+- Addition maps can be the White House, Pentagon, Downtown D.C. or other famous locations related to the U.S. Government.
 
 **Player Avatars:**
 
-- Players will embody prominent politicians, adding a unique twist to the game.
+- Players will embody politicians, adding a unique twist to the game.
+- Player will start with relatively unknown politicions.
+- As they continue to play the game they will be able to unlock more and more famous politicians.
+- The top level of politicions will have special abilities. For example:
+  - Trump: Ability to build walls.
+  - Obama: Player and teammates heal faster.
+  - Biden: Upgrades are more expensive for the other teams.
 
 **Teams:**
 
