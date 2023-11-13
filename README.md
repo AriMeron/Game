@@ -2,17 +2,17 @@
 
 ## Overview
 
-Welcome to Capitol Battle Royale, a thrilling first-person shooter (FPS) that pits the "Democrats" against the "Republicans" in the iconic Capitol Building. Players will assume the avatars of prominent politicians, such as Bernie Sanders or Donald Trump. Both teams will be armed with semi-automatic weapons and have an equal level of health, creating a fair and intense competition.
+Welcome to Capitol Battle Royale, a thrilling top down shooter that pits the "Democrats" against the "Republicans" in the iconic Capitol Building. Players will assume the avatars of prominent politicians, such as Joe Biden or Donald Trump. Both teams will be armed with semi-automatic weapons and have an equal level of health, creating a fair and intense competition.
 
 ## Visual Elements
 
 **Game Type:**
 
--   Top Down Shooter
+-   Top Down Hero Shooter
 
 **Game Environment:**
 
--   Fully immersive 3D world.
+-   The Capitol
 
 **Multiplayer:**
 
@@ -29,18 +29,16 @@ Welcome to Capitol Battle Royale, a thrilling first-person shooter (FPS) that pi
 
 **Teams:**
 
+-   Each politician has a unique weapon and ability
 -   Engage in epic 5v5 battles with the following politicians:
-    -   **Republicans:** Trump, Ted Cruz, Marjorie Taylor Greene, DeSantis, McConnell.
-    -   **Democrats:** Bernie, Hillary, AOC, Biden, Liz Warren.
-
-**Avatar Outlines:**
-
--   To easily differentiate the two teams, all Republican avatars will have a red outline, while Democrats will have a blue outline.
-
-**Weapons:**
-
--   All players will be equipped with the same semi-automatic firearm.
--   Shots fired will be visible as they travel through the air.
+    -   **Republicans:**
+    -   Trump, Weapon: Golden Glock, Ability (Build a Wall): Surrounds himself with destructible walls
+    -   Dubya, Weapon: Revolver, Ability (Weapons of Mass Destruction): Summons a WMD
+    -   Ronald Reagan, Weapon: Pistol, Ability (Trickle Down Economics): Throws a coin which he can shoot (Ultrakill)
+    -   **Democrats:**
+    -   Biden, Weapon: Vaccine gun (Poison damage), Ability (Dark Brandon): Turns into "Dark Brandon" for 10s, increased speed and auto firing
+    -   JFK, Weapon: Sniper rifle, Ability (): Auto aim and expanded visibility for 10 seconds
+    -   Obama, Weapon: Welfare Gun (Heals allies, hurts enemies), Ability (Drone Strike): Calls a drone strike
 
 **Aiming:**
 
@@ -56,23 +54,19 @@ Welcome to Capitol Battle Royale, a thrilling first-person shooter (FPS) that pi
 
 -   Guns will produce realistic firing sounds, enhancing the action.
 
-**Catchphrases:**
-
--   Every time a player secures a kill, a catchphrase or iconic noise associated with their chosen politician avatar will play. For instance, if Donald Trump eliminates an opponent, you might hear him saying "Build a wall."
-
 ## Controls
 
 **Movement:**
 
--   Use WSAD keys for character movement.
+-   Use WASD keys for character movement.
 
 **Aim and Look:**
 
--   Mouse movement provides precise control over aiming, allowing players to look up, down, or turn around.
+-   Mouse movement provides precise control over aiming.
 
 **Shooting:**
 
 -   Left-click to fire your weapon. Holding the left-click allows for rapid fire.
--   Right-click can be used to throw grenades, with each player having two grenades per round.
+-   Right-click can be used to activate your character's special ability.
 
 Get ready for an action-packed showdown in the Capitol Building, where you can step into the shoes of your favorite politicians and engage in thrilling battles!
