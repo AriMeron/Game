@@ -30,17 +30,22 @@ Welcome to Capitol Battle Royale, a thrilling first-person shooter (FPS) that pi
   - **Republicans:** Trump, Ted Cruz, Marjorie Taylor Greene, George W Bush, McConnell.
   - **Democrats:** Bernie, Hillary, AOC, Biden, Liz Warren.
   - Additional characters Like JFK(D), Reagan(R), Xi(D), and Putin(R) may be added later.
-  - The green party exists but they have no guns or items and only serve to pad republican kill counts.
 
 **Avatar Outlines:**
 - To easily differentiate the two teams, all Republican avatars will have a red outline, while Democrats will have a blue outline.
 - What do you mean other parties?
+
+## Gameplay
 
 **Weapons:**
 - All players will be equipped with the same semi-automatic firearm.
 - Shots fired will be visible as they travel through the air.
 - Some characters will have special guns and abilities.
 - For example MTG would be able to call an orbital laser created by unspecified religious minorities.
+
+**Crates**
+- Crates may contain anything including cash,ammo, shotguns, sniper rifles, drone strikes, health packs, etc.
+- Republicans will only get health packs if they can pay for it.
 
 **George Washington**
 - Yes he does get the 2009 dodge challenger.
@@ -50,14 +55,18 @@ Welcome to Capitol Battle Royale, a thrilling first-person shooter (FPS) that pi
 
 **Monetization**
 - We will have targeted ads depending on which side you choose to play. Choosing republican, for example, will result in more cigarette/viagra ads, while choosing democrat will result in more ads for soy products and cuckolding.
+- Ads will usually be placed in the paintings in the white house.
 - Xi JingPing mains will be sold to China.
+
+**Game modes**
+- There will be the classics, such as Team Deathmatch, Capture the i̶n̶c̶r̶i̶m̶i̶n̶a̶t̶i̶n̶g̶ ̶e̶v̶i̶d̶e̶n̶c̶e̶ flag, etc.
+- There will also be Storm the Capitol, a twist on Control point. One side will have to breach a set of points outside and inside the capitol building assisted by friendly NPCS, and the other will have to defend the capitol alongside police officers.
 
 ## Audio
 
 **Background Music:**
 - The Star Spangled Banner will play as looped background audio, adding to the immersive experience.
 - Other tracks may include things like Hail to the Chief, Fortunate son, or a loop of the guitar solo from free bird.
-- There may be soundtracks for when one team wins, such as communist songs for the democrats and facist songs for the republicans.
 
 **Weapon Sounds:**
 - Guns will produce realistic firing sounds, enhancing the action.
