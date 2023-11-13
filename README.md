@@ -8,6 +8,7 @@ Welcome to Capitol Riot, a thrilling first-person shooter (FPS) that pits the "D
 
 **Game Type:**
 - First-person shooter (FPS)
+- Battle Royale
 
 **Game Environment:**
 - Fully immersive 3D world.
@@ -48,6 +49,11 @@ Should also have 10v10 option, and 20 person individual battle royale servers.
 **Aiming:**
 - Players will have a crosshair at the center of their screen to assist with aiming.
 - The control to scope will be shift
+
+**Animations**
+- All characters will have running, jumping crouch and death animations
+- Death animations will not be bloody or overly gruesome
+- Players will get flashes on their screen in certain directions when they are being shot (direction dipends on direction they're being shot from)
 
 ## Audio
 
