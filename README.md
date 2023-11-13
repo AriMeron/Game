@@ -21,6 +21,7 @@ Welcome to Capitol Riot, a thrilling first-person shooter (FPS) that pits the "D
 - Possibly, additional rooms within the Capitol Building can be included in the map.
 - Create more maps and scenarios such as a capitol riot on the buidling against cpu police
 - Running for president: Individual battle royale in White House Map
+- Maps will have grenades and extra bullet magazines that players can pick up when they run out
 
 **Player Avatars:**
 - Players will embody prominent politicians, adding a unique twist to the game.
@@ -79,6 +80,7 @@ Should also have 10v10 option, and 20 person individual battle royale servers.
 - Left-click to fire your weapon. Holding the left-click allows for rapid fire.
 - Right-click can be used to throw grenades, with each player having two grenades per round.
 - Shift to scope
+- Players can run out of bullets or grenades and will have to pick up more around the map.
 
 Get ready for an action-packed showdown in the Capitol Building, where you can step into the shoes of your favorite politicians and engage in thrilling battles!
 
