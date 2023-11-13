@@ -28,7 +28,6 @@ Welcome to Capitol Battle Royale, a thrilling first-person shooter (FPS) that pi
 
 **Player Avatars:**
 
-<<<<<<< HEAD
 - Players will embody politicians, adding a unique twist to the game.
 - Player will start with relatively unknown politicions.
 - As they continue to play the game they will be able to unlock more and more famous politicians.
@@ -36,15 +35,20 @@ Welcome to Capitol Battle Royale, a thrilling first-person shooter (FPS) that pi
   - Trump: Ability to build walls.
   - Obama: Player and teammates heal faster.
   - Biden: Upgrades are more expensive for the other teams.
-=======
-- Players will embody prominent politicians, adding a unique twist to the game.
->>>>>>> 445364d8e3f175c354d30709fe522bae25279b71
 
 **Teams:**
 
-- Engage in epic 5v5 battles with the following politicians:
+- Multiple Different Game Modes
+- Normal 5v5 Battles
+  - Only able to use politicians you have unlocked.
+  - Ranked matchmaking
+- 5v5 Battles with Famous Politicians
   - **Republicans:** Trump, Ted Cruz, Marjorie Taylor Greene, DeSantis, McConnell.
   - **Democrats:** Bernie, Hillary, AOC, Biden, Liz Warren.
+- Storm the Capitol
+  - 10-50 players one one team.
+  - Fighting against NPC capitol police.
+- All of these game modes can be applied to other locations.
 
 **Avatar Outlines:**
 
@@ -85,6 +89,8 @@ Welcome to Capitol Battle Royale, a thrilling first-person shooter (FPS) that pi
 
 **Shooting:**
 
+- Weapons will be left around the map. Similar to fortnite weapons.
+- Focused on weapons banned by the ATF.
 - Left-click to fire your weapon. Holding the left-click allows for rapid fire.
 - Right-click can be used to throw grenades, with each player having two grenades per round.
 
