@@ -22,6 +22,8 @@ Welcome to Capitol Battle Royale, a thrilling first-person shooter (FPS) that pi
 
 -   The primary battleground will be the Capitol Rotunda, featuring strategically placed crates and walls to provide cover and enhance gameplay.
 -   Possibly, additional rooms within the Capitol Building can be included in the map.
+-   Can expand to having different maps with different styles and layouts.
+-   Add user created maps and designs to the game. Maybe even a separate studio for creating these designs.
 
 **Player Avatars:**
 
