@@ -92,3 +92,14 @@ Welcome to Capitol Battle Royale, a thrilling first-person shooter (FPS) that pi
 Get ready for an action-packed showdown in the Capitol Building, where you can step into the shoes of your favorite politicians and engage in thrilling battles!
 
 
+# My Design Iteration
+
+**Better:**
+- I've chosen to define better as a more interactive, flexible, and inclsuive game. This includes the addition of new game modes that include a wider array of political parties. I've also included the ability for users to change their own controls. 
+
+**Additions:**
+- I've included a few new game modes, 3x3, 10x10, 3x3x3, 5x5x5, and free for all. This will not only allow for several new ways to play the game, but will appeal to a broader range of players.
+
+- I've added the addition of new parties, inclduing the Green party and independent parties, to braoden the player base.
+
+- I've included the feature to customize controls to offer users more flexibility 
