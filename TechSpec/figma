@@ -1,2 +1,3 @@
 Natalie: wrote functions/variables for weapons
 Chase: wrote player class, did research on how to use orthographic camera for the 3d design
+William: wrote map class (including door, scoring, and healing sub classes), added methods to player and network class
