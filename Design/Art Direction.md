@@ -30,14 +30,14 @@ Player Sprites (Each needs a front and back
 
 Walk Diagonal Front
 -Bush (Sophia)
--JFK
--Trump
+-JFK(Claire)
+-Trump(Claire)
 -Biden
 -Obama
 -Reagan
 
 Walk Diagonal Back
--Bush
+-Bush(Claire)
 -JFK
 -Trump
 -Biden
@@ -47,7 +47,7 @@ Walk Diagonal Back
 Walk Front
 -Bush (Sophia)
 -JFK (Sophia)
--Trump
+-Trump (Claire)
 -Biden
 -Obama (Sophia)
 -Reagan (Sophia)
