@@ -22,7 +22,7 @@ Guns
 Vaccine Gun
 Revolver
 Sniper Rifle
-Golden Glock
+Golden Glock (completed)
 Welfare Gun
 Pistol
 Player Sprites (Each needs a front and back
