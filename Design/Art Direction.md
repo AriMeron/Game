@@ -19,18 +19,18 @@ Player animations—GENERIC
 2) dodge roll
 3) idle
 Guns
-Vaccine Gun
+Vaccine Gun (completed)
 Revolver
 Sniper Rifle
 Golden Glock (completed)
-Welfare Gun
+Welfare Gun (completed)
 Pistol
 Player Sprites (Each needs a front and back
 Biden/Dark Brandon (completed)
 Trump (completed)
-Obama
+Obama (completed)
 JFK (completed)
-Reagan
+Reagan (completed)
 Bush W (w/ cowboy hat) (completed)
 Abilities
 Drone strike
