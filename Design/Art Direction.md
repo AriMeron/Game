@@ -22,16 +22,38 @@ Guns
 Vaccine Gun (completed)
 Revolver
 Sniper Rifle
-Golden Glock (completed)
-Welfare Gun (completed)
+Golden Glock (completed) - Sophia
+Welfare Gun (completed) -Sophia
 Pistol
 Player Sprites (Each needs a front and back
-Biden/Dark Brandon (completed)
-Trump (completed)
-Obama (completed)
-JFK (completed)
-Reagan (completed)
-Bush W (w/ cowboy hat) (completed)
+
+
+Walk Diagonal Front
+-Bush (Sophia)
+-JFK
+-Trump
+-Biden
+-Obama
+-Reagan
+
+Walk Diagonal Back
+-Bush
+-JFK
+-Trump
+-Biden
+-Obama (Sophia)
+-Reagan
+
+Walk Front
+-Bush (Sophia)
+-JFK (Sophia)
+-Trump
+-Biden
+-Obama (Sophia)
+-Reagan (Sophia)
+
+Walk Back
+
 Abilities
 Drone strike
 WMDs
