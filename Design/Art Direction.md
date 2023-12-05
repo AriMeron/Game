@@ -34,7 +34,7 @@ Walk Diagonal Front
 -Trump(Claire)
 -Biden
 -Obama
--Reagan
+-Reagan (Micah)
 
 Walk Diagonal Back
 -Bush(Claire)
@@ -42,7 +42,7 @@ Walk Diagonal Back
 -Trump
 -Biden
 -Obama (Sophia)
--Reagan
+-Reagan (Micah)
 
 Walk Front
 -Bush (Sophia)
@@ -50,7 +50,7 @@ Walk Front
 -Trump (Claire)
 -Biden
 -Obama (Sophia)
--Reagan (Sophia)
+-Reagan (Micah)
 
 Walk Back
 
