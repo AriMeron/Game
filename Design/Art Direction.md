@@ -38,6 +38,29 @@ Wall
 -   Wall Locked Door
 -   Wall Lamp
 
+## Sound Design
+
+Character Voicelines
+
+- Trump Kill: Complete (Alex)
+- Trump Streak: Complete (Alex)
+- Trump Death
+- JFK Kill: Complete (Alex)
+- JFK Streak: Complete (Alex)
+- JFK Death
+- Obama Kill: Complete (Alex)
+- Obama Streak: Complete (Alex)
+- Obama Death
+- Reagan Kill
+- Reagan Streak
+- Reagan Death
+- Bush Kill
+- Bush Streak
+- Bush Death
+- Biden Kill
+- Biden Streak
+- Biden Death
+
 ## Character Design
 
 -   Biden: Complete (Wyatt)
@@ -165,9 +188,9 @@ Death
 -   (Biden) Vaccine Gun: Complete (Claire)
 -   (JFK) Sniper Rifle
 -   (Obama) Welfare Gun
--   (Dubya) Revolver
+-   (Dubya) Revolver: Complete (Alex)
 -   (Trump) Golden Glock: Complete (Sophia)
--   (Reagan) Snub Nose Revolver
+-   (Reagan) Snub Nose Revolver: Complete (Alex)
 
 ## Bullets
 
