@@ -1,62 +1,209 @@
+# Art Direction
+
+# Inspiration
+
 Enter the Gungeon
 
-Custom tile set
-Floor textures for various rooms
-Spawn rooms, side rooms, and main hallway
-All can probably be the same textures
-Wall texture
-Blue and red carpet tiles for spawn
-Pillar sprites
-Door sprites
-Open and closed doors
-Open both ways
-Green Healing Area Tiles
-Gold Reward Area
-Bench and table textures
-Areas behind walls/benches/tables/pillars/closed doors are darker to signify the lack of vision
-Player animations—GENERIC
-1) Walk, (Two animations, one facing front one facing back, flipped for both dirs)
-2) dodge roll
-3) idle
-Guns
-Vaccine Gun (completed)
-Revolver
-Sniper Rifle
-Golden Glock (completed) - Sophia
-Welfare Gun (completed) -Sophia
-Pistol
-Player Sprites (Each needs a front and back
+# Sprites
 
+## Tileset
 
-Walk Diagonal Front
--Bush (Sophia)
--JFK(Claire)
--Trump(Claire)
--Biden
--Obama
--Reagan (Micah)
+Marble
 
-Walk Diagonal Back
--Bush(Claire)
--JFK
--Trump
--Biden
--Obama (Sophia)
--Reagan (Micah)
+-   Marble: Complete (Wyatt)
+-   Marble Dark: Complete (Wyatt)
+-   Quartered Marble: Complete (Wyatt)
+-   Quartered Marble Dark
+-   Large Marble: Complete (Wyatt)
+-   Large Marble Dark
 
-Walk Front
--Bush (Sophia)
--JFK (Sophia)
--Trump (Claire)
--Biden
--Obama (Sophia)
--Reagan (Micah)
+Carpet
 
-Walk Back
+-   Red Carpet
+-   Blue Carpet
+-   Orange Carpet
 
-Abilities
-Drone strike
-WMDs
-Walls
-Coin shooting (trickle down)
-Logo
+Obstacles
+
+-   Table
+-   Chair
+-   Oval Office Desk
+-   Column
+
+Wall
+
+-   Wall Base
+-   Wall Red Banner
+-   Wall Blue Banner
+-   Wall Locked Door
+-   Wall Lamp
+
+## Character Design
+
+-   Biden: Complete (Wyatt)
+-   JFK: Complete (Wyatt)
+-   Obama: Complete (Wyatt)
+-   Dubya: Complete (Wyatt)
+-   Trump: Complete (Wyatt)
+-   Reagan: Complete (Wyatt)
+
+## Character Animation
+
+Walk
+
+-   Walk Front Design: Complete (Wyatt)
+    -   Biden: Complete (Wyatt)
+    -   JFK: Complete (Sophia)
+    -   Obama: Complete (Sophia)
+    -   Dubya: Complete (Sophia)
+    -   Trump: Complete (Claire)
+    -   Reagan: Complete (Micah)
+-   Walk Diagonal Front Design: Complete (Wyatt)
+    -   Biden: Complete (Wyatt)
+    -   JFK: Complete (Claire)
+    -   Obama: Complete (Sophia)
+    -   Dubya: Complete (Sophia)
+    -   Trump: Complete (Claire)
+    -   Reagan: Complete (Micah)
+-   Walk Diagonal Back Design: Complete (Wyatt)
+    -   Biden: Complete (Wyatt)
+    -   JFK: Complete (Alex)
+    -   Obama: Complete (Sophia)
+    -   Dubya: Complete (Claire)
+    -   Trump: Complete (Alex)
+    -   Reagan: Complete (Micah)
+-   Walk Back Design
+    -   Biden
+    -   JFK
+    -   Obama
+    -   Dubya
+    -   Trump
+    -   Reagan
+
+Dodge Roll
+
+-   Dodge Roll Front Design
+    -   Biden
+    -   JFK
+    -   Obama
+    -   Dubya
+    -   Trump
+    -   Reagan
+-   Dodge Roll Diagonal Front Design
+    -   Biden
+    -   JFK
+    -   Obama
+    -   Dubya
+    -   Trump
+    -   Reagan
+-   Dodge Roll Diagonal Back Design
+    -   Biden
+    -   JFK
+    -   Obama
+    -   Dubya
+    -   Trump
+    -   Reagan
+-   Dodge Roll Back Design
+    -   Biden
+    -   JFK
+    -   Obama
+    -   Dubya
+    -   Trump
+    -   Reagan
+
+Idle
+
+-   Idle Front Design
+    -   Biden
+    -   JFK
+    -   Obama
+    -   Dubya
+    -   Trump
+    -   Reagan
+-   Idle Diagonal Front Design
+    -   Biden
+    -   JFK
+    -   Obama
+    -   Dubya
+    -   Trump
+    -   Reagan
+-   Idle Diagonal Back Design
+    -   Biden
+    -   JFK
+    -   Obama
+    -   Dubya
+    -   Trump
+    -   Reagan
+-   Idle Back Design
+    -   Biden
+    -   JFK
+    -   Obama
+    -   Dubya
+    -   Trump
+    -   Reagan
+
+Death
+
+-   Biden
+-   JFK
+-   Obama
+-   Dubya
+-   Trump
+-   Reagan
+
+## Gun Design
+
+-   (Biden) Vaccine Gun: Complete (Wyatt)
+-   (JFK) Sniper Rifle: Complete (Wyatt)
+-   (Obama) Welfare Gun: Complete (Wyatt)
+-   (Dubya) Revolver: Complete (Wyatt)
+-   (Trump) Golden Glock: Complete (Wyatt)
+-   (Reagan) Snub Nose Revolver: Complete (Wyatt)
+
+## Gun Animation
+
+-   (Biden) Vaccine Gun: Complete (Claire)
+-   (JFK) Sniper Rifle
+-   (Obama) Welfare Gun
+-   (Dubya) Revolver
+-   (Trump) Golden Glock: Complete (Sophia)
+-   (Reagan) Snub Nose Revolver
+
+## Bullets
+
+-   (Biden) Vaccine Particles
+-   (JFK) Sniper Bullet
+-   (Obama) Dollar Bill
+-   (Dubya) Revolver Bullet
+-   (Trump) Golden Glock Bullet
+-   (Reagan) Snub Nose Revolver Bullet
+
+## Abilities
+
+-   (Biden) Dark Brandon (via Vaccine Injection)
+-   (JFK) Black and White Overlay + Laser Pointer
+-   (Obama) Drone
+-   (Dubya) Nuke
+-   (Trump) Wall
+-   (Reagan) Coin: Complete (Wyatt)
+
+# UI
+
+## Screens
+
+-   Start Game
+-   Lobby Select
+-   Loading
+-   Create Lobby
+-   Character Select
+
+## Overlay
+
+-   Player Health
+-   Ammo (?)
+-   Game Progress Bar (Electoral College)
+
+## Misc
+
+-   Logo
+-   App Icon
