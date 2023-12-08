@@ -83,7 +83,7 @@ Walk
 Dodge Roll
 
 -   Dodge Roll Front Design
-    -   Biden
+    -   Biden: Complete (Sophia)
     -   JFK
     -   Obama
     -   Dubya
