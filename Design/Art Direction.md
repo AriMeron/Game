@@ -42,24 +42,24 @@ Wall
 
 Character Voicelines
 
-- Trump Kill: Complete (Alex)
-- Trump Streak: Complete (Alex)
-- Trump Death
-- JFK Kill: Complete (Alex)
-- JFK Streak: Complete (Alex)
-- JFK Death
-- Obama Kill: Complete (Alex)
-- Obama Streak: Complete (Alex)
-- Obama Death
-- Reagan Kill
-- Reagan Streak
-- Reagan Death
-- Bush Kill
-- Bush Streak
-- Bush Death
-- Biden Kill
-- Biden Streak
-- Biden Death
+-   Trump Kill: Complete (Alex)
+-   Trump Streak: Complete (Alex)
+-   Trump Death
+-   JFK Kill: Complete (Alex)
+-   JFK Streak: Complete (Alex)
+-   JFK Death
+-   Obama Kill: Complete (Alex)
+-   Obama Streak: Complete (Alex)
+-   Obama Death
+-   Reagan Kill
+-   Reagan Streak
+-   Reagan Death
+-   Bush Kill
+-   Bush Streak
+-   Bush Death
+-   Biden Kill
+-   Biden Streak
+-   Biden Death
 
 ## Character Design
 
@@ -95,8 +95,8 @@ Walk
     -   Dubya: Complete (Claire)
     -   Trump: Complete (Alex)
     -   Reagan: Complete (Micah)
--   Walk Back Design
-    -   Biden
+-   Walk Back Design: Complete (Wyatt)
+    -   Biden: Complete (Wyatt)
     -   JFK
     -   Obama
     -   Dubya
@@ -112,8 +112,8 @@ Dodge Roll
     -   Dubya
     -   Trump
     -   Reagan
--   Dodge Roll Diagonal Front Design
-    -   Biden
+-   Dodge Roll Diagonal Front Design: Complete (Wyatt and Sophia)
+    -   Biden: Complete (Wyatt and Sophia)
     -   JFK
     -   Obama
     -   Dubya
@@ -228,5 +228,5 @@ Death
 
 ## Misc
 
--   Logo
+-   Logo: Complete (Wyatt)
 -   App Icon
