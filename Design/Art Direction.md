@@ -106,7 +106,7 @@ Walk
 Dodge Roll
 
 -   Dodge Roll Front Design
-    -   Biden: Complete (Sophia)
+    -   Biden
     -   JFK
     -   Obama
     -   Dubya
@@ -114,11 +114,11 @@ Dodge Roll
     -   Reagan
 -   Dodge Roll Diagonal Front Design: Complete (Wyatt and Sophia)
     -   Biden: Complete (Wyatt and Sophia)
-    -   JFK
-    -   Obama
-    -   Dubya
-    -   Trump
-    -   Reagan
+    -   JFK: Complete (Sophia)
+    -   Obama: Complete (Micah)
+    -   Dubya: Complete (Sophia)
+    -   Trump: Complete (Sophia)
+    -   Reagan: Complete (Micah)
 -   Dodge Roll Diagonal Back Design
     -   Biden
     -   JFK
