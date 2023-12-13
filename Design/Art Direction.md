@@ -186,7 +186,7 @@ Death
 ## Gun Animation
 
 -   (Biden) Vaccine Gun: Complete (Claire)
--   (JFK) Sniper Rifle
+-   (JFK) Sniper Rifle (Claire)
 -   (Obama) Welfare Gun
 -   (Dubya) Revolver: Complete (Alex)
 -   (Trump) Golden Glock: Complete (Sophia)
