@@ -61,6 +61,15 @@ Character Voicelines
 -   Biden Streak
 -   Biden Death
 
+Weapon Sounds
+
+-   Welfare Gunshot: complete (Micah)
+-   Golden Glock Gunshot: complete
+-   Revolver Gunshot: complete (Micah)
+-   Vaccine Gunshot: complete
+-   Pistol Gunshot: complete
+-   Sniper Rifle Gunshot: complete
+
 ## Character Design
 
 -   Biden: Complete (Wyatt)
