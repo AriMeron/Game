@@ -33,3 +33,9 @@ func _on_test_movement_button_down():
 
 func _on_load_menus_button_down():
 	pass # Replace with function body.
+
+
+func _on_node_load_example_button_down():
+	var scene = load("res://Scenes/Menus/ExampleScene.tscn").instantiate()
+	get_tree().root.add_child(scene)
+	self.hide()

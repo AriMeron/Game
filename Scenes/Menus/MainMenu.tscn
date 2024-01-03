@@ -15,6 +15,13 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_v86av")
 
+[node name="Node Load example" type="Button" parent="."]
+offset_left = 455.0
+offset_top = 118.0
+offset_right = 647.0
+offset_bottom = 190.0
+text = "Load Node Example"
+
 [node name="View Assets" type="Button" parent="."]
 layout_mode = 0
 offset_left = 113.0
@@ -58,6 +65,7 @@ offset_right = 996.0
 offset_bottom = 520.0
 text = "Load Menus"
 
+[connection signal="button_down" from="Node Load example" to="." method="_on_node_load_example_button_down"]
 [connection signal="button_down" from="View Assets" to="." method="_on_view_assets_button_down"]
 [connection signal="button_down" from="Load Map" to="." method="_on_load_map_button_down"]
 [connection signal="button_down" from="Host" to="." method="_on_host_button_down"]
