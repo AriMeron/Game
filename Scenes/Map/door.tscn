@@ -1,0 +1,49 @@
+[gd_scene load_steps=8 format=3 uid="uid://8ayn1y7so7nb"]
+
+[ext_resource type="TileSet" uid="uid://cpddivvqyqdq" path="res://new_tile_set.tres" id="1_d3l0v"]
+[ext_resource type="Script" path="res://door.gd" id="1_ra5nj"]
+
+[sub_resource type="ViewportTexture" id="ViewportTexture_deq13"]
+viewport_path = NodePath("SubViewport")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_0fmtf"]
+resource_local_to_scene = true
+albedo_texture = SubResource("ViewportTexture_deq13")
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_swijb"]
+
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_32m20"]
+data = PackedVector3Array(1, 0, 1, -1, 0, 1, 1, 0, -1, -1, 0, 1, -1, 0, -1, 1, 0, -1)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_rf2tq"]
+size = Vector3(4, 2, 4)
+
+[node name="door" type="Node3D"]
+script = ExtResource("1_ra5nj")
+
+[node name="SubViewport" type="SubViewport" parent="."]
+
+[node name="TileMap" type="TileMap" parent="SubViewport"]
+tile_set = ExtResource("1_d3l0v")
+format = 2
+layer_0/tile_data = PackedInt32Array(65536, 1048578, 8, 65537, 1048578, 8, 65538, 1048578, 8, 65539, 1048578, 8, 65540, 1048578, 8, 65541, 1048578, 8, 65542, 1048578, 8, 65543, 1048578, 8, 131079, 1048578, 8, 196615, 1048578, 8, 262151, 1048578, 8, 327687, 1048578, 8, 393223, 1048578, 8, 458759, 1048578, 8, 458752, 1048578, 8, 393216, 1048578, 8, 327680, 1048578, 8, 262144, 1048578, 8, 196608, 1048578, 8, 131072, 1048578, 8, 131073, 1048578, 8, 131074, 1114114, 8, 131075, 1114114, 8, 131076, 1114114, 8, 131077, 1114114, 8, 196613, 1114114, 8, 262149, 1114114, 8, 327685, 1114114, 8, 327686, 1048578, 8, 393222, 1048578, 8, 262150, 1048578, 8, 196614, 1048578, 8, 131078, 1048578, 8, 393217, 1048578, 8, 327681, 1048578, 8, 327682, 1114114, 8, 262146, 1114114, 8, 196610, 1114114, 8, 196609, 1048578, 8, 262145, 1048578, 8, 458753, 1048578, 8, 458754, 1114114, 8, 393218, 1114114, 8, 327683, 1114114, 8, 262147, 1114114, 8, 196611, 1114114, 8, 393219, 1114114, 8, 327684, 786434, 11, 262148, 1114114, 8, 196612, 1114114, 8, 393220, 1114114, 8, 458756, 1114114, 8, 458755, 1114114, 8, 458757, 1114114, 8, 458758, 1048578, 8, 393221, 1114114, 8, 0, 1048578, 8, 1, 1048578, 8, 2, 1048578, 8, 3, 1048578, 8, 4, 1048578, 8, 5, 1048578, 8, 6, 1048578, 8, 7, 1048578, 8)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, -1.5246e-23, -1.5246e-23, -4.37114e-08, -1, 0, 1, -4.37114e-08, 2.08165e-12, 2.08165e-12, 2.08165e-12)
+material_override = SubResource("StandardMaterial3D_0fmtf")
+mesh = SubResource("PlaneMesh_swijb")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="MeshInstance3D"]
+
+[node name="doorCollision" type="CollisionShape3D" parent="MeshInstance3D/StaticBody3D"]
+shape = SubResource("ConcavePolygonShape3D_32m20")
+
+[node name="Area" type="Area3D" parent="."]
+
+[node name="areaCollision" type="CollisionShape3D" parent="Area"]
+shape = SubResource("BoxShape3D_rf2tq")
+
+[node name="Label3D" type="Label3D" parent="."]
+transform = Transform3D(1, -5.95416e-16, 2.4663e-16, 2.4663e-16, 0.707107, 0.707107, -5.95416e-16, -0.707107, 0.707107, 2.08165e-12, 0.5, 1)
+visible = false
+text = "Press 'E' to open/close"
