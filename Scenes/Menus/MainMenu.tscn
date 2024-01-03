@@ -1,0 +1,66 @@
+[gd_scene load_steps=2 format=3 uid="uid://b5uyetxut2swm"]
+
+[ext_resource type="Script" path="res://Control.gd" id="1_v86av"]
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -4.0
+offset_top = -3.0
+offset_right = 6.0
+offset_bottom = 7.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_v86av")
+
+[node name="View Assets" type="Button" parent="."]
+layout_mode = 0
+offset_left = 113.0
+offset_top = 288.0
+offset_right = 305.0
+offset_bottom = 360.0
+text = "Assets"
+
+[node name="Load Map" type="Button" parent="."]
+offset_left = 455.0
+offset_top = 293.0
+offset_right = 647.0
+offset_bottom = 365.0
+text = "Map"
+
+[node name="Host" type="Button" parent="."]
+offset_left = 784.0
+offset_top = 275.0
+offset_right = 976.0
+offset_bottom = 347.0
+text = "Host"
+
+[node name="Client" type="Button" parent="."]
+offset_left = 130.0
+offset_top = 438.0
+offset_right = 322.0
+offset_bottom = 510.0
+text = "Join"
+
+[node name="Test movement" type="Button" parent="."]
+offset_left = 473.0
+offset_top = 446.0
+offset_right = 665.0
+offset_bottom = 518.0
+text = "Test movement"
+
+[node name="Load menus" type="Button" parent="."]
+offset_left = 804.0
+offset_top = 448.0
+offset_right = 996.0
+offset_bottom = 520.0
+text = "Load Menus"
+
+[connection signal="button_down" from="View Assets" to="." method="_on_view_assets_button_down"]
+[connection signal="button_down" from="Load Map" to="." method="_on_load_map_button_down"]
+[connection signal="button_down" from="Host" to="." method="_on_host_button_down"]
+[connection signal="button_down" from="Client" to="." method="_on_client_button_down"]
+[connection signal="button_down" from="Test movement" to="." method="_on_test_movement_button_down"]
+[connection signal="button_down" from="Load menus" to="." method="_on_load_menus_button_down"]
