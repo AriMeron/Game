@@ -153,12 +153,12 @@ Idle
     -   Trump
     -   Reagan
 -   Idle Diagonal Front Design
-    -   Biden
-    -   JFK
-    -   Obama
-    -   Dubya
-    -   Trump
-    -   Reagan
+    -   Biden (Claire)
+    -   JFK (Claire)
+    -   Obama (Claire)
+    -   Dubya (Claire)
+    -   Trump (Claire)
+    -   Reagan (Claire)
 -   Idle Diagonal Back Design: Complete (Sophia - All)
     -   Biden
     -   JFK
@@ -239,3 +239,5 @@ Death
 
 -   Logo: Complete (Wyatt)
 -   App Icon
+
+test
