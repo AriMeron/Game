@@ -49,7 +49,7 @@ func _physics_process(delta):
 		update_animation(movement)
 	else:
 		# Stop the animation if not moving
-		stop()
+		play("idle")
 
 
 
@@ -66,19 +66,23 @@ func update_animation(movement: Vector3):
 			flip_h_value = 1
 			if Input.is_action_pressed("ui_down"): 
 				anim_name = "walk_forward"
-			else:
+			elif Input.is_action_pressed("ui_up"):
 				anim_name = "walk_diag"
+			else:
+				anim_name = "walk_side"
 		elif Input.is_action_pressed("ui_left"):
 			# Left, Up-Left, or Up coming from the left side
 			flip_h_value = 2
 			if Input.is_action_pressed("ui_down"): 
 				anim_name = "walk_forward"
-			else:
+			elif Input.is_action_pressed("ui_up"):
 				anim_name = "walk_diag"
+			else:
+				anim_name = "walk_side"
 		elif Input.is_action_pressed("ui_down"):
 			anim_name = "walk_forward"
 		elif Input.is_action_pressed("ui_up"):
-			anim_name = "walk_diag"
+			anim_name = "walk_up"
 	# Set the animation and flip_h property
 	if anim_name != "":
 		play(anim_name)
@@ -87,4 +91,4 @@ func update_animation(movement: Vector3):
 		elif flip_h_value == 2:
 			flip_h = true
 	else:
-		stop()
+		play("idle")
