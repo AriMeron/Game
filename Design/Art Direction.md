@@ -84,95 +84,95 @@ Weapon Sounds
 Walk
 
 -   Walk Front Design: Complete (Wyatt)
-    -   Biden: Complete (Wyatt)
-    -   JFK: Complete (Sophia)
-    -   Obama: Complete (Sophia)
-    -   Dubya: Complete (Sophia)
-    -   Trump: Complete (Claire)
-    -   Reagan: Complete (Micah)
+	-   Biden: Complete (Wyatt)
+	-   JFK: Complete (Sophia)
+	-   Obama: Complete (Sophia)
+	-   Dubya: Complete (Sophia)
+	-   Trump: Complete (Claire)
+	-   Reagan: Complete (Micah)
 -   Walk Diagonal Front Design: Complete (Wyatt)
-    -   Biden: Complete (Wyatt)
-    -   JFK: Complete (Claire)
-    -   Obama: Complete (Sophia)
-    -   Dubya: Complete (Sophia)
-    -   Trump: Complete (Claire)
-    -   Reagan: Complete (Micah)
+	-   Biden: Complete (Wyatt)
+	-   JFK: Complete (Claire)
+	-   Obama: Complete (Sophia)
+	-   Dubya: Complete (Sophia)
+	-   Trump: Complete (Claire)
+	-   Reagan: Complete (Micah)
 -   Walk Diagonal Back Design: Complete (Wyatt)
-    -   Biden: Complete (Wyatt)
-    -   JFK: Complete (Alex)
-    -   Obama: Complete (Sophia)
-    -   Dubya: Complete (Claire)
-    -   Trump: Complete (Alex)
-    -   Reagan: Complete (Micah)
+	-   Biden: Complete (Wyatt)
+	-   JFK: Complete (Alex)
+	-   Obama: Complete (Sophia)
+	-   Dubya: Complete (Claire)
+	-   Trump: Complete (Alex)
+	-   Reagan: Complete (Micah)
 -   Walk Back Design: Complete (Wyatt)
-    -   Biden: Complete (Wyatt)
-    -   JFK
-    -   Obama
-    -   Dubya
-    -   Trump
-    -   Reagan
+	-   Biden: Complete (Wyatt)
+	-   JFK
+	-   Obama
+	-   Dubya
+	-   Trump
+	-   Reagan
 
 Dodge Roll
 
 -   Dodge Roll Front Design
-    -   Biden
-    -   JFK
-    -   Obama
-    -   Dubya
-    -   Trump
-    -   Reagan
+	-   Biden
+	-   JFK
+	-   Obama
+	-   Dubya
+	-   Trump
+	-   Reagan
 -   Dodge Roll Diagonal Front Design: Complete (Wyatt and Sophia)
-    -   Biden: Complete (Wyatt and Sophia)
-    -   JFK: Complete (Sophia)
-    -   Obama: Complete (Micah)
-    -   Dubya: Complete (Sophia)
-    -   Trump: Complete (Sophia)
-    -   Reagan: Complete (Micah)
+	-   Biden: Complete (Wyatt and Sophia)
+	-   JFK: Complete (Sophia)
+	-   Obama: Complete (Micah)
+	-   Dubya: Complete (Sophia)
+	-   Trump: Complete (Sophia)
+	-   Reagan: Complete (Micah)
 -   Dodge Roll Diagonal Back Design
-    -   Biden
-    -   JFK
-    -   Obama
-    -   Dubya
-    -   Trump
-    -   Reagan
+	-   Biden
+	-   JFK
+	-   Obama
+	-   Dubya
+	-   Trump
+	-   Reagan
 -   Dodge Roll Back Design
-    -   Biden
-    -   JFK
-    -   Obama
-    -   Dubya
-    -   Trump
-    -   Reagan
+	-   Biden
+	-   JFK
+	-   Obama
+	-   Dubya
+	-   Trump
+	-   Reagan
 
 Idle
 
 -   Idle Front Design
-    -   Biden
-    -   JFK
-    -   Obama
-    -   Dubya
-    -   Trump
-    -   Reagan
+	-   Biden
+	-   JFK
+	-   Obama
+	-   Dubya
+	-   Trump
+	-   Reagan
 -   Idle Diagonal Front Design
-    -   Biden
-    -   JFK
-    -   Obama
-    -   Dubya
-    -   Trump
-    -   Reagan
+	-   Biden
+	-   JFK
+	-   Obama
+	-   Dubya
+	-   Trump
+	-   Reagan
 -   Idle Diagonal Back Design
-    -   Biden
-    -   JFK
-    -   Obama
-    -   Dubya
-    -   Trump
-    -   Reagan
+	-   Biden
+	-   JFK
+	-   Obama
+	-   Dubya
+	-   Trump
+	-   Reagan
 -   Idle Back Design
-    -   Biden
-    -   JFK
-    -   Obama
-    -   Dubya
-    -   Trump
-    -   Reagan
+	-   Biden
+	-   JFK
+	-   Obama
+	-   Dubya
+	-   Trump
+	-   Reagan
 
 Death
 

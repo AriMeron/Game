@@ -2,8 +2,8 @@
 
 [ext_resource type="Texture2D" uid="uid://0xegepfhkpn5" path="res://Design/DodgeRoll/DiagonalFront/JFK-DodgeRoll-DiagonalFront.png" id="1_vftlt"]
 [ext_resource type="Texture2D" uid="uid://ctxa4x0gpb3mn" path="res://Design/WalkDiagonalFront Sheets/JFKWalk.png" id="2_p2yhq"]
-[ext_resource type="Script" path="res://Scenes/Player/movement.gd" id="2_ykv6t"]
 [ext_resource type="Texture2D" uid="uid://c3piouk04or88" path="res://Design/WalkFront/JFKFrontWalk.png" id="3_d5qwj"]
+[ext_resource type="Script" path="res://Scenes/Player/animations.gd" id="4_ju6fq"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_yxan1"]
 atlas = ExtResource("1_vftlt")
@@ -175,4 +175,4 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.402237, 0)
 texture_filter = 0
 sprite_frames = SubResource("SpriteFrames_lf7xo")
 animation = &"roll_diag"
-script = ExtResource("2_ykv6t")
+script = ExtResource("4_ju6fq")
