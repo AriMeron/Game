@@ -145,7 +145,7 @@ Dodge Roll
 
 Idle
 
--   Idle Front Design
+-   Idle Front Design: Complete (Sophia - All)
 	-   Biden
 	-   JFK
 	-   Obama
