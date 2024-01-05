@@ -1,0 +1,16 @@
+[gd_scene load_steps=4 format=3 uid="uid://bigiq4xklycm1"]
+
+[ext_resource type="PackedScene" uid="uid://xxcdv2ttwtcq" path="res://Scenes/Player/demoplayer.tscn" id="1_4rq8i"]
+[ext_resource type="Script" path="res://Scenes/Player/movement.gd" id="1_7iqit"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_53677"]
+size = Vector3(0.228257, 0.257697, 0.164541)
+
+[node name="CharacterBody3D" type="CharacterBody3D"]
+script = ExtResource("1_7iqit")
+
+[node name="AnimatedSprite3D" parent="." instance=ExtResource("1_4rq8i")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.08165e-12, 2.08165e-12, 2.08165e-12)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("BoxShape3D_53677")
