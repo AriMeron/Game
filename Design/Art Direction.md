@@ -104,7 +104,7 @@ Walk
 	-   Dubya: Complete (Claire)
 	-   Trump: Complete (Alex)
 	-   Reagan: Complete (Micah)
--   Walk Back Design: Complete (Wyatt)
+-   Walk Back Design: Complete (Wyatt) -- All Walk Back Done (Sophia)
 	-   Biden: Complete (Wyatt)
 	-   JFK
 	-   Obama
@@ -228,4 +228,3 @@ Death
 -   Logo: Complete (Wyatt)
 -   App Icon
 
-test
