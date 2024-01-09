@@ -1,30 +1,34 @@
 extends Node3D  
 
 var inZone = true
-var collision_node
+var animation_node
 var area
+var doorState = false
 
 func _ready():
-	collision_node = $MeshInstance3D/StaticBody3D/doorCollision
+	animation_node = $AnimationPlayer
 	area = $Area
 	area.connect("body_entered", Callable(self, "_on_Area_body_entered"))
 	area.connect("body_exited", Callable(self, "_on_Area_body_exited"))
 	
 func _input(_event):
 	if Input.is_action_just_pressed("interact"):
-		if inZone == true:
+		if inZone == true && animation_node.is_playing() == false:
 			print("EVENT")
-			print(collision_node.disabled)
-			if collision_node.disabled:
-				collision_node.disabled = false
+			doorState = !doorState
+			if (doorState):
+				animation_node.play("door_opening")
 			else:
-				collision_node.disabled = true
+				animation_node.play("door_closing")
+			
 	
-func _on_Area_body_entered(_body:Node) -> void:
-	$Label3D.visible = true
-	inZone = true
+func _on_Area_body_entered(body:Node) -> void:
+	if body.is_in_group("Player"):
+		$Label3D.visible = true
+		inZone = true
 	
 	
-func _on_Area_body_exited(_body:Node) -> void:
-	$Label3D.visible = false
-	inZone = false
+func _on_Area_body_exited(body:Node) -> void:
+	if body.is_in_group("Player"):
+		$Label3D.visible = false
+		inZone = false

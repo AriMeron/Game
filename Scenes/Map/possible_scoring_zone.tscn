@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://8crjah1huxmt"]
+
+[ext_resource type="PackedScene" uid="uid://bdibwmj224q5y" path="res://Scenes/Map/floor.tscn" id="1_qx3qe"]
+
+[node name="possibleScoringZone" type="Node3D"]
+
+[node name="floor" parent="." instance=ExtResource("1_qx3qe")]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 2.08165e-12, 2.08165e-12, 2.08165e-12)

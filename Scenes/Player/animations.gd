@@ -13,16 +13,16 @@ func _physics_process(delta):
 	
 	# Handle inputs
 	if not rolling:
-		if Input.is_action_pressed("ui_right"):
+		if Input.is_action_pressed("right"):
 			movement.x += 1
 			moving = true
-		if Input.is_action_pressed("ui_left"):
+		if Input.is_action_pressed("left"):
 			movement.x -= 1
 			moving = true
-		if Input.is_action_pressed("ui_down"):
+		if Input.is_action_pressed("down"):
 			movement.z += 1
 			moving = true
-		if Input.is_action_pressed("ui_up"):
+		if Input.is_action_pressed("up"):
 			movement.z -= 1
 			moving = true
 		if moving:
@@ -61,27 +61,27 @@ func update_animation(movement: Vector3):
 		anim_name = "roll_diag"
 	else:
 		# Determine the animation based on movement
-		if Input.is_action_pressed("ui_right"):
+		if Input.is_action_pressed("right"):
 			# Right, Up-Right, or Up
 			flip_h_value = 1
-			if Input.is_action_pressed("ui_down"): 
+			if Input.is_action_pressed("down"): 
 				anim_name = "walk_forward"
-			elif Input.is_action_pressed("ui_up"):
+			elif Input.is_action_pressed("up"):
 				anim_name = "walk_diag"
 			else:
 				anim_name = "walk_side"
-		elif Input.is_action_pressed("ui_left"):
+		elif Input.is_action_pressed("left"):
 			# Left, Up-Left, or Up coming from the left side
 			flip_h_value = 2
-			if Input.is_action_pressed("ui_down"): 
+			if Input.is_action_pressed("down"): 
 				anim_name = "walk_forward"
-			elif Input.is_action_pressed("ui_up"):
+			elif Input.is_action_pressed("up"):
 				anim_name = "walk_diag"
 			else:
 				anim_name = "walk_side"
-		elif Input.is_action_pressed("ui_down"):
+		elif Input.is_action_pressed("down"):
 			anim_name = "walk_forward"
-		elif Input.is_action_pressed("ui_up"):
+		elif Input.is_action_pressed("up"):
 			anim_name = "walk_up"
 	# Set the animation and flip_h property
 	if anim_name != "":

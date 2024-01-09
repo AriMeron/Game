@@ -4,7 +4,7 @@
 [ext_resource type="Script" path="res://Scenes/Player/movement.gd" id="1_7iqit"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_53677"]
-size = Vector3(0.228257, 0.257697, 0.164541)
+size = Vector3(0.228257, 0.257697, 0.0786725)
 
 [node name="CharacterBody3D" type="CharacterBody3D"]
 script = ExtResource("1_7iqit")
