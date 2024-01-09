@@ -21,9 +21,24 @@ func peer_disconnected(id):
 
 func connected_to_server():
 	print("Connected to Server!")
+	SendPlayerInformation.rpc_id(1, $LineEdit.text, multiplayer.get_unique_id())
 
 func connection_failed(id):
 	print("Couldn't Connect")
+
+@rpc("any_peer")
+func SendPlayerInformation(name,id):
+	if !GameManager.Players.has(id):
+		GameManager.Players[id] = {
+			"name": name,
+			"id": id,
+			"score": 0
+		}
+	
+	if multiplayer.is_server():
+		for i in GameManager.Players:
+			SendPlayerInformation.rpc(GameManager.Players[i].name, i)
+		
 
 @rpc("any_peer", "call_local")
 func StartGame():
@@ -42,6 +57,8 @@ func _on_host_button_down():
 	
 	multiplayer.set_multiplayer_peer(peer)
 	print("Waiting For Players!")
+	
+	SendPlayerInformation($LineEdit.text, multiplayer.get_unique_id())
 	
 	pass # Replace with function body.
 

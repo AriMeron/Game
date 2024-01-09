@@ -80,6 +80,21 @@ offset_right = 996.0
 offset_bottom = 520.0
 text = "Load Menus"
 
+[node name="LineEdit" type="LineEdit" parent="."]
+layout_mode = 0
+offset_left = 86.0
+offset_top = 160.0
+offset_right = 369.0
+offset_bottom = 191.0
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_left = 110.0
+offset_top = 106.0
+offset_right = 308.0
+offset_bottom = 129.0
+text = "Name:"
+
 [connection signal="button_down" from="Node Load example" to="." method="_on_node_load_example_button_down"]
 [connection signal="button_down" from="Start Game" to="." method="_on_start_game_button_down"]
 [connection signal="button_down" from="View Assets" to="." method="_on_view_assets_button_down"]
