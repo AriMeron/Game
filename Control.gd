@@ -25,6 +25,12 @@ func connected_to_server():
 func connection_failed(id):
 	print("Couldn't Connect")
 
+@rpc("any_peer", "call_local")
+func StartGame():
+	var scene = load ("res://Scenes/Player/DemoPlayerSpace.tscn").instantiate()
+	get_tree().root.add_child(scene)
+	self.hide()
+
 func _on_host_button_down():
 	peer = ENetMultiplayerPeer.new()
 	var error = peer.create_server(port, 6)
@@ -40,6 +46,7 @@ func _on_host_button_down():
 	pass # Replace with function body.
 
 func _on_start_game_button_down():
+	StartGame.rpc()
 	pass # Replace with function body.
 
 
