@@ -104,7 +104,7 @@ Walk
 	-   Dubya: Complete (Claire)
 	-   Trump: Complete (Alex)
 	-   Reagan: Complete (Micah)
--   Walk Back Design: Complete (Wyatt)
+-   Walk Back Design: Complete (Wyatt) -- All Walk Back Done (Sophia)
 	-   Biden: Complete (Wyatt)
 	-   JFK
 	-   Obama
@@ -145,7 +145,7 @@ Dodge Roll
 
 Idle
 
--   Idle Front Design
+-   Idle Front Design: Complete (Sophia - All)
 	-   Biden
 	-   JFK
 	-   Obama
@@ -153,19 +153,7 @@ Idle
 	-   Trump
 	-   Reagan
 -   Idle Diagonal Front Design
-	-   Biden
-	-   JFK
-	-   Obama
-	-   Dubya
-	-   Trump
-	-   Reagan
--   Idle Diagonal Back Design
-	-   Biden
-	-   JFK
-	-   Obama
-	-   Dubya
-	-   Trump
-	-   Reagan
+-   Idle Diagonal Back Design: Complete (Sophia - All)
 -   Idle Back Design
 	-   Biden
 	-   JFK
@@ -240,5 +228,3 @@ Death
 -   Logo: Complete (Wyatt)
 -   App Icon
 
-
-test
