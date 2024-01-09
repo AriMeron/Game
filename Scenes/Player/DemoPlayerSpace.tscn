@@ -1,7 +1,10 @@
-[gd_scene load_steps=11 format=3 uid="uid://b2pistp508v2p"]
+[gd_scene load_steps=14 format=3 uid="uid://b2pistp508v2p"]
 
 [ext_resource type="Script" path="res://Scenes/Player/Camera3D.gd" id="1_jruti"]
 [ext_resource type="PackedScene" uid="uid://bigiq4xklycm1" path="res://Scenes/Player/characterCollider.tscn" id="1_pndb7"]
+[ext_resource type="PackedScene" uid="uid://cwhxvx6bgqsx3" path="res://Scenes/Particles/DirtParticle.tscn" id="3_nb7cp"]
+[ext_resource type="PackedScene" uid="uid://fkoqs8yhxfnp" path="res://Scenes/Particles/DustTrail.tscn" id="4_ds8fb"]
+[ext_resource type="PackedScene" uid="uid://b4nt3i4alsft4" path="res://Scenes/Particles/CloudParticle.tscn" id="5_asbwd"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_fdkgt"]
 sky_top_color = Color(0.709804, 0, 0.772549, 1)
@@ -64,3 +67,12 @@ shape = SubResource("BoxShape3D_sgtiu")
 
 [node name="Player" parent="." instance=ExtResource("1_pndb7")]
 transform = Transform3D(10, 0, 0, 0, 14.14, 0, 0, 0, 10, 0, 2.7127, 0)
+dirt_particle = ExtResource("3_nb7cp")
+cloud_particle = ExtResource("5_asbwd")
+
+[node name="DustTrail" parent="Player" instance=ExtResource("4_ds8fb")]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0, -0.1, 0)
+
+[node name="GPUParticlesCollisionBox3D" type="GPUParticlesCollisionBox3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0141907, 0.645223, -0.132416)
+size = Vector3(39.8806, 2, 40.4267)

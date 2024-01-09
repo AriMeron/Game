@@ -6,9 +6,15 @@ var rolling = false
 var roll_timer = 0.5
 var roll_direction = Vector3.ZERO
 
+@export var dirt_particle :PackedScene
+@export var cloud_particle :PackedScene
+
 func _physics_process(delta):
 	var velocity = Vector3.ZERO
 	var moving = false
+	
+	if not moving:
+		$DustTrail.get_child(0).emitting = false
 	
 	# Handle inputs
 	if not rolling:
@@ -26,8 +32,11 @@ func _physics_process(delta):
 			moving = true
 		if moving:
 			velocity = velocity.normalized() * speed
+			$DustTrail.get_child(0).emitting = true
 
 	if Input.is_action_just_pressed("roll") and not rolling:
+		
+		
 		rolling = true
 		roll_timer = 0.6  # Reset the roll timer
 		if moving:
@@ -35,6 +44,16 @@ func _physics_process(delta):
 		else:
 			# Default roll direction if not moving
 			roll_direction = Vector3(0, 0, 0.1667) 
+			
+		# create dirt particle
+		var dirt = dirt_particle.instantiate()
+		dirt.position.y = -0.05
+		dirt.get_child(0).set_velocity(roll_direction)
+		get_tree().get_root().get_child(0).get_child(4).add_child(dirt)
+		# create cloud particle
+		var cloud = cloud_particle.instantiate()
+		cloud.get_child(0).set_velocity(roll_direction)
+		get_tree().get_root().get_child(0).get_child(4).add_child(cloud)
 
 	if rolling:
 		if roll_timer > 0:
@@ -55,3 +74,13 @@ func _physics_process(delta):
 	# Ensure the AnimatedSprite3D child node is properly updated.
 
 # Adjust the update_animation function as needed for the new setup.
+	
+	# Particle
+	if Input.is_action_just_pressed("dirt_particle"):
+		var p = dirt_particle.instantiate()
+		get_tree().get_root().get_child(0).get_child(4).add_child(p)
+		
+	if Input.is_action_just_pressed("cloud_particle"):
+		var p = cloud_particle.instantiate()
+		p.get_child(0).set_velocity(roll_direction)
+		get_tree().get_root().get_child(0).get_child(4).add_child(p)
