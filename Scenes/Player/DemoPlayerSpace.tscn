@@ -65,9 +65,6 @@ physics_material_override = SubResource("PhysicsMaterial_sugad")
 transform = Transform3D(1, 0, 0, 0, 1, 0, -1.4013e-45, 0, 1, 0, 0, 0)
 shape = SubResource("BoxShape3D_sgtiu")
 
-[node name="Player" parent="." instance=ExtResource("1_pndb7")]
-transform = Transform3D(10, 0, 0, 0, 14.14, 0, 0, 0, 10, 0, 2.7127, 0)
-
 [node name="SpawnLocations" type="Node3D" parent="."]
 
 [node name="0" type="Node3D" parent="SpawnLocations" groups=["PlayerSpawnPoint"]]
