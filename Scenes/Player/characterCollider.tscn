@@ -7,6 +7,7 @@
 size = Vector3(0.228257, 0.257697, 0.164541)
 
 [node name="CharacterBody3D" type="CharacterBody3D"]
+transform = Transform3D(10, 0, 0, 0, 14.4, 0, 0, 0, 10, 0, 0, 0)
 script = ExtResource("1_7iqit")
 
 [node name="AnimatedSprite3D" parent="." instance=ExtResource("1_4rq8i")]
@@ -14,3 +15,4 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.08165e-12, 2.08165e-12, 2.0
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 shape = SubResource("BoxShape3D_53677")
+metadata/_edit_group_ = true

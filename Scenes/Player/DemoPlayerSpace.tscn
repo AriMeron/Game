@@ -1,5 +1,6 @@
-[gd_scene load_steps=11 format=3 uid="uid://b2pistp508v2p"]
+[gd_scene load_steps=12 format=3 uid="uid://b2pistp508v2p"]
 
+[ext_resource type="Script" path="res://Scenes/Player/SceneManager.gd" id="1_61104"]
 [ext_resource type="Script" path="res://Scenes/Player/Camera3D.gd" id="1_jruti"]
 [ext_resource type="PackedScene" uid="uid://bigiq4xklycm1" path="res://Scenes/Player/characterCollider.tscn" id="1_pndb7"]
 
@@ -34,6 +35,8 @@ size = Vector2(17, 5)
 size = Vector3(16.9229, 2.14514, 3.63179)
 
 [node name="Node3D" type="Node3D"]
+script = ExtResource("1_61104")
+PlayerScene = ExtResource("1_pndb7")
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource("Environment_arj20")
@@ -64,3 +67,11 @@ shape = SubResource("BoxShape3D_sgtiu")
 
 [node name="Player" parent="." instance=ExtResource("1_pndb7")]
 transform = Transform3D(10, 0, 0, 0, 14.14, 0, 0, 0, 10, 0, 2.7127, 0)
+
+[node name="SpawnLocations" type="Node3D" parent="."]
+
+[node name="0" type="Node3D" parent="SpawnLocations" groups=["PlayerSpawnPoint"]]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.76971, 2.69712, 5.34846)
+
+[node name="1" type="Node3D" parent="SpawnLocations" groups=["PlayerSpawnPoint"]]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.0178, 2.69712, 5.34846)
