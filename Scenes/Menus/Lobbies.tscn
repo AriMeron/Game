@@ -1,0 +1,179 @@
+[gd_scene load_steps=2 format=3 uid="uid://c8qn1ewwy72j1"]
+
+[ext_resource type="Script" path="res://Scenes/Menus/Lobbies.gd" id="1_2fug8"]
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 5.0
+offset_top = 2.0
+offset_right = 5.0
+offset_bottom = 2.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_2fug8")
+
+[node name="Create" type="Button" parent="."]
+layout_mode = 0
+offset_left = 33.0
+offset_top = 22.0
+offset_right = 259.0
+offset_bottom = 83.0
+theme_override_font_sizes/font_size = 34
+text = "Create Lobby"
+
+[node name="TextEdit" type="TextEdit" parent="Create"]
+layout_mode = 0
+offset_left = 237.0
+offset_top = 32.0
+offset_right = 525.0
+offset_bottom = 62.0
+
+[node name="LobbyName" type="Label" parent="Create"]
+layout_mode = 0
+offset_left = 235.0
+offset_top = 1.0
+offset_right = 394.0
+offset_bottom = 30.0
+text = "Lobby Name:"
+
+[node name="Join" type="Button" parent="."]
+layout_mode = 0
+offset_left = 32.0
+offset_top = 87.0
+offset_right = 258.0
+offset_bottom = 148.0
+theme_override_font_sizes/font_size = 34
+text = "Join Lobby"
+
+[node name="Players" type="Panel" parent="."]
+layout_mode = 0
+offset_left = 26.0
+offset_top = 156.0
+offset_right = 264.0
+offset_bottom = 612.0
+
+[node name="Label" type="Label" parent="Players"]
+layout_mode = 0
+offset_right = 238.0
+offset_bottom = 34.0
+theme_override_font_sizes/font_size = 16
+text = "Players (0)"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Players"]
+layout_mode = 0
+offset_left = -2.0
+offset_top = 34.0
+offset_right = 240.0
+offset_bottom = 455.0
+
+[node name="Button3" type="Button" parent="."]
+layout_mode = 0
+offset_left = 34.0
+offset_top = 621.0
+offset_right = 260.0
+offset_bottom = 682.0
+theme_override_font_sizes/font_size = 34
+text = "Leave Lobby"
+
+[node name="Chat" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.023
+anchor_bottom = 0.028
+offset_left = 297.0
+offset_top = 154.0
+offset_right = 1249.56
+offset_bottom = 587.84
+
+[node name="Name" type="Label" parent="Chat"]
+layout_mode = 0
+offset_left = 1.0
+offset_top = 4.0
+offset_right = 153.0
+offset_bottom = 38.0
+theme_override_font_sizes/font_size = 16
+text = "Lobby Name"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Chat"]
+layout_mode = 1
+anchors_preset = -1
+anchor_bottom = 0.044
+offset_left = 4.0
+offset_top = 44.0
+offset_right = 975.0
+offset_bottom = 431.024
+
+[node name="Message" type="Button" parent="."]
+layout_mode = 0
+offset_left = 297.0
+offset_top = 630.0
+offset_right = 504.0
+offset_bottom = 674.0
+theme_override_font_sizes/font_size = 20
+text = "Send Message"
+
+[node name="TextEdit" type="TextEdit" parent="Message"]
+layout_mode = 0
+offset_left = 223.0
+offset_right = 911.0
+offset_bottom = 42.0
+
+[node name="Start Game" type="Button" parent="."]
+layout_mode = 0
+offset_left = 1046.0
+offset_top = 86.0
+offset_right = 1272.0
+offset_bottom = 147.0
+theme_override_font_sizes/font_size = 34
+text = "Start Game"
+
+[node name="LobbyPopup" type="PopupPanel" parent="."]
+
+[node name="Panel" type="Panel" parent="LobbyPopup"]
+offset_left = 4.0
+offset_top = 4.0
+offset_right = 96.0
+offset_bottom = 96.0
+
+[node name="ScrollContainer" type="ScrollContainer" parent="LobbyPopup/Panel"]
+layout_mode = 0
+offset_left = 4.0
+offset_top = 39.0
+offset_right = 577.0
+offset_bottom = 346.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="LobbyPopup/Panel/ScrollContainer"]
+layout_mode = 2
+
+[node name="Button" type="Button" parent="LobbyPopup/Panel"]
+layout_mode = 0
+offset_left = 444.0
+offset_top = 351.0
+offset_right = 579.0
+offset_bottom = 386.0
+text = "Leave Lobby"
+
+[node name="Label" type="Label" parent="LobbyPopup/Panel"]
+layout_mode = 0
+offset_right = 110.0
+offset_bottom = 30.0
+theme_override_font_sizes/font_size = 20
+text = "Lobbies"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="SteamName" type="Label" parent="."]
+layout_mode = 0
+offset_left = 1058.0
+offset_top = 34.0
+offset_right = 1270.0
+offset_bottom = 76.0
+theme_override_font_sizes/font_size = 20
+text = "Steam Name"
