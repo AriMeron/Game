@@ -1,5 +1,6 @@
-[gd_scene load_steps=5 format=3 uid="uid://dmmqbopsvwpyl"]
+[gd_scene load_steps=6 format=3 uid="uid://dmmqbopsvwpyl"]
 
+[ext_resource type="Script" path="res://Scenes/Player/GunRotation.gd" id="1_citn0"]
 [ext_resource type="Texture2D" uid="uid://doqedowhemera" path="res://Design/VaccineGun.png" id="1_kv2wt"]
 [ext_resource type="Texture2D" uid="uid://bglbn4woh40pn" path="res://Design/VaccineGunMirrored.png" id="2_7tcbd"]
 [ext_resource type="Script" path="res://Scenes/Player/AnimatedSprite3D.gd" id="3_4y86b"]
@@ -51,6 +52,7 @@ animations = [{
 }]
 
 [node name="Gun" type="CharacterBody3D"]
+script = ExtResource("1_citn0")
 
 [node name="AnimatedSprite3D" type="AnimatedSprite3D" parent="."]
 centered = false
