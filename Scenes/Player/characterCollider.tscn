@@ -11,6 +11,7 @@ script = ExtResource("1_7iqit")
 
 [node name="AnimatedSprite3D" parent="." instance=ExtResource("1_4rq8i")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.08165e-12, 2.08165e-12, 2.08165e-12)
+animation = &"walk_up"
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 shape = SubResource("BoxShape3D_53677")

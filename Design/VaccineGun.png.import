@@ -2,8 +2,8 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b1ax1my02cch6"
-path.s3tc="res://.godot/imported/vaccineGun.png-4e20a6a47f31b1f4de52aa119d536a73.s3tc.ctex"
+uid="uid://doqedowhemera"
+path.s3tc="res://.godot/imported/VaccineGun.png-f09557aefc0acc0aaf6cd5c07dbe5063.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://Design/Weapon/vaccineGun.png"
-dest_files=["res://.godot/imported/vaccineGun.png-4e20a6a47f31b1f4de52aa119d536a73.s3tc.ctex"]
+source_file="res://Design/VaccineGun.png"
+dest_files=["res://.godot/imported/VaccineGun.png-f09557aefc0acc0aaf6cd5c07dbe5063.s3tc.ctex"]
 
 [params]
 
