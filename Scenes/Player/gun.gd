@@ -22,9 +22,9 @@ func _process(delta):
 		if Input.is_action_pressed("ui_left"):
 			transform.origin = Vector3 (-0.14, -0.06, 0);
 		if Input.is_action_pressed("ui_down"):
-			transform.origin = Vector3 (-0.223, -0.06, 0);
+			transform.origin = Vector3 (-0.14, -0.06, 0);
 		if Input.is_action_pressed("ui_up"):
-			transform.origin = Vector3 (-0.223, -0.06, 0);
+			transform.origin = Vector3 (-0.14, -0.06, 0);
 
 	# Apply movement using velocity
 	if velocity.length() > 0:
