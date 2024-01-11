@@ -1,7 +1,10 @@
-[gd_scene load_steps=11 format=3 uid="uid://b2pistp508v2p"]
+[gd_scene load_steps=14 format=3 uid="uid://b2pistp508v2p"]
 
 [ext_resource type="Script" path="res://Scenes/Player/SceneManager.gd" id="1_61104"]
 [ext_resource type="PackedScene" uid="uid://bigiq4xklycm1" path="res://Scenes/Player/characterCollider.tscn" id="1_pndb7"]
+[ext_resource type="Script" path="res://Scenes/Player/Ability Bar.gd" id="3_1busy"]
+[ext_resource type="Script" path="res://Scenes/Player/HP Bar.gd" id="3_5xaux"]
+[ext_resource type="Script" path="res://Scenes/Player/Variable Label.gd" id="5_4s5x4"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_fdkgt"]
 sky_top_color = Color(0.709804, 0, 0.772549, 1)
@@ -56,6 +59,47 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, -1.4013e-45, 0, 1, 0, 0, 0)
 shape = SubResource("BoxShape3D_sgtiu")
 
 [node name="SpawnLocations" type="Node3D" parent="."]
+
+[node name="HUD" type="CanvasLayer" parent="."]
+
+[node name="HP Bar" type="ProgressBar" parent="HUD"]
+offset_right = 450.0
+offset_bottom = 107.0
+script = ExtResource("3_5xaux")
+
+[node name="Ability Bar" type="ProgressBar" parent="HUD"]
+offset_left = 4.0
+offset_top = 110.0
+offset_right = 447.0
+offset_bottom = 237.0
+script = ExtResource("3_1busy")
+
+[node name="Timer" type="Timer" parent="HUD/Ability Bar"]
+autostart = true
+
+[node name="Label" type="Label" parent="HUD"]
+offset_left = 541.0
+offset_top = 10.0
+offset_right = 644.0
+offset_bottom = 94.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 50
+text = "/50"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Variable Label" type="Label" parent="HUD"]
+offset_left = 472.0
+offset_top = 10.0
+offset_right = 575.0
+offset_bottom = 94.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 50
+horizontal_alignment = 1
+vertical_alignment = 1
+script = ExtResource("5_4s5x4")
+
+[connection signal="timeout" from="HUD/Ability Bar/Timer" to="HUD/Ability Bar" method="_on_timer_timeout"]
 
 [node name="0" type="Node3D" parent="SpawnLocations" groups=["PlayerSpawnPoint"]]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.76971, 2.69712, 5.34846)
