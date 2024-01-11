@@ -1,9 +1,11 @@
-[gd_scene load_steps=6 format=3 uid="uid://dmmqbopsvwpyl"]
+[gd_scene load_steps=8 format=3 uid="uid://dmmqbopsvwpyl"]
 
 [ext_resource type="Script" path="res://Scenes/Player/GunRotation.gd" id="1_citn0"]
 [ext_resource type="Texture2D" uid="uid://doqedowhemera" path="res://Design/VaccineGun.png" id="1_kv2wt"]
 [ext_resource type="Texture2D" uid="uid://bglbn4woh40pn" path="res://Design/VaccineGunMirrored.png" id="2_7tcbd"]
 [ext_resource type="Script" path="res://Scenes/Player/AnimatedSprite3D.gd" id="3_4y86b"]
+[ext_resource type="Texture2D" uid="uid://dfb05oyibnwh1" path="res://Design/BidenGun.png" id="4_a0cvh"]
+[ext_resource type="Texture2D" uid="uid://c4xsljf27yol1" path="res://Design/BidenGunFlipped.png" id="5_gv2c2"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_cn2j1"]
 animations = [{
@@ -20,7 +22,7 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("1_kv2wt")
+"texture": ExtResource("4_a0cvh")
 }],
 "loop": true,
 "name": &"down",
@@ -28,7 +30,7 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("2_7tcbd")
+"texture": ExtResource("4_a0cvh")
 }],
 "loop": true,
 "name": &"left",
@@ -36,7 +38,7 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("1_kv2wt")
+"texture": ExtResource("5_gv2c2")
 }],
 "loop": true,
 "name": &"right",
@@ -44,7 +46,7 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("1_kv2wt")
+"texture": ExtResource("4_a0cvh")
 }],
 "loop": true,
 "name": &"up",
@@ -56,8 +58,9 @@ script = ExtResource("1_citn0")
 
 [node name="AnimatedSprite3D" type="AnimatedSprite3D" parent="."]
 centered = false
+texture_filter = 0
 sprite_frames = SubResource("SpriteFrames_cn2j1")
-animation = &"up"
+animation = &"left"
 script = ExtResource("3_4y86b")
 
 [node name="CharacterBody3D" type="CharacterBody3D" parent="."]

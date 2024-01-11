@@ -2,26 +2,27 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://doqedowhemera"
-path="res://.godot/imported/VaccineGun.png-f09557aefc0acc0aaf6cd5c07dbe5063.ctex"
+uid="uid://bbk35ywxc6ntg"
+path.s3tc="res://.godot/imported/BidenHand.png-b78365f209654029dc4af08d98a8dc62.s3tc.ctex"
 metadata={
-"vram_texture": false
+"imported_formats": ["s3tc_bptc"],
+"vram_texture": true
 }
 
 [deps]
 
-source_file="res://Design/VaccineGun.png"
-dest_files=["res://.godot/imported/VaccineGun.png-f09557aefc0acc0aaf6cd5c07dbe5063.ctex"]
+source_file="res://Design/BidenHand.png"
+dest_files=["res://.godot/imported/BidenHand.png-b78365f209654029dc4af08d98a8dc62.s3tc.ctex"]
 
 [params]
 
-compress/mode=0
+compress/mode=2
 compress/high_quality=false
 compress/lossy_quality=0.7
 compress/hdr_compression=1
 compress/normal_map=0
 compress/channel_pack=0
-mipmaps/generate=false
+mipmaps/generate=true
 mipmaps/limit=-1
 roughness/mode=0
 roughness/src_normal=""
