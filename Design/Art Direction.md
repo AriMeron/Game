@@ -13,30 +13,30 @@ Marble
 -   Marble: Complete (Wyatt)
 -   Marble Dark: Complete (Wyatt)
 -   Quartered Marble: Complete (Wyatt)
--   Quartered Marble Dark
+-   Quartered Marble Dark: Complete (Wyatt)
 -   Large Marble: Complete (Wyatt)
--   Large Marble Dark
+-   Large Marble Dark: Complete (Wyatt)
 
 Carpet
 
--   Red Carpet
--   Blue Carpet
--   Orange Carpet
+-   Red Carpet: Complete (Wyatt)
+-   Blue Carpe: Complete (Wyatt)t
+-   Orange Carpet: Complete (Wyatt)
 
 Obstacles
 
--   Table
+-   Table: Complete (Wyatt)
 -   Chair
 -   Oval Office Desk
 -   Column
 
 Wall
 
--   Wall Base
--   Wall Red Banner
--   Wall Blue Banner
+-   Wall Base: Complete (Wyatt)
+-   Wall Red Banner: Complete (Wyatt)
+-   Wall Blue Banner: Complete (Wyatt)
 -   Wall Locked Door
--   Wall Lamp
+-   Wall Lamp: Complete (Wyatt)
 
 ## Sound Design
 
@@ -104,7 +104,7 @@ Walk
     -   Dubya: Complete (Claire)
     -   Trump: Complete (Alex)
     -   Reagan: Complete (Micah)
--   Walk Back Design: Complete (Wyatt)
+-   Walk Back Design: Complete (Wyatt) -- All Walk Back Done (Sophia)
     -   Biden: Complete (Wyatt)
     -   JFK
     -   Obama
@@ -114,8 +114,8 @@ Walk
 
 Dodge Roll
 
--   Dodge Roll Front Design
-    -   Biden
+-   Dodge Roll Front Design: Complete (Wyatt and Sophia)
+    -   Biden: Complete (Wyatt and Sophia)
     -   JFK
     -   Obama
     -   Dubya
@@ -145,7 +145,7 @@ Dodge Roll
 
 Idle
 
--   Idle Front Design
+-   Idle Front Design: Complete (Sophia - All)
     -   Biden
     -   JFK
     -   Obama
@@ -153,19 +153,19 @@ Idle
     -   Trump
     -   Reagan
 -   Idle Diagonal Front Design
-    -   Biden (Wyatt)
+    -   Biden (Claire)
     -   JFK (Claire)
     -   Obama (Claire)
     -   Dubya (Claire)
     -   Trump (Claire)
     -   Reagan (Claire)
 -   Idle Diagonal Back Design
-    -   Biden (Wyatt)
-    -   JFK (Claire)
-    -   Obama (Claire)
-    -   Dubya (Claire)
-    -   Trump (Claire)
-    -   Reagan (Claire)
+    -   Biden
+    -   JFK
+    -   Obama
+    -   Dubya
+    -   Trump
+    -   Reagan
 -   Idle Back Design
     -   Biden
     -   JFK
@@ -199,7 +199,7 @@ Death
 -   (Obama) Welfare Gun
 -   (Dubya) Revolver: Complete (Alex)
 -   (Trump) Golden Glock: Complete (Sophia)
--   (Reagan) Snub Nose Revolver: Complete (Alex)
+-   (Reagan) Ray Gun
 
 ## Bullets
 
@@ -217,9 +217,18 @@ Death
 -   (Obama) Drone
 -   (Dubya) Nuke
 -   (Trump) Wall
--   (Reagan) Coin: Complete (Wyatt)
+-   (Reagan) Star Wars
 
 # UI
+
+Portraits
+
+-   Biden: Complete (Wyatt)
+-   JFK: Complete (Wyatt)
+-   Obama: Complete (Wyatt)
+-   Dubya: Complete (Wyatt)
+-   Trump: Complete (Wyatt)
+-   Reagan: Complete (Wyatt)
 
 ## Screens
 

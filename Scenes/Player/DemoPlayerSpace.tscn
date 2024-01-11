@@ -1,0 +1,110 @@
+[gd_scene load_steps=14 format=3 uid="uid://b2pistp508v2p"]
+
+[ext_resource type="Script" path="res://Scenes/Player/Camera3D.gd" id="1_jruti"]
+[ext_resource type="PackedScene" uid="uid://bigiq4xklycm1" path="res://Scenes/Player/characterCollider.tscn" id="1_pndb7"]
+[ext_resource type="Script" path="res://Scenes/Player/Ability Bar.gd" id="3_1busy"]
+[ext_resource type="Script" path="res://Scenes/Player/HP Bar.gd" id="3_5xaux"]
+[ext_resource type="Script" path="res://Scenes/Player/Variable Label.gd" id="5_4s5x4"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_fdkgt"]
+sky_top_color = Color(0.709804, 0, 0.772549, 1)
+sky_horizon_color = Color(0.75, 0.52549, 0.733333, 1)
+sky_energy_multiplier = 1.45
+ground_bottom_color = Color(0.290196, 0.101961, 0.160784, 1)
+ground_horizon_color = Color(0.75, 0.52549, 0.733333, 1)
+
+[sub_resource type="Sky" id="Sky_jesnj"]
+sky_material = SubResource("ProceduralSkyMaterial_fdkgt")
+
+[sub_resource type="Environment" id="Environment_arj20"]
+background_mode = 2
+sky = SubResource("Sky_jesnj")
+tonemap_mode = 2
+glow_enabled = true
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_p66fi"]
+size = Vector2(40, 40)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_dswdk"]
+albedo_color = Color(0.305882, 1, 0.733333, 1)
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_v6xhx"]
+size = Vector2(17, 5)
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_sugad"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_sgtiu"]
+size = Vector3(16.9229, 2.14514, 3.63179)
+
+[node name="Node3D" type="Node3D"]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_arj20")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+mesh = SubResource("PlaneMesh_p66fi")
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(0.999986, 0.00523596, 7.55448e-11, -0.00370239, 0.707097, 0.707107, 0.00370239, -0.707097, 0.707107, 0, 11.1116, 11.9645)
+projection = 1
+size = 17.0
+script = ExtResource("1_jruti")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="Camera3D"]
+transform = Transform3D(1, -9.88408e-11, -1.91727e-11, 8.2033e-10, 1, -9.62996e-09, 2.25809e-10, -3.94329e-08, 1, 0, 0, 0)
+
+[node name="wall" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, -6.66422e-31, 4.11901e-38, 0, -4.37114e-08, -1.414, 6.66422e-31, 1, -6.18079e-08, 2.08165e-12, 2.47486, -3.31404)
+material_override = SubResource("StandardMaterial3D_dswdk")
+mesh = SubResource("PlaneMesh_v6xhx")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="wall"]
+physics_material_override = SubResource("PhysicsMaterial_sugad")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="wall/StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, -1.4013e-45, 0, 1, 0, 0, 0)
+shape = SubResource("BoxShape3D_sgtiu")
+
+[node name="Player" parent="." instance=ExtResource("1_pndb7")]
+transform = Transform3D(10, 0, 0, 0, 14.14, 0, 0, 0, 10, 0, 2.7127, 0)
+
+[node name="HUD" type="CanvasLayer" parent="."]
+
+[node name="HP Bar" type="ProgressBar" parent="HUD"]
+offset_right = 450.0
+offset_bottom = 107.0
+script = ExtResource("3_5xaux")
+
+[node name="Ability Bar" type="ProgressBar" parent="HUD"]
+offset_left = 4.0
+offset_top = 110.0
+offset_right = 447.0
+offset_bottom = 237.0
+script = ExtResource("3_1busy")
+
+[node name="Timer" type="Timer" parent="HUD/Ability Bar"]
+autostart = true
+
+[node name="Label" type="Label" parent="HUD"]
+offset_left = 541.0
+offset_top = 10.0
+offset_right = 644.0
+offset_bottom = 94.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 50
+text = "/50"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Variable Label" type="Label" parent="HUD"]
+offset_left = 472.0
+offset_top = 10.0
+offset_right = 575.0
+offset_bottom = 94.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 50
+horizontal_alignment = 1
+vertical_alignment = 1
+script = ExtResource("5_4s5x4")
+
+[connection signal="timeout" from="HUD/Ability Bar/Timer" to="HUD/Ability Bar" method="_on_timer_timeout"]
