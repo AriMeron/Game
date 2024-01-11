@@ -9,8 +9,15 @@ func _ready():
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	text = str(ammo)
+	
 
+var leftHeld = false
 func _input(event):
-	if event is InputEventMouseButton and event.pressed and event.button_index == MOUSE_BUTTON_LEFT:
-		if ammo > 0:
-			ammo -=1
+	if Input.is_mouse_button_pressed(MOUSE_BUTTON_LEFT):
+			if ammo > 0 and leftHeld == false:
+				ammo -=1
+				leftHeld = true
+	elif Input.is_action_just_released:
+		leftHeld = false
+	if Input.is_key_pressed(KEY_R):
+		ammo = 50
