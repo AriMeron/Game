@@ -1,13 +1,14 @@
-[gd_scene load_steps=31 format=3 uid="uid://xxcdv2ttwtcq"]
+[gd_scene load_steps=32 format=3 uid="uid://xxcdv2ttwtcq"]
 
 [ext_resource type="Texture2D" uid="uid://0xegepfhkpn5" path="res://Design/DodgeRoll/DiagonalFront/JFK-DodgeRoll-DiagonalFront.png" id="1_vftlt"]
 [ext_resource type="Texture2D" uid="uid://ctxa4x0gpb3mn" path="res://Design/WalkDiagonalFront Sheets/JFKWalk.png" id="2_p2yhq"]
 [ext_resource type="Texture2D" uid="uid://c3piouk04or88" path="res://Design/WalkFront/JFKFrontWalk.png" id="3_d5qwj"]
 [ext_resource type="Script" path="res://Scenes/Player/animations.gd" id="4_ju6fq"]
-[ext_resource type="Texture2D" uid="uid://cwsem8qqu1mn0" path="res://Scenes/Particles/gun.webp" id="5_qxby5"]
-[ext_resource type="PackedScene" uid="uid://d2jhi3luwqg0j" path="res://Scenes/Particles/BloodParticle.tscn" id="5_y61b5"]
-[ext_resource type="PackedScene" uid="uid://djms35v5jvsak" path="res://Scenes/Particles/BulletParticle.tscn" id="6_0nuhx"]
-[ext_resource type="PackedScene" uid="uid://x245ilvsmq7j" path="res://Scenes/Particles/Bullet.tscn" id="7_4mky1"]
+[ext_resource type="PackedScene" uid="uid://d2jhi3luwqg0j" path="res://Scenes/Particles/BloodParticle.tscn" id="5_wo63q"]
+[ext_resource type="PackedScene" path="res://Scenes/Particles/BulletParticle.tscn" id="6_avh0h"]
+[ext_resource type="PackedScene" uid="uid://b5j5qkq132br2" path="res://Scenes/Particles/Bullet.tscn" id="7_4hk3l"]
+[ext_resource type="PackedScene" uid="uid://brufljs8818j2" path="res://Scenes/Particles/BulletCasingParticle.tscn" id="8_bj1mq"]
+[ext_resource type="Texture2D" uid="uid://cwsem8qqu1mn0" path="res://Scenes/Particles/gun.webp" id="9_jfxdk"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_yxan1"]
 atlas = ExtResource("1_vftlt")
@@ -180,16 +181,17 @@ texture_filter = 0
 sprite_frames = SubResource("SpriteFrames_lf7xo")
 animation = &"roll_diag"
 script = ExtResource("4_ju6fq")
-blood_particle = ExtResource("5_y61b5")
-bullet_particle = ExtResource("6_0nuhx")
-bullet = ExtResource("7_4mky1")
+blood_particle = ExtResource("5_wo63q")
+bullet_particle = ExtResource("6_avh0h")
+bullet = ExtResource("7_4hk3l")
+bullet_casing_particle = ExtResource("8_bj1mq")
 
 [node name="GunRotation" type="Node3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00374699, 0.101627, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.105417, 0)
 
 [node name="Gun" type="Sprite3D" parent="GunRotation"]
-transform = Transform3D(0.03, 0, 0, 0, 0.03, 0, 0, 0, 0.03, 0.135932, -0.113128, 0)
-texture = ExtResource("5_qxby5")
+transform = Transform3D(0.03, 0, 0, 0, 0.03, 0, 0, 0, 0.03, 0.138463, -0.0960951, 0)
+texture = ExtResource("9_jfxdk")
 
-[node name="BulletSpawn" type="Node3D" parent="GunRotation"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.191094, -0.0899267, 0)
+[node name="BulletSpawn" type="Node3D" parent="GunRotation/Gun"]
+transform = Transform3D(33.3333, 0, 0, 0, 33.3333, 0, 0, 0, 33.3333, 1.15993, 0.369688, 0)

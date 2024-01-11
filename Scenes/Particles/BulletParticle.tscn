@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://djms35v5jvsak"]
+[gd_scene load_steps=10 format=3 uid="uid://dn8yq6k2lluq7"]
 
 [ext_resource type="Texture2D" uid="uid://bock3qn4qawmv" path="res://Scenes/Particles/spark.png" id="1_sjq0e"]
 [ext_resource type="Script" path="res://Scenes/Particles/BulletParticle.gd" id="2_qsi8w"]

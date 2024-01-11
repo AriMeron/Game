@@ -9,6 +9,7 @@ var roll_direction = Vector3.ZERO
 @export var blood_particle :PackedScene
 @export var bullet_particle :PackedScene
 @export var bullet :PackedScene
+@export var bullet_casing_particle :PackedScene
 
 
 func _physics_process(delta):
@@ -24,12 +25,15 @@ func _physics_process(delta):
 	
 	if Input.is_action_just_pressed("fire"):
 		var p = bullet_particle.instantiate()
-		p.get_child(0).set_velocity(Vector3(mouse_position.x, -mouse_position.y, 0))
-		get_child(0).get_child(1).add_child(p)
+		p.get_child(0).set_velocity(Vector3(0, 3.14159, -atan(mouse_position.y / -mouse_position.x)))
+		get_child(0).get_child(0).get_child(0).add_child(p)
+		
+		var bc = bullet_casing_particle.instantiate()
+		get_child(0).get_child(0).get_child(0).add_child(bc)
 		
 		var b = bullet.instantiate()
 		b.get_child(0).set_velocity(Vector3(mouse_position.x, -mouse_position.y, 0))
-		get_child(0).get_child(1).add_child(b)
+		get_child(0).get_child(0).get_child(0).add_child(b)
 		
 	if Input.is_action_just_pressed("blood_particle"):
 		var p = blood_particle.instantiate()
