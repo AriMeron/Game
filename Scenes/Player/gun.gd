@@ -20,7 +20,7 @@ func _process(delta):
 		if Input.is_action_pressed("ui_right"):
 			transform.origin = Vector3 (-0.223, -0.097, 0);
 		if Input.is_action_pressed("ui_left"):
-			transform.origin = Vector3 (0.05, -0.097, 0);
+			transform.origin = Vector3 (0.06, -0.097, 0);
 		if Input.is_action_pressed("ui_down"):
 			transform.origin = Vector3 (-0.223, -0.097, 0);
 		if Input.is_action_pressed("ui_up"):

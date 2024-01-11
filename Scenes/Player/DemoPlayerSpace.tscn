@@ -1,8 +1,9 @@
-[gd_scene load_steps=12 format=3 uid="uid://b2pistp508v2p"]
+[gd_scene load_steps=13 format=3 uid="uid://b2pistp508v2p"]
 
 [ext_resource type="Script" path="res://Scenes/Player/Camera3D.gd" id="1_jruti"]
 [ext_resource type="PackedScene" uid="uid://bigiq4xklycm1" path="res://Scenes/Player/characterCollider.tscn" id="1_pndb7"]
 [ext_resource type="PackedScene" uid="uid://dmmqbopsvwpyl" path="res://Scenes/Player/gun.tscn" id="3_25s8k"]
+[ext_resource type="Script" path="res://Scenes/Player/gun.gd" id="4_djpon"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_fdkgt"]
 sky_top_color = Color(0.709804, 0, 0.772549, 1)
@@ -67,4 +68,8 @@ shape = SubResource("BoxShape3D_sgtiu")
 transform = Transform3D(10, 0, 0, 0, 14.14, 0, 0, 0, 10, 0, 2.7127, 0)
 
 [node name="Gun" parent="Player" instance=ExtResource("3_25s8k")]
-transform = Transform3D(1, 0, 0, 0, 0.999999, 0, 0, 0, 1, 0.0413222, -0.0966083, 2.08165e-12)
+transform = Transform3D(1, 0, 0, 0, 0.999998, 0, 0, 0, 1, -0.224489, -0.0780383, -0.00526798)
+script = ExtResource("4_djpon")
+
+[node name="Bullet" type="CharacterBody3D" parent="Player/Gun"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
