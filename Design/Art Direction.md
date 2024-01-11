@@ -129,19 +129,19 @@ Dodge Roll
     -   Trump: Complete (Sophia)
     -   Reagan: Complete (Micah)
 -   Dodge Roll Diagonal Back Design
-    -   Biden
-    -   JFK
-    -   Obama
-    -   Dubya
-    -   Trump
-    -   Reagan
--   Dodge Roll Back Design
-    -   Biden
+    -   Biden (Wyatt)
     -   JFK (Claire)
     -   Obama (Claire)
-    -   Dubya
+    -   Dubya (Sophia)
     -   Trump (Claire)
     -   Reagan (Claire)
+-   Dodge Roll Back Design
+    -   Biden (Wyatt)
+    -   JFK (Claire)
+    -   Obama (Sophia)
+    -   Dubya (Sophia)
+    -   Trump (Claire)
+    -   Reagan (Sophia)
 
 Idle
 
