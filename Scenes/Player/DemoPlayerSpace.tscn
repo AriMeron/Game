@@ -60,6 +60,12 @@ shape = SubResource("BoxShape3D_sgtiu")
 
 [node name="SpawnLocations" type="Node3D" parent="."]
 
+[node name="0" type="Node3D" parent="SpawnLocations" groups=["PlayerSpawnPoint"]]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.76971, 2.69712, 5.34846)
+
+[node name="1" type="Node3D" parent="SpawnLocations" groups=["PlayerSpawnPoint"]]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.0178, 2.69712, 5.34846)
+
 [node name="HUD" type="CanvasLayer" parent="."]
 
 [node name="HP Bar" type="ProgressBar" parent="HUD"]
@@ -100,9 +106,3 @@ vertical_alignment = 1
 script = ExtResource("5_4s5x4")
 
 [connection signal="timeout" from="HUD/Ability Bar/Timer" to="HUD/Ability Bar" method="_on_timer_timeout"]
-
-[node name="0" type="Node3D" parent="SpawnLocations" groups=["PlayerSpawnPoint"]]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.76971, 2.69712, 5.34846)
-
-[node name="1" type="Node3D" parent="SpawnLocations" groups=["PlayerSpawnPoint"]]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.0178, 2.69712, 5.34846)
