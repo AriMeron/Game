@@ -5,7 +5,7 @@
 [ext_resource type="Texture2D" uid="uid://c3piouk04or88" path="res://Design/WalkFront/JFKFrontWalk.png" id="3_d5qwj"]
 [ext_resource type="Script" path="res://Scenes/Player/animations.gd" id="4_ju6fq"]
 [ext_resource type="PackedScene" uid="uid://d2jhi3luwqg0j" path="res://Scenes/Particles/BloodParticle.tscn" id="5_wo63q"]
-[ext_resource type="PackedScene" path="res://Scenes/Particles/BulletParticle.tscn" id="6_avh0h"]
+[ext_resource type="PackedScene" uid="uid://dn8yq6k2lluq7" path="res://Scenes/Particles/BulletParticle.tscn" id="6_avh0h"]
 [ext_resource type="PackedScene" uid="uid://b5j5qkq132br2" path="res://Scenes/Particles/Bullet.tscn" id="7_4hk3l"]
 [ext_resource type="PackedScene" uid="uid://brufljs8818j2" path="res://Scenes/Particles/BulletCasingParticle.tscn" id="8_bj1mq"]
 [ext_resource type="Texture2D" uid="uid://cwsem8qqu1mn0" path="res://Scenes/Particles/gun.webp" id="9_jfxdk"]

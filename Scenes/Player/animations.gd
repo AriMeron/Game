@@ -19,13 +19,13 @@ func _physics_process(delta):
 	var center = get_viewport().get_visible_rect().size/2
 	var mouse_position = get_viewport().get_mouse_position() - center
 	if mouse_position.x < 0:
-		$GunRotation.rotation = Vector3(0, 3.14159, -atan(mouse_position.y / -mouse_position.x))
+		$GunRotation.rotation = Vector3(3.14159*2, 3.14159, -atan(mouse_position.y / -mouse_position.x))
 	if mouse_position.x > 0:
 		$GunRotation.rotation = Vector3(0, 0, atan(mouse_position.y / -mouse_position.x))
 	
 	if Input.is_action_just_pressed("fire"):
 		var p = bullet_particle.instantiate()
-		p.get_child(0).set_velocity(Vector3(0, 3.14159, -atan(mouse_position.y / -mouse_position.x)))
+		#p.get_child(0).set_velocity(Vector3(0, 3.14159, -atan(mouse_position.y / -mouse_position.x)))
 		get_child(0).get_child(0).get_child(0).add_child(p)
 		
 		var bc = bullet_casing_particle.instantiate()

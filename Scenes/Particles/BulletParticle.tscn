@@ -1,7 +1,7 @@
 [gd_scene load_steps=10 format=3 uid="uid://dn8yq6k2lluq7"]
 
 [ext_resource type="Texture2D" uid="uid://bock3qn4qawmv" path="res://Scenes/Particles/spark.png" id="1_sjq0e"]
-[ext_resource type="Script" path="res://Scenes/Particles/BulletParticle.gd" id="2_qsi8w"]
+[ext_resource type="Script" path="res://Scenes/Particles/BulletExplosion.gd" id="2_rqgd3"]
 
 [sub_resource type="Gradient" id="Gradient_p4ee5"]
 colors = PackedColorArray(1, 1, 1, 1, 1, 1, 1, 0)
@@ -26,6 +26,7 @@ color_ramp = SubResource("GradientTexture1D_f8q65")
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_jy141"]
 transparency = 1
+cull_mode = 2
 vertex_color_use_as_albedo = true
 albedo_texture = ExtResource("1_sjq0e")
 
@@ -33,7 +34,7 @@ albedo_texture = ExtResource("1_sjq0e")
 material = SubResource("StandardMaterial3D_jy141")
 size = Vector2(1.3, 1.3)
 
-[node name="BulletParticle" type="Node3D"]
+[node name="BulletExplosion" type="Node3D"]
 
 [node name="GPUParticles3D" type="GPUParticles3D" parent="."]
 amount = 5
@@ -41,4 +42,4 @@ lifetime = 0.3
 explosiveness = 1.0
 process_material = SubResource("ParticleProcessMaterial_kejqo")
 draw_pass_1 = SubResource("QuadMesh_xujq6")
-script = ExtResource("2_qsi8w")
+script = ExtResource("2_rqgd3")
