@@ -137,11 +137,11 @@ Dodge Roll
     -   Reagan
 -   Dodge Roll Back Design
     -   Biden
-    -   JFK
-    -   Obama
+    -   JFK (Claire)
+    -   Obama (Claire)
     -   Dubya
-    -   Trump
-    -   Reagan
+    -   Trump (Claire)
+    -   Reagan (Claire)
 
 Idle
 
