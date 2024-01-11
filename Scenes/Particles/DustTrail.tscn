@@ -28,7 +28,7 @@ height = 0.2
 
 [node name="DustTrail" type="Node3D"]
 
-[node name="GPUParticles3D" type="GPUParticles3D" parent="."]
+[node name="Particle" type="GPUParticles3D" parent="."]
 layers = 2
 amount = 16
 lifetime = 0.5

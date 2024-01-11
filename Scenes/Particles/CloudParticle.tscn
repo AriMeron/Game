@@ -31,7 +31,7 @@ size = Vector2(7, 7)
 
 [node name="RollDust" type="Node3D"]
 
-[node name="0" type="GPUParticles3D" parent="."]
+[node name="Particle" type="GPUParticles3D" parent="."]
 amount = 1
 lifetime = 1.6
 explosiveness = 1.0
