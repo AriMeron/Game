@@ -18,16 +18,16 @@ func _physics_process(delta):
 	
 	# Handle inputs
 	if not rolling:
-		if Input.is_action_pressed("ui_right"):
+		if Input.is_action_pressed("right"):
 			velocity.x += 1
 			moving = true
-		if Input.is_action_pressed("ui_left"):
+		if Input.is_action_pressed("left"):
 			velocity.x -= 1
 			moving = true
-		if Input.is_action_pressed("ui_down"):
+		if Input.is_action_pressed("down"):
 			velocity.z += 1
 			moving = true
-		if Input.is_action_pressed("ui_up"):
+		if Input.is_action_pressed("up"):
 			velocity.z -= 1
 			moving = true
 		if moving:
@@ -76,11 +76,3 @@ func _physics_process(delta):
 # Adjust the update_animation function as needed for the new setup.
 	
 	# Particle
-	if Input.is_action_just_pressed("dirt_particle"):
-		var p = dirt_particle.instantiate()
-		get_tree().get_root().get_child(0).get_child(4).add_child(p)
-		
-	if Input.is_action_just_pressed("cloud_particle"):
-		var p = cloud_particle.instantiate()
-		p.get_child(0).set_velocity(roll_direction)
-		get_tree().get_root().get_child(0).get_child(4).add_child(p)
