@@ -16,25 +16,20 @@ func _ready():
 func _process(delta):
 	var velocity = Vector3.ZERO
 	var moving = false
-	#moving w player
 	if not rolling:
 		if Input.is_action_pressed("ui_right"):
-			velocity.x += 1
-			moving = true
+			transform.origin = Vector3 (-0.223, -0.097, 0);
 		if Input.is_action_pressed("ui_left"):
-			velocity.x -= 1
-			moving = true
+			transform.origin = Vector3 (-0.041, -0.097, 0);
 		if Input.is_action_pressed("ui_down"):
-			velocity.z += 1
-			moving = true
+			transform.origin = Vector3 (-0.223, -0.097, 0);
 		if Input.is_action_pressed("ui_up"):
-			velocity.z -= 1
-			moving = true
-		if moving:
-			velocity = velocity.normalized() * speed
-
+			transform.origin = Vector3 (-0.223, -0.097, 0);
+	#moving w player
+	if not rolling:
+		$GunAnimated.hide()
 	if rolling:
-		$Gun.visible = not $Gun.visible
+		$GunAnimated.show()
 
 	# Apply movement using velocity
 	if velocity.length() > 0:

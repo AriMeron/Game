@@ -1,30 +1,61 @@
-[gd_scene load_steps=5 format=3 uid="uid://dmmqbopsvwpyl"]
+[gd_scene load_steps=6 format=3 uid="uid://dmmqbopsvwpyl"]
 
 [ext_resource type="Script" path="res://Scenes/Player/gun.gd" id="1_4hlha"]
 [ext_resource type="Texture2D" uid="uid://doqedowhemera" path="res://Design/VaccineGun.png" id="1_kv2wt"]
+[ext_resource type="Texture2D" uid="uid://bglbn4woh40pn" path="res://Design/VaccineGunMirrored.png" id="2_7tcbd"]
+[ext_resource type="Script" path="res://Scenes/Player/AnimatedSprite3D.gd" id="3_4y86b"]
 
-[sub_resource type="SpriteFrames" id="SpriteFrames_5g23p"]
+[sub_resource type="SpriteFrames" id="SpriteFrames_cn2j1"]
 animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_kv2wt")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_7tcbd")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}, {
 "frames": [{
 "duration": 1.0,
 "texture": ExtResource("1_kv2wt")
 }],
 "loop": true,
-"name": &"default",
+"name": &"down",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_7tcbd")
+}],
+"loop": true,
+"name": &"left",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_kv2wt")
+}],
+"loop": true,
+"name": &"right",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_kv2wt")
+}],
+"loop": true,
+"name": &"up",
 "speed": 5.0
 }]
-
-[sub_resource type="BoxShape3D" id="BoxShape3D_7rrrp"]
-size = Vector3(0.132004, 0.0859714, 0.00987341)
 
 [node name="Gun" type="CharacterBody3D"]
 script = ExtResource("1_4hlha")
 
 [node name="AnimatedSprite3D" type="AnimatedSprite3D" parent="."]
-transform = Transform3D(1, -3.48787e-16, 3.48787e-16, 3.48787e-16, 1, -3.48787e-16, -3.48787e-16, 3.48787e-16, 1, 0, 0, 0)
-offset = Vector2(-15, 2.08165e-12)
-sprite_frames = SubResource("SpriteFrames_5g23p")
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
-transform = Transform3D(1, -3.48787e-16, 3.48787e-16, 3.48787e-16, 1, -3.48787e-16, -3.48787e-16, 3.48787e-16, 1, -0.152999, -0.0140981, 0)
-shape = SubResource("BoxShape3D_7rrrp")
+centered = false
+sprite_frames = SubResource("SpriteFrames_cn2j1")
+animation = &"up"
+script = ExtResource("3_4y86b")

@@ -67,4 +67,4 @@ shape = SubResource("BoxShape3D_sgtiu")
 transform = Transform3D(10, 0, 0, 0, 14.14, 0, 0, 0, 10, 0, 2.7127, 0)
 
 [node name="Gun" parent="Player" instance=ExtResource("3_25s8k")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
+transform = Transform3D(1, 0, 0, 0, 0.999999, 0, 0, 0, 1, 0.0413222, -0.0966083, 2.08165e-12)
