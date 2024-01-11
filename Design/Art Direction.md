@@ -153,19 +153,19 @@ Idle
     -   Trump
     -   Reagan
 -   Idle Diagonal Front Design
-    -   Biden (Claire)
+    -   Biden (Wyatt)
     -   JFK (Claire)
     -   Obama (Claire)
     -   Dubya (Claire)
     -   Trump (Claire)
     -   Reagan (Claire)
 -   Idle Diagonal Back Design
-    -   Biden
-    -   JFK
-    -   Obama
-    -   Dubya
-    -   Trump
-    -   Reagan
+    -   Biden (Wyatt)
+    -   JFK (Claire)
+    -   Obama (Claire)
+    -   Dubya (Claire)
+    -   Trump (Claire)
+    -   Reagan (Claire)
 -   Idle Back Design
     -   Biden
     -   JFK
