@@ -1,6 +1,6 @@
 [gd_scene load_steps=7 format=3 uid="uid://u30p5iljgnsd"]
 
-[ext_resource type="TileSet" uid="uid://cpddivvqyqdq" path="res://Scenes/Map/new_tile_set.tres" id="2_y64fd"]
+[ext_resource type="TileSet" uid="uid://cpddivvqyqdq" path="res://Design/tileset_map/00_temp_tile.tres" id="2_y64fd"]
 
 [sub_resource type="GDScript" id="GDScript_hggft"]
 script/source = "extends CharacterBody3D

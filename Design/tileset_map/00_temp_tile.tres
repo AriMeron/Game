@@ -1,6 +1,7 @@
-[gd_resource type="TileSet" load_steps=3 format=3 uid="uid://cpddivvqyqdq"]
+[gd_resource type="TileSet" load_steps=5 format=3 uid="uid://cpddivvqyqdq"]
 
 [ext_resource type="Texture2D" uid="uid://cpw4j6xuc4kt2" path="res://Scenes/Map/tilesheet_complete.png" id="1_b8jf3"]
+[ext_resource type="Texture2D" uid="uid://bvqe1jj016dw" path="res://Design/tileset_map/capitolSpritesheetBase.png" id="2_7fvb0"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_83t8c"]
 texture = ExtResource("1_b8jf3")
@@ -270,6 +271,17 @@ texture_region_size = Vector2i(64, 64)
 9:5/0 = 0
 20:4/0 = 0
 
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_x8d8i"]
+texture = ExtResource("2_7fvb0")
+texture_region_size = Vector2i(64, 64)
+1:0/0 = 0
+2:0/0 = 0
+1:1/0 = 0
+2:1/0 = 0
+1:2/0 = 0
+2:2/0 = 0
+
 [resource]
 tile_size = Vector2i(64, 64)
 sources/2 = SubResource("TileSetAtlasSource_83t8c")
+sources/3 = SubResource("TileSetAtlasSource_x8d8i")
