@@ -1,6 +1,6 @@
 [gd_scene load_steps=8 format=3 uid="uid://dmmqbopsvwpyl"]
 
-[ext_resource type="Script" path="res://Scenes/Player/GunRotation.gd" id="1_citn0"]
+[ext_resource type="Script" path="res://Scenes/Player/gun.gd" id="1_7isgs"]
 [ext_resource type="Script" path="res://Scenes/Player/AnimatedSprite3D.gd" id="3_4y86b"]
 [ext_resource type="Texture2D" uid="uid://dfb05oyibnwh1" path="res://Design/BidenGun.png" id="4_a0cvh"]
 [ext_resource type="Texture2D" uid="uid://c4xsljf27yol1" path="res://Design/BidenGunFlipped.png" id="5_gv2c2"]
@@ -56,9 +56,10 @@ animations = [{
 }]
 
 [node name="Gun" type="CharacterBody3D"]
-script = ExtResource("1_citn0")
+script = ExtResource("1_7isgs")
 
 [node name="AnimatedSprite3D" type="AnimatedSprite3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.129721, -0.0511119, 0)
 centered = false
 texture_filter = 0
 sprite_frames = SubResource("SpriteFrames_cn2j1")

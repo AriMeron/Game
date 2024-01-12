@@ -1,7 +1,7 @@
 extends CharacterBody3D
 
 const ROTATION_SPEED = 10
-var side_name = ""
+var side_name = "right"
 var rolling = false
 var roll_timer = 0.5
 

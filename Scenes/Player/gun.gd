@@ -1,36 +1,17 @@
 extends CharacterBody3D
+#
+var sensitivity = 0.1
 
-var speed = 7
-var roll_speed = 15
-var rolling = false
-var roll_timer = 0.5
-var roll_direction = Vector3.ZERO
-
-
-# Called when the node enters the scene tree for the first time.
-func _ready():
-	pass # Replace with function body.
-
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-	var velocity = Vector3.ZERO
-	var moving = false
-	if not rolling:
-		if Input.is_action_pressed("ui_right"):
-			transform.origin = Vector3 (-0.02, -0.06, 0);
-		if Input.is_action_pressed("ui_left"):
-			transform.origin = Vector3 (-0.14, -0.06, 0);
-		if Input.is_action_pressed("ui_down"):
-			transform.origin = Vector3 (-0.02, -0.06, 0);
-		if Input.is_action_pressed("ui_up"):
-			transform.origin = Vector3 (-0.14, -0.06, 0);
+	var screen_size = get_viewport().get_visible_rect().size
+	var mouse_position = get_viewport().get_mouse_position()
 
-	# Apply movement using velocity
-	if velocity.length() > 0:
-		var collision = move_and_collide(velocity * delta)
-		if collision:
-			velocity = velocity.slide(collision.get_normal())
-			move_and_collide(velocity * delta)
-	
-	#following cursor rotation
+	# Calculate the direction vector from character to mouse
+	var character_position = global_transform.origin
+	var target_direction = (mouse_position - screen_size / 2).normalized()
+
+	# Calculate the angle between the current direction and the target direction
+	var angle = atan2(target_direction.y, target_direction.x)
+
+	# Set the character's rotation to point towards the mouse
+	set_rotation(Vector3(0, 0, -angle))
