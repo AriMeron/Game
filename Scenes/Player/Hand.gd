@@ -1,16 +1,35 @@
 extends CharacterBody3D
 
 const ROTATION_SPEED = 10
+var side_name = ""
+var rolling = false
+var roll_timer = 0.5
 
 func _process(delta):
 	if Input.is_action_pressed("ui_right"):
+		# Right, Up-Right, or Up
+		if Input.is_action_pressed("ui_down"): 
+			side_name = "right"
+		elif Input.is_action_pressed("ui_up"):
+			side_name= "right"
+		else:
+			side_name = "right"
+	elif Input.is_action_pressed("ui_left"):
+		# Left, Up-Left, or Up coming from the left side
+		if Input.is_action_pressed("ui_down"): 
+			side_name = "left"
+		elif Input.is_action_pressed("ui_up"):
+			side_name = "left"
+		else:
+			side_name = "left"
+	elif Input.is_action_pressed("ui_down"):
+		side_name = "right"
+	elif Input.is_action_pressed("ui_up"):
+		side_name = "left"
+	switch()
+
+func switch():
+	if side_name == "right":
 		transform.origin = Vector3 (0.06, -0.02, 0);
-	if Input.is_action_pressed("ui_left"):
+	else:
 		transform.origin = Vector3 (-0.06, -0.02, 0);
-	if Input.is_action_pressed("ui_down"):
-		transform.origin = Vector3 (-0.06, -0.02, 0);
-	if Input.is_action_pressed("ui_up"):
-		transform.origin = Vector3 (-0.06, -0.02, 0);
-	
-	var rotation_amount = Input.get_action_strength("turn") * ROTATION_SPEED * delta
-	rotate_z(rotation_amount)

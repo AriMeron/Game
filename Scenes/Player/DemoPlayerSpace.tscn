@@ -1,9 +1,8 @@
-[gd_scene load_steps=15 format=3 uid="uid://b2pistp508v2p"]
+[gd_scene load_steps=14 format=3 uid="uid://b2pistp508v2p"]
 
 [ext_resource type="Script" path="res://Scenes/Player/Camera3D.gd" id="1_jruti"]
 [ext_resource type="PackedScene" uid="uid://bigiq4xklycm1" path="res://Scenes/Player/characterCollider.tscn" id="1_pndb7"]
 [ext_resource type="PackedScene" uid="uid://dmmqbopsvwpyl" path="res://Scenes/Player/gun.tscn" id="3_25s8k"]
-[ext_resource type="Script" path="res://Scenes/Player/GunRotationPoint.gd" id="3_erwa3"]
 [ext_resource type="Script" path="res://Scenes/Player/gun.gd" id="4_djpon"]
 [ext_resource type="PackedScene" uid="uid://08m58yq27sq0" path="res://Scenes/Player/character_body_3d.tscn" id="6_rw1p0"]
 
@@ -68,10 +67,6 @@ shape = SubResource("BoxShape3D_sgtiu")
 
 [node name="Player" parent="." instance=ExtResource("1_pndb7")]
 transform = Transform3D(10, 0, 0, 0, 14.14, 0, 0, 0, 10, 0, 2.7127, 0)
-
-[node name="GunRotation" type="Node3D" parent="Player"]
-transform = Transform3D(0.994881, -0.101056, 3.48787e-16, 0.101056, 0.99488, -3.48787e-16, -3.11754e-16, 3.82248e-16, 1, -2.38419e-08, 0, -7.45058e-10)
-script = ExtResource("3_erwa3")
 
 [node name="Hand" parent="Player" instance=ExtResource("6_rw1p0")]
 transform = Transform3D(0.994151, -0.107999, 3.48787e-16, 0.107999, 0.994149, -3.48787e-16, -3.09078e-16, 3.84415e-16, 1, 0.0639354, -0.0319639, -0.00501244)
