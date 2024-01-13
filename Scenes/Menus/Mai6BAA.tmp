@@ -7,33 +7,25 @@ layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_left = 88.0
+offset_top = 4.0
+offset_right = 98.0
+offset_bottom = 14.0
 grow_horizontal = 2
 grow_vertical = 2
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
 [node name="MainMenu" type="PanelContainer" parent="CanvasLayer"]
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_left = 458.0
-offset_top = 228.0
-offset_right = -458.0
-offset_bottom = -228.0
-grow_horizontal = 2
-grow_vertical = 2
+offset_right = 40.0
+offset_bottom = 40.0
 script = ExtResource("2_ej1am")
 
 [node name="MarginContainer" type="MarginContainer" parent="CanvasLayer/MainMenu"]
 layout_mode = 2
-theme_override_constants/margin_left = 15
-theme_override_constants/margin_top = 15
-theme_override_constants/margin_right = 15
-theme_override_constants/margin_bottom = 15
 
 [node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/MainMenu/MarginContainer"]
 layout_mode = 2
-theme_override_constants/separation = 20
 
 [node name="JoinLobby" type="Button" parent="CanvasLayer/MainMenu/MarginContainer/VBoxContainer"]
 layout_mode = 2
@@ -41,20 +33,16 @@ text = "Join"
 
 [node name="HostInternet" type="Button" parent="CanvasLayer/MainMenu/MarginContainer/VBoxContainer"]
 layout_mode = 2
-text = "Host Internet"
+text = "Host"
+
+[node name="Settings" type="Label" parent="CanvasLayer/MainMenu/MarginContainer/VBoxContainer"]
+layout_mode = 2
 
 [node name="Host LAN" type="Button" parent="CanvasLayer/MainMenu/MarginContainer/VBoxContainer"]
 layout_mode = 2
-text = "Host LAN"
 
-[node name="LineEdit" type="LineEdit" parent="CanvasLayer/MainMenu/MarginContainer/VBoxContainer"]
+[node name="TestGame" type="Button" parent="CanvasLayer/MainMenu/MarginContainer/VBoxContainer"]
 layout_mode = 2
-placeholder_text = "Enter address to join"
-alignment = 1
-
-[node name="Settings" type="Button" parent="CanvasLayer/MainMenu/MarginContainer/VBoxContainer"]
-layout_mode = 2
-text = "Settings"
 
 [connection signal="button_down" from="CanvasLayer/MainMenu/MarginContainer/VBoxContainer/JoinLobby" to="." method="_on_join_button_down"]
 [connection signal="button_down" from="CanvasLayer/MainMenu/MarginContainer/VBoxContainer/HostInternet" to="." method="_on_host_button_down"]
