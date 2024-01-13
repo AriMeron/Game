@@ -69,9 +69,9 @@ shape = SubResource("BoxShape3D_sgtiu")
 transform = Transform3D(10, 0, 0, 0, 14.14, 0, 0, 0, 10, 0, 2.7127, 0)
 
 [node name="Hand" parent="Player" instance=ExtResource("6_rw1p0")]
-transform = Transform3D(0.994151, -0.107999, 3.48787e-16, 0.107999, 0.994149, -3.48787e-16, -3.09078e-16, 3.84415e-16, 1, 0.0639354, -0.0319639, -0.00501244)
+transform = Transform3D(0.994151, -0.107999, 3.48787e-16, 0.107999, 0.994149, -3.48787e-16, -3.09078e-16, 3.84415e-16, 1, -0.00167685, -0.0319639, -0.00501244)
 
 [node name="Gun" parent="Player/Hand" instance=ExtResource("3_25s8k")]
-transform = Transform3D(0.994151, 0.107999, 3.48787e-16, -0.107999, 0.994148, -3.48787e-16, -3.84415e-16, 3.09077e-16, 1, 0.0571872, -0.0136616, 0)
+transform = Transform3D(0.994151, 0.107999, 3.48787e-16, -0.107999, 0.994148, -3.48787e-16, -3.84415e-16, 3.09077e-16, 1, 0.0068751, -0.00819597, 0)
 
 [node name="Bullet" parent="Player/Hand/Gun" instance=ExtResource("5_pottu")]
