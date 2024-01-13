@@ -1,13 +1,6 @@
-[gd_scene load_steps=17 format=3 uid="uid://b2pistp508v2p"]
+[gd_scene load_steps=11 format=3 uid="uid://ceskejnfklpfc"]
 
-[ext_resource type="Script" path="res://Scenes/Player/MousePositionSetup.gd" id="1_0rexb"]
-[ext_resource type="Script" path="res://Scenes/Player/Camera3D.gd" id="1_jruti"]
-[ext_resource type="PackedScene" uid="uid://bigiq4xklycm1" path="res://Scenes/Player/characterCollider.tscn" id="1_pndb7"]
-[ext_resource type="PackedScene" uid="uid://dmmqbopsvwpyl" path="res://Scenes/Player/gun.tscn" id="3_25s8k"]
-[ext_resource type="Script" path="res://Scenes/Player/SwitchPivot.gd" id="4_87i6w"]
-[ext_resource type="PackedScene" uid="uid://cuc7sb61gqr1q" path="res://Scenes/Player/bullet.tscn" id="5_pottu"]
-[ext_resource type="PackedScene" uid="uid://08m58yq27sq0" path="res://Scenes/Player/character_body_3d.tscn" id="6_rw1p0"]
-[ext_resource type="Texture2D" uid="uid://cf0xh4ie6s4wr" path="res://Design/Weapon/bullet.png" id="8_nnm0g"]
+[ext_resource type="Script" path="res://Scenes/Player/Camera3D.gd" id="1_508rr"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_fdkgt"]
 sky_top_color = Color(0.709804, 0, 0.772549, 1)
@@ -39,20 +32,22 @@ size = Vector2(17, 5)
 [sub_resource type="BoxShape3D" id="BoxShape3D_sgtiu"]
 size = Vector3(16.9229, 2.14514, 3.63179)
 
+[sub_resource type="SpriteFrames" id="SpriteFrames_i8ea2"]
+
 [node name="Node3D" type="Node3D"]
-script = ExtResource("1_0rexb")
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource("Environment_arj20")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.999983, -0.00577701, 0, 0.00577701, 0.999983, 0, 0, 0)
 mesh = SubResource("PlaneMesh_p66fi")
 
 [node name="Camera3D" type="Camera3D" parent="."]
 transform = Transform3D(0.999986, 0.00523596, 7.55448e-11, -0.00370239, 0.707097, 0.707107, 0.00370239, -0.707097, 0.707107, 0, 11.1116, 11.9645)
 projection = 1
 size = 17.0
-script = ExtResource("1_jruti")
+script = ExtResource("1_508rr")
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="Camera3D"]
 transform = Transform3D(1, -9.88408e-11, -1.91727e-11, 8.2033e-10, 1, -9.62996e-09, 2.25809e-10, -3.94329e-08, 1, 0, 0, 0)
@@ -69,21 +64,5 @@ physics_material_override = SubResource("PhysicsMaterial_sugad")
 transform = Transform3D(1, 0, 0, 0, 1, 0, -1.4013e-45, 0, 1, 0, 0, 0)
 shape = SubResource("BoxShape3D_sgtiu")
 
-[node name="Player" parent="." instance=ExtResource("1_pndb7")]
-transform = Transform3D(10, 0, 0, 0, 14.14, 0, 0, 0, 10, 0, 2.7127, 0)
-
-[node name="Hand" parent="Player" instance=ExtResource("6_rw1p0")]
-transform = Transform3D(0.994151, -0.107999, 3.48787e-16, 0.107999, 0.994149, -3.48787e-16, -3.09078e-16, 3.84415e-16, 1, 0.0639354, 0.0409504, -0.00501244)
-
-[node name="Node3D" type="Node3D" parent="Player/Hand"]
-transform = Transform3D(1, -2.21619e-09, 1.08885e-22, -2.9419e-09, 1, -8.29829e-23, -4.35156e-23, 2.37815e-23, 1, -0.064607, -0.0618828, 0)
-script = ExtResource("4_87i6w")
-
-[node name="Gun" parent="Player/Hand/Node3D" instance=ExtResource("3_25s8k")]
-transform = Transform3D(0.994151, 0.107999, 3.48787e-16, -0.107999, 0.994148, -3.48787e-16, -3.84415e-16, 3.09077e-16, 1, 0.0163772, -0.0243577, 0)
-
-[node name="Bullet" parent="Player/Hand/Node3D/Gun" instance=ExtResource("5_pottu")]
-
-[node name="Sprite3D" type="Sprite3D" parent="Player/Hand/Node3D"]
-transform = Transform3D(0.02, -9.10067e-11, -2.07735e-24, -8.71818e-11, 0.02, 2.80001e-25, 1.94009e-24, -1.27386e-25, 0.02, 0, 0, 0)
-texture = ExtResource("8_nnm0g")
+[node name="AnimatedSprite3D" type="AnimatedSprite3D" parent="."]
+sprite_frames = SubResource("SpriteFrames_i8ea2")
