@@ -2,7 +2,7 @@ extends Node3D
 
 # Constants
 const RAY_LENGTH = 1000
-const BULLET_SPEED = 10 # Speed of the bullet
+const BULLET_SPEED = 50 # Speed of the bullet
 const BULLET_SCENE = preload("res://Scenes/Player/Bullet.tscn") # Path to the Bullet scene
 var hand: CharacterBody3D
 var origin
@@ -30,12 +30,31 @@ func _physics_process(delta):
 	# Shooting a bullet
 	if Input.is_action_just_pressed("shoot"):
 		print("shoot")
-		shoot_bullet(origin, end)
+		shoot_bullet()
 		print (origin)
 		print (end)
+func shoot_bullet():
+	var camera = get_node_or_null("Camera3D")
+	if camera == null:
+		print("Camera node not found")
+		return
 
-func shoot_bullet(origin, end):
 	var bullet_instance = BULLET_SCENE.instantiate()
-	bullet_instance.global_transform = cam.global_transform
 	add_child(bullet_instance)
-	bullet_instance.linear_velocity = cam.global_transform.basis.z.normalized() * -BULLET_SPEED
+	bullet_instance.global_transform.origin = camera.global_transform.origin
+
+	var mouse_pos = get_viewport().get_mouse_position()
+	var from = camera.project_ray_origin(mouse_pos)
+	var to = from + camera.project_ray_normal(mouse_pos) * 1000
+	var query_parameters = PhysicsRayQueryParameters3D.new()
+	query_parameters.from = from
+	query_parameters.to = to
+	var space_state = get_world_3d().direct_space_state
+	var result = space_state.intersect_ray(query_parameters)
+
+	if result:
+		var target_pos = result.position
+		var direction = (target_pos - camera.global_transform.origin).normalized()
+		bullet_instance.linear_velocity = direction * BULLET_SPEED
+	else:
+		bullet_instance.queue_free()  # Remove the bullet if it doesn't hit anything
