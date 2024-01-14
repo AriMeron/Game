@@ -1,7 +1,10 @@
-[gd_scene load_steps=3 format=3 uid="uid://d4glmwn6kkmf6"]
+[gd_scene load_steps=4 format=3 uid="uid://d4glmwn6kkmf6"]
 
 [ext_resource type="Script" path="res://Scenes/Player/Bullet.gd" id="1_8637o"]
 [ext_resource type="Texture2D" uid="uid://cf0xh4ie6s4wr" path="res://Design/Weapon/bullet.png" id="1_nvl4t"]
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_r4av0"]
+radius = 0.163595
 
 [node name="Bullet" type="RigidBody3D"]
 script = ExtResource("1_8637o")
@@ -9,3 +12,6 @@ script = ExtResource("1_8637o")
 [node name="Sprite3D" type="Sprite3D" parent="."]
 transform = Transform3D(0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, 0, 0, 0)
 texture = ExtResource("1_nvl4t")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("SphereShape3D_r4av0")
