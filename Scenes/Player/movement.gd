@@ -9,7 +9,6 @@ var roll_direction = Vector3.ZERO
 func _physics_process(delta):
 	var velocity = Vector3.ZERO
 	var moving = false
-	
 	# Handle inputs
 	if not rolling:
 		if Input.is_action_pressed("ui_right"):

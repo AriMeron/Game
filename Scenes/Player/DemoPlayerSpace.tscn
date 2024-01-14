@@ -1,9 +1,10 @@
-[gd_scene load_steps=14 format=3 uid="uid://b2pistp508v2p"]
+[gd_scene load_steps=15 format=3 uid="uid://b2pistp508v2p"]
 
 [ext_resource type="Script" path="res://Scenes/Player/Camera3D.gd" id="1_jruti"]
+[ext_resource type="Script" path="res://Scenes/Player/Main.gd" id="1_lyer7"]
 [ext_resource type="PackedScene" uid="uid://bigiq4xklycm1" path="res://Scenes/Player/characterCollider.tscn" id="1_pndb7"]
 [ext_resource type="PackedScene" uid="uid://dmmqbopsvwpyl" path="res://Scenes/Player/gun.tscn" id="3_25s8k"]
-[ext_resource type="PackedScene" uid="uid://cuc7sb61gqr1q" path="res://Scenes/Player/bullet.tscn" id="5_pottu"]
+[ext_resource type="PackedScene" uid="uid://d4glmwn6kkmf6" path="res://Scenes/Player/Bullet.tscn" id="6_pxiar"]
 [ext_resource type="PackedScene" uid="uid://08m58yq27sq0" path="res://Scenes/Player/character_body_3d.tscn" id="6_rw1p0"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_fdkgt"]
@@ -37,6 +38,7 @@ size = Vector2(17, 5)
 size = Vector3(16.9229, 2.14514, 3.63179)
 
 [node name="Node3D" type="Node3D"]
+script = ExtResource("1_lyer7")
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource("Environment_arj20")
@@ -74,4 +76,5 @@ transform = Transform3D(0.994151, -0.107999, 3.48787e-16, 0.107999, 0.994149, -3
 [node name="Gun" parent="Player/Hand" instance=ExtResource("3_25s8k")]
 transform = Transform3D(0.994151, 0.107999, 3.48787e-16, -0.107999, 0.994148, -3.48787e-16, -3.84415e-16, 3.09077e-16, 1, 0.0068751, -0.00819597, 0)
 
-[node name="Bullet" parent="Player/Hand/Gun" instance=ExtResource("5_pottu")]
+[node name="Bullet" parent="Player/Hand/Gun" instance=ExtResource("6_pxiar")]
+transform = Transform3D(1, -4.09982e-13, -1.05879e-22, -7.10543e-15, 1, -1.45584e-22, 1.43962e-21, -6.99587e-22, 1, -0.0937556, 0.0307214, 0.00292536)

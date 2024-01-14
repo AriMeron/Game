@@ -29,6 +29,7 @@ func _process(delta):
 			side_name = "right"  # Right and Up pressed
 		else:
 			side_name = "right"  # Only Right pressed
+	
 
 	var screen_size = get_viewport().get_visible_rect().size
 	var mouse_position = get_viewport().get_mouse_position()
@@ -54,5 +55,4 @@ func _process(delta):
 		max_angle = 1.7
 		min_angle = -0.9
 		angle = clamp(angle, min_angle, max_angle)
-		print(angle)
 		set_rotation(Vector3(0, 0, -angle))
