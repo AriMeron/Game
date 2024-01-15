@@ -6,11 +6,7 @@ var rolling = false
 var roll_timer = 0.5
 var roll_direction = Vector3.ZERO
 
-@export var blood_particle :PackedScene
-@export var bullet_particle :PackedScene
-@export var bullet :PackedScene
-@export var bullet_casing_particle :PackedScene
-@export var heal_particle :PackedScene
+
 
 
 func _physics_process(delta):
@@ -23,30 +19,6 @@ func _physics_process(delta):
 		$GunRotation.rotation = Vector3(3.14159*2, 3.14159, -atan(mouse_position.y / -mouse_position.x))
 	if mouse_position.x > 0:
 		$GunRotation.rotation = Vector3(0, 0, atan(mouse_position.y / -mouse_position.x))
-	
-	if Input.is_action_just_pressed("fire"):
-		var p = bullet_particle.instantiate()
-		#p.get_child(0).set_velocity(Vector3(0, 3.14159, -atan(mouse_position.y / -mouse_position.x)))
-		get_child(0).get_child(0).get_child(0).add_child(p)
-		
-		var bc = bullet_casing_particle.instantiate()
-		get_child(0).get_child(0).get_child(0).add_child(bc)
-		
-		var b = bullet.instantiate()
-		b.get_child(0).set_velocity(Vector3(mouse_position.x, -mouse_position.y, 0))
-		get_child(0).get_child(0).get_child(0).add_child(b)
-		
-	if Input.is_action_just_pressed("blood_particle"):
-		var p = blood_particle.instantiate()
-		p.position.y = -0.05
-		add_child(p)
-		
-	if Input.is_action_pressed("heal"):
-		var p = heal_particle.instantiate()
-		add_child(p)
-
-		
-
 	
 	# Handle inputs
 	if not rolling:

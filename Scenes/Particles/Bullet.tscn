@@ -1,6 +1,6 @@
 [gd_scene load_steps=7 format=3 uid="uid://b5j5qkq132br2"]
 
-[ext_resource type="Script" path="res://Scenes/Particles/BulletParticle.gd" id="1_a2vpl"]
+[ext_resource type="Script" path="res://Scenes/Particles/Particle.gd" id="1_hor0l"]
 
 [sub_resource type="Gradient" id="Gradient_l7ncb"]
 offsets = PackedFloat32Array(0.8, 1)
@@ -35,4 +35,4 @@ amount = 1
 lifetime = 2.0
 process_material = SubResource("ParticleProcessMaterial_hlxov")
 draw_pass_1 = SubResource("CapsuleMesh_pdfbx")
-script = ExtResource("1_a2vpl")
+script = ExtResource("1_hor0l")

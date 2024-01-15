@@ -1,7 +1,7 @@
 [gd_scene load_steps=10 format=3 uid="uid://dn8yq6k2lluq7"]
 
 [ext_resource type="Texture2D" uid="uid://bock3qn4qawmv" path="res://Scenes/Particles/spark.png" id="1_sjq0e"]
-[ext_resource type="Script" path="res://Scenes/Particles/BulletExplosion.gd" id="2_rqgd3"]
+[ext_resource type="Script" path="res://Scenes/Particles/Particle.gd" id="2_6pf6j"]
 
 [sub_resource type="Gradient" id="Gradient_p4ee5"]
 colors = PackedColorArray(1, 1, 1, 1, 1, 1, 1, 0)
@@ -42,4 +42,4 @@ lifetime = 0.3
 explosiveness = 1.0
 process_material = SubResource("ParticleProcessMaterial_kejqo")
 draw_pass_1 = SubResource("QuadMesh_xujq6")
-script = ExtResource("2_rqgd3")
+script = ExtResource("2_6pf6j")

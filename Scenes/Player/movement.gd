@@ -8,6 +8,11 @@ var roll_direction = Vector3.ZERO
 
 @export var dirt_particle :PackedScene
 @export var cloud_particle :PackedScene
+@export var blood_particle :PackedScene
+@export var bullet_particle :PackedScene
+@export var bullet :PackedScene
+@export var bullet_casing_particle :PackedScene
+@export var heal_particle :PackedScene 
 
 func _physics_process(delta):
 	var velocity = Vector3.ZERO
@@ -48,11 +53,11 @@ func _physics_process(delta):
 		# create dirt particle
 		var dirt = dirt_particle.instantiate()
 		dirt.position.y = -0.05
-		dirt.get_child(0).set_velocity(roll_direction)
+		dirt.get_child(0).set_velocity_direction(roll_direction)
 		get_tree().get_root().get_child(0).get_child(4).add_child(dirt)
 		# create cloud particle
 		var cloud = cloud_particle.instantiate()
-		cloud.get_child(0).set_velocity(roll_direction)
+		cloud.get_child(0).set_velocity_direction(roll_direction)
 		get_tree().get_root().get_child(0).get_child(4).add_child(cloud)
 
 	if rolling:
@@ -75,4 +80,26 @@ func _physics_process(delta):
 
 # Adjust the update_animation function as needed for the new setup.
 	
-	# Particle
+	# Particles
+	
+	if Input.is_action_just_pressed("fire"):
+		var p = bullet_particle.instantiate()
+		p.get_child(0).set_velocity_direction(Vector3(1, 0, 0))
+		#p.get_child(0).set_velocity(velocity.length())
+		get_child(0).get_child(0).get_child(0).get_child(0).add_child(p)
+		
+		var bc = bullet_casing_particle.instantiate()
+		get_child(0).get_child(0).get_child(0).get_child(0).add_child(bc)
+		
+		var b = bullet.instantiate()
+		b.get_child(0).set_velocity_direction(Vector3(0, -1, 0))
+		get_child(0).get_child(0).get_child(0).get_child(0).add_child(b)
+		
+	if Input.is_action_just_pressed("blood_particle"):
+		var p = blood_particle.instantiate()
+		p.position.y = -0.05
+		add_child(p)
+		
+	if Input.is_action_pressed("heal"):
+		var p = heal_particle.instantiate()
+		add_child(p)

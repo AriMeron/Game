@@ -1,14 +1,9 @@
-[gd_scene load_steps=33 format=3 uid="uid://xxcdv2ttwtcq"]
+[gd_scene load_steps=28 format=3 uid="uid://xxcdv2ttwtcq"]
 
 [ext_resource type="Texture2D" uid="uid://0xegepfhkpn5" path="res://Design/DodgeRoll/DiagonalFront/JFK-DodgeRoll-DiagonalFront.png" id="1_vftlt"]
 [ext_resource type="Texture2D" uid="uid://ctxa4x0gpb3mn" path="res://Design/WalkDiagonalFront Sheets/JFKWalk.png" id="2_p2yhq"]
 [ext_resource type="Texture2D" uid="uid://c3piouk04or88" path="res://Design/WalkFront/JFKFrontWalk.png" id="3_d5qwj"]
 [ext_resource type="Script" path="res://Scenes/Player/animations.gd" id="4_ju6fq"]
-[ext_resource type="PackedScene" uid="uid://d2jhi3luwqg0j" path="res://Scenes/Particles/BloodParticle.tscn" id="5_wo63q"]
-[ext_resource type="PackedScene" uid="uid://dn8yq6k2lluq7" path="res://Scenes/Particles/BulletParticle.tscn" id="6_avh0h"]
-[ext_resource type="PackedScene" uid="uid://b5j5qkq132br2" path="res://Scenes/Particles/Bullet.tscn" id="7_4hk3l"]
-[ext_resource type="PackedScene" uid="uid://brufljs8818j2" path="res://Scenes/Particles/BulletCasingParticle.tscn" id="8_bj1mq"]
-[ext_resource type="PackedScene" uid="uid://lliwv5pgvs5b" path="res://Scenes/Particles/HealParticle.tscn" id="9_hlk3l"]
 [ext_resource type="Texture2D" uid="uid://cwsem8qqu1mn0" path="res://Scenes/Particles/gun.webp" id="9_jfxdk"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_yxan1"]
@@ -182,11 +177,6 @@ texture_filter = 0
 sprite_frames = SubResource("SpriteFrames_lf7xo")
 animation = &"roll_diag"
 script = ExtResource("4_ju6fq")
-blood_particle = ExtResource("5_wo63q")
-bullet_particle = ExtResource("6_avh0h")
-bullet = ExtResource("7_4hk3l")
-bullet_casing_particle = ExtResource("8_bj1mq")
-heal_particle = ExtResource("9_hlk3l")
 
 [node name="GunRotation" type="Node3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.105417, 0)
