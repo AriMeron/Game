@@ -1,7 +1,6 @@
-[gd_scene load_steps=8 format=3 uid="uid://b5j5qkq132br2"]
+[gd_scene load_steps=7 format=3 uid="uid://b5j5qkq132br2"]
 
 [ext_resource type="Script" path="res://Scenes/Particles/BulletParticle.gd" id="1_a2vpl"]
-[ext_resource type="PackedScene" uid="uid://xxcdv2ttwtcq" path="res://Scenes/Player/demoplayer.tscn" id="2_imlmu"]
 
 [sub_resource type="Gradient" id="Gradient_l7ncb"]
 offsets = PackedFloat32Array(0.8, 1)
@@ -37,4 +36,3 @@ lifetime = 2.0
 process_material = SubResource("ParticleProcessMaterial_hlxov")
 draw_pass_1 = SubResource("CapsuleMesh_pdfbx")
 script = ExtResource("1_a2vpl")
-GunRotation = ExtResource("2_imlmu")

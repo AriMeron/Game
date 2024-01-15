@@ -10,6 +10,7 @@ var roll_direction = Vector3.ZERO
 @export var bullet_particle :PackedScene
 @export var bullet :PackedScene
 @export var bullet_casing_particle :PackedScene
+@export var heal_particle :PackedScene
 
 
 func _physics_process(delta):
@@ -39,6 +40,12 @@ func _physics_process(delta):
 		var p = blood_particle.instantiate()
 		p.position.y = -0.05
 		add_child(p)
+		
+	if Input.is_action_pressed("heal"):
+		var p = heal_particle.instantiate()
+		add_child(p)
+
+		
 
 	
 	# Handle inputs

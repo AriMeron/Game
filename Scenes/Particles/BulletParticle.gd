@@ -1,7 +1,6 @@
 extends GPUParticles3D
 
-@export var GunRotation :PackedScene
-
+#@export var GunRotation :PackedScene
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	var pm = process_material
