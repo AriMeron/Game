@@ -7,15 +7,15 @@ layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = 5.0
-offset_top = 2.0
-offset_right = 5.0
-offset_bottom = 2.0
+offset_left = -1.0
+offset_top = -2.0
+offset_right = -1.0
+offset_bottom = -2.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_2fug8")
 
-[node name="Create" type="Button" parent="."]
+[node name="Host" type="Button" parent="."]
 layout_mode = 0
 offset_left = 33.0
 offset_top = 22.0
@@ -24,14 +24,14 @@ offset_bottom = 83.0
 theme_override_font_sizes/font_size = 34
 text = "Create Lobby"
 
-[node name="TextEdit" type="TextEdit" parent="Create"]
+[node name="TextEdit" type="TextEdit" parent="Host"]
 layout_mode = 0
 offset_left = 237.0
 offset_top = 32.0
 offset_right = 525.0
 offset_bottom = 62.0
 
-[node name="LobbyName" type="Label" parent="Create"]
+[node name="LobbyName" type="Label" parent="Host"]
 layout_mode = 0
 offset_left = 235.0
 offset_top = 1.0
@@ -71,7 +71,7 @@ offset_top = 34.0
 offset_right = 240.0
 offset_bottom = 455.0
 
-[node name="Button3" type="Button" parent="."]
+[node name="Leave" type="Button" parent="."]
 layout_mode = 0
 offset_left = 34.0
 offset_top = 621.0
@@ -134,33 +134,51 @@ offset_bottom = 147.0
 theme_override_font_sizes/font_size = 34
 text = "Start Game"
 
-[node name="LobbyPopup" type="PopupPanel" parent="."]
+[node name="Username" type="Label" parent="."]
+layout_mode = 0
+offset_left = 943.0
+offset_top = 47.0
+offset_right = 1007.0
+offset_bottom = 94.0
+theme_override_font_sizes/font_size = 20
+text = "Name:"
 
-[node name="Panel" type="Panel" parent="LobbyPopup"]
-offset_left = 4.0
-offset_top = 4.0
-offset_right = 96.0
-offset_bottom = 96.0
+[node name="TextEdit" type="TextEdit" parent="Username"]
+layout_mode = 0
+offset_left = 66.0
+offset_top = 2.0
+offset_right = 338.0
+offset_bottom = 37.0
 
-[node name="ScrollContainer" type="ScrollContainer" parent="LobbyPopup/Panel"]
+[node name="Lobbies" type="PopupPanel" parent="."]
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 0
+offset_left = 169.0
+offset_top = 748.0
+offset_right = 889.0
+offset_bottom = 1248.0
+
+[node name="ScrollContainer" type="ScrollContainer" parent="Panel"]
 layout_mode = 0
 offset_left = 4.0
-offset_top = 39.0
-offset_right = 577.0
-offset_bottom = 346.0
+offset_top = 33.0
+offset_right = 726.0
+offset_bottom = 444.0
 
-[node name="VBoxContainer" type="VBoxContainer" parent="LobbyPopup/Panel/ScrollContainer"]
+[node name="VBoxContainer" type="VBoxContainer" parent="Panel/ScrollContainer"]
 layout_mode = 2
 
-[node name="Button" type="Button" parent="LobbyPopup/Panel"]
+[node name="Close" type="Button" parent="Panel"]
 layout_mode = 0
-offset_left = 444.0
-offset_top = 351.0
-offset_right = 579.0
-offset_bottom = 386.0
+offset_left = 560.0
+offset_top = 445.0
+offset_right = 722.0
+offset_bottom = 496.0
+theme_override_font_sizes/font_size = 20
 text = "Leave Lobby"
 
-[node name="Label" type="Label" parent="LobbyPopup/Panel"]
+[node name="Label" type="Label" parent="Panel"]
 layout_mode = 0
 offset_right = 110.0
 offset_bottom = 30.0
@@ -169,11 +187,7 @@ text = "Lobbies"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="SteamName" type="Label" parent="."]
-layout_mode = 0
-offset_left = 1058.0
-offset_top = 34.0
-offset_right = 1270.0
-offset_bottom = 76.0
-theme_override_font_sizes/font_size = 20
-text = "Steam Name"
+[connection signal="button_down" from="Host" to="." method="_on_create_button_down"]
+[connection signal="button_down" from="Host" to="." method="_on_host_button_down"]
+[connection signal="button_down" from="Join" to="." method="_on_join_button_down"]
+[connection signal="button_down" from="Panel/Close" to="." method="_on_close_button_down"]
