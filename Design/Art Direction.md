@@ -13,30 +13,30 @@ Marble
 -   Marble: Complete (Wyatt)
 -   Marble Dark: Complete (Wyatt)
 -   Quartered Marble: Complete (Wyatt)
--   Quartered Marble Dark
+-   Quartered Marble Dark: Complete (Wyatt)
 -   Large Marble: Complete (Wyatt)
--   Large Marble Dark
+-   Large Marble Dark: Complete (Wyatt)
 
 Carpet
 
--   Red Carpet
--   Blue Carpet
--   Orange Carpet
+-   Red Carpet: Complete (Wyatt)
+-   Blue Carpe: Complete (Wyatt)t
+-   Orange Carpet: Complete (Wyatt)
 
 Obstacles
 
--   Table
+-   Table: Complete (Wyatt)
 -   Chair
 -   Oval Office Desk
 -   Column
 
 Wall
 
--   Wall Base
--   Wall Red Banner
--   Wall Blue Banner
+-   Wall Base: Complete (Wyatt)
+-   Wall Red Banner: Complete (Wyatt)
+-   Wall Blue Banner: Complete (Wyatt)
 -   Wall Locked Door
--   Wall Lamp
+-   Wall Lamp: Complete (Wyatt)
 
 ## Sound Design
 
@@ -84,95 +84,95 @@ Weapon Sounds
 Walk
 
 -   Walk Front Design: Complete (Wyatt)
-	-   Biden: Complete (Wyatt)
-	-   JFK: Complete (Sophia)
-	-   Obama: Complete (Sophia)
-	-   Dubya: Complete (Sophia)
-	-   Trump: Complete (Claire)
-	-   Reagan: Complete (Micah)
+    -   Biden: Complete (Wyatt)
+    -   JFK: Complete (Sophia)
+    -   Obama: Complete (Sophia)
+    -   Dubya: Complete (Sophia)
+    -   Trump: Complete (Claire)
+    -   Reagan: Complete (Micah)
 -   Walk Diagonal Front Design: Complete (Wyatt)
-	-   Biden: Complete (Wyatt)
-	-   JFK: Complete (Claire)
-	-   Obama: Complete (Sophia)
-	-   Dubya: Complete (Sophia)
-	-   Trump: Complete (Claire)
-	-   Reagan: Complete (Micah)
+    -   Biden: Complete (Wyatt)
+    -   JFK: Complete (Claire)
+    -   Obama: Complete (Sophia)
+    -   Dubya: Complete (Sophia)
+    -   Trump: Complete (Claire)
+    -   Reagan: Complete (Micah)
 -   Walk Diagonal Back Design: Complete (Wyatt)
-	-   Biden: Complete (Wyatt)
-	-   JFK: Complete (Alex)
-	-   Obama: Complete (Sophia)
-	-   Dubya: Complete (Claire)
-	-   Trump: Complete (Alex)
-	-   Reagan: Complete (Micah)
--   Walk Back Design: Complete (Wyatt)
-	-   Biden: Complete (Wyatt)
-	-   JFK
-	-   Obama
-	-   Dubya
-	-   Trump
-	-   Reagan
+    -   Biden: Complete (Wyatt)
+    -   JFK: Complete (Alex)
+    -   Obama: Complete (Sophia)
+    -   Dubya: Complete (Claire)
+    -   Trump: Complete (Alex)
+    -   Reagan: Complete (Micah)
+-   Walk Back Design: Complete (Wyatt) -- All Walk Back Done (Sophia)
+    -   Biden: Complete (Wyatt)
+    -   JFK
+    -   Obama
+    -   Dubya
+    -   Trump
+    -   Reagan
 
 Dodge Roll
 
--   Dodge Roll Front Design
-	-   Biden
-	-   JFK
-	-   Obama
-	-   Dubya
-	-   Trump
-	-   Reagan
+-   Dodge Roll Front Design: Complete (Wyatt and Sophia)
+    -   Biden: Complete (Wyatt and Sophia)
+    -   JFK
+    -   Obama
+    -   Dubya
+    -   Trump
+    -   Reagan
 -   Dodge Roll Diagonal Front Design: Complete (Wyatt and Sophia)
-	-   Biden: Complete (Wyatt and Sophia)
-	-   JFK: Complete (Sophia)
-	-   Obama: Complete (Micah)
-	-   Dubya: Complete (Sophia)
-	-   Trump: Complete (Sophia)
-	-   Reagan: Complete (Micah)
+    -   Biden: Complete (Wyatt and Sophia)
+    -   JFK: Complete (Sophia)
+    -   Obama: Complete (Micah)
+    -   Dubya: Complete (Sophia)
+    -   Trump: Complete (Sophia)
+    -   Reagan: Complete (Micah)
 -   Dodge Roll Diagonal Back Design
-	-   Biden
-	-   JFK
-	-   Obama
-	-   Dubya
-	-   Trump
-	-   Reagan
+    -   Biden (Wyatt)
+    -   JFK (Claire)
+    -   Obama (Claire)
+    -   Dubya (Sophia)
+    -   Trump (Claire)
+    -   Reagan (Claire)
 -   Dodge Roll Back Design
-	-   Biden
-	-   JFK
-	-   Obama
-	-   Dubya
-	-   Trump
-	-   Reagan
+    -   Biden (Wyatt)
+    -   JFK (Claire)
+    -   Obama (Sophia)
+    -   Dubya (Sophia)
+    -   Trump (Claire)
+    -   Reagan (Sophia)
 
 Idle
 
--   Idle Front Design
-	-   Biden
-	-   JFK
-	-   Obama
-	-   Dubya
-	-   Trump
-	-   Reagan
+-   Idle Front Design: Complete (Sophia - All)
+    -   Biden
+    -   JFK
+    -   Obama
+    -   Dubya
+    -   Trump
+    -   Reagan
 -   Idle Diagonal Front Design
-	-   Biden
-	-   JFK
-	-   Obama
-	-   Dubya
-	-   Trump
-	-   Reagan
+    -   Biden (Claire)
+    -   JFK (Claire)
+    -   Obama (Claire)
+    -   Dubya (Claire)
+    -   Trump (Claire)
+    -   Reagan (Claire)
 -   Idle Diagonal Back Design
-	-   Biden
-	-   JFK
-	-   Obama
-	-   Dubya
-	-   Trump
-	-   Reagan
+    -   Biden
+    -   JFK
+    -   Obama
+    -   Dubya
+    -   Trump
+    -   Reagan
 -   Idle Back Design
-	-   Biden
-	-   JFK
-	-   Obama
-	-   Dubya
-	-   Trump
-	-   Reagan
+    -   Biden
+    -   JFK
+    -   Obama
+    -   Dubya
+    -   Trump
+    -   Reagan
 
 Death
 
@@ -199,7 +199,7 @@ Death
 -   (Obama) Welfare Gun
 -   (Dubya) Revolver: Complete (Alex)
 -   (Trump) Golden Glock: Complete (Sophia)
--   (Reagan) Snub Nose Revolver: Complete (Alex)
+-   (Reagan) Ray Gun
 
 ## Bullets
 
@@ -217,9 +217,18 @@ Death
 -   (Obama) Drone
 -   (Dubya) Nuke
 -   (Trump) Wall
--   (Reagan) Coin: Complete (Wyatt)
+-   (Reagan) Star Wars
 
 # UI
+
+Portraits
+
+-   Biden: Complete (Wyatt)
+-   JFK: Complete (Wyatt)
+-   Obama: Complete (Wyatt)
+-   Dubya: Complete (Wyatt)
+-   Trump: Complete (Wyatt)
+-   Reagan: Complete (Wyatt)
 
 ## Screens
 
@@ -239,6 +248,3 @@ Death
 
 -   Logo: Complete (Wyatt)
 -   App Icon
-
-
-test

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cfwbpu144b4j7"
-path="res://.godot/imported/JoeDodgeRollFront.png-0261f5cb42fe314bb70279d3f7188f49.ctex"
+uid="uid://chqnvqw26thok"
+path="res://.godot/imported/Bush-DodgeRoll-Front-Sheet.png-dd93d19bbbf7de6fbbcc62ca6a78fff2.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Design/DodgeRoll/Front/JoeDodgeRollFront.png"
-dest_files=["res://.godot/imported/JoeDodgeRollFront.png-0261f5cb42fe314bb70279d3f7188f49.ctex"]
+source_file="res://Design/DodgeRoll/Front/Bush-DodgeRoll-Front-Sheet.png"
+dest_files=["res://.godot/imported/Bush-DodgeRoll-Front-Sheet.png-dd93d19bbbf7de6fbbcc62ca6a78fff2.ctex"]
 
 [params]
 
