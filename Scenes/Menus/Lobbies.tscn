@@ -151,25 +151,26 @@ offset_right = 338.0
 offset_bottom = 37.0
 
 [node name="Lobbies" type="PopupPanel" parent="."]
+initial_position = 1
+size = Vector2i(101, 100)
 
-[node name="Panel" type="Panel" parent="."]
-layout_mode = 0
-offset_left = 169.0
-offset_top = 748.0
-offset_right = 889.0
-offset_bottom = 1248.0
+[node name="Panel" type="Panel" parent="Lobbies"]
+offset_left = 4.0
+offset_top = 4.0
+offset_right = 97.0
+offset_bottom = 96.0
 
-[node name="ScrollContainer" type="ScrollContainer" parent="Panel"]
+[node name="ScrollContainer" type="ScrollContainer" parent="Lobbies/Panel"]
 layout_mode = 0
 offset_left = 4.0
 offset_top = 33.0
 offset_right = 726.0
 offset_bottom = 444.0
 
-[node name="VBoxContainer" type="VBoxContainer" parent="Panel/ScrollContainer"]
+[node name="VBoxContainer" type="VBoxContainer" parent="Lobbies/Panel/ScrollContainer"]
 layout_mode = 2
 
-[node name="Close" type="Button" parent="Panel"]
+[node name="Close" type="Button" parent="Lobbies/Panel"]
 layout_mode = 0
 offset_left = 560.0
 offset_top = 445.0
@@ -178,7 +179,7 @@ offset_bottom = 496.0
 theme_override_font_sizes/font_size = 20
 text = "Leave Lobby"
 
-[node name="Label" type="Label" parent="Panel"]
+[node name="Label" type="Label" parent="Lobbies/Panel"]
 layout_mode = 0
 offset_right = 110.0
 offset_bottom = 30.0
@@ -187,7 +188,7 @@ text = "Lobbies"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[connection signal="button_down" from="Host" to="." method="_on_create_button_down"]
 [connection signal="button_down" from="Host" to="." method="_on_host_button_down"]
+[connection signal="button_down" from="Host" to="." method="_on_create_button_down"]
 [connection signal="button_down" from="Join" to="." method="_on_join_button_down"]
-[connection signal="button_down" from="Panel/Close" to="." method="_on_close_button_down"]
+[connection signal="button_down" from="Lobbies/Panel/Close" to="." method="_on_close_button_down"]

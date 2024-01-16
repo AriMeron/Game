@@ -1,6 +1,7 @@
 extends Control
 
-const DEF_PORT = 8080
+@export var Address = "127.0.0.1"
+@export var port = 8910
 const PROTO_NAME = "ludus"
 
 var peer = null
@@ -60,25 +61,28 @@ func StartGame():
 	self.hide()
 
 func _on_join_button_down():
+	lobbies.popup()
 	peer = ENetMultiplayerPeer.new()
 	peer.create_client(Address, port)
 	peer.get_host().compress(ENetConnection.COMPRESS_RANGE_CODER)
 	multiplayer.set_multiplayer_peer(peer)
-	lobbies.popup()
 	
 func _on_Lobby_Match_List(lobbies):
 	for LOBBY in lobbies:
 		##get data for these two variables
-		var LOBBY_NAME = "f"
-		var LOBBY_MEMBERS = "lfjkl"
+		var LOBBY_NAME = ""##add network code here
+		var LOBBY_MEMBERS = ""## and here
 		
 		var LOBBY_BUTTON = Button.new()
 		LOBBY_BUTTON.set_text("Lobby "+str(LOBBY)+" : "+ str(LOBBY_NAME)+"- ["+str(LOBBY_MEMBERS)+"] Players(s)")
 		LOBBY_BUTTON.set_size(Vector2(800,50))
 		LOBBY_BUTTON.set_name("lobby_"+str(LOBBY))
-		LOBBY_BUTTON.connect("pressed",self,"join_Lobby")
+		LOBBY_BUTTON.connect("pressed",self,"join_Lobby",[LOBBY])
+		lobbyList.add_child(LOBBY_BUTTON)
 		
 
+func join_Lobby(lobbyID):
+	pass
 
 
 func _on_close_button_down():
