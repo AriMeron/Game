@@ -1,0 +1,20 @@
+[gd_scene load_steps=5 format=3 uid="uid://diyxymhdnb2dj"]
+
+[ext_resource type="Shader" path="res://Scenes/Characters/Joe Biden/brandonshad.gdshader" id="1_sx1r1"]
+[ext_resource type="Script" path="res://Scenes/Characters/Joe Biden/wavebrandon.gd" id="2_5ch5m"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_270wu"]
+render_priority = 0
+shader = ExtResource("1_sx1r1")
+shader_parameter/time_speed = 1.0
+
+[sub_resource type="TorusMesh" id="TorusMesh_q2rdu"]
+inner_radius = 0.4
+outer_radius = 0.814
+
+[node name="BidenWave" type="Node3D"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+material_override = SubResource("ShaderMaterial_270wu")
+mesh = SubResource("TorusMesh_q2rdu")
+script = ExtResource("2_5ch5m")

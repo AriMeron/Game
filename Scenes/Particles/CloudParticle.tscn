@@ -1,0 +1,42 @@
+[gd_scene load_steps=8 format=3 uid="uid://b4nt3i4alsft4"]
+
+[ext_resource type="Texture2D" uid="uid://cnsksvcexiuim" path="res://Scenes/Particles/8918176.png" id="1_okwgh"]
+[ext_resource type="Script" path="res://Scenes/Particles/Particle.gd" id="2_g3l6a"]
+
+[sub_resource type="Gradient" id="Gradient_5sbmx"]
+offsets = PackedFloat32Array(0, 0.595455)
+colors = PackedColorArray(1, 1, 1, 1, 1, 1, 1, 0)
+metadata/_snap_count = 17
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_del0b"]
+gradient = SubResource("Gradient_5sbmx")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_2gcrh"]
+emission_shape_scale = Vector3(0, 0, 0)
+direction = Vector3(0, 0, 0)
+spread = 0.0
+initial_velocity_min = -0.3
+initial_velocity_max = -0.3
+gravity = Vector3(0, 0, 0)
+linear_accel_min = -5.0
+linear_accel_max = -5.0
+color_ramp = SubResource("GradientTexture1D_del0b")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ll2gd"]
+transparency = 1
+vertex_color_use_as_albedo = true
+albedo_texture = ExtResource("1_okwgh")
+
+[sub_resource type="QuadMesh" id="QuadMesh_p57bx"]
+material = SubResource("StandardMaterial3D_ll2gd")
+size = Vector2(7, 7)
+
+[node name="RollDust" type="Node3D"]
+
+[node name="Particle" type="GPUParticles3D" parent="."]
+amount = 1
+lifetime = 1.6
+explosiveness = 1.0
+process_material = SubResource("ParticleProcessMaterial_2gcrh")
+draw_pass_1 = SubResource("QuadMesh_p57bx")
+script = ExtResource("2_g3l6a")

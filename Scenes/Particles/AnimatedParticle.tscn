@@ -1,0 +1,29 @@
+[gd_scene load_steps=6 format=3 uid="uid://dewk0lswd81yq"]
+
+[ext_resource type="Shader" path="res://Scenes/Particles/AnimatedParticle.gdshader" id="1_c7j00"]
+[ext_resource type="Texture2D" uid="uid://btp3espdms6ka" path="res://Scenes/Particles/animated particle.jpeg" id="1_h8wib"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_b2my7"]
+render_priority = 0
+shader = ExtResource("1_c7j00")
+shader_parameter/numberOfFrames = 8.0
+shader_parameter/numberOfTracks = 4.0
+shader_parameter/texture_albedo = ExtResource("1_h8wib")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_wq40i"]
+initial_velocity_min = 1.0
+initial_velocity_max = 1.0
+gravity = Vector3(0, 0, 0)
+anim_speed_min = 1.0
+anim_speed_max = 1.0
+
+[sub_resource type="QuadMesh" id="QuadMesh_74c3g"]
+
+[node name="AnimatedParticle" type="Node3D"]
+
+[node name="GPUParticles3D" type="GPUParticles3D" parent="."]
+material_override = SubResource("ShaderMaterial_b2my7")
+cast_shadow = 0
+amount = 1
+process_material = SubResource("ParticleProcessMaterial_wq40i")
+draw_pass_1 = SubResource("QuadMesh_74c3g")
