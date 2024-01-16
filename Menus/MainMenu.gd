@@ -1,9 +1,13 @@
 extends Control
 
 var server_script = preload("res://Scripts/Server.gd");
+var test_scene = preload("res://Scenes/Map/test_scene.tscn");
 
 func _on_settings_pressed():
-	
+	var instance = test_scene.instantiate()
+	get_tree().root.add_child(instance)
+	self.queue_free()
+	#get_tree().change_scene_to(test_scene)
 	pass # Replace with function body.
 
 
