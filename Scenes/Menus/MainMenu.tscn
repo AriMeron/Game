@@ -56,5 +56,8 @@ alignment = 1
 layout_mode = 2
 text = "Settings"
 
-[connection signal="button_down" from="CanvasLayer/MainMenu/MarginContainer/VBoxContainer/JoinLobby" to="." method="_on_join_button_down"]
-[connection signal="button_down" from="CanvasLayer/MainMenu/MarginContainer/VBoxContainer/HostInternet" to="." method="_on_host_button_down"]
+[connection signal="pressed" from="CanvasLayer/MainMenu/MarginContainer/VBoxContainer/JoinLobby" to="CanvasLayer/MainMenu" method="_on_join_lobby_pressed"]
+[connection signal="pressed" from="CanvasLayer/MainMenu/MarginContainer/VBoxContainer/HostInternet" to="CanvasLayer/MainMenu" method="_on_host_internet_pressed"]
+[connection signal="pressed" from="CanvasLayer/MainMenu/MarginContainer/VBoxContainer/Host LAN" to="CanvasLayer/MainMenu" method="_on_host_lan_pressed"]
+[connection signal="property_list_changed" from="CanvasLayer/MainMenu/MarginContainer/VBoxContainer/LineEdit" to="CanvasLayer/MainMenu" method="_on_line_edit_property_list_changed"]
+[connection signal="pressed" from="CanvasLayer/MainMenu/MarginContainer/VBoxContainer/Settings" to="CanvasLayer/MainMenu" method="_on_settings_pressed"]
