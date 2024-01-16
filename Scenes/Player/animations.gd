@@ -75,7 +75,7 @@ func update_animation(movement: Vector3):
 			flip_h_value = 1
 			if Input.is_action_pressed("down"): 
 				anim_name = "walk_forward"
-			elif Input.is_action_pressed("ui_up"):
+			elif Input.is_action_pressed("up"):
 				anim_name = "walk_diag"
 			else:
 				anim_name = "walk_diag"
@@ -84,7 +84,7 @@ func update_animation(movement: Vector3):
 			flip_h_value = 2
 			if Input.is_action_pressed("down"): 
 				anim_name = "walk_forward"
-			elif Input.is_action_pressed("ui_up"):
+			elif Input.is_action_pressed("up"):
 				anim_name = "walk_diag"
 			else:
 				anim_name = "walk_diag"

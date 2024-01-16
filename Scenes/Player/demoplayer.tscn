@@ -1,6 +1,6 @@
-[gd_scene load_steps=39 format=3 uid="uid://xxcdv2ttwtcq"]
+[gd_scene load_steps=40 format=3 uid="uid://xxcdv2ttwtcq"]
 
-[ext_resource type="Texture2D" uid="uid://cjes2rrai734v" path="res://Design/JoeDemoSpritesheet.png" id="1_f5lvm"]
+[ext_resource type="Texture2D" path="res://Design/JoeDemoSpritesheet.png" id="1_f5lvm"]
 [ext_resource type="Script" path="res://Scenes/Player/animations.gd" id="4_ju6fq"]
 [ext_resource type="Texture2D" uid="uid://cwsem8qqu1mn0" path="res://Scenes/Particles/gun.webp" id="9_jfxdk"]
 
