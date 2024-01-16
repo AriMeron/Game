@@ -57,13 +57,9 @@ animations = [{
 [node name="Gun" type="CharacterBody3D"]
 script = ExtResource("1_7isgs")
 
-[node name="Gun-anim" type="AnimatedSprite3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.106471, -0.0647507, 0.0015974)
+[node name="AnimatedSprite3D" type="AnimatedSprite3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.129721, -0.0511119, 0)
 centered = false
 texture_filter = 0
 sprite_frames = SubResource("SpriteFrames_cn2j1")
 animation = &"left"
-<<<<<<< HEAD
-=======
-script = ExtResource("3_4y86b")
->>>>>>> 8e3ee46fa15af55a0bc0269ba5e3591e66c37224
