@@ -1,7 +1,8 @@
-[gd_scene load_steps=39 format=3 uid="uid://xxcdv2ttwtcq"]
+[gd_scene load_steps=40 format=3 uid="uid://xxcdv2ttwtcq"]
 
-[ext_resource type="Texture2D" uid="uid://cjes2rrai734v" path="res://Design/JoeDemoSpritesheet.png" id="1_f5lvm"]
+[ext_resource type="Texture2D" path="res://Design/JoeDemoSpritesheet.png" id="1_f5lvm"]
 [ext_resource type="Script" path="res://Scenes/Player/animations.gd" id="4_ju6fq"]
+[ext_resource type="Texture2D" uid="uid://cwsem8qqu1mn0" path="res://Scenes/Particles/gun.webp" id="9_jfxdk"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_cs2yf"]
 atlas = ExtResource("1_f5lvm")
@@ -287,3 +288,13 @@ texture_filter = 0
 sprite_frames = SubResource("SpriteFrames_lf7xo")
 animation = &"roll_diag"
 script = ExtResource("4_ju6fq")
+
+[node name="GunRotation" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.105417, 0)
+
+[node name="Gun" type="Sprite3D" parent="GunRotation"]
+transform = Transform3D(0.03, 0, 0, 0, 0.03, 0, 0, 0, 0.03, 0.138463, -0.0960951, 0)
+texture = ExtResource("9_jfxdk")
+
+[node name="BulletSpawn" type="Node3D" parent="GunRotation/Gun"]
+transform = Transform3D(33.3333, 0, 0, 0, 33.3333, 0, 0, 0, 33.3333, 1.15993, 0.369688, 0)
