@@ -1,9 +1,8 @@
-[gd_scene load_steps=15 format=3 uid="uid://dmgh1hh7xvw10"]
+[gd_scene load_steps=12 format=3 uid="uid://dmgh1hh7xvw10"]
 
 [ext_resource type="Script" path="res://Scenes/Map/test_scene.gd" id="1_aagre"]
 [ext_resource type="PackedScene" uid="uid://bdibwmj224q5y" path="res://Scenes/Map/floor.tscn" id="1_dkk4u"]
 [ext_resource type="PackedScene" uid="uid://8ayn1y7so7nb" path="res://Scenes/Map/door.tscn" id="2_k4v1w"]
-[ext_resource type="PackedScene" uid="uid://kyfdv1vfgrd3" path="res://Scenes/Map/wall.tscn" id="3_nympk"]
 [ext_resource type="PackedScene" uid="uid://c704vf7jbt60f" path="res://Scenes/Map/points.tscn" id="5_vsndi"]
 [ext_resource type="PackedScene" uid="uid://8crjah1huxmt" path="res://Scenes/Map/possible_scoring_zone.tscn" id="6_bjb6t"]
 [ext_resource type="PackedScene" uid="uid://bigiq4xklycm1" path="res://Scenes/Player/characterCollider.tscn" id="7_p2cxb"]
@@ -11,34 +10,16 @@
 [ext_resource type="Script" path="res://Scenes/Player/Ability Bar.gd" id="9_fqv6j"]
 [ext_resource type="Script" path="res://Scenes/Player/Variable Label.gd" id="10_ifvbg"]
 [ext_resource type="PackedScene" uid="uid://cu41wjfyawovx" path="res://Scenes/Map/healing.tscn" id="11_iuuyo"]
-
-[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_fdkgt"]
-sky_top_color = Color(0.709804, 0, 0.772549, 1)
-sky_horizon_color = Color(0.75, 0.52549, 0.733333, 1)
-sky_energy_multiplier = 1.45
-ground_bottom_color = Color(0.290196, 0.101961, 0.160784, 1)
-ground_horizon_color = Color(0.75, 0.52549, 0.733333, 1)
-
-[sub_resource type="Sky" id="Sky_jesnj"]
-sky_material = SubResource("ProceduralSkyMaterial_fdkgt")
-
-[sub_resource type="Environment" id="Environment_arj20"]
-background_mode = 2
-sky = SubResource("Sky_jesnj")
-tonemap_mode = 2
-glow_enabled = true
+[ext_resource type="PackedScene" uid="uid://d0r1a7b5t24bl" path="res://Scenes/Map/blank_wall.tscn" id="11_utrep"]
 
 [node name="Node3D" type="Node3D"]
 script = ExtResource("1_aagre")
 
-[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
-environment = SubResource("Environment_arj20")
-
 [node name="Player" parent="." groups=["Player"] instance=ExtResource("7_p2cxb")]
-transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 10, 2.08165e-12, 1, 2.08165e-12)
+transform = Transform3D(10, 0, 0, 0, 14.14, 0, 0, 0, 10, 2.08165e-12, 1.5, 2.08165e-12)
 
 [node name="Camera3D" type="Camera3D" parent="Player"]
-transform = Transform3D(0.0999997, -5.15674e-17, 2.13598e-17, 2.46629e-17, 0.0612406, 0.0612403, -5.95414e-17, -0.0612406, 0.0612403, 2.08165e-12, 2, 2)
+transform = Transform3D(0.0999997, -5.15674e-17, 2.13598e-17, 2.46629e-17, 0.0612406, 0.0612403, -5.95414e-17, -0.0612406, 0.0612403, 2.08165e-12, 1, 2)
 projection = 1
 size = 17.0
 
@@ -48,20 +29,11 @@ transform = Transform3D(1, -9.88408e-11, -1.91727e-11, 8.2033e-10, 1, -9.62996e-
 [node name="floor" parent="." instance=ExtResource("1_dkk4u")]
 transform = Transform3D(20, 0, 0, 0, 20, 0, 0, 0, 20, 2.08165e-12, 2.08165e-12, 2.08165e-12)
 
-[node name="wall2" parent="." instance=ExtResource("3_nympk")]
-transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, -6, 3, -3)
-
-[node name="wall3" parent="." instance=ExtResource("3_nympk")]
-transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 2.08165e-12, 3, -3)
-
-[node name="wall4" parent="." instance=ExtResource("3_nympk")]
-transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 6, 3, -3)
-
 [node name="ScoringZone" parent="." instance=ExtResource("5_vsndi")]
 transform = Transform3D(4, 0, 0, 0, 4, 0, 0, 0, 4, 28, 2.08165e-12, 2.08165e-12)
 
 [node name="door" parent="." instance=ExtResource("2_k4v1w")]
-transform = Transform3D(0.75, 0, 0, 0, 0.75, 0, 0, 0, 0.75, -12, 3, -3)
+transform = Transform3D(0.75, 0, 0, 0, 0.75, 0, 0, 0, 0.75, -18, 3, -3)
 
 [node name="possibleScoringZone1" parent="." instance=ExtResource("6_bjb6t")]
 transform = Transform3D(4, 0, 0, 0, 4, 0, 0, 0, 4, 28, 2.08165e-12, 2.08165e-12)
@@ -117,5 +89,8 @@ script = ExtResource("10_ifvbg")
 
 [node name="HealingZone" parent="." instance=ExtResource("11_iuuyo")]
 transform = Transform3D(4, -0.0014393, 0.00152147, 0.00143931, 4, -5.38056e-06, -0.00152147, 5.85665e-06, 4, 28, 2.08165e-12, 16)
+
+[node name="Node3D" parent="." instance=ExtResource("11_utrep")]
+transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 2.08165e-12, 2.08165e-12, -3)
 
 [connection signal="timeout" from="HUD/Ability Bar/Timer" to="HUD/Ability Bar" method="_on_timer_timeout"]
