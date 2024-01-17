@@ -25,6 +25,6 @@ func _process(delta):
 
 func switch():
 	if side_name == "right":
-		transform.origin = Vector3(0.06, -0.02, 0)
+		transform.origin = Vector3(0.06, -0.055, 0)
 	else:
-		transform.origin = Vector3(-0.06, -0.02, 0)
+		transform.origin = Vector3(-0.06, -0.055, 0)
