@@ -1,6 +1,6 @@
 [gd_scene load_steps=7 format=3 uid="uid://c704vf7jbt60f"]
 
-[ext_resource type="Script" path="res://Scenes/Map/points.gd" id="1_jmg6p"]
+[ext_resource type="Script" path="res://Scenes/Map/MapScripts/points.gd" id="1_jmg6p"]
 [ext_resource type="TileSet" uid="uid://cpddivvqyqdq" path="res://Design/tileset_map/00_temp_tile.tres" id="2_sefcw"]
 
 [sub_resource type="CylinderShape3D" id="CylinderShape3D_7xj5r"]

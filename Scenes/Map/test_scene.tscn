@@ -1,6 +1,6 @@
 [gd_scene load_steps=12 format=3 uid="uid://dmgh1hh7xvw10"]
 
-[ext_resource type="Script" path="res://Scenes/Map/test_scene.gd" id="1_aagre"]
+[ext_resource type="Script" path="res://Scenes/Map/MapScripts/test_scene.gd" id="1_aagre"]
 [ext_resource type="PackedScene" uid="uid://bdibwmj224q5y" path="res://Scenes/Map/floor.tscn" id="1_dkk4u"]
 [ext_resource type="PackedScene" uid="uid://8ayn1y7so7nb" path="res://Scenes/Map/door.tscn" id="2_k4v1w"]
 [ext_resource type="PackedScene" uid="uid://c704vf7jbt60f" path="res://Scenes/Map/points.tscn" id="5_vsndi"]
@@ -10,7 +10,7 @@
 [ext_resource type="Script" path="res://Scenes/Player/Ability Bar.gd" id="9_fqv6j"]
 [ext_resource type="Script" path="res://Scenes/Player/Variable Label.gd" id="10_ifvbg"]
 [ext_resource type="PackedScene" uid="uid://cu41wjfyawovx" path="res://Scenes/Map/healing.tscn" id="11_iuuyo"]
-[ext_resource type="PackedScene" uid="uid://d0r1a7b5t24bl" path="res://Scenes/Map/blank_wall.tscn" id="11_utrep"]
+[ext_resource type="PackedScene" path="res://Scenes/Map/blank_wall.tscn" id="11_utrep"]
 
 [node name="Node3D" type="Node3D"]
 script = ExtResource("1_aagre")

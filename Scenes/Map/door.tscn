@@ -1,6 +1,6 @@
 [gd_scene load_steps=30 format=3 uid="uid://8ayn1y7so7nb"]
 
-[ext_resource type="Script" path="res://Scenes/Map/door.gd" id="1_ra5nj"]
+[ext_resource type="Script" path="res://Scenes/Map/MapScripts/door.gd" id="1_1ywba"]
 [ext_resource type="TileSet" uid="uid://cpddivvqyqdq" path="res://Design/tileset_map/00_temp_tile.tres" id="2_togeb"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_rf2tq"]
@@ -125,7 +125,7 @@ _data = {
 }
 
 [node name="door" type="Node3D"]
-script = ExtResource("1_ra5nj")
+script = ExtResource("1_1ywba")
 
 [node name="doorFramePort" type="SubViewport" parent="."]
 

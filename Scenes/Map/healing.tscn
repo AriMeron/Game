@@ -1,6 +1,6 @@
 [gd_scene load_steps=16 format=3 uid="uid://cu41wjfyawovx"]
 
-[ext_resource type="Script" path="res://Scenes/Map/healingZone.gd" id="1_mk011"]
+[ext_resource type="Script" path="res://Scenes/Map/MapScripts/healingZone.gd" id="1_mk011"]
 [ext_resource type="TileSet" uid="uid://cpddivvqyqdq" path="res://Design/tileset_map/00_temp_tile.tres" id="2_jx04j"]
 
 [sub_resource type="ViewportTexture" id="ViewportTexture_ovyed"]
