@@ -3,20 +3,19 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://ble68vht2884w"
-path.s3tc="res://.godot/imported/FloorTileset.png-99c652efc3d08ac9aae847a9d4f63448.s3tc.ctex"
+path="res://.godot/imported/FloorTileset.png-99c652efc3d08ac9aae847a9d4f63448.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
-"vram_texture": true
+"vram_texture": false
 }
 
 [deps]
 
 source_file="res://Design/tileset_map/FloorTileset.png"
-dest_files=["res://.godot/imported/FloorTileset.png-99c652efc3d08ac9aae847a9d4f63448.s3tc.ctex"]
+dest_files=["res://.godot/imported/FloorTileset.png-99c652efc3d08ac9aae847a9d4f63448.ctex"]
 
 [params]
 
-compress/mode=2
+compress/mode=0
 compress/high_quality=false
 compress/lossy_quality=0.7
 compress/hdr_compression=1
