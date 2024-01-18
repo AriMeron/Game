@@ -1,0 +1,19 @@
+[gd_scene load_steps=3 format=3 uid="uid://cg8wi4fqobc8l"]
+
+[ext_resource type="Texture2D" uid="uid://3410nwqgkqwi" path="res://Scenes/Characters/Joe Biden/Gun/BidenHand.png" id="1_dna16"]
+[ext_resource type="Texture2D" uid="uid://cerbutq5saycl" path="res://Scenes/Characters/Joe Biden/Gun/BidenGun.png" id="2_ea8ia"]
+
+[node name="Hand" type="Sprite3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.08165e-12, 2.08165e-12, 2.08165e-12)
+texture_filter = 0
+render_priority = 1
+texture = ExtResource("1_dna16")
+
+[node name="RotationHelper" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00235889, 0.00962154, 2.08165e-12)
+
+[node name="Gun" type="Sprite3D" parent="RotationHelper"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.038835, 0.0150877, 0)
+flip_h = true
+texture_filter = 0
+texture = ExtResource("2_ea8ia")

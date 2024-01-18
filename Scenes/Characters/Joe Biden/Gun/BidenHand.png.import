@@ -2,27 +2,26 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c7sfelfalw7vx"
-path.s3tc="res://.godot/imported/JFK-DodgeRoll-DiagonalFront.png-9c155d316a6b7670b0818d46f7345141.s3tc.ctex"
+uid="uid://3410nwqgkqwi"
+path="res://.godot/imported/BidenHand.png-73d55ce9913dc6a03b00e5aa1552fcde.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
-"vram_texture": true
+"vram_texture": false
 }
 
 [deps]
 
-source_file="res://Design/DodgeRoll/DiagonalFront/JFK-DodgeRoll-DiagonalFront.png"
-dest_files=["res://.godot/imported/JFK-DodgeRoll-DiagonalFront.png-9c155d316a6b7670b0818d46f7345141.s3tc.ctex"]
+source_file="res://Scenes/Characters/Joe Biden/Gun/BidenHand.png"
+dest_files=["res://.godot/imported/BidenHand.png-73d55ce9913dc6a03b00e5aa1552fcde.ctex"]
 
 [params]
 
-compress/mode=2
+compress/mode=0
 compress/high_quality=false
 compress/lossy_quality=0.7
 compress/hdr_compression=1
 compress/normal_map=0
 compress/channel_pack=0
-mipmaps/generate=true
+mipmaps/generate=false
 mipmaps/limit=-1
 roughness/mode=0
 roughness/src_normal=""

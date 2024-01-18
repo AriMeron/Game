@@ -46,7 +46,7 @@ func StartGame():
 	get_tree().root.add_child(scene)
 	self.hide()
 
-func _on_host_button_down():
+func _initialize_as_host():
 	peer = ENetMultiplayerPeer.new()
 	var error = peer.create_server(port, 6)
 	if error != OK:
@@ -67,7 +67,7 @@ func _on_start_game_button_down():
 	pass # Replace with function body.
 
 
-func _on_join_button_down():
+func _initialize_as_client():
 	peer = ENetMultiplayerPeer.new()
 	peer.create_client(Address, port)
 	peer.get_host().compress(ENetConnection.COMPRESS_RANGE_CODER)

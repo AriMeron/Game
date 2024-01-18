@@ -1,0 +1,45 @@
+[gd_scene load_steps=8 format=3 uid="uid://brufljs8818j2"]
+
+[ext_resource type="Texture2D" uid="uid://sfclbh5qbvv6" path="res://Scenes/Particles/bullet casing.png" id="1_hpv07"]
+[ext_resource type="Script" path="res://Scenes/Particles/Particle.gd" id="2_2xm1p"]
+
+[sub_resource type="Gradient" id="Gradient_6k4lg"]
+offsets = PackedFloat32Array(0.777273, 1)
+colors = PackedColorArray(1, 1, 1, 1, 1, 1, 1, 0)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_l6jkm"]
+gradient = SubResource("Gradient_6k4lg")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_427is"]
+angle_min = -90.0
+angle_max = 90.0
+direction = Vector3(-1, -0.2, 0)
+spread = 10.0
+initial_velocity_min = 1.0
+initial_velocity_max = 1.0
+gravity = Vector3(0, -100, 0)
+color_ramp = SubResource("GradientTexture1D_l6jkm")
+collision_mode = 1
+collision_friction = 0.5
+collision_bounce = 0.0
+collision_use_scale = true
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_61ytt"]
+transparency = 1
+cull_mode = 2
+vertex_color_use_as_albedo = true
+albedo_texture = ExtResource("1_hpv07")
+
+[sub_resource type="QuadMesh" id="QuadMesh_6spbf"]
+material = SubResource("StandardMaterial3D_61ytt")
+size = Vector2(0.5, 0.5)
+
+[node name="BulletCasingParticle" type="Node3D"]
+
+[node name="GPUParticles3D" type="GPUParticles3D" parent="."]
+transform = Transform3D(-4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 0, 0, 1, 0, 0, 0)
+amount = 1
+explosiveness = 1.0
+process_material = SubResource("ParticleProcessMaterial_427is")
+draw_pass_1 = SubResource("QuadMesh_6spbf")
+script = ExtResource("2_2xm1p")

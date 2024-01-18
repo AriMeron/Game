@@ -2,8 +2,8 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c7sfelfalw7vx"
-path.s3tc="res://.godot/imported/JFK-DodgeRoll-DiagonalFront.png-9c155d316a6b7670b0818d46f7345141.s3tc.ctex"
+uid="uid://cwsem8qqu1mn0"
+path.s3tc="res://.godot/imported/gun.webp-486acda4423f6171741bd3d58a9def74.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://Design/DodgeRoll/DiagonalFront/JFK-DodgeRoll-DiagonalFront.png"
-dest_files=["res://.godot/imported/JFK-DodgeRoll-DiagonalFront.png-9c155d316a6b7670b0818d46f7345141.s3tc.ctex"]
+source_file="res://Scenes/Particles/gun.webp"
+dest_files=["res://.godot/imported/gun.webp-486acda4423f6171741bd3d58a9def74.s3tc.ctex"]
 
 [params]
 
