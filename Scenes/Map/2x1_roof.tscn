@@ -1,0 +1,27 @@
+[gd_scene load_steps=5 format=3 uid="uid://6auw4l37umhm"]
+
+[ext_resource type="TileSet" uid="uid://ejlti37obpv3" path="res://Design/tileset_map/WallTileset.tres" id="1_rh811"]
+
+[sub_resource type="ViewportTexture" id="ViewportTexture_r6e4n"]
+viewport_path = NodePath("SubViewport")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_wgfsh"]
+resource_local_to_scene = true
+albedo_texture = SubResource("ViewportTexture_r6e4n")
+texture_filter = 0
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_txafr"]
+material = SubResource("StandardMaterial3D_wgfsh")
+
+[node name="Node3D" type="Node3D"]
+
+[node name="SubViewport" type="SubViewport" parent="."]
+size = Vector2i(32, 32)
+
+[node name="TileMap" type="TileMap" parent="SubViewport"]
+tile_set = ExtResource("1_rh811")
+format = 2
+layer_0/tile_data = PackedInt32Array(131075, 589827, 1, 131072, 458755, 0, 196608, 458755, 1, 131073, 458755, 1, 196609, 524291, 1, 131074, 524291, 1, 196610, 589827, 1, 0, 458755, 0, 65536, 458755, 1, 1, 458755, 0, 65537, 458755, 0, 2, 524291, 0, 65538, 524291, 0, 3, 589827, 0, 65539, 589827, 0, 196611, 196611, 1)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+mesh = SubResource("PlaneMesh_txafr")
