@@ -5,9 +5,22 @@ var roll_speed = 15
 var rolling = false
 var roll_timer = 0.5
 var roll_direction = Vector3.ZERO
+var side_name = "right"
 
 
 func _physics_process(delta):
+	var screen_size = get_viewport().get_visible_rect().size
+	var mouse_position = get_viewport().get_mouse_position()
+	var target_direction = (mouse_position - screen_size / 2).normalized()
+
+	# Calculate the angle between the current direction and the target direction
+	var angle = atan2(target_direction.y, target_direction.x)
+	if angle > -1.5708 and angle < 1.5708:
+		side_name = "right"
+	else:
+		side_name = "left"
+	switch(angle)
+
 	var movement = Vector3.ZERO
 	var moving = false
 	
@@ -51,7 +64,12 @@ func _physics_process(delta):
 		# Stop the animation if not moving
 		play("idle")
 
-
+func switch(angle):
+	var flip_h_value = 0
+	if side_name == "left":
+		flip_h = true
+	elif side_name == "right":
+		flip_h = false
 
 func update_animation(movement: Vector3):
 	var anim_name = ""

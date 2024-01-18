@@ -6,9 +6,20 @@ const ROTATION_SPEED = 10
 var side_name = "right"
 var rolling = false
 var roll_timer = 0.5
-var min_angle # 45 degrees to the left
-var max_angle # 45 degrees to the right
 var is_inverted = false
+
+# Constants
+const RAY_LENGTH = 1000
+const BULLET_SPEED = 50 # Speed of the bullet
+const BULLET_SCENE = preload("res://Scenes/Player/Bullet.tscn") # Path to the Bullet scene
+var hand: CharacterBody3D
+var origin
+var cam
+var intersects_with_floor = false
+
+func _ready():
+	hand = get_node_or_null("Node3D/Player/Hand")
+	cam = $Camera3D
 
 func set_gun_offset(offset: Vector3):
 	gun_offset = offset
@@ -30,22 +41,13 @@ func _process(delta):
 	else:
 		side_name = "left"
 	switch(angle)
-		# Flip the object horizontally based on side_name
 
 func switch(angle):
-	invert_character()
 	if side_name == "left":
 		scale.x = abs(scale.x)
 		angle = -angle + 3.1415
 		set_rotation(Vector3(0, 0, angle))
-		transform.origin = Vector3(-0.12, 0.025, 0)
 	elif side_name == "right":
 		scale.x = -abs(scale.x)  # Flip the scale to negative
 		scale.z = -scale.z
 		set_rotation(Vector3(0, 0, -angle))
-		transform.origin = Vector3(0.0, 0.025, 0)
-	
-func invert_character():
-	is_inverted = !is_inverted  # Toggle the inversion state
-	scale.y = -scale.y  # Flip the scale on the y-axis to invert the character
-
