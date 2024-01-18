@@ -6,6 +6,16 @@ var rolling = false
 var roll_timer = 0.5
 
 func _process(delta):
+	if Input.is_action_just_pressed("roll") and not rolling:
+		rolling = true
+		roll_timer = 0.6  # Reset the roll timer
+	if rolling:
+		roll_timer -= delta
+		hide_sprite()
+	if roll_timer <= 0:
+		rolling = false
+	if rolling == false:
+		visible = true
 	if Input.is_action_pressed("ui_left"):
 		if Input.is_action_pressed("ui_down"):
 			side_name = "left"  # Left and Down pressed
@@ -37,3 +47,6 @@ func switch():
 		transform.origin = Vector3(0.06, -0.04, 0)
 	else:
 		transform.origin = Vector3(-0.06, -0.04, 0)
+
+func hide_sprite():
+	visible = false

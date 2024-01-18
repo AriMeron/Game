@@ -1,11 +1,10 @@
 extends CharacterBody3D
 
 var sensitivity = 0.1
-var gun_offset = Vector3()  # Initialize gun_offset as a Vector3
 const ROTATION_SPEED = 10
 var side_name = "right"
-var rolling = false
 var roll_timer = 0.5
+var rolling = false
 var is_inverted = false
 
 # Constants
@@ -27,10 +26,8 @@ func _process(delta):
 	var mouse_position = get_viewport().get_mouse_position()
 
 	# Calculate the direction vector from character to mouse
-	var character_position = global_transform.origin + gun_offset
-#	var character_position = transform.origin + gun_offset
+	var character_position = global_transform.origin
 	var target_direction = (mouse_position - screen_size / 2).normalized()
-
 	# Calculate the angle between the current direction and the target direction
 	var angle = atan2(target_direction.y, target_direction.x)
 	if angle > -1.5708 and angle < 1.5708:
@@ -60,3 +57,6 @@ func recoil(angle):
 	elif side_name == "right":
 		new_angle = angle - 0.2
 		set_rotation(Vector3(0, 0, -new_angle))
+
+func hide_gun_rolling():
+	visible = false
