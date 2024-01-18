@@ -3,7 +3,7 @@ extends Node3D
 # Constants
 const RAY_LENGTH = 1000
 const BULLET_SPEED = 50 # Speed of the bullet
-const BULLET_SCENE = preload("res://Scenes/Player/Bullet.tscn") # Path to the Bullet scene
+const BULLET_SCENE = preload("res://Scenes/Player/bullet.tscn") # Path to the Bullet scene
 var hand: CharacterBody3D
 var origin
 var cam
@@ -49,7 +49,6 @@ func shoot_bullet(y_height: float = 2.0):
 	var to = from + cam.project_ray_normal(mouse_pos) * RAY_LENGTH
 
 	# Use the camera's projection to find the z-coordinate in 3D space
-	# that corresponds to the mouse's y-coordinate
 	var projected_z = (from.z + (to.z - from.z) * ((y_height - from.y) / (to.y - from.y)))
 
 	# Create a target position using the mouse's x, a constant y, and the calculated z
@@ -57,4 +56,6 @@ func shoot_bullet(y_height: float = 2.0):
 
 	# Calculate direction vector
 	var direction = (target_pos_3d - bullet_spawn.global_transform.origin).normalized()
-	bullet_instance.linear_velocity = direction * BULLET_SPEED
+
+	# Store the direction for use in the bullet's script
+	bullet_instance.initial_direction = direction * BULLET_SPEED

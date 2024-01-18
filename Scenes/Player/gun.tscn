@@ -61,5 +61,6 @@ script = ExtResource("1_7isgs")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.129721, -0.0511119, 0)
 centered = false
 texture_filter = 0
+render_priority = 1
 sprite_frames = SubResource("SpriteFrames_cn2j1")
 animation = &"left"

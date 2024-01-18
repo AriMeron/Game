@@ -4,7 +4,7 @@
 [ext_resource type="Script" path="res://Scenes/Player/Camera3D.gd" id="1_jruti"]
 [ext_resource type="PackedScene" uid="uid://bigiq4xklycm1" path="res://Scenes/Player/characterCollider.tscn" id="1_pndb7"]
 [ext_resource type="PackedScene" uid="uid://dmmqbopsvwpyl" path="res://Scenes/Player/gun.tscn" id="3_25s8k"]
-[ext_resource type="PackedScene" uid="uid://d4glmwn6kkmf6" path="res://Scenes/Player/bullet.tscn" id="6_pxiar"]
+[ext_resource type="PackedScene" uid="uid://cq02fvhwetsxi" path="res://Scenes/Player/bullet.tscn" id="6_pxiar"]
 [ext_resource type="PackedScene" uid="uid://08m58yq27sq0" path="res://Scenes/Player/character_body_3d.tscn" id="6_rw1p0"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_fdkgt"]
@@ -74,11 +74,11 @@ transform = Transform3D(10, 0, 0, 0, 14.14, 0, 0, 0, 10, 0, 2.7127, 0)
 transform = Transform3D(0.994151, -0.107999, 3.48787e-16, 0.107999, 0.994149, -3.48787e-16, -3.09078e-16, 3.84415e-16, 1, -0.00167685, -0.0319639, -0.00501244)
 
 [node name="Gun" parent="Player/Hand" instance=ExtResource("3_25s8k")]
-transform = Transform3D(0.994151, 0.107999, 3.48788e-16, -0.107999, 0.994148, -3.48786e-16, -3.84415e-16, 3.09077e-16, 1, 0.0068751, -0.00819594, 0)
+transform = Transform3D(0.994151, 0.107999, 3.48788e-16, -0.107999, 0.994148, -3.48786e-16, -3.84415e-16, 3.09077e-16, 1, 0.0068751, -0.00819589, 0)
 
 [node name="BulletSpawn" type="Marker3D" parent="Player/Hand/Gun"]
 transform = Transform3D(0.1, -2.14923e-08, -7.33203e-17, -2.16706e-08, 0.0707217, 6.57868e-17, 7.33202e-17, -4.65252e-17, 0.1, -0.0893796, 0.0345538, 0.00501244)
 
 [node name="Bullet" parent="Player/Hand/Gun" instance=ExtResource("6_pxiar")]
-transform = Transform3D(0.05, -4.01449e-15, -7.27919e-23, -8.88178e-16, 0.05, 3.30872e-23, 8.08483e-23, -4.45085e-23, 0.05, -0.0938351, 0.0307214, 0.00292536)
+transform = Transform3D(1, 2.56365e-14, -6.81613e-23, -7.49613e-15, 1, -2.9289e-24, 3.49742e-24, -2.70729e-23, 1, 0, 0, 0)
 visible = false
