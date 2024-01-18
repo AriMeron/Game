@@ -21,11 +21,8 @@ func _ready():
 	hand = get_node_or_null("Node3D/Player/Hand")
 	cam = $Camera3D
 
-func set_gun_offset(offset: Vector3):
-	gun_offset = offset
 
 func _process(delta):
-
 	var screen_size = get_viewport().get_visible_rect().size
 	var mouse_position = get_viewport().get_mouse_position()
 
@@ -41,6 +38,9 @@ func _process(delta):
 	else:
 		side_name = "left"
 	switch(angle)
+	if Input.is_action_pressed("shoot"):
+		recoil(angle)
+		await(get_tree().create_timer(0.25))
 
 func switch(angle):
 	if side_name == "left":
@@ -51,3 +51,12 @@ func switch(angle):
 		scale.x = -abs(scale.x)  # Flip the scale to negative
 		scale.z = -scale.z
 		set_rotation(Vector3(0, 0, -angle))
+
+func recoil(angle):
+	var new_angle
+	if side_name == "left":
+		new_angle = -angle + 2.9
+		set_rotation(Vector3(0, 0, new_angle))
+	elif side_name == "right":
+		new_angle = angle - 0.2
+		set_rotation(Vector3(0, 0, -new_angle))
