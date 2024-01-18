@@ -12,7 +12,7 @@ func start_server():
 	peer = ENetMultiplayerPeer.new()
 	var error = peer.create_server(port, 6)
 	if error != OK:
-		print("cannont host:" + error)
+		print("cannont host:" + str(error))
 		return
 	
 	peer.get_host().compress(ENetConnection.COMPRESS_RANGE_CODER)
