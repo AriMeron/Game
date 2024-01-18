@@ -71,7 +71,7 @@ func _on_Lobby_Match_List(lobbies):# This function will need to be able to find 
 	for LOBBY in lobbies:
 		##get data for these two variables
 		var LOBBY_NAME = "Lobby"##add network code here
-		var LOBBY_MEMBERS = "Steve"## and here
+		var LOBBY_MEMBERS = "0"## and here
 		
 		var LOBBY_BUTTON = Button.new()
 		LOBBY_BUTTON.set_text("Lobby "+str(LOBBY)+" : "+ str(LOBBY_NAME)+"- ["+str(LOBBY_MEMBERS)+"] Players(s)")
@@ -82,7 +82,9 @@ func _on_Lobby_Match_List(lobbies):# This function will need to be able to find 
 		
 
 func join_Lobby(lobbyID):
-	pass
+	var scene = load("res://Scenes/Menus/CharacterSelection/Biden.tscn").instantiate()
+	get_tree().root.add_child(scene)
+	self.hide()
 
 
 func _on_close_button_down():

@@ -3,17 +3,17 @@
 [ext_resource type="Script" path="res://Scenes/Menus/Lobbies.gd" id="1_2fug8"]
 
 [node name="Control" type="Control"]
-z_index = 1
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = -1.0
-offset_top = -2.0
-offset_right = -1.0
-offset_bottom = -2.0
+offset_left = 2.0
+offset_top = 5.0
+offset_right = 2.0
+offset_bottom = 5.0
 grow_horizontal = 2
 grow_vertical = 2
+scale = Vector2(1, 1.00294)
 script = ExtResource("1_2fug8")
 
 [node name="Host" type="Button" parent="."]
@@ -78,6 +78,7 @@ offset_left = 34.0
 offset_top = 621.0
 offset_right = 260.0
 offset_bottom = 682.0
+scale = Vector2(1, 1.03056)
 theme_override_font_sizes/font_size = 34
 text = "Leave Lobby"
 
