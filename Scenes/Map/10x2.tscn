@@ -2,16 +2,15 @@
 
 [ext_resource type="TileSet" uid="uid://ejlti37obpv3" path="res://Design/tileset_map/WallTileset.tres" id="1_3iq8f"]
 
-[sub_resource type="ViewportTexture" id="ViewportTexture_bsqll"]
+[sub_resource type="ViewportTexture" id="ViewportTexture_0y157"]
 viewport_path = NodePath("SubViewport")
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_hjmqs"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_dqcxt"]
 resource_local_to_scene = true
-albedo_texture = SubResource("ViewportTexture_bsqll")
+albedo_texture = SubResource("ViewportTexture_0y157")
 texture_filter = 0
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_6816r"]
-material = SubResource("StandardMaterial3D_hjmqs")
 size = Vector2(20, 2)
 
 [node name="10x2" type="Node3D"]
@@ -27,4 +26,5 @@ layer_0/tile_data = PackedInt32Array(0, 3, 6, 65536, 3, 7, 131072, 3, 8, 196608,
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
 transform = Transform3D(1, 0, -1.5246e-23, -1.5246e-23, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0)
+material_override = SubResource("StandardMaterial3D_dqcxt")
 mesh = SubResource("PlaneMesh_6816r")
