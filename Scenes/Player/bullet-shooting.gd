@@ -18,7 +18,7 @@ func _process(delta):
 	var screen_size = get_viewport().get_visible_rect().size
 	var mouse_position = get_viewport().get_mouse_position()
 
-#	var character_position = transform.origin + gun_offset
+	# Calculate the target direction
 	var target_direction = (mouse_position - screen_size / 2).normalized()
 
 	# Calculate the angle between the current direction and the target direction
@@ -27,8 +27,11 @@ func _process(delta):
 		side_name = "right"
 	else:
 		side_name = "left"
-	if Input.is_action_pressed("shoot"):
+
+	# Trigger shoot_bullet() once per click
+	if Input.is_action_just_pressed("shoot"):
 		shoot_bullet()
+
 
 func shoot_bullet(y_height: float = 2.0):
 	var bullet_spawn = get_node("Player/Hand/Gun/BulletSpawn")  # Get BulletSpawn node
