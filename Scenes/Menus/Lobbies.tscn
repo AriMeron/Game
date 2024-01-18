@@ -3,6 +3,7 @@
 [ext_resource type="Script" path="res://Scenes/Menus/Lobbies.gd" id="1_2fug8"]
 
 [node name="Control" type="Control"]
+z_index = 1
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -152,13 +153,13 @@ offset_bottom = 37.0
 
 [node name="Lobbies" type="PopupPanel" parent="."]
 initial_position = 1
-size = Vector2i(101, 100)
+size = Vector2i(730, 500)
 
 [node name="Panel" type="Panel" parent="Lobbies"]
 offset_left = 4.0
 offset_top = 4.0
-offset_right = 97.0
-offset_bottom = 96.0
+offset_right = 726.0
+offset_bottom = 496.0
 
 [node name="ScrollContainer" type="ScrollContainer" parent="Lobbies/Panel"]
 layout_mode = 0

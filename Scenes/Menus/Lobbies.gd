@@ -4,7 +4,7 @@ extends Control
 @export var port = 8910
 const PROTO_NAME = "ludus"
 
-var peer = null
+var peer
 @onready var nameEdit = $Username/TextEdit
 @onready var lobbySetName = $Create/LobbyName
 @onready var lobbyGetName = $Chat/Name
@@ -42,17 +42,17 @@ func connection_failed(id):
 
 @rpc("any_peer")
 func SendPlayerInformation(name,id):
-	if !GameManager.Players.has(id):
-		GameManager.Players[id] = {
-			"name": name,
-			"id": id,
-			"score": 0
-		}
+	#if !GameManager.Players.has(id):
+	#	GameManager.Players[id] = {
+	#		"name": name,
+	#		"id": id,
+	#		"score": 0
+	#	}
 	
-	if multiplayer.is_server():
-		for i in GameManager.Players:
-			SendPlayerInformation.rpc(GameManager.Players[i].name, i)
-		
+	#if multiplayer.is_server():
+	#	for i in GameManager.Players:
+	#		SendPlayerInformation.rpc(GameManager.Players[i].name, i)
+	pass
 
 @rpc("any_peer", "call_local")
 func StartGame():
@@ -67,17 +67,17 @@ func _on_join_button_down():
 	peer.get_host().compress(ENetConnection.COMPRESS_RANGE_CODER)
 	multiplayer.set_multiplayer_peer(peer)
 	
-func _on_Lobby_Match_List(lobbies):
+func _on_Lobby_Match_List(lobbies):# This function will need to be able to find lobbies
 	for LOBBY in lobbies:
 		##get data for these two variables
-		var LOBBY_NAME = ""##add network code here
-		var LOBBY_MEMBERS = ""## and here
+		var LOBBY_NAME = "Lobby"##add network code here
+		var LOBBY_MEMBERS = "Steve"## and here
 		
 		var LOBBY_BUTTON = Button.new()
 		LOBBY_BUTTON.set_text("Lobby "+str(LOBBY)+" : "+ str(LOBBY_NAME)+"- ["+str(LOBBY_MEMBERS)+"] Players(s)")
 		LOBBY_BUTTON.set_size(Vector2(800,50))
 		LOBBY_BUTTON.set_name("lobby_"+str(LOBBY))
-		LOBBY_BUTTON.connect("pressed",self,"join_Lobby",[LOBBY])
+		LOBBY_BUTTON.pressed.connect(join_Lobby.bind(LOBBY))
 		lobbyList.add_child(LOBBY_BUTTON)
 		
 
