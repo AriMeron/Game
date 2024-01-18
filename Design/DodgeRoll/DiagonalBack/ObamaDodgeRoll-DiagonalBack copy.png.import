@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cfwbpu144b4j7"
-path="res://.godot/imported/JoeDodgeRollFront.png-0261f5cb42fe314bb70279d3f7188f49.ctex"
+uid="uid://dtp3tef1oysss"
+path="res://.godot/imported/ObamaDodgeRoll-DiagonalBack copy.png-1b1e2b4c95e202d997415cb3de9f82fd.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Design/DodgeRoll/Front/JoeDodgeRollFront.png"
-dest_files=["res://.godot/imported/JoeDodgeRollFront.png-0261f5cb42fe314bb70279d3f7188f49.ctex"]
+source_file="res://Design/DodgeRoll/DiagonalBack/ObamaDodgeRoll-DiagonalBack copy.png"
+dest_files=["res://.godot/imported/ObamaDodgeRoll-DiagonalBack copy.png-1b1e2b4c95e202d997415cb3de9f82fd.ctex"]
 
 [params]
 
