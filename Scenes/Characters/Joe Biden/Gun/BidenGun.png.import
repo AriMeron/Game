@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://sd0ibtoplnuv"
-path="res://.godot/imported/ReaganSpritesheet.png-1c12011409c1d7185f68d540bb86e878.ctex"
+uid="uid://cerbutq5saycl"
+path="res://.godot/imported/BidenGun.png-176196c2b00017958aa78f6ca93fbe9f.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Design/ReaganSpritesheet.png"
-dest_files=["res://.godot/imported/ReaganSpritesheet.png-1c12011409c1d7185f68d540bb86e878.ctex"]
+source_file="res://Scenes/Characters/Joe Biden/Gun/BidenGun.png"
+dest_files=["res://.godot/imported/BidenGun.png-176196c2b00017958aa78f6ca93fbe9f.ctex"]
 
 [params]
 
@@ -31,4 +31,4 @@ process/normal_map_invert_y=false
 process/hdr_as_srgb=false
 process/hdr_clamp_exposure=false
 process/size_limit=0
-detect_3d/compress_to=1
+detect_3d/compress_to=0

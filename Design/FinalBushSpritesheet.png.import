@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://naur77msmffs"
-path="res://.godot/imported/BushSpritesheet.png-acad6fd303af670817c606dfba5f0f86.ctex"
+uid="uid://cmyx8npvcssv4"
+path="res://.godot/imported/FinalBushSpritesheet.png-490bbdadaf21c653d5f7aa84c52a769d.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Design/BushSpritesheet.png"
-dest_files=["res://.godot/imported/BushSpritesheet.png-acad6fd303af670817c606dfba5f0f86.ctex"]
+source_file="res://Design/FinalBushSpritesheet.png"
+dest_files=["res://.godot/imported/FinalBushSpritesheet.png-490bbdadaf21c653d5f7aa84c52a769d.ctex"]
 
 [params]
 
