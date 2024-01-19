@@ -4,7 +4,7 @@
 [ext_resource type="Script" path="res://Scenes/Player/movement.gd" id="1_7iqit"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_53677"]
-size = Vector3(0.228257, 0.257697, 0.0786725)
+size = Vector3(0.228257, 0.257697, 0.15672)
 
 [node name="CharacterBody3D" type="CharacterBody3D"]
 script = ExtResource("1_7iqit")
@@ -13,4 +13,5 @@ script = ExtResource("1_7iqit")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.08165e-12, 2.08165e-12, 2.08165e-12)
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.010668)
 shape = SubResource("BoxShape3D_53677")

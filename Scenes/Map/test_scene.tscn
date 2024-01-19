@@ -5,14 +5,14 @@
 
 [node name="Node3D" type="Node3D"]
 
-[node name="Node3D" parent="." instance=ExtResource("1_8ihtv")]
+[node name="Map" parent="." instance=ExtResource("1_8ihtv")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.08165e-12, 2.08165e-12, -21)
 
 [node name="CharacterBody3D" parent="." instance=ExtResource("2_n62rk")]
-transform = Transform3D(4, 0, 0, 0, 5.657, 0, 0, 0, 4, 2.08165e-12, -0.5, -28)
+transform = Transform3D(4, 0, 0, 0, 5.657, 0, 0, 0, 4, 2.08165e-12, -0.25, -28)
 
 [node name="Camera3D" type="Camera3D" parent="CharacterBody3D"]
-transform = Transform3D(0.25, -1.48854e-16, 6.16574e-17, 6.16574e-17, 0.176777, 0.176777, -1.48854e-16, -0.176777, 0.176777, 2.08165e-12, 0.56, 1)
+transform = Transform3D(0.25, -1.48854e-16, 6.16574e-17, 6.16574e-17, 0.176777, 0.176777, -1.48854e-16, -0.176777, 0.176777, 2.08165e-12, 1.6, 3)
 projection = 1
 size = 5.27878
 

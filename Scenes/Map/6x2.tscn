@@ -13,8 +13,7 @@ texture_filter = 0
 [sub_resource type="PlaneMesh" id="PlaneMesh_k4wgg"]
 size = Vector2(12, 2)
 
-[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_wy1yy"]
-data = PackedVector3Array(6, 0, 1, -6, 0, 1, 6, 0, -1, -6, 0, 1, -6, 0, -1, 6, 0, -1)
+[sub_resource type="BoxShape3D" id="BoxShape3D_mkran"]
 
 [node name="Node3D" type="Node3D"]
 
@@ -34,4 +33,5 @@ mesh = SubResource("PlaneMesh_k4wgg")
 [node name="StaticBody3D" type="StaticBody3D" parent="MeshInstance3D"]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="MeshInstance3D/StaticBody3D"]
-shape = SubResource("ConcavePolygonShape3D_wy1yy")
+transform = Transform3D(12.25, 0, 0, 0, 2.75, 0, 0, 0, 2, 2.08165e-12, -1.25, 2.08165e-12)
+shape = SubResource("BoxShape3D_mkran")
