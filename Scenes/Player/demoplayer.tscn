@@ -184,7 +184,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_hq0l2")
 }],
-"loop": true,
+"loop": false,
 "name": &"roll_diag",
 "speed": 15.0
 }, {
@@ -286,4 +286,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.402237, 0)
 texture_filter = 0
 sprite_frames = SubResource("SpriteFrames_lf7xo")
 animation = &"roll_diag"
+frame = 8
+frame_progress = 1.0
 script = ExtResource("4_ju6fq")
