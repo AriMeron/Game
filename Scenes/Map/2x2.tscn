@@ -1,4 +1,4 @@
-[gd_scene load_steps=5 format=3 uid="uid://cix255ay5pkn3"]
+[gd_scene load_steps=6 format=3 uid="uid://cix255ay5pkn3"]
 
 [ext_resource type="TileSet" uid="uid://ejlti37obpv3" path="res://Design/tileset_map/WallTileset.tres" id="1_k1t54"]
 
@@ -12,6 +12,9 @@ texture_filter = 0
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_du1y0"]
 size = Vector2(4, 2)
+
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_66xob"]
+data = PackedVector3Array(2, 0, 1, -2, 0, 1, 2, 0, -1, -2, 0, 1, -2, 0, -1, 2, 0, -1)
 
 [node name="Node3D" type="Node3D"]
 
@@ -27,3 +30,8 @@ layer_0/tile_data = PackedInt32Array(0, 3, 6, 65536, 3, 7, 131072, 3, 8, 196608,
 transform = Transform3D(1, 0, -1.5246e-23, -1.5246e-23, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0)
 material_override = SubResource("StandardMaterial3D_dvwhe")
 mesh = SubResource("PlaneMesh_du1y0")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="MeshInstance3D"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="MeshInstance3D/StaticBody3D"]
+shape = SubResource("ConcavePolygonShape3D_66xob")
