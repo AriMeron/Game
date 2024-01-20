@@ -10,8 +10,21 @@ func _ready():
 	multiplayer.peer_disconnected.connect(peer_disconnected)
 	multiplayer.connected_to_server.connect(connected_to_server)
 	multiplayer.connection_failed.connect(connection_failed)
-	
 	pass # Replace with function body.
+
+func host_button(name):
+	peer = ENetMultiplayerPeer.new()
+	var error = peer.create_server(port, 6)
+	if error != OK:
+		print("cannont host:" + error)
+		return
+	
+	peer.get_host().compress(ENetConnection.COMPRESS_RANGE_CODER)
+	
+	multiplayer.set_multiplayer_peer(peer)
+	print("Waiting For Players!")
+	
+	SendPlayerInformation(name, multiplayer.get_unique_id())
 
 func peer_connected(id):
 	print("Player Connected " + str(id))
@@ -21,7 +34,7 @@ func peer_disconnected(id):
 
 func connected_to_server():
 	print("Connected to Server!")
-	SendPlayerInformation.rpc_id(1, $LineEdit.text, multiplayer.get_unique_id())
+	SendPlayerInformation.rpc_id(1, "name - placement", multiplayer.get_unique_id())
 
 func connection_failed(id):
 	print("Couldn't Connect")
@@ -45,6 +58,12 @@ func StartGame():
 	var scene = load ("res://Scenes/Player/DemoPlayerSpace.tscn").instantiate()
 	get_tree().root.add_child(scene)
 	self.hide()
+
+func join_button():
+	peer = ENetMultiplayerPeer.new()
+	peer.create_client(Address, port)
+	peer.get_host().compress(ENetConnection.COMPRESS_RANGE_CODER)
+	multiplayer.set_multiplayer_peer(peer)
 
 func _initialize_as_host():
 	peer = ENetMultiplayerPeer.new()
