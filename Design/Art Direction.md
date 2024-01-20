@@ -116,11 +116,11 @@ Dodge Roll
 
 -   Dodge Roll Front Design: Complete (Wyatt and Sophia)
     -   Biden: Complete (Wyatt and Sophia)
-    -   JFK
-    -   Obama
-    -   Dubya
-    -   Trump
-    -   Reagan
+    -   JFK (Sophia)
+    -   Obama (Sophia)
+    -   Dubya (Sophia)
+    -   Trump (Sophia)
+    -   Reagan (Sophia)
 -   Dodge Roll Diagonal Front Design: Complete (Wyatt and Sophia)
     -   Biden: Complete (Wyatt and Sophia)
     -   JFK: Complete (Sophia)
@@ -152,21 +152,21 @@ Idle
     -   Dubya
     -   Trump
     -   Reagan
--   Idle Diagonal Front Design
-    -   Biden (Claire)
-    -   JFK (Claire)
-    -   Obama (Claire)
-    -   Dubya (Claire)
-    -   Trump (Claire)
-    -   Reagan (Claire)
--   Idle Diagonal Back Design
+-   Idle Diagonal Front Design (Claire - All)
+    -   Biden 
+    -   JFK 
+    -   Obama 
+    -   Dubya 
+    -   Trump 
+    -   Reagan 
+-   Idle Diagonal Back Design (Claire - All)
     -   Biden
     -   JFK
     -   Obama
     -   Dubya
     -   Trump
     -   Reagan
--   Idle Back Design
+-   Idle Back Design (Sophia - All)
     -   Biden
     -   JFK
     -   Obama

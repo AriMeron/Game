@@ -2,7 +2,11 @@
 
 importer="mp3"
 type="AudioStreamMP3"
+<<<<<<< HEAD
 uid="uid://crvbe851fwebd"
+=======
+uid="uid://dmfx2bwhovc23"
+>>>>>>> main
 path="res://.godot/imported/ReaganQuote3.mp3-a440efb1025483acafcc70674ed41789.mp3str"
 
 [deps]
