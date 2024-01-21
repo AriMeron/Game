@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://dmgh1hh7xvw10"]
+[gd_scene load_steps=8 format=3 uid="uid://dmgh1hh7xvw10"]
 
 [ext_resource type="PackedScene" uid="uid://bdibwmj224q5y" path="res://Scenes/Map/floor.tscn" id="1_dkk4u"]
 [ext_resource type="PackedScene" uid="uid://clity2ddchtyq" path="res://Scenes/Map/player.tscn" id="2_cq62u"]
@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://kyfdv1vfgrd3" path="res://Scenes/Map/wall.tscn" id="3_nympk"]
 [ext_resource type="PackedScene" uid="uid://cu41wjfyawovx" path="res://Scenes/Map/healing.tscn" id="5_8lgtj"]
 [ext_resource type="PackedScene" uid="uid://c704vf7jbt60f" path="res://Scenes/Map/points.tscn" id="5_vsndi"]
+[ext_resource type="PackedScene" uid="uid://dabdfd4dr6jtt" path="res://Scenes/Map/score_board.tscn" id="7_d1rvx"]
 
 [node name="test_scene" type="Node3D"]
 
@@ -74,3 +75,5 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 2.08165e-12, -3)
 
 [node name="floor15" parent="." instance=ExtResource("1_dkk4u")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 2.08165e-12, -5)
+
+[node name="ScoreBoard" parent="." instance=ExtResource("7_d1rvx")]

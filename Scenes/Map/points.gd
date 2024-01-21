@@ -5,9 +5,17 @@ var points
 var timer
 var label
 var forLoop = false
+var scoreboard_scene
+var ui
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	var scoreboard_scene = preload("res://Scenes/Map/score_board.tscn")  # Adjust the path as needed
+	if scoreboard_scene:
+		ui = scoreboard_scene.instantiate()
+		add_child(ui)
+	else:
+		print("Failed to load score_board scene.")
 	area = $Area
 	area.connect("body_entered", Callable(self, "_on_Area_body_entered"))
 	area.connect("body_exited", Callable(self, "_on_Area_body_exited"))
@@ -30,6 +38,8 @@ func _on_Area_body_exited(_body:Node) -> void:
 	print("out")
 
 func _addPoints():
+	ui.update_score_Rep(5)
+	ui.update_score_Dem(5)
 	print("adding points")
 	points += 5
 	label.text = "Points: " + str(points)
