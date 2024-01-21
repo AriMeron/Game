@@ -1,0 +1,11 @@
+[gd_scene format=3 uid="uid://caqhiglwusyfx"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Label" type="Label" parent="."]
+offset_left = 488.0
+offset_top = 231.0
+offset_right = 541.0
+offset_bottom = 257.0
+size_flags_vertical = 1
+text = "temporary placeholder for actual victory scene"

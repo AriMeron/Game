@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=3 uid="uid://dabdfd4dr6jtt"]
+[gd_scene load_steps=3 format=3 uid="uid://dabdfd4dr6jtt"]
 
 [ext_resource type="Script" path="res://Scenes/Map/score_board.gd" id="1_dcvno"]
+[ext_resource type="PackedScene" uid="uid://caqhiglwusyfx" path="res://Scenes/Map/victory_temp.tscn" id="2_2ldi8"]
 
 [node name="ScoreBoard" type="CanvasLayer"]
 script = ExtResource("1_dcvno")
@@ -17,3 +18,5 @@ offset_left = -40.0
 offset_bottom = 23.0
 grow_horizontal = 0
 horizontal_alignment = 2
+
+[node name="victory_temp" parent="." instance=ExtResource("2_2ldi8")]
