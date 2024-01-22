@@ -28,7 +28,9 @@ collision_use_scale = true
 transparency = 1
 cull_mode = 2
 vertex_color_use_as_albedo = true
+albedo_color = Color(0, 0.94902, 0, 1)
 albedo_texture = ExtResource("1_hpv07")
+texture_filter = 2
 
 [sub_resource type="QuadMesh" id="QuadMesh_6spbf"]
 material = SubResource("StandardMaterial3D_61ytt")

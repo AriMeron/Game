@@ -12,6 +12,7 @@ var health = 100
 
 var DirtParticle = preload("res://Scenes/Characters/Joe Biden/Particles/DirtParticle.tscn")
 var BloodParticle = preload("res://Scenes/Characters/Joe Biden/Particles/BloodParticle.tscn")
+var HealParticle = preload("res://Scenes/Characters/Joe Biden/Particles/HealParticle.tscn")
 
 func _physics_process(delta):
 	var velocity = Vector3.ZERO
@@ -74,6 +75,8 @@ func _physics_process(delta):
 	set_dust_trail_particle(moving, velocity)
 	if Input.is_action_just_pressed("blood_particle"):
 		create_blood_particle()
+	if Input.is_action_just_pressed("heal"):
+		create_heal_particle()
 	
 # Adjust the update_animation function as needed for the new setup.
 
@@ -90,5 +93,7 @@ func create_blood_particle():
 	var particle = BloodParticle.instantiate()
 	add_child(particle)
 	
-
+func create_heal_particle():
+	var particle = HealParticle.instantiate()
+	add_child(particle)
 

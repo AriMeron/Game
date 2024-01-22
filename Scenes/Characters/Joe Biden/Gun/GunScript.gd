@@ -102,5 +102,9 @@ func create_bullet_casing_particle():
 func create_bullet_explosion_particle():
 	var particle = BulletExplosionParticle.instantiate()
 	particle.position.x = 0.07
+	if flipGun:
+		particle.position.y = 0.02
+	else :
+		particle.position.y = -0.02
 	get_child(0).get_child(0).add_child(particle)
 	

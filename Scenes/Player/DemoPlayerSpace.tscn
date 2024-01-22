@@ -12,7 +12,7 @@
 [ext_resource type="PackedScene" uid="uid://dn8yq6k2lluq7" path="res://Scenes/Characters/Joe Biden/Particles/BulletParticle.tscn" id="6_wa4ry"]
 [ext_resource type="PackedScene" uid="uid://b5j5qkq132br2" path="res://Scenes/Particles/Bullet.tscn" id="7_sto06"]
 [ext_resource type="PackedScene" uid="uid://brufljs8818j2" path="res://Scenes/Characters/Joe Biden/Particles/BulletCasingParticle.tscn" id="8_dxoty"]
-[ext_resource type="PackedScene" uid="uid://lliwv5pgvs5b" path="res://Scenes/Particles/HealParticle.tscn" id="9_rh6it"]
+[ext_resource type="PackedScene" uid="uid://lliwv5pgvs5b" path="res://Scenes/Characters/Joe Biden/Particles/HealParticle.tscn" id="9_rh6it"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_fdkgt"]
 sky_top_color = Color(0.709804, 0, 0.772549, 1)
