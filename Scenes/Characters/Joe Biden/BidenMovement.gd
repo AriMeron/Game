@@ -89,4 +89,6 @@ func create_dirt_particle(velocity_direction : Vector3):
 func create_blood_particle():
 	var particle = BloodParticle.instantiate()
 	add_child(particle)
+	
+
 

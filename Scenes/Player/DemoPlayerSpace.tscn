@@ -9,7 +9,7 @@
 [ext_resource type="Script" path="res://Scenes/Player/Variable Label.gd" id="5_4s5x4"]
 [ext_resource type="PackedScene" uid="uid://b4nt3i4alsft4" path="res://Scenes/Particles/CloudParticle.tscn" id="5_asbwd"]
 [ext_resource type="PackedScene" uid="uid://d2jhi3luwqg0j" path="res://Scenes/Characters/Joe Biden/Particles/BloodParticle.tscn" id="5_be5xw"]
-[ext_resource type="PackedScene" uid="uid://dn8yq6k2lluq7" path="res://Scenes/Particles/BulletParticle.tscn" id="6_wa4ry"]
+[ext_resource type="PackedScene" uid="uid://dn8yq6k2lluq7" path="res://Scenes/Characters/Joe Biden/Particles/BulletParticle.tscn" id="6_wa4ry"]
 [ext_resource type="PackedScene" uid="uid://b5j5qkq132br2" path="res://Scenes/Particles/Bullet.tscn" id="7_sto06"]
 [ext_resource type="PackedScene" uid="uid://brufljs8818j2" path="res://Scenes/Characters/Joe Biden/Particles/BulletCasingParticle.tscn" id="8_dxoty"]
 [ext_resource type="PackedScene" uid="uid://lliwv5pgvs5b" path="res://Scenes/Particles/HealParticle.tscn" id="9_rh6it"]

@@ -32,6 +32,7 @@ var shotTimer = 0
 var canShoot = true
 
 var BulletCasingParticle = preload("res://Scenes/Characters/Joe Biden/Particles/BulletCasingParticle.tscn")
+var BulletExplosionParticle = preload("res://Scenes/Characters/Joe Biden/Particles/BulletParticle.tscn")
 
 func _ready():
 	original_position_right = rotationHelp.position
@@ -64,6 +65,7 @@ func _process(delta):
 			current_recoil_rotation += recoil_rotation_step
 			current_recoil_rotation = min(current_recoil_rotation, max_recoil_rotation)
 			canShoot = false
+			create_bullet_explosion_particle()
 			create_bullet_casing_particle()
 	if current_recoil > 0.0 or current_recoil_rotation > 0.0:
 		current_recoil -= recoil_recovery_speed * delta
@@ -91,4 +93,14 @@ func _process(delta):
 func create_bullet_casing_particle():
 	var particle = BulletCasingParticle.instantiate()
 	particle.position.z = 0.1
+	if flipGun:
+		particle.get_child(0).set_velocity_direction(Vector3(2, -1, 0))
+	else:
+		particle.get_child(0).set_velocity_direction(Vector3(-2, -1, 0))
 	get_child(0).get_child(0).add_child(particle)
+	
+func create_bullet_explosion_particle():
+	var particle = BulletExplosionParticle.instantiate()
+	particle.position.x = 0.07
+	get_child(0).get_child(0).add_child(particle)
+	
