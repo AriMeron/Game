@@ -1,9 +1,7 @@
-[gd_scene load_steps=5 format=3 uid="uid://b0iygl7wuy6ga"]
+[gd_scene load_steps=3 format=3 uid="uid://b0iygl7wuy6ga"]
 
-[ext_resource type="Texture2D" uid="uid://bqid4wqunseuv" path="res://Design/Character Selection UI/Biden.png" id="1_pjr5o"]
-[ext_resource type="Script" path="res://Scripts/CharacterSelection/LoadObama.gd" id="2_l4oe8"]
-[ext_resource type="Script" path="res://Scripts/CharacterSelection/LoadJFK.gd" id="3_4hjod"]
-[ext_resource type="Script" path="res://Scripts/CharacterSelection/LoadTrump.gd" id="4_v4i0f"]
+[ext_resource type="Texture2D" uid="uid://d0fu0be7jaxhc" path="res://Design/Character Selection UI/Biden.png" id="1_pjr5o"]
+[ext_resource type="Script" path="res://Scripts/CharacterSelection/CharacterSelection.gd" id="2_y4ow0"]
 
 [node name="Control" type="Control"]
 layout_mode = 3
@@ -24,7 +22,7 @@ offset_left = 330.0
 offset_top = 782.0
 offset_right = 573.0
 offset_bottom = 1023.0
-script = ExtResource("2_l4oe8")
+script = ExtResource("2_y4ow0")
 
 [node name="Button2" type="Button" parent="."]
 visibility_layer = 0
@@ -33,7 +31,7 @@ offset_left = 585.0
 offset_top = 785.0
 offset_right = 828.0
 offset_bottom = 1024.0
-script = ExtResource("3_4hjod")
+script = ExtResource("2_y4ow0")
 
 [node name="Button3" type="Button" parent="."]
 visibility_layer = 0
@@ -42,8 +40,16 @@ offset_left = 879.0
 offset_top = 783.0
 offset_right = 1122.0
 offset_bottom = 1022.0
-script = ExtResource("4_v4i0f")
+script = ExtResource("2_y4ow0")
 
-[connection signal="pressed" from="Button" to="Button" method="_on_pressed"]
-[connection signal="pressed" from="Button2" to="Button2" method="_on_pressed"]
-[connection signal="pressed" from="Button3" to="Button3" method="_on_pressed"]
+[node name="Button4" type="Button" parent="."]
+visibility_layer = 0
+layout_mode = 0
+offset_left = 1250.0
+offset_top = 795.0
+offset_right = 1749.0
+offset_bottom = 899.0
+
+[connection signal="pressed" from="Button" to="Button" method="loadObama"]
+[connection signal="pressed" from="Button2" to="Button2" method="loadJFK"]
+[connection signal="pressed" from="Button3" to="Button3" method="loadTrump"]

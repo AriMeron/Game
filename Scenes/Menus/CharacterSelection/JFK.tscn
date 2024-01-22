@@ -1,9 +1,7 @@
-[gd_scene load_steps=5 format=3 uid="uid://c2gyoj3uaq4co"]
+[gd_scene load_steps=3 format=3 uid="uid://c2gyoj3uaq4co"]
 
-[ext_resource type="Texture2D" uid="uid://rr15r21rhxa0" path="res://Design/Character Selection UI/JFK Screen.png" id="1_i058i"]
-[ext_resource type="Script" path="res://Scripts/CharacterSelection/LoadBiden.gd" id="2_b8ir8"]
-[ext_resource type="Script" path="res://Scripts/CharacterSelection/LoadObama.gd" id="3_q6cnv"]
-[ext_resource type="Script" path="res://Scripts/CharacterSelection/LoadTrump.gd" id="4_s6ps1"]
+[ext_resource type="Texture2D" uid="uid://cbxcut7plef3j" path="res://Design/Character Selection UI/JFK Screen.png" id="1_i058i"]
+[ext_resource type="Script" path="res://Scripts/CharacterSelection/CharacterSelection.gd" id="2_crvuu"]
 
 [node name="Control" type="Control"]
 layout_mode = 3
@@ -24,7 +22,7 @@ offset_left = 74.0
 offset_top = 783.0
 offset_right = 317.0
 offset_bottom = 1024.0
-script = ExtResource("2_b8ir8")
+script = ExtResource("2_crvuu")
 
 [node name="Button2" type="Button" parent="."]
 visibility_layer = 0
@@ -33,7 +31,7 @@ offset_left = 326.0
 offset_top = 783.0
 offset_right = 569.0
 offset_bottom = 1022.0
-script = ExtResource("3_q6cnv")
+script = ExtResource("2_crvuu")
 
 [node name="Button3" type="Button" parent="."]
 visibility_layer = 0
@@ -42,8 +40,8 @@ offset_left = 879.0
 offset_top = 783.0
 offset_right = 1122.0
 offset_bottom = 1022.0
-script = ExtResource("4_s6ps1")
+script = ExtResource("2_crvuu")
 
-[connection signal="pressed" from="Button" to="Button" method="_on_pressed"]
-[connection signal="pressed" from="Button2" to="Button2" method="_on_pressed"]
-[connection signal="pressed" from="Button3" to="Button3" method="_on_pressed"]
+[connection signal="pressed" from="Button" to="Button" method="loadBiden"]
+[connection signal="pressed" from="Button2" to="Button2" method="loadObama"]
+[connection signal="pressed" from="Button3" to="Button3" method="loadTrump"]
