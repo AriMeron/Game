@@ -13,3 +13,7 @@ func _process(delta):
 
 func _on_timer_timeout():
 	value -=5
+
+func _input(event):
+	if Input.is_key_pressed(KEY_Q) and value == 0:
+		value=100

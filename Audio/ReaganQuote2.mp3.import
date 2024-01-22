@@ -1,0 +1,23 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+<<<<<<< HEAD
+uid="uid://bspwsc5vh13bv"
+=======
+uid="uid://c60wxnbff6yyf"
+>>>>>>> main
+path="res://.godot/imported/ReaganQuote2.mp3-b46a18570420ae8d7c35c6aea3d39214.mp3str"
+
+[deps]
+
+source_file="res://Audio/ReaganQuote2.mp3"
+dest_files=["res://.godot/imported/ReaganQuote2.mp3-b46a18570420ae8d7c35c6aea3d39214.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

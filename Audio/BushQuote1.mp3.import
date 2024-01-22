@@ -1,0 +1,23 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+<<<<<<< HEAD
+uid="uid://bn1jsiypa0amw"
+=======
+uid="uid://bpmkn0cs5r6rg"
+>>>>>>> main
+path="res://.godot/imported/BushQuote1.mp3-e25ea7ad23d24be032d6cc02e968b6e6.mp3str"
+
+[deps]
+
+source_file="res://Audio/BushQuote1.mp3"
+dest_files=["res://.godot/imported/BushQuote1.mp3-e25ea7ad23d24be032d6cc02e968b6e6.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

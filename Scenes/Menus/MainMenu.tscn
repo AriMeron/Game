@@ -1,80 +1,69 @@
 [gd_scene load_steps=2 format=3 uid="uid://b5uyetxut2swm"]
 
-[ext_resource type="Script" path="res://Control.gd" id="1_v86av"]
+[ext_resource type="Script" path="res://Menus/MainMenu.gd" id="2_ej1am"]
 
 [node name="Control" type="Control"]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = -4.0
-offset_top = -3.0
-offset_right = 6.0
-offset_bottom = 7.0
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("1_v86av")
 
-[node name="Node Load example" type="Button" parent="."]
-layout_mode = 0
-offset_left = 455.0
-offset_top = 118.0
-offset_right = 647.0
-offset_bottom = 190.0
-text = "Load Node Example"
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
 
-[node name="View Assets" type="Button" parent="."]
-layout_mode = 0
-offset_left = 113.0
-offset_top = 288.0
-offset_right = 305.0
-offset_bottom = 360.0
-text = "Assets"
+[node name="MainMenu" type="PanelContainer" parent="CanvasLayer"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 458.0
+offset_top = 228.0
+offset_right = -458.0
+offset_bottom = -228.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("2_ej1am")
 
-[node name="Load Map" type="Button" parent="."]
-layout_mode = 0
-offset_left = 455.0
-offset_top = 293.0
-offset_right = 647.0
-offset_bottom = 365.0
-text = "Map"
+[node name="MarginContainer" type="MarginContainer" parent="CanvasLayer/MainMenu"]
+layout_mode = 2
+theme_override_constants/margin_left = 15
+theme_override_constants/margin_top = 15
+theme_override_constants/margin_right = 15
+theme_override_constants/margin_bottom = 15
 
-[node name="Host" type="Button" parent="."]
-layout_mode = 0
-offset_left = 784.0
-offset_top = 275.0
-offset_right = 976.0
-offset_bottom = 347.0
-text = "Host"
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/MainMenu/MarginContainer"]
+layout_mode = 2
+theme_override_constants/separation = 20
 
-[node name="Client" type="Button" parent="."]
-layout_mode = 0
-offset_left = 130.0
-offset_top = 438.0
-offset_right = 322.0
-offset_bottom = 510.0
+[node name="JoinLobby" type="Button" parent="CanvasLayer/MainMenu/MarginContainer/VBoxContainer"]
+layout_mode = 2
 text = "Join"
 
-[node name="Test movement" type="Button" parent="."]
-layout_mode = 0
-offset_left = 473.0
-offset_top = 446.0
-offset_right = 665.0
-offset_bottom = 518.0
-text = "Test movement"
+[node name="HostInternet" type="Button" parent="CanvasLayer/MainMenu/MarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "Host Internet"
 
-[node name="Load menus" type="Button" parent="."]
-layout_mode = 0
-offset_left = 804.0
-offset_top = 448.0
-offset_right = 996.0
-offset_bottom = 520.0
-text = "Load Menus"
+[node name="Host LAN" type="Button" parent="CanvasLayer/MainMenu/MarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "Host LAN"
 
-[connection signal="button_down" from="Node Load example" to="." method="_on_node_load_example_button_down"]
-[connection signal="button_down" from="View Assets" to="." method="_on_view_assets_button_down"]
-[connection signal="button_down" from="Load Map" to="." method="_on_load_map_button_down"]
-[connection signal="button_down" from="Host" to="." method="_on_host_button_down"]
-[connection signal="button_down" from="Client" to="." method="_on_client_button_down"]
-[connection signal="button_down" from="Test movement" to="." method="_on_test_movement_button_down"]
-[connection signal="button_down" from="Load menus" to="." method="_on_load_menus_button_down"]
+[node name="LineEdit" type="LineEdit" parent="CanvasLayer/MainMenu/MarginContainer/VBoxContainer"]
+layout_mode = 2
+placeholder_text = "Enter address to join"
+alignment = 1
+
+[node name="Settings" type="Button" parent="CanvasLayer/MainMenu/MarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "Settings"
+
+[node name="Start Game" type="Button" parent="CanvasLayer/MainMenu/MarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "Start Game"
+
+[connection signal="pressed" from="CanvasLayer/MainMenu/MarginContainer/VBoxContainer/JoinLobby" to="CanvasLayer/MainMenu" method="_on_join_lobby_pressed"]
+[connection signal="pressed" from="CanvasLayer/MainMenu/MarginContainer/VBoxContainer/HostInternet" to="CanvasLayer/MainMenu" method="_on_host_internet_pressed"]
+[connection signal="button_down" from="CanvasLayer/MainMenu/MarginContainer/VBoxContainer/Host LAN" to="CanvasLayer/MainMenu" method="_on_host_lan_button_down"]
+[connection signal="pressed" from="CanvasLayer/MainMenu/MarginContainer/VBoxContainer/Host LAN" to="CanvasLayer/MainMenu" method="_on_host_lan_pressed"]
+[connection signal="property_list_changed" from="CanvasLayer/MainMenu/MarginContainer/VBoxContainer/LineEdit" to="CanvasLayer/MainMenu" method="_on_line_edit_property_list_changed"]
+[connection signal="pressed" from="CanvasLayer/MainMenu/MarginContainer/VBoxContainer/Settings" to="CanvasLayer/MainMenu" method="_on_settings_pressed"]
+[connection signal="button_down" from="CanvasLayer/MainMenu/MarginContainer/VBoxContainer/Start Game" to="CanvasLayer/MainMenu" method="_on_start_game_button_down"]

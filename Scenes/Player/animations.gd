@@ -7,9 +7,18 @@ var roll_timer = 0.5
 var roll_direction = Vector3.ZERO
 
 
+
+
 func _physics_process(delta):
 	var movement = Vector3.ZERO
 	var moving = false
+	
+	var center = get_viewport().get_visible_rect().size/2
+	var mouse_position = get_viewport().get_mouse_position() - center
+	if mouse_position.x < 0:
+		$GunRotation.rotation = Vector3(3.14159*2, 3.14159, -atan(mouse_position.y / -mouse_position.x))
+	if mouse_position.x > 0:
+		$GunRotation.rotation = Vector3(0, 0, atan(mouse_position.y / -mouse_position.x))
 	
 	# Handle inputs
 	if not rolling:
@@ -69,7 +78,7 @@ func update_animation(movement: Vector3):
 			elif Input.is_action_pressed("up"):
 				anim_name = "walk_diag"
 			else:
-				anim_name = "walk_side"
+				anim_name = "walk_diag"
 		elif Input.is_action_pressed("left"):
 			# Left, Up-Left, or Up coming from the left side
 			flip_h_value = 2
@@ -78,11 +87,11 @@ func update_animation(movement: Vector3):
 			elif Input.is_action_pressed("up"):
 				anim_name = "walk_diag"
 			else:
-				anim_name = "walk_side"
+				anim_name = "walk_diag"
 		elif Input.is_action_pressed("down"):
 			anim_name = "walk_forward"
 		elif Input.is_action_pressed("up"):
-			anim_name = "walk_up"
+			anim_name = "walk_diag"
 	# Set the animation and flip_h property
 	if anim_name != "":
 		play(anim_name)
