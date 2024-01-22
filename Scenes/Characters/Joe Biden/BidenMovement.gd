@@ -79,6 +79,8 @@ func _physics_process(delta):
 		create_heal_particle()
 	
 # Adjust the update_animation function as needed for the new setup.
+func get_player_type():
+	return "democrat"
 
 func set_dust_trail_particle(b : bool, velocity_direction : Vector3):
 	$DustTrail.get_child(0).emitting = b

@@ -9,7 +9,8 @@ size = Vector3(0.228257, 0.257697, 0.164541)
 [sub_resource type="SceneReplicationConfig" id="SceneReplicationConfig_tpf5x"]
 properties/0/path = NodePath(".:position")
 properties/0/spawn = true
-properties/0/replication_mode = 1
+properties/0/sync = true
+properties/0/watch = false
 
 [node name="CharacterBody3D" type="CharacterBody3D"]
 script = ExtResource("1_7iqit")
