@@ -13,14 +13,14 @@
 Effects methods:
 
 -   damage method
-    -   uses damage amount to damage the target
-    -   send a packet with opponent player object and damage amount
+	-   uses damage amount to damage the target
+	-   send a packet with opponent player object and damage amount
 -   heal method
-    -   use heal amount to heal the user
-    -   send a packet with the user object and heal amount
+	-   use heal amount to heal the user
+	-   send a packet with the user object and heal amount
 -   crowd control method
-    -   uses crowd control duration to stun the target
-    -   send a packet with opponent player object and stun duration
+	-   uses crowd control duration to stun the target
+	-   send a packet with opponent player object and stun duration
 
 Use ability method:
 
