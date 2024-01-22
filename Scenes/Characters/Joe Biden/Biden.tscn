@@ -31,3 +31,7 @@ script = ExtResource("6_7k20f")
 
 [node name="DustTrail" parent="." instance=ExtResource("7_srlcm")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.104684, 0)
+
+[node name="Gun" parent="." instance=ExtResource("5_gkqed")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.069, -0.038, 2.08165e-12)
+script = ExtResource("6_7k20f")
