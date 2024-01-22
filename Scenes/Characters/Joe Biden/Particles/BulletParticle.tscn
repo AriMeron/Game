@@ -1,7 +1,7 @@
 [gd_scene load_steps=10 format=3 uid="uid://dn8yq6k2lluq7"]
 
 [ext_resource type="Texture2D" uid="uid://bock3qn4qawmv" path="res://Scenes/Particles/spark.png" id="1_sjq0e"]
-[ext_resource type="Script" path="res://Scenes/Particles/Particle.gd" id="2_6pf6j"]
+[ext_resource type="Script" path="res://Scenes/Characters/Joe Biden/Particles/Particle.gd" id="2_6pf6j"]
 
 [sub_resource type="Gradient" id="Gradient_p4ee5"]
 colors = PackedColorArray(1, 1, 1, 1, 1, 1, 1, 0)
@@ -28,7 +28,9 @@ color_ramp = SubResource("GradientTexture1D_f8q65")
 transparency = 1
 cull_mode = 2
 vertex_color_use_as_albedo = true
+albedo_color = Color(0.278431, 1, 0.254902, 1)
 albedo_texture = ExtResource("1_sjq0e")
+texture_filter = 2
 
 [sub_resource type="QuadMesh" id="QuadMesh_xujq6"]
 material = SubResource("StandardMaterial3D_jy141")

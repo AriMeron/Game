@@ -1,7 +1,7 @@
 [gd_scene load_steps=8 format=3 uid="uid://b4nt3i4alsft4"]
 
 [ext_resource type="Texture2D" uid="uid://cnsksvcexiuim" path="res://Scenes/Particles/8918176.png" id="1_okwgh"]
-[ext_resource type="Script" path="res://Scenes/Particles/Particle.gd" id="2_g3l6a"]
+[ext_resource type="Script" path="res://Scenes/Characters/Joe Biden/Particles/Particle.gd" id="2_g3l6a"]
 
 [sub_resource type="Gradient" id="Gradient_5sbmx"]
 offsets = PackedFloat32Array(0, 0.595455)
