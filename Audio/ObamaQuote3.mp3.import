@@ -2,7 +2,11 @@
 
 importer="mp3"
 type="AudioStreamMP3"
-uid="uid://cotky3pmoyqg0"
+<<<<<<< HEAD
+uid="uid://dw20rq4xnqh1p"
+=======
+uid="uid://degx87xxr1syo"
+>>>>>>> main
 path="res://.godot/imported/ObamaQuote3.mp3-92aad793c03914f4900f5b62c7cc9990.mp3str"
 
 [deps]

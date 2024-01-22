@@ -6,10 +6,8 @@ var score_label_Dem
 var score_label_Rep
 
 func _ready():
-	score_label_Dem = $HBoxContainer/Reps/RepublicanScore
-	score_label_Rep = $HBoxContainer/Dems/DemocratScore
-#	update_score_Dem(0)
-#	update_score_Rep(0)
+	score_label_Dem = $CenterContainer/HBoxContainer/RepublicanScore
+	score_label_Rep = $CenterContainer/HBoxContainer/DemocratScore
 
 func update_score_Dem(points: int):
 	score_Dem = points

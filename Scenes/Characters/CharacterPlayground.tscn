@@ -54,3 +54,7 @@ shape = SubResource("BoxShape3D_sgtiu")
 
 [node name="Biden" parent="." instance=ExtResource("1_yhuv3")]
 transform = Transform3D(10, 0, 0, 0, 14.14, 0, 0, 0, 10, 0, 2.23281, 0)
+
+[node name="GPUParticlesCollisionBox3D" type="GPUParticlesCollisionBox3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.027832, 0.529782, -0.240051)
+size = Vector3(40.1436, 2, 40.7084)

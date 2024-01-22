@@ -17,3 +17,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.038835, 0.0150877, 0)
 flip_h = true
 texture_filter = 0
 texture = ExtResource("2_ea8ia")
+
+[node name="BulletSpawn" type="Marker3D" parent="RotationHelper/Gun"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0457839, -0.00606821, -2.08165e-12)

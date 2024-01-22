@@ -2,7 +2,11 @@
 
 importer="mp3"
 type="AudioStreamMP3"
-uid="uid://cbvttrokpp0ox"
+<<<<<<< HEAD
+uid="uid://4htf3xlnsc3b"
+=======
+uid="uid://cxe34t7fok0ap"
+>>>>>>> main
 path="res://.godot/imported/BidenQuote2.mp3-fe49e4520326004ee0cf0ab9d1f882c9.mp3str"
 
 [deps]
