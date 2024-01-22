@@ -22,6 +22,7 @@ func _ready():
 	label = $Label3D
 	points = 0
 	timer = Timer.new()
+	timer.stop()
 	timer.set_wait_time(1.0)  # Set the interval to 1 second
 	timer.set_one_shot(false)  # Only call the function once per timer
 	timer.connect("timeout", Callable(self, "_addPoints"))  # Connect the timeout signal to the other_function
@@ -38,9 +39,8 @@ func _on_Area_body_exited(_body:Node) -> void:
 	print("out")
 
 func _addPoints():
-	ui.update_score_Rep(5)
-	ui.update_score_Dem(5)
 	print("adding points")
 	points += 5
-	label.text = "Points: " + str(points)
+	ui.update_score_Rep(points)
+#	ui.update_score_Dem(points)
 	
