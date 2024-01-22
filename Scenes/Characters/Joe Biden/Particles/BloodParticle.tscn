@@ -1,6 +1,6 @@
 [gd_scene load_steps=9 format=3 uid="uid://d2jhi3luwqg0j"]
 
-[ext_resource type="Script" path="res://Scenes/Particles/Particle.gd" id="1_fxynp"]
+[ext_resource type="Script" path="res://Scenes/Characters/Joe Biden/Particles/Particle.gd" id="1_fxynp"]
 
 [sub_resource type="Gradient" id="Gradient_ikm4c"]
 offsets = PackedFloat32Array(0.809091, 1)
@@ -19,8 +19,8 @@ curve = SubResource("Curve_vj7q2")
 [sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_krrwi"]
 direction = Vector3(0, 1, 0)
 spread = 15.0
-initial_velocity_min = 10.0
-initial_velocity_max = 10.0
+initial_velocity_min = 1.0
+initial_velocity_max = 1.0
 gravity = Vector3(0, -100, 0)
 scale_curve = SubResource("CurveTexture_4m63m")
 color = Color(1, 0, 0, 1)
@@ -42,7 +42,6 @@ size = Vector2(0.3, 0.3)
 [node name="BloodParticle" type="Node3D"]
 
 [node name="GPUParticles3D" type="GPUParticles3D" parent="."]
-amount = 10
 lifetime = 0.6
 explosiveness = 1.0
 process_material = SubResource("ParticleProcessMaterial_krrwi")
