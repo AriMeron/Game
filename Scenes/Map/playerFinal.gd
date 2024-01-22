@@ -29,3 +29,5 @@ func _physics_process(delta):
 
 	move_and_slide()
 
+func get_player_type():
+	return "republican"

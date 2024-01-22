@@ -67,3 +67,5 @@ func _physics_process(delta):
 	# Ensure the AnimatedSprite3D child node is properly updated.
 
 # Adjust the update_animation function as needed for the new setup.
+func get_player_type():
+	return "democrat"
