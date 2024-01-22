@@ -10,7 +10,6 @@ func _ready():
 	multiplayer.peer_disconnected.connect(peer_disconnected)
 	multiplayer.connected_to_server.connect(connected_to_server)
 	multiplayer.connection_failed.connect(connection_failed)
-	
 	pass # Replace with function body.
 
 func peer_connected(id):
@@ -52,13 +51,15 @@ func _initialize_as_host():
 	if error != OK:
 		print("cannont host:" + error)
 		return
+
 	
 	peer.get_host().compress(ENetConnection.COMPRESS_RANGE_CODER)
 	
 	multiplayer.set_multiplayer_peer(peer)
+
 	print("Waiting For Players!")
 	
-	SendPlayerInformation($LineEdit.text, multiplayer.get_unique_id())
+	SendPlayerInformation("name test", multiplayer.get_unique_id())
 	
 	pass # Replace with function body.
 
@@ -68,10 +69,16 @@ func _on_start_game_button_down():
 
 
 func _initialize_as_client():
-	peer = ENetMultiplayerPeer.new()
-	peer.create_client(Address, port)
-	peer.get_host().compress(ENetConnection.COMPRESS_RANGE_CODER)
-	multiplayer.set_multiplayer_peer(peer)
+	var peer2 = ENetMultiplayerPeer.new()
+	var error = peer2.create_client(Address, port)
+	
+	if error != OK:
+		print("cannont create client:" + error)
+		return
+	
+	peer2.get_host().compress(ENetConnection.COMPRESS_RANGE_CODER)
+	var multiplayer2 = get_tree().multiplayer
+	multiplayer2.set_multiplayer_peer(peer2)
 	pass # Replace with function body.
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
