@@ -21,6 +21,8 @@ func _ready():
 	timer.set_one_shot(false)
 	timer.connect("timeout", Callable(self, "_addPoints"))
 	add_child(timer)
+	ui.update_score_Dem(0)
+	ui.update_score_Rep(0)
 
 func _on_Area_body_entered(body: Node) -> void:
 	if body.has_method("get_player_type"):

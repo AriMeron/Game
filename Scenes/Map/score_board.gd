@@ -6,18 +6,20 @@ var score_label_Dem
 var score_label_Rep
 
 func _ready():
-	score_label_Dem = $RepublicanScore
-	score_label_Rep = $DemocratScore
+	score_label_Dem = $HBoxContainer/Reps/RepublicanScore
+	score_label_Rep = $HBoxContainer/Dems/DemocratScore
+#	update_score_Dem(0)
+#	update_score_Rep(0)
 
 func update_score_Dem(points: int):
 	score_Dem = points
-	score_label_Dem.text = "Democrats: " + str(score_Dem)
+	score_label_Dem.text = str(score_Dem)
 	check_for_winner()
 		
 
 func update_score_Rep(points: int):
 	score_Rep = points
-	score_label_Rep.text = "Republicans: " + str(score_Rep)
+	score_label_Rep.text = str(score_Rep)
 	check_for_winner()
 	
 func check_for_winner():
