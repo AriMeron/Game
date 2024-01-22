@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://cwt7q7ulkdjtg"]
+[gd_scene load_steps=8 format=3 uid="uid://cwt7q7ulkdjtg"]
 
 [ext_resource type="Script" path="res://Scenes/Characters/Joe Biden/BidenMovement.gd" id="1_tc1ea"]
 [ext_resource type="PackedScene" uid="uid://cx5uoe48sp0kc" path="res://Scenes/Characters/Joe Biden/bidenSprite.tscn" id="3_7f0oe"]

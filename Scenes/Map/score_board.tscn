@@ -9,29 +9,28 @@ script = ExtResource("1_dcvno")
 [node name="victory_temp" parent="." instance=ExtResource("2_2ldi8")]
 visible = false
 
-[node name="HBoxContainer" type="HBoxContainer" parent="."]
-offset_right = 720.0
-offset_bottom = 360.0
-
-[node name="Dems" type="Node2D" parent="HBoxContainer"]
-position = Vector2(873, 33)
-
-[node name="DemocratScore" type="Label" parent="HBoxContainer/Dems"]
-offset_left = -15.0
-offset_right = -14.0
+[node name="CenterContainer" type="CenterContainer" parent="."]
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -20.0
+offset_right = 20.0
 offset_bottom = 49.0
+grow_horizontal = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="CenterContainer"]
+layout_mode = 2
+theme_override_constants/separation = 100
+
+[node name="RepublicanScore" type="Label" parent="CenterContainer/HBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.686275, 0, 0, 1)
+theme_override_font_sizes/font_size = 35
+
+[node name="DemocratScore" type="Label" parent="CenterContainer/HBoxContainer"]
+layout_mode = 2
 size_flags_horizontal = 8
 theme_override_colors/font_color = Color(0, 0, 0.764706, 1)
 theme_override_font_sizes/font_size = 35
 horizontal_alignment = 2
 metadata/_edit_use_anchors_ = true
-
-[node name="Reps" type="Node2D" parent="HBoxContainer"]
-position = Vector2(389, 33)
-
-[node name="RepublicanScore" type="Label" parent="HBoxContainer/Reps"]
-offset_left = -15.0
-offset_right = -14.0
-offset_bottom = 49.0
-theme_override_colors/font_color = Color(0.686275, 0, 0, 1)
-theme_override_font_sizes/font_size = 35
