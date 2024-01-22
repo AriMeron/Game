@@ -2,7 +2,11 @@
 
 importer="texture"
 type="CompressedTexture2D"
+<<<<<<< Updated upstream
 uid="uid://dl1k3utfqsfsy"
+=======
+uid="uid://sbncexhr55kr"
+>>>>>>> Stashed changes
 path="res://.godot/imported/BushNukeAbilityConcept.png-9b9efffb37a6c2bfc0b3062ffb9d0624.ctex"
 metadata={
 "vram_texture": false

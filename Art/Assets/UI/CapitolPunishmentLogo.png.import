@@ -2,7 +2,11 @@
 
 importer="texture"
 type="CompressedTexture2D"
+<<<<<<< Updated upstream
 uid="uid://djaqu302dal8h"
+=======
+uid="uid://bkpfhbs013w8e"
+>>>>>>> Stashed changes
 path="res://.godot/imported/CapitolPunishmentLogo.png-3c4bfd2aed62bb8b61728cbb4ed75d9d.ctex"
 metadata={
 "vram_texture": false

@@ -2,7 +2,11 @@
 
 importer="texture"
 type="CompressedTexture2D"
+<<<<<<< Updated upstream
 uid="uid://dl2m6bcd6bbrh"
+=======
+uid="uid://chgqepsce7lad"
+>>>>>>> Stashed changes
 path="res://.godot/imported/JFKPortrait.png-b8a17dad0a96afe4a56e7ca1989c8433.ctex"
 metadata={
 "vram_texture": false

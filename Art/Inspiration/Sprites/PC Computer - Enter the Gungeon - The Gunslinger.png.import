@@ -2,7 +2,11 @@
 
 importer="texture"
 type="CompressedTexture2D"
+<<<<<<< Updated upstream
 uid="uid://cg7k2t7fnwcxv"
+=======
+uid="uid://by0d61g788jxh"
+>>>>>>> Stashed changes
 path="res://.godot/imported/PC Computer - Enter the Gungeon - The Gunslinger.png-87a4882cf78bf21929bd227e697be821.ctex"
 metadata={
 "vram_texture": false

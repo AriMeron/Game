@@ -2,7 +2,11 @@
 
 importer="texture"
 type="CompressedTexture2D"
+<<<<<<< Updated upstream
 uid="uid://c6ndvnlkhktp6"
+=======
+uid="uid://ft1nc23guaio"
+>>>>>>> Stashed changes
 path="res://.godot/imported/Obama Screen.png-9f81fd2a00e48d3a92d3541ad0e6ab90.ctex"
 metadata={
 "vram_texture": false

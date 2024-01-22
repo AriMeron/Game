@@ -2,7 +2,11 @@
 
 importer="texture"
 type="CompressedTexture2D"
+<<<<<<< Updated upstream
 uid="uid://bojyecqdjskr5"
+=======
+uid="uid://4tmoiimeo6r8"
+>>>>>>> Stashed changes
 path="res://.godot/imported/rivalsOfAether.jpg-88595d84bcf6e0669f98783c2f86c65f.ctex"
 metadata={
 "vram_texture": false

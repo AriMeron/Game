@@ -2,7 +2,11 @@
 
 importer="texture"
 type="CompressedTexture2D"
+<<<<<<< Updated upstream
 uid="uid://dsp5ldd3idlpa"
+=======
+uid="uid://nu28ncqgmxkb"
+>>>>>>> Stashed changes
 path="res://.godot/imported/ReaganGun.png-93a9241fa47386b485a40e94bfbc22fa.ctex"
 metadata={
 "vram_texture": false

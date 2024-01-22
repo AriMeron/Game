@@ -2,7 +2,11 @@
 
 importer="texture"
 type="CompressedTexture2D"
+<<<<<<< Updated upstream
 uid="uid://b5vqkysdx5gb6"
+=======
+uid="uid://c24a8jfbrrmwh"
+>>>>>>> Stashed changes
 path="res://.godot/imported/BidenSpritesheet.png-0fe73367c25523a0635c04bb59bf25fa.ctex"
 metadata={
 "vram_texture": false
