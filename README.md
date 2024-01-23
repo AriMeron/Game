@@ -2,7 +2,7 @@
 
 ## Overview
 
-Welcome to Capitol Battle Royale, a thrilling third-person shooter that pits the "Democrats" against the "Republicans" in the iconic Capitol Building. Players will assume the avatars of prominent politicians, such as Bernie Sanders or Donald Trump. Both teams will be armed with aynthing allowed within the second ammendment and have an equal level of health, creating a fair and intense competition.
+Welcome to Capitol Battle Royale, a thrilling third-person battle royale that pits the "Democrats" against the "Republicans" in the iconic Capitol Building. Players will assume the avatars of prominent politicians, such as Bernie Sanders or Donald Trump. Both teams will be armed with any arms allowed within their consitutional rights of the second ammendment and have an equal level of health, creating a fair and intense competition.
 
 ## Visual Elements
 
