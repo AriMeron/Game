@@ -15,7 +15,8 @@ var roll_direction = Vector3.ZERO
 @export var heal_particle :PackedScene 
 
 func _ready():
-	$MultiplayerSynchronizer.set_multiplayer_authority(str(name).to_int())
+	# $MultiplayerSynchronizer.set_multiplayer_authority(str(name).to_int())
+	pass
 
 func _physics_process(delta):
 	if true:

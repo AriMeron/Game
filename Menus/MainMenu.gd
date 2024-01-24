@@ -87,7 +87,7 @@ func SendPlayerInformation(name,id):
 
 @rpc("any_peer", "call_local")
 func StartGame():
-	var scene = load ("res://Scenes/Player/DemoPlayerSpace.tscn").instantiate()
+	var scene = load ("res://Scenes/Map/map_final.tscn").instantiate()
 	get_tree().root.add_child(scene)
 	self.hide()
 

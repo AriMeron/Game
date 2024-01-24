@@ -1,5 +1,8 @@
 extends Control
 
+# Map_Final is the map
+# Biden is unique and not a generic character
+
 @export var Address = "127.0.0.1"
 @export var port = 8910
 var peer
@@ -37,11 +40,13 @@ func SendPlayerInformation(name,id):
 		for i in GameManager.Players:
 			SendPlayerInformation.rpc(GameManager.Players[i].name, i)
 
+# Allow anyone to start the game
 @rpc("any_peer", "call_local")
 func StartGame():
-	var scene = load ("res://Scenes/Player/DemoPlayerSpace.tscn").instantiate()
+	var scene = load ("res://Scenes/Map/map_final.tscn").instantiate()
 	get_tree().root.add_child(scene)
 	self.hide()
+
 
 func _initialize_as_host():
 	peer = ENetMultiplayerPeer.new()
@@ -87,9 +92,4 @@ func _on_load_map_button_down():
 
 func _on_test_movement_button_down():
 	pass # Replace with function body.
-
-func _on_node_load_example_button_down():
-	var scene = load("res://Scenes/Menus/ExampleScene.tscn").instantiate()
-	get_tree().root.add_child(scene)
-	self.hide()
 
