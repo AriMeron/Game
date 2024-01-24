@@ -3,34 +3,14 @@ extends Control
 var server_script = preload("res://Scripts/Server.gd");
 
 
-var test_scene = preload("res://Scenes/Map/test_scene.tscn");
-
-
-
-
-func _on_settings_pressed():
-	var instance = test_scene.instantiate()
-	get_tree().root.add_child(instance)
-	self.queue_free()
-	#get_tree().change_scene_to(test_scene)
-	pass # Replace with function body.
-
 
 func _on_host_lan_pressed():
-
-
 	_initialize_as_host()  # Assuming there's a method named 'start_server' in your Server.gd
 	print("host pressed")
 	pass # Replace with function body.
 
 
-
-func _on_line_edit_property_list_changed():
-	pass # Replace with function body.
-
-
 func _on_join_lobby_pressed():
-
 	_initialize_as_client()
 	print("join pressed")
 	# initialize as client
@@ -60,19 +40,6 @@ func _ready():
 	multiplayer.connection_failed.connect(connection_failed)
 	pass # Replace with function body.
 
-func peer_connected(id):
-	print("Player Connected " + str(id))
-
-func peer_disconnected(id):
-	print("Player Disconnected " + str(id))
-
-func connected_to_server():
-	print("Connected to Server!")
-	SendPlayerInformation.rpc_id(1, "test_name", multiplayer.get_unique_id())
-
-func connection_failed(id):
-	print("Couldn't Connect")
-
 @rpc("any_peer")
 func SendPlayerInformation(name,id):
 	if !GameManager.Players.has(id):
@@ -85,10 +52,13 @@ func SendPlayerInformation(name,id):
 		for i in GameManager.Players:
 			SendPlayerInformation.rpc(GameManager.Players[i].name, i)
 
+# When you start game, create a map and a character for each player
 @rpc("any_peer", "call_local")
 func StartGame():
-	var scene = load ("res://Scenes/Map/map_final.tscn").instantiate()
-	get_tree().root.add_child(scene)
+	var map = load ("res://Scenes/Map/map_final.tscn").instantiate()
+	get_tree().root.add_child(map)
+	var player = load ("res://Scenes/Characters/CharacterPlayground.tscn").instantiate()
+	get_tree().root.add_child(player)
 	self.hide()
 
 func _initialize_as_host():
@@ -109,7 +79,6 @@ func _start_game_button_down():
 	StartGame.rpc()
 	pass # Replace with function body.
 
-
 func _initialize_as_client():
 	var peer2 = ENetMultiplayerPeer.new()
 	var error = peer2.create_client(Address, port)
@@ -125,9 +94,9 @@ func _process(delta):
 	pass
 
 
+
 func _on_view_assets_button_down():
 	pass # Replace with function body.
-
 
 func _on_load_map_button_down():
 	pass # Replace with function body.
@@ -140,3 +109,24 @@ func _on_node_load_example_button_down():
 	get_tree().root.add_child(scene)
 	self.hide()
 
+func peer_connected(id):
+	print("Player Connected " + str(id))
+
+func peer_disconnected(id):
+	print("Player Disconnected " + str(id))
+
+func connected_to_server():
+	print("Connected to Server!")
+	SendPlayerInformation.rpc_id(1, "test_name", multiplayer.get_unique_id())
+
+func connection_failed(id):
+	print("Couldn't Connect")
+
+
+var test_scene = preload("res://Scenes/Map/test_scene.tscn");
+func _on_settings_pressed():
+	var instance = test_scene.instantiate()
+	get_tree().root.add_child(instance)
+	self.queue_free()
+	#get_tree().change_scene_to(test_scene)
+	pass # Replace with function body.
