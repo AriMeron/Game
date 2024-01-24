@@ -7,9 +7,9 @@ var roll_timer = 0.5
 var roll_direction = Vector3.ZERO
 var health = 100
 var velo = 0
-var DirtParticle = preload("res://Scenes/Characters/Joe Biden/Particles/DirtParticle.tscn")
-var BloodParticle = preload("res://Scenes/Characters/Joe Biden/Particles/BloodParticle.tscn")
-var HealParticle = preload("res://Scenes/Characters/Joe Biden/Particles/HealParticle.tscn")
+var DirtParticle = preload("res://Scenes/Characters/Reagan/Particles/DirtParticle.tscn")
+var BloodParticle = preload("res://Scenes/Characters/Reagan/Particles/BloodParticle.tscn")
+var HealParticle = preload("res://Scenes/Characters/Reagan/Particles/HealParticle.tscn")
 
 func _physics_process(delta):
 	var velocity = Vector3.ZERO

@@ -1,7 +1,7 @@
 [gd_scene load_steps=8 format=3 uid="uid://cs1iv21w114lh"]
 
 [ext_resource type="Script" path="res://Scenes/Characters/Reagan/reaganMovement.gd" id="1_6p32k"]
-[ext_resource type="PackedScene" uid="uid://bvbftbobasikk" path="res://Scenes/Characters/Reagan/reganCam.tscn" id="4_ifps6"]
+[ext_resource type="PackedScene" uid="uid://bvbftbobasikk" path="res://Scenes/Characters/Reagan/reaganCam.tscn" id="4_ifps6"]
 [ext_resource type="PackedScene" uid="uid://o80g7p1m0kx5" path="res://Scenes/Characters/Reagan/Gun/ReaganGun.tscn" id="5_2f8wy"]
 [ext_resource type="PackedScene" uid="uid://bspar6itmpg5c" path="res://Scenes/Characters/Reagan/reaganSprite.tscn" id="5_t0gtq"]
 [ext_resource type="PackedScene" uid="uid://1xcmmoprofqb" path="res://Scenes/Characters/Reagan/Particles/DustTrail.tscn" id="6_6hgaa"]

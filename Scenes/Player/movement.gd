@@ -15,7 +15,15 @@ var roll_direction = Vector3.ZERO
 @export var heal_particle :PackedScene 
 
 func _ready():
-	$MultiplayerSynchronizer.set_multiplayer_authority(str(name).to_int())
+	var multiplayer_synchronizer = $MultiplayerSynchronizer
+
+	# Check if the node is not null
+	if multiplayer_synchronizer:
+		# Set multiplayer authority using the node
+		multiplayer_synchronizer.set_multiplayer_authority(str(name).to_int())
+	else:
+		print("Error: MultiplayerSynchronizer node is null.")
+
 
 func _physics_process(delta):
 	if true:
