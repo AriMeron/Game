@@ -1,0 +1,31 @@
+[gd_scene load_steps=5 format=3 uid="uid://n3jsw8qxgo67"]
+
+[ext_resource type="TileSet" uid="uid://chtyrwny5yebr" path="res://Design/tileset_map/WallTilesetTransparent.tres" id="1_eragf"]
+
+[sub_resource type="ViewportTexture" id="ViewportTexture_ikgmi"]
+viewport_path = NodePath("SubViewport")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_pfmng"]
+resource_local_to_scene = true
+transparency = 1
+albedo_texture = SubResource("ViewportTexture_ikgmi")
+texture_filter = 0
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_0wk01"]
+size = Vector2(1, 1)
+
+[node name="Node3D" type="Node3D"]
+
+[node name="SubViewport" type="SubViewport" parent="."]
+transparent_bg = true
+size = Vector2i(16, 16)
+
+[node name="TileMap" type="TileMap" parent="SubViewport"]
+tile_set = ExtResource("1_eragf")
+format = 2
+layer_0/tile_data = PackedInt32Array(65536, 262144, 7, 65537, 327680, 7)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, -1.5246e-23, -1.5246e-23, -4.37114e-08, -1, 0, 1, -4.37114e-08, 2.08165e-12, 0.5, 2.08165e-12)
+material_override = SubResource("StandardMaterial3D_pfmng")
+mesh = SubResource("PlaneMesh_0wk01")

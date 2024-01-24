@@ -1,0 +1,28 @@
+[gd_scene load_steps=5 format=3 uid="uid://bcgasgbwnr2rp"]
+
+[ext_resource type="TileSet" uid="uid://ejlti37obpv3" path="res://Design/tileset_map/WallTileset.tres" id="1_kst0d"]
+
+[sub_resource type="ViewportTexture" id="ViewportTexture_fv0hm"]
+viewport_path = NodePath("SubViewport")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_meb6u"]
+resource_local_to_scene = true
+albedo_texture = SubResource("ViewportTexture_fv0hm")
+texture_filter = 0
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_fmytd"]
+size = Vector2(10, 2)
+
+[node name="Node3D" type="Node3D"]
+
+[node name="SubViewport" type="SubViewport" parent="."]
+size = Vector2i(160, 32)
+
+[node name="TileMap" type="TileMap" parent="SubViewport"]
+tile_set = ExtResource("1_kst0d")
+format = 2
+layer_0/tile_data = PackedInt32Array(196608, 3, 5, 196609, 65539, 5, 196610, 3, 5, 196611, 65539, 5, 196612, 3, 5, 196613, 65539, 5, 196614, 3, 5, 196615, 65539, 5, 196616, 3, 5, 196617, 65539, 5, 196618, 3, 5, 196619, 65539, 5, 196620, 3, 5, 196621, 65539, 5, 196622, 3, 5, 196623, 65539, 5, 196624, 3, 5, 196625, 65539, 5, 196626, 3, 5, 196627, 65539, 5, 0, 458755, 0, 65536, 458755, 0, 1, 524291, 0, 65537, 524291, 0, 2, 589827, 0, 65538, 589827, 0, 3, 458755, 0, 65539, 524291, 0, 4, 524291, 0, 65540, 589827, 0, 5, 589827, 0, 65541, 458755, 0, 6, 458755, 0, 65542, 524291, 0, 7, 524291, 0, 65543, 589827, 0, 8, 589827, 0, 65544, 458755, 0, 9, 458755, 0, 65545, 524291, 0, 10, 524291, 0, 65546, 589827, 0, 11, 589827, 0, 65547, 458755, 0, 12, 458755, 0, 65548, 524291, 0, 13, 524291, 0, 65549, 589827, 0, 14, 589827, 0, 65550, 458755, 0, 15, 458755, 0, 65551, 524291, 0, 16, 524291, 0, 65552, 589827, 0, 17, 458755, 0, 65553, 458755, 0, 18, 524291, 0, 65554, 524291, 0, 19, 589827, 0, 65555, 589827, 0, 131089, 458755, 1, 131090, 524291, 1, 131091, 589827, 1, 131086, 458755, 1, 131087, 524291, 1, 131088, 589827, 1, 131083, 458755, 1, 131084, 524291, 1, 131085, 589827, 1, 131080, 458755, 1, 131081, 524291, 1, 131082, 589827, 1, 131077, 458755, 1, 131078, 524291, 1, 131079, 589827, 1, 131074, 589827, 1, 131075, 524291, 1, 131076, 589827, 1, 131072, 458755, 1, 131073, 524291, 1)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+material_override = SubResource("StandardMaterial3D_meb6u")
+mesh = SubResource("PlaneMesh_fmytd")

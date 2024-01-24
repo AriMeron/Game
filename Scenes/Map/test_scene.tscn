@@ -1,76 +1,12 @@
-[gd_scene load_steps=7 format=3 uid="uid://dmgh1hh7xvw10"]
+[gd_scene load_steps=3 format=3 uid="uid://kcd7m74ajc42"]
 
-[ext_resource type="PackedScene" uid="uid://bdibwmj224q5y" path="res://Scenes/Map/floor.tscn" id="1_dkk4u"]
-[ext_resource type="PackedScene" uid="uid://clity2ddchtyq" path="res://Scenes/Map/player.tscn" id="2_cq62u"]
-[ext_resource type="PackedScene" uid="uid://8ayn1y7so7nb" path="res://Scenes/Map/door.tscn" id="2_k4v1w"]
-[ext_resource type="PackedScene" uid="uid://kyfdv1vfgrd3" path="res://Scenes/Map/wall.tscn" id="3_nympk"]
-[ext_resource type="PackedScene" uid="uid://cu41wjfyawovx" path="res://Scenes/Map/healing.tscn" id="5_8lgtj"]
-[ext_resource type="PackedScene" uid="uid://c704vf7jbt60f" path="res://Scenes/Map/points.tscn" id="5_vsndi"]
+[ext_resource type="PackedScene" uid="uid://dtwxk32y4yj1g" path="res://Scenes/Map/map_final.tscn" id="1_8ihtv"]
+[ext_resource type="PackedScene" uid="uid://cwt7q7ulkdjtg" path="res://Scenes/Characters/Joe Biden/Biden.tscn" id="2_82mqj"]
 
-[node name="test_scene" type="Node3D"]
+[node name="Node3D" type="Node3D"]
 
-[node name="Player" parent="." instance=ExtResource("2_cq62u")]
-transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 1, 0.5, 2)
+[node name="Map" parent="." instance=ExtResource("1_8ihtv")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1.1, 2.08165e-12, 2.08165e-12, -21)
 
-[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
-transform = Transform3D(0.642908, -5.4932e-07, -0.765944, 0.557204, 0.686136, 0.467698, 0.525541, -0.727474, 0.441122, -3.36977, 4.86523, 3.67175)
-
-[node name="Node3D" parent="." instance=ExtResource("2_k4v1w")]
-transform = Transform3D(1, -3.48787e-16, 3.48787e-16, 3.48787e-16, 1, -3.48787e-16, -3.48787e-16, 3.48787e-16, 1, 4, 1.01, 2.08165e-12)
-
-[node name="floor" parent="." instance=ExtResource("1_dkk4u")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.08165e-12, 2.08165e-12, 1)
-
-[node name="floor2" parent="." instance=ExtResource("1_dkk4u")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.08165e-12, 2.08165e-12, 3)
-
-[node name="floor3" parent="." instance=ExtResource("1_dkk4u")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 2.08165e-12, 1)
-
-[node name="floor4" parent="." instance=ExtResource("1_dkk4u")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 2.08165e-12, 3)
-
-[node name="wall" parent="." instance=ExtResource("3_nympk")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.08165e-12, 1, 2.08165e-12)
-
-[node name="wall2" parent="." instance=ExtResource("3_nympk")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 1, 2.08165e-12)
-
-[node name="floor5" parent="." instance=ExtResource("1_dkk4u")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 2.08165e-12, -1)
-
-[node name="floor6" parent="." instance=ExtResource("1_dkk4u")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 2.08165e-12, -1)
-
-[node name="floor7" parent="." instance=ExtResource("1_dkk4u")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 2.08165e-12, 1)
-
-[node name="floor8" parent="." instance=ExtResource("1_dkk4u")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.08165e-12, 2.08165e-12, -1)
-
-[node name="floor9" parent="." instance=ExtResource("1_dkk4u")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 2.08165e-12, -1)
-
-[node name="floor10" parent="." instance=ExtResource("1_dkk4u")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 2.08165e-12, 1)
-
-[node name="floor11" parent="." instance=ExtResource("1_dkk4u")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 2.08165e-12, 1)
-
-[node name="floor12" parent="." instance=ExtResource("1_dkk4u")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 2.08165e-12, -3)
-
-[node name="floor13" parent="." instance=ExtResource("1_dkk4u")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 2.08165e-12, -5)
-
-[node name="Node3D2" parent="." instance=ExtResource("5_vsndi")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 2.08165e-12, -4)
-
-[node name="Node3D3" parent="." instance=ExtResource("5_8lgtj")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5, 2.08165e-12, -4)
-
-[node name="floor14" parent="." instance=ExtResource("1_dkk4u")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 2.08165e-12, -3)
-
-[node name="floor15" parent="." instance=ExtResource("1_dkk4u")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 2.08165e-12, -5)
+[node name="Biden" parent="." instance=ExtResource("2_82mqj")]
+transform = Transform3D(4, 0, 0, 0, 5.65694, -0.0185702, 0, 0.026263, 3.99996, -5.02978, 2.08165e-12, 9.67476)
