@@ -44,7 +44,7 @@ size = Vector2(17, 5)
 [sub_resource type="BoxShape3D" id="BoxShape3D_sgtiu"]
 size = Vector3(16.9229, 2.14514, 3.63179)
 
-[node name="Node3D" type="Node3D"]
+[node name="Node3D2" type="Node3D"]
 script = ExtResource("1_61104")
 PlayerScene = ExtResource("1_pndb7")
 

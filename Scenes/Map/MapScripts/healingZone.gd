@@ -21,14 +21,16 @@ func _ready():
 	add_child(timer)  # Add the timer to the scene tree to start it
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-func _on_Area_body_entered(_body:Node) -> void:
-	timer.start()
-	print("in")
+func _on_Area_body_entered(body:Node) -> void:
+	if (body.is_in_group("Player")):
+		timer.start()
+		print("in")
 	
 	
-func _on_Area_body_exited(_body:Node) -> void:
-	timer.stop()
-	print("out")
+func _on_Area_body_exited(body:Node) -> void:
+	if (body.is_in_group("Player")):
+		timer.stop()
+		print("out")
 
 func _addHealth():
 	print("adding health")

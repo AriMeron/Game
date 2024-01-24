@@ -1,20 +1,12 @@
 [gd_scene load_steps=3 format=3 uid="uid://kcd7m74ajc42"]
 
 [ext_resource type="PackedScene" uid="uid://dtwxk32y4yj1g" path="res://Scenes/Map/map_final.tscn" id="1_8ihtv"]
-[ext_resource type="PackedScene" uid="uid://bigiq4xklycm1" path="res://Scenes/Player/characterCollider.tscn" id="2_n62rk"]
+[ext_resource type="PackedScene" uid="uid://cwt7q7ulkdjtg" path="res://Scenes/Characters/Joe Biden/Biden.tscn" id="2_82mqj"]
 
 [node name="Node3D" type="Node3D"]
 
 [node name="Map" parent="." instance=ExtResource("1_8ihtv")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.08165e-12, 2.08165e-12, -21)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1.1, 2.08165e-12, 2.08165e-12, -21)
 
-[node name="CharacterBody3D" parent="." instance=ExtResource("2_n62rk")]
-transform = Transform3D(4, 0, 0, 0, 5.657, 0, 0, 0, 4, 2.08165e-12, -0.25, -28)
-
-[node name="Camera3D" type="Camera3D" parent="CharacterBody3D"]
-transform = Transform3D(0.25, -1.48854e-16, 6.16574e-17, 6.16574e-17, 0.176777, 0.176777, -1.48854e-16, -0.176777, 0.176777, 2.08165e-12, 1.6, 3)
-projection = 1
-size = 5.27878
-
-[node name="DirectionalLight3D" type="DirectionalLight3D" parent="CharacterBody3D"]
-transform = Transform3D(1, -5.95416e-16, 2.4663e-16, 2.4663e-16, 0.707107, 0.707107, -5.95416e-16, -0.707107, 0.707107, 2.08165e-12, 0.56, 1)
+[node name="Biden" parent="." instance=ExtResource("2_82mqj")]
+transform = Transform3D(4, 0, 0, 0, 5.65694, -0.0185702, 0, 0.026263, 3.99996, -5.02978, 2.08165e-12, 9.67476)

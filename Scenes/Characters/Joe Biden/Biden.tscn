@@ -9,16 +9,18 @@
 [ext_resource type="PackedScene" uid="uid://fkoqs8yhxfnp" path="res://Scenes/Characters/Joe Biden/Particles/DustTrail.tscn" id="7_srlcm"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_53677"]
-size = Vector3(0.228257, 0.257697, 0.164541)
+size = Vector3(0.118399, 0.257697, 0.107324)
 
-[node name="Biden" type="CharacterBody3D"]
-transform = Transform3D(10, 0, 0, 0, 14.14, 0, 0, 0, 10, 0, 0, 0)
+[node name="Biden" type="CharacterBody3D" groups=["Player"]]
+transform = Transform3D(10, 0, 0, 0, 14.14, 0, 0, 0, 10, 0.00284958, 0.0452595, -0.0220184)
 script = ExtResource("1_tc1ea")
 
 [node name="BidenCam" parent="." instance=ExtResource("4_x80xi")]
-transform = Transform3D(0.0999979, 0.000641204, 5.90988e-11, -0.000370236, 0.0577396, 0.0408351, 0.000370237, -0.0577397, 0.0816455, 4.16329e-12, 0.566029, 1.19564)
+transform = Transform3D(0.0999979, 0.000641204, -2.91739e-10, -0.000370236, 0.0577396, 0.0408352, 0.000370237, -0.0577397, 0.0816455, 0, 0.999999, 1.9)
+size = 8.06662
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.999999, 0, 0, 0, 1, 0, 0, -0.0315285)
 shape = SubResource("BoxShape3D_53677")
 
 [node name="AnimatedSprite3D" parent="." instance=ExtResource("3_7f0oe")]
