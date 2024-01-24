@@ -92,7 +92,7 @@ func _process(delta):
 		rotationHelp.rotation.z = deg_to_rad(angle_degrees) - deg_to_rad(current_recoil_rotation)
 		#gunModel.rotation.z = - deg_to_rad(current_recoil_rotation)
 
-var BULLET_SCENE = preload("res://Scenes/Characters/Joe Biden/Gun/bullet.tscn")
+var BULLET_SCENE = preload("res://Scenes/Characters/Reagan/Gun/bullet.tscn")
 const BULLET_SPEED = 20
 const RAY_LENGTH = 1000
 
