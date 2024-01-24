@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://cwt7q7ulkdjtg"]
+[gd_scene load_steps=9 format=3 uid="uid://cwt7q7ulkdjtg"]
 
 [ext_resource type="Script" path="res://Scenes/Characters/Joe Biden/BidenMovement.gd" id="1_tc1ea"]
 [ext_resource type="PackedScene" uid="uid://cx5uoe48sp0kc" path="res://Scenes/Characters/Joe Biden/bidenSprite.tscn" id="3_7f0oe"]
@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://cg8wi4fqobc8l" path="res://Scenes/Characters/Joe Biden/Gun/BidenGun.tscn" id="5_gkqed"]
 [ext_resource type="Script" path="res://Scenes/Characters/Joe Biden/Gun/GunScript.gd" id="6_7k20f"]
 [ext_resource type="PackedScene" uid="uid://fkoqs8yhxfnp" path="res://Scenes/Characters/Joe Biden/Particles/DustTrail.tscn" id="7_srlcm"]
+[ext_resource type="PackedScene" uid="uid://diyxymhdnb2dj" path="res://Scenes/Characters/Joe Biden/brandonWave.tscn" id="7_ya4uv"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_53677"]
 size = Vector3(0.228257, 0.257697, 0.164541)
@@ -32,6 +33,5 @@ script = ExtResource("6_7k20f")
 [node name="DustTrail" parent="." instance=ExtResource("7_srlcm")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.104684, 0)
 
-[node name="Gun" parent="." instance=ExtResource("5_gkqed")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.069, -0.038, 2.08165e-12)
-script = ExtResource("6_7k20f")
+[node name="BidenWave" parent="." instance=ExtResource("7_ya4uv")]
+transform = Transform3D(0.6, 0, 0, 0, 0.6, 0, 0, 0, 0.6, 0, 0, 0)

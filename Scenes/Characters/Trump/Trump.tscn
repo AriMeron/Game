@@ -1,0 +1,34 @@
+[gd_scene load_steps=9 format=3 uid="uid://s1bvch6mycde"]
+
+[ext_resource type="Script" path="res://Scenes/Characters/Trump/TrumpMovement.gd" id="1_5g2ow"]
+[ext_resource type="PackedScene" uid="uid://c6ti1w3mnkgp0" path="res://Scenes/Characters/Trump/trumpSprite.tscn" id="6_5sifp"]
+[ext_resource type="PackedScene" uid="uid://cxo1mtx6iwv6u" path="res://Scenes/Characters/Trump/trumpCam.tscn" id="6_f5qmp"]
+[ext_resource type="PackedScene" uid="uid://b1goyj6ukd4bc" path="res://Scenes/Characters/Trump/Gun/TrumpGun.tscn" id="6_vfjov"]
+[ext_resource type="Script" path="res://Scenes/Characters/Trump/trumpAnimation.gd" id="7_7m5no"]
+[ext_resource type="Script" path="res://Scenes/Characters/Trump/Gun/GunScript.gd" id="7_bgqwr"]
+[ext_resource type="PackedScene" uid="uid://djxpqvecrigvu" path="res://Scenes/Characters/Trump/Particles/DustTrail.tscn" id="7_c6hdt"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_53677"]
+size = Vector3(0.228257, 0.257697, 0.164541)
+
+[node name="Trump" type="CharacterBody3D"]
+transform = Transform3D(10, 0, 0, 0, 14.14, 0, 0, 0, 10, 0, 0, 0)
+script = ExtResource("1_5g2ow")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("BoxShape3D_53677")
+
+[node name="TrumpCam" parent="." instance=ExtResource("6_f5qmp")]
+transform = Transform3D(0.0999986, 0.00042935, -2.40516e-11, -0.000370239, 0.057982, 0.0643467, 0.000370239, -0.057982, 0.0643467, 2.08165e-12, 0.566, 1.196)
+
+[node name="AnimatedSprite3D" parent="." instance=ExtResource("6_5sifp")]
+animation = &"idle_side"
+frame_progress = 0.0
+script = ExtResource("7_7m5no")
+
+[node name="DustTrail" parent="." instance=ExtResource("7_c6hdt")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.08165e-12, -0.105, 2.08165e-12)
+
+[node name="Gun" parent="." instance=ExtResource("6_vfjov")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.069, -0.038, 2.08165e-12)
+script = ExtResource("7_bgqwr")
