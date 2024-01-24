@@ -1,7 +1,7 @@
 extends CharacterBody3D
 
-var speed = 7
-var roll_speed = 15
+var speed = 4
+var roll_speed = 7
 var rolling = false
 var roll_timer = 0.5
 var roll_direction = Vector3.ZERO
