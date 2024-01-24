@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://kcd7m74ajc42"]
 
-[ext_resource type="PackedScene" uid="uid://dtwxk32y4yj1g" path="res://Scenes/Map/map_final.tscn" id="1_8ihtv"]
+[ext_resource type="PackedScene" path="res://Scenes/Map/map_final.tscn" id="1_8ihtv"]
 [ext_resource type="PackedScene" uid="uid://cwt7q7ulkdjtg" path="res://Scenes/Characters/Joe Biden/Biden.tscn" id="2_82mqj"]
 
 [node name="Node3D" type="Node3D"]
