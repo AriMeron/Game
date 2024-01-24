@@ -22,7 +22,7 @@
 [ext_resource type="PackedScene" uid="uid://nt2la6ktqb7v" path="res://Scenes/Map/floor1.tscn" id="20_jnq2t"]
 [ext_resource type="PackedScene" uid="uid://sy8bu33c1umx" path="res://Scenes/Map/table.tscn" id="21_hm32y"]
 
-[node name="Node3D" type="Node3D"]
+[node name="Node3D3" type="Node3D"]
 
 [node name="10x2" parent="." instance=ExtResource("1_c4l86")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.08165e-12, 2.08165e-12, -9)

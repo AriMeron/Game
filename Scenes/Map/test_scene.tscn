@@ -4,7 +4,7 @@
 [ext_resource type="PackedScene" uid="uid://cwt7q7ulkdjtg" path="res://Scenes/Characters/Joe Biden/Biden.tscn" id="2_82mqj"]
 [ext_resource type="PackedScene" uid="uid://b387axubmqyc4" path="res://Scenes/Map/10x2.tscn" id="3_kxtaf"]
 
-[node name="Node3D" type="Node3D"]
+[node name="Node3D2" type="Node3D"]
 
 [node name="Map" parent="." instance=ExtResource("1_8ihtv")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1.1, 2.08165e-12, 2.08165e-12, -21)
