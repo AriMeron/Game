@@ -1,12 +1,19 @@
-[gd_scene load_steps=3 format=3 uid="uid://kcd7m74ajc42"]
+[gd_scene load_steps=4 format=3 uid="uid://kcd7m74ajc42"]
 
 [ext_resource type="PackedScene" uid="uid://dtwxk32y4yj1g" path="res://Scenes/Map/map_final.tscn" id="1_8ihtv"]
 [ext_resource type="PackedScene" uid="uid://cwt7q7ulkdjtg" path="res://Scenes/Characters/Joe Biden/Biden.tscn" id="2_82mqj"]
+[ext_resource type="PackedScene" uid="uid://b387axubmqyc4" path="res://Scenes/Map/10x2.tscn" id="3_kxtaf"]
 
-[node name="Node3D" type="Node3D"]
+[node name="Node3D2" type="Node3D"]
 
 [node name="Map" parent="." instance=ExtResource("1_8ihtv")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1.1, 2.08165e-12, 2.08165e-12, -21)
 
 [node name="Biden" parent="." instance=ExtResource("2_82mqj")]
-transform = Transform3D(4, 0, 0, 0, 5.65694, -0.0185702, 0, 0.026263, 3.99996, -5.02978, 2.08165e-12, 9.67476)
+transform = Transform3D(5, 0, 0, 0, 7.07492, -0.0232128, 0, 0.0328462, 4.99995, -5.02978, 2.08165e-12, 9.67476)
+
+[node name="10x2" parent="." instance=ExtResource("3_kxtaf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -15.1111, 0, 7.38887)
+
+[node name="10x3" parent="." instance=ExtResource("3_kxtaf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -14.97, 2, 7.514)

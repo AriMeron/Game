@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://cann2updrfvqs"]
+
+[ext_resource type="Script" path="res://Scenes/Characters/basePlayer.gd" id="1_53tul"]
+
+[node name="Node3D" type="Node3D"]
+script = ExtResource("1_53tul")
