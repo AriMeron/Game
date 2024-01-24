@@ -1,4 +1,4 @@
-[gd_scene load_steps=3 format=3 uid="uid://cq02fvhwetsxi"]
+[gd_scene load_steps=3 format=3 uid="uid://cydtjtht46hcl"]
 
 [ext_resource type="Script" path="res://Scenes/Characters/Joe Biden/Gun/bullet.gd" id="1_aeraf"]
 [ext_resource type="Texture2D" uid="uid://civ51iau5di63" path="res://Scenes/Characters/Joe Biden/greenBullet.png" id="2_1qj8p"]
