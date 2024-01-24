@@ -2,7 +2,7 @@
 
 ## Overview
 
-Welcome to Capitol Battle Royale, a thrilling first-person shooter (FPS) that pits the "Democrats" against the "Republicans" in the iconic Capitol Building. Players will assume the avatars of prominent politicians, such as Bernie Sanders or Donald Trump. Both teams will be armed with semi-automatic weapons and have an equal level of health, creating a fair and intense competition.
+Welcome to Capitol Battle Royale, a thrilling third-person battle royale that pits the "Democrats" against the "Republicans" in the iconic Capitol Building. Players will assume the avatars of prominent politicians, such as Bernie Sanders or Donald Trump. Both teams will be armed with any arms allowed within their consitutional rights of the second ammendment and have an equal level of health, creating a fair and intense competition.
 
 ## Visual Elements
 
@@ -31,8 +31,8 @@ Welcome to Capitol Battle Royale, a thrilling first-person shooter (FPS) that pi
 - To easily differentiate the two teams, all Republican avatars will have a red outline, while Democrats will have a blue outline.
 
 **Weapons:**
-- All players will be equipped with the same semi-automatic firearm.
-- Shots fired will be visible as they travel through the air.
+- All players will be equipped with the similar behaving devices fitting to their character and under their rights of the 2nd ammendment.
+- Projectiles will be visible as they travel through the air.
 
 **Aiming:**
 - Players will have a crosshair at the center of their screen to assist with aiming.
@@ -42,11 +42,11 @@ Welcome to Capitol Battle Royale, a thrilling first-person shooter (FPS) that pi
 **Background Music:**
 - The Star Spangled Banner will play as looped background audio, adding to the immersive experience.
 
-**Weapon Sounds:**
-- Guns will produce realistic firing sounds, enhancing the action.
+**Attack Sounds:**
+- Projectiles and associated 2nd ammendment sanctioned items will produce realistic firing sounds, enhancing the action.
 
 **Catchphrases:**
-- Every time a player secures a kill, a catchphrase or iconic noise associated with their chosen politician avatar will play. For instance, if Donald Trump eliminates an opponent, you might hear him saying "Build a wall."
+- Every time a player defeats their opponent, a catchphrase or iconic noise associated with their chosen politician avatar will play. For instance, if Donald Trump eliminates an opponent, you might hear him saying "Build a wall."
 
 ## Controls
 
@@ -57,9 +57,9 @@ Welcome to Capitol Battle Royale, a thrilling first-person shooter (FPS) that pi
 - Mouse movement provides precise control over aiming, allowing players to look up, down, or turn around.
 
 **Shooting:**
-- Left-click to fire your weapon. Holding the left-click allows for rapid fire.
+- Left-click to fire. Holding the left-click allows for rapid fire.
 - Right-click can be used to throw grenades, with each player having two grenades per round.
 
 Get ready for an action-packed showdown in the Capitol Building, where you can step into the shoes of your favorite politicians and engage in thrilling battles!
 
-
+**Updated 1/23 to remove guns and weapons from the behavior of the game

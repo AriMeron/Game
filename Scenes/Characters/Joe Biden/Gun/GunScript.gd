@@ -10,8 +10,12 @@ var rotationHelp = get_node("RotationHelper")
 var body = get_parent()
 @onready
 var hand = get_node(".")
+@onready
+var cam = get_parent().get_node("BidenCam")
 
 var flipGun = false
+
+
 
 # Recoil variables
 var original_position_right = Vector3()
@@ -22,18 +26,16 @@ var recoil_step = 0.03 # Recoil increase per click
 var recoil_recovery_speed = 0.4 # Speed of recoil recovery
 var current_recoil_rotation = 0
 var max_recoil_rotation = 25
-var recoil_rotation_step = 14
-var recoil_recovery_rotation_speed = 25
+var recoil_rotation_step = 25
+var recoil_recovery_rotation_speed = 160
 
 var ogHandPos = Vector3()
 #fireRate is timeUntil can shoot again
 var fireRate = .2
 var shotTimer = 0
 var canShoot = true
-
-var BulletCasingParticle = preload("res://Scenes/Characters/Joe Biden/Particles/BulletCasingParticle.tscn")
-var BulletExplosionParticle = preload("res://Scenes/Characters/Joe Biden/Particles/BulletParticle.tscn")
-
+@onready
+var bullet_spawn = get_node("RotationHelper/Gun/BulletSpawn")
 func _ready():
 	original_position_right = rotationHelp.position
 	original_position_left = original_position_right
@@ -53,6 +55,7 @@ func _process(delta):
 	var angle_to_mouse = 0
 	angle_to_mouse = atan2(mouse_pos.y - hand_pos.y, mouse_pos.x - hand_pos.x)
 
+
 	# Convert the angle to degrees and clamp it
 	angle_degrees = rad_to_deg(-1 * angle_to_mouse)
 
@@ -65,8 +68,9 @@ func _process(delta):
 			current_recoil_rotation += recoil_rotation_step
 			current_recoil_rotation = min(current_recoil_rotation, max_recoil_rotation)
 			canShoot = false
-			create_bullet_explosion_particle()
-			create_bullet_casing_particle()
+			if body.rolling == false: 
+				shoot_bullet(mouse_pos, angle_degrees)
+				create_bullet_explosion_particle()
 	if current_recoil > 0.0 or current_recoil_rotation > 0.0:
 		current_recoil -= recoil_recovery_speed * delta
 		current_recoil = max(current_recoil, 0.0)
@@ -83,13 +87,70 @@ func _process(delta):
 	if not flipGun:
 		hand.position.y = ogHandPos.y + current_recoil
 		hand.position.x = ogHandPos.x - current_recoil
+		rotationHelp.rotation.z = deg_to_rad(angle_degrees) + deg_to_rad(current_recoil_rotation)
 		#gunModel.rotation.z = deg_to_rad(current_recoil_rotation)
 	else:
 		hand.position.y =  ogHandPos.y + current_recoil
 		hand.position.x = - 1 * ogHandPos.x + current_recoil
+		rotationHelp.rotation.z = deg_to_rad(angle_degrees) - deg_to_rad(current_recoil_rotation)
 		#gunModel.rotation.z = - deg_to_rad(current_recoil_rotation)
 
+var BULLET_SCENE = preload("res://Scenes/Characters/Joe Biden/Gun/bullet.tscn")
+const BULLET_SPEED = 20
+const RAY_LENGTH = 1000
 
+func shoot_bullet(mouse_pos, angle):
+	#YOU HAVE TO USE THE CAMERA :(((((
+	var y_height = 2
+	var bullet_instance = BULLET_SCENE.instantiate()
+	get_tree().get_root().add_child(bullet_instance)
+	# Extract only the global X and Z position
+	var spawn_pos = bullet_spawn.global_transform.origin
+	spawn_pos.y = y_height  # Set Y to a constant value
+	# Apply the position to the bullet instance
+	var window_size = get_viewport().get_size()
+	bullet_instance.global_transform.origin = Vector3(spawn_pos.x, y_height, spawn_pos.z)
+	var from = cam.project_ray_origin(mouse_pos)
+	var to = from + cam.project_ray_normal(mouse_pos) * RAY_LENGTH
+	# Use the camera's projection to find the z-coordinate in 3D space
+	var projected_z = (from.z + (to.z - from.z) * ((y_height - from.y) / (to.y - from.y)))
+
+	# Create a target position using the mouse's x, a constant y, and the calculated z
+	var target_pos_3d = Vector3(from.x, y_height, projected_z)
+
+	var direction = (target_pos_3d - spawn_pos).normalized()
+
+	# Add a random bloom to the direction
+	var bloom_amount = 0.09  # Adjust this value for more/less bloom
+	direction.x += randf_range(-bloom_amount, bloom_amount)
+	direction.z += randf_range(-bloom_amount, bloom_amount)
+	direction = direction.normalized()  # Re-normalize the direction vector
+	if angle < 90 and angle > -90 and direction.x < 0:
+		direction.x *= -1
+	elif (angle > 90 or angle < -90) and direction.x > 0:
+		direction.x *= -1
+	
+		
+	
+	# Store the direction for use in the bullet's script
+	if typeof(body.velo) == 2:
+		bullet_instance.initial_direction = direction * BULLET_SPEED
+	elif body.velo.x != 0 or body.velo.y != 0:
+		bullet_instance.initial_direction = direction * BULLET_SPEED * (abs(sqrt(body.velo.x * body.velo.x + body.velo.z * body.velo.z)) * .1)
+	else:
+		bullet_instance.initial_direction = direction * BULLET_SPEED
+	
+
+
+	
+	
+
+
+
+
+var BulletCasingParticle = preload("res://Scenes/Characters/Joe Biden/Particles/BulletCasingParticle.tscn")
+
+var BulletExplosionParticle = preload("res://Scenes/Characters/Joe Biden/Particles/BulletParticle.tscn")
 func create_bullet_casing_particle():
 	var particle = BulletCasingParticle.instantiate()
 	particle.position.z = 0.1

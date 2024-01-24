@@ -9,7 +9,7 @@ var brandonTimer = 0
 var brandonScale = 1
 var isDark = false
 var health = 100
-
+var velo = 0
 var DirtParticle = preload("res://Scenes/Characters/Joe Biden/Particles/DirtParticle.tscn")
 var BloodParticle = preload("res://Scenes/Characters/Joe Biden/Particles/BloodParticle.tscn")
 var HealParticle = preload("res://Scenes/Characters/Joe Biden/Particles/HealParticle.tscn")
@@ -69,6 +69,7 @@ func _physics_process(delta):
 		if collision:
 			velocity = velocity.slide(collision.get_normal())
 			move_and_collide(velocity * delta)
+		velo = velocity
 
 	# The update_animation function will need adjustments for the new setup.
 	# Ensure the AnimatedSprite3D child node is properly updated.
@@ -79,6 +80,8 @@ func _physics_process(delta):
 		create_heal_particle()
 	
 # Adjust the update_animation function as needed for the new setup.
+func get_player_type():
+	return "democrat"
 
 func set_dust_trail_particle(b : bool, velocity_direction : Vector3):
 	$DustTrail.get_child(0).emitting = b
