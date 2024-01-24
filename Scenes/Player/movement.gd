@@ -1,7 +1,7 @@
 extends CharacterBody3D
 
-var speed = 7
-var roll_speed = 15
+var speed = 4
+var roll_speed = 7
 var rolling = false
 var roll_timer = 0.5
 var roll_direction = Vector3.ZERO
@@ -15,7 +15,8 @@ var roll_direction = Vector3.ZERO
 @export var heal_particle :PackedScene 
 
 func _ready():
-	$MultiplayerSynchronizer.set_multiplayer_authority(str(name).to_int())
+	# $MultiplayerSynchronizer.set_multiplayer_authority(str(name).to_int())
+	pass
 
 func _physics_process(delta):
 	if true:

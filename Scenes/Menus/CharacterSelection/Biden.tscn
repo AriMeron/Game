@@ -1,0 +1,49 @@
+[gd_scene load_steps=5 format=3 uid="uid://b0iygl7wuy6ga"]
+
+[ext_resource type="Texture2D" uid="uid://c8aprxpeglt8o" path="res://Art/Design/Character Select/Initial Design/Biden.png" id="1_pjr5o"]
+[ext_resource type="Script" path="res://Scripts/CharacterSelection/LoadObama.gd" id="2_l4oe8"]
+[ext_resource type="Script" path="res://Scripts/CharacterSelection/LoadJFK.gd" id="3_4hjod"]
+[ext_resource type="Script" path="res://Scripts/CharacterSelection/LoadTrump.gd" id="4_v4i0f"]
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(960, 539)
+texture = ExtResource("1_pjr5o")
+
+[node name="Button" type="Button" parent="."]
+visibility_layer = 0
+layout_mode = 0
+offset_left = 330.0
+offset_top = 782.0
+offset_right = 573.0
+offset_bottom = 1023.0
+script = ExtResource("2_l4oe8")
+
+[node name="Button2" type="Button" parent="."]
+visibility_layer = 0
+layout_mode = 0
+offset_left = 585.0
+offset_top = 785.0
+offset_right = 828.0
+offset_bottom = 1024.0
+script = ExtResource("3_4hjod")
+
+[node name="Button3" type="Button" parent="."]
+visibility_layer = 0
+layout_mode = 0
+offset_left = 879.0
+offset_top = 783.0
+offset_right = 1122.0
+offset_bottom = 1022.0
+script = ExtResource("4_v4i0f")
+
+[connection signal="pressed" from="Button" to="Button" method="_on_pressed"]
+[connection signal="pressed" from="Button2" to="Button2" method="_on_pressed"]
+[connection signal="pressed" from="Button3" to="Button3" method="_on_pressed"]

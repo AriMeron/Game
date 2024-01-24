@@ -1,0 +1,41 @@
+[gd_scene load_steps=6 format=3 uid="uid://sy8bu33c1umx"]
+
+[ext_resource type="TileSet" uid="uid://ejlti37obpv3" path="res://Design/tileset_map/WallTileset.tres" id="1_s1tva"]
+
+[sub_resource type="ViewportTexture" id="ViewportTexture_gppef"]
+viewport_path = NodePath("SubViewport")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ha2sn"]
+resource_local_to_scene = true
+transparency = 2
+alpha_scissor_threshold = 0.5
+alpha_antialiasing_mode = 0
+albedo_texture = SubResource("ViewportTexture_gppef")
+texture_filter = 0
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_hga5b"]
+size = Vector2(1, 1.5)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_olex1"]
+size = Vector3(1.01255, 1, 1.68628)
+
+[node name="Node3D" type="Node3D"]
+
+[node name="SubViewport" type="SubViewport" parent="."]
+transparent_bg = true
+size = Vector2i(16, 24)
+
+[node name="TileMap" type="TileMap" parent="SubViewport"]
+tile_set = ExtResource("1_s1tva")
+format = 2
+layer_0/tile_data = PackedInt32Array(0, 3, 1, 65536, 3, 2, 131072, 3, 3, 1, 65539, 1, 65537, 65539, 2, 131073, 65539, 3)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+material_override = SubResource("StandardMaterial3D_ha2sn")
+mesh = SubResource("PlaneMesh_hga5b")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="MeshInstance3D"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="MeshInstance3D/StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.343269)
+shape = SubResource("BoxShape3D_olex1")

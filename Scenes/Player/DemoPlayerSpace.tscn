@@ -4,15 +4,15 @@
 [ext_resource type="PackedScene" uid="uid://bigiq4xklycm1" path="res://Scenes/Player/characterCollider.tscn" id="1_pndb7"]
 [ext_resource type="Script" path="res://Scenes/Player/Ability Bar.gd" id="3_1busy"]
 [ext_resource type="Script" path="res://Scenes/Player/HP Bar.gd" id="3_5xaux"]
-[ext_resource type="PackedScene" uid="uid://cwhxvx6bgqsx3" path="res://Scenes/Particles/DirtParticle.tscn" id="3_nb7cp"]
-[ext_resource type="PackedScene" uid="uid://fkoqs8yhxfnp" path="res://Scenes/Particles/DustTrail.tscn" id="4_ds8fb"]
+[ext_resource type="PackedScene" uid="uid://cwhxvx6bgqsx3" path="res://Scenes/Characters/Joe Biden/Particles/DirtParticle.tscn" id="3_nb7cp"]
+[ext_resource type="PackedScene" uid="uid://fkoqs8yhxfnp" path="res://Scenes/Characters/Joe Biden/Particles/DustTrail.tscn" id="4_ds8fb"]
 [ext_resource type="Script" path="res://Scenes/Player/Variable Label.gd" id="5_4s5x4"]
 [ext_resource type="PackedScene" uid="uid://b4nt3i4alsft4" path="res://Scenes/Particles/CloudParticle.tscn" id="5_asbwd"]
-[ext_resource type="PackedScene" uid="uid://d2jhi3luwqg0j" path="res://Scenes/Particles/BloodParticle.tscn" id="5_be5xw"]
-[ext_resource type="PackedScene" uid="uid://dn8yq6k2lluq7" path="res://Scenes/Particles/BulletParticle.tscn" id="6_wa4ry"]
+[ext_resource type="PackedScene" uid="uid://d2jhi3luwqg0j" path="res://Scenes/Characters/Joe Biden/Particles/BloodParticle.tscn" id="5_be5xw"]
+[ext_resource type="PackedScene" uid="uid://dn8yq6k2lluq7" path="res://Scenes/Characters/Joe Biden/Particles/BulletParticle.tscn" id="6_wa4ry"]
 [ext_resource type="PackedScene" uid="uid://b5j5qkq132br2" path="res://Scenes/Particles/Bullet.tscn" id="7_sto06"]
-[ext_resource type="PackedScene" uid="uid://brufljs8818j2" path="res://Scenes/Particles/BulletCasingParticle.tscn" id="8_dxoty"]
-[ext_resource type="PackedScene" uid="uid://lliwv5pgvs5b" path="res://Scenes/Particles/HealParticle.tscn" id="9_rh6it"]
+[ext_resource type="PackedScene" uid="uid://brufljs8818j2" path="res://Scenes/Characters/Joe Biden/Particles/BulletCasingParticle.tscn" id="8_dxoty"]
+[ext_resource type="PackedScene" uid="uid://lliwv5pgvs5b" path="res://Scenes/Characters/Joe Biden/Particles/HealParticle.tscn" id="9_rh6it"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_fdkgt"]
 sky_top_color = Color(0.709804, 0, 0.772549, 1)
@@ -44,7 +44,7 @@ size = Vector2(17, 5)
 [sub_resource type="BoxShape3D" id="BoxShape3D_sgtiu"]
 size = Vector3(16.9229, 2.14514, 3.63179)
 
-[node name="Node3D" type="Node3D"]
+[node name="Node3D2" type="Node3D"]
 script = ExtResource("1_61104")
 PlayerScene = ExtResource("1_pndb7")
 

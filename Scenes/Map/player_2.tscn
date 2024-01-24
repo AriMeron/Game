@@ -1,0 +1,11 @@
+[gd_scene load_steps=2 format=3 uid="uid://dt7c5oh8dyifg"]
+
+[ext_resource type="PackedScene" uid="uid://cwt7q7ulkdjtg" path="res://Scenes/Characters/Joe Biden/Biden.tscn" id="1_cbm6f"]
+
+[node name="Player2" type="CharacterBody3D"]
+
+[node name="Sprite3D" type="Sprite3D" parent="."]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+
+[node name="Biden" parent="." instance=ExtResource("1_cbm6f")]

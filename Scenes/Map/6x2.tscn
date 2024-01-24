@@ -1,0 +1,37 @@
+[gd_scene load_steps=6 format=3 uid="uid://coktrxjb6la0g"]
+
+[ext_resource type="TileSet" uid="uid://ejlti37obpv3" path="res://Design/tileset_map/WallTileset.tres" id="1_p5jve"]
+
+[sub_resource type="ViewportTexture" id="ViewportTexture_qgj5n"]
+viewport_path = NodePath("SubViewport")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_nm0go"]
+resource_local_to_scene = true
+albedo_texture = SubResource("ViewportTexture_qgj5n")
+texture_filter = 0
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_k4wgg"]
+size = Vector2(12, 2)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_mkran"]
+
+[node name="Node3D" type="Node3D"]
+
+[node name="SubViewport" type="SubViewport" parent="."]
+size = Vector2i(192, 32)
+
+[node name="TileMap" type="TileMap" parent="SubViewport"]
+tile_set = ExtResource("1_p5jve")
+format = 2
+layer_0/tile_data = PackedInt32Array(0, 3, 6, 65536, 3, 7, 131072, 3, 8, 196608, 3, 9, 1, 65539, 6, 65537, 65539, 7, 131073, 65539, 8, 196609, 65539, 9, 2, 3, 6, 65538, 3, 7, 131074, 3, 8, 196610, 3, 9, 3, 65539, 6, 65539, 65539, 7, 131075, 65539, 8, 196611, 65539, 9, 4, 3, 6, 65540, 3, 7, 131076, 3, 8, 196612, 3, 9, 5, 65539, 6, 65541, 65539, 7, 131077, 65539, 8, 196613, 65539, 9, 6, 3, 6, 65542, 3, 7, 131078, 3, 8, 196614, 3, 9, 7, 65539, 6, 65543, 65539, 7, 131079, 65539, 8, 196615, 65539, 9, 8, 3, 6, 65544, 3, 7, 131080, 3, 8, 196616, 3, 9, 9, 65539, 6, 65545, 65539, 7, 131081, 65539, 8, 196617, 65539, 9, 10, 3, 6, 65546, 3, 7, 131082, 3, 8, 196618, 3, 9, 11, 65539, 6, 65547, 65539, 7, 131083, 65539, 8, 196619, 65539, 9, 12, 3, 6, 65548, 3, 7, 131084, 3, 8, 196620, 3, 9, 13, 65539, 6, 65549, 65539, 7, 131085, 65539, 8, 196621, 65539, 9, 14, 3, 6, 65550, 3, 7, 131086, 3, 8, 196622, 3, 9, 15, 65539, 6, 65551, 65539, 7, 131087, 65539, 8, 196623, 65539, 9, 16, 3, 6, 65552, 3, 7, 131088, 3, 8, 196624, 3, 9, 17, 65539, 6, 65553, 65539, 7, 131089, 65539, 8, 196625, 65539, 9, 18, 3, 6, 65554, 3, 7, 131090, 3, 8, 196626, 3, 9, 19, 65539, 6, 65555, 65539, 7, 131091, 65539, 8, 196627, 65539, 9, 20, 3, 6, 65556, 3, 7, 131092, 3, 8, 196628, 3, 9, 21, 65539, 6, 65557, 65539, 7, 131093, 65539, 8, 196629, 65539, 9, 22, 3, 6, 65558, 3, 7, 131094, 3, 8, 196630, 3, 9, 23, 65539, 6, 65559, 65539, 7, 131095, 65539, 8, 196631, 65539, 9)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, -1.5246e-23, -1.5246e-23, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0)
+material_override = SubResource("StandardMaterial3D_nm0go")
+mesh = SubResource("PlaneMesh_k4wgg")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="MeshInstance3D"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="MeshInstance3D/StaticBody3D"]
+transform = Transform3D(12.25, 0, 0, 0, 2.25, 0, 0, 0, 2, 2.08165e-12, -1, 2.08165e-12)
+shape = SubResource("BoxShape3D_mkran")
