@@ -1,7 +1,7 @@
 [gd_scene load_steps=8 format=3 uid="uid://wp621ey5o2jt"]
 
 [ext_resource type="Texture2D" uid="uid://dfs00vldfjm6m" path="res://Scenes/Particles/heal.png" id="1_h6sq1"]
-[ext_resource type="Script" path="res://Scenes/Characters/Joe Biden/Particles/Particle.gd" id="2_4fobw"]
+[ext_resource type="Script" path="res://Scenes/Characters/Obama/Particles/Particle.gd" id="2_d5jty"]
 
 [sub_resource type="Curve" id="Curve_osols"]
 _data = [Vector2(0, 1), 0.0, -3.23256, 0, 0, Vector2(1, 0), 0.0, 0.0, 0, 0]
@@ -38,4 +38,4 @@ amount = 10
 lifetime = 2.0
 process_material = SubResource("ParticleProcessMaterial_ke7if")
 draw_pass_1 = SubResource("QuadMesh_c6w8h")
-script = ExtResource("2_4fobw")
+script = ExtResource("2_d5jty")

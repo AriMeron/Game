@@ -1,7 +1,7 @@
 [gd_scene load_steps=8 format=3 uid="uid://d3oqgnu0047k4"]
 
 [ext_resource type="Texture2D" uid="uid://sfclbh5qbvv6" path="res://Scenes/Particles/bullet casing.png" id="1_gki5c"]
-[ext_resource type="Script" path="res://Scenes/Characters/Joe Biden/Particles/Particle.gd" id="2_qhj7l"]
+[ext_resource type="Script" path="res://Scenes/Characters/Obama/Particles/Particle.gd" id="2_qfa8u"]
 
 [sub_resource type="Gradient" id="Gradient_6k4lg"]
 offsets = PackedFloat32Array(0.777273, 1)
@@ -44,4 +44,4 @@ amount = 1
 explosiveness = 1.0
 process_material = SubResource("ParticleProcessMaterial_427is")
 draw_pass_1 = SubResource("QuadMesh_6spbf")
-script = ExtResource("2_qhj7l")
+script = ExtResource("2_qfa8u")

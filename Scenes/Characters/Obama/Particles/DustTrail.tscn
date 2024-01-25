@@ -1,6 +1,6 @@
 [gd_scene load_steps=7 format=3 uid="uid://cme8d41r1rvba"]
 
-[ext_resource type="Script" path="res://Scenes/Characters/Trump/Particles/Particle.gd" id="1_yljdm"]
+[ext_resource type="Script" path="res://Scenes/Characters/Obama/Particles/Particle.gd" id="1_sindr"]
 
 [sub_resource type="Gradient" id="Gradient_1nhru"]
 offsets = PackedFloat32Array(0, 0.818182, 0.981818)
@@ -45,4 +45,4 @@ amount = 4
 lifetime = 0.5
 process_material = SubResource("ParticleProcessMaterial_7cxwk")
 draw_pass_1 = SubResource("SphereMesh_1c54m")
-script = ExtResource("1_yljdm")
+script = ExtResource("1_sindr")

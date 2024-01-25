@@ -29,7 +29,7 @@ animation = &"idle_side"
 frame_progress = 0.0
 
 [node name="Gun" parent="." instance=ExtResource("5_gkqed")]
-transform = Transform3D(1, 0, 0, 0, 0.999998, 0, 0, 0, 1, 0.0689902, -0.0381989, 2.08165e-12)
+transform = Transform3D(1, 0, 0, 0, 0.999998, 0, 0, 0, 1, 0.0689902, -0.0381989, 0)
 script = ExtResource("6_7k20f")
 
 [node name="DustTrail" parent="." instance=ExtResource("7_srlcm")]
