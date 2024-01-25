@@ -55,7 +55,6 @@ func _process(delta):
 	var angle_to_mouse = 0
 	angle_to_mouse = atan2(mouse_pos.y - hand_pos.y, mouse_pos.x - hand_pos.x)
 
-
 	# Convert the angle to degrees and clamp it
 	angle_degrees = rad_to_deg(-1 * angle_to_mouse)
 
@@ -124,7 +123,7 @@ func shoot_bullet(mouse_pos, angle):
 	var bloom_amount = 0.09  # Adjust this value for more/less bloom
 	direction.x += randf_range(-bloom_amount, bloom_amount)
 	direction.z += randf_range(-bloom_amount, bloom_amount)
-	direction = direction.normalized()  # Re-normalize the direction vector
+	direction = Utils.normalizeVelocity(direction) # Re-normalize the direction vector
 	if angle < 90 and angle > -90 and direction.x < 0:
 		direction.x *= -1
 	elif (angle > 90 or angle < -90) and direction.x > 0:
