@@ -1,0 +1,367 @@
+[gd_scene load_steps=14 format=3 uid="uid://btwikjbpbf47a"]
+
+[ext_resource type="Texture2D" uid="uid://c0i0da0b37ky1" path="res://Art/Assets/UI/JFKSelected.png" id="1_jdfda"]
+[ext_resource type="FontFile" uid="uid://bhxjlljme2ggl" path="res://Art/Assets/UI/Fonts/PixCon.ttf" id="2_400qc"]
+[ext_resource type="Texture2D" uid="uid://pumho2xyxsbh" path="res://Art/Assets/UI/Screenshot 2024-01-24 at 9.29.20 PM.png" id="3_hj17w"]
+[ext_resource type="Texture2D" uid="uid://7hw2w6wxa1vo" path="res://Art/Assets/UI/ReaganSelected.png" id="4_l2y3p"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ssgtu"]
+bg_color = Color(0.192157, 0.192157, 0.192157, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_uo3qo"]
+bg_color = Color(0.333333, 0.333333, 0.333333, 1)
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_bmqwt"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_qxbmv"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_0ajjg"]
+bg_color = Color(0.247059, 0.333333, 0.960784, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_rpbov"]
+bg_color = Color(1, 0.254902, 0.254902, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_8w226"]
+bg_color = Color(0.0980392, 0.0980392, 0.0980392, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_onjp8"]
+bg_color = Color(0.0980392, 0.0980392, 0.0980392, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_d502w"]
+bg_color = Color(0.333333, 0.333333, 0.333333, 1)
+
+[node name="NewCharacterSelect" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Background" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_ssgtu")
+
+[node name="Ground" type="Panel" parent="."]
+layout_mode = 2
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -271.0
+grow_horizontal = 2
+grow_vertical = 0
+size_flags_vertical = 8
+theme_override_styles/panel = SubResource("StyleBoxFlat_uo3qo")
+
+[node name="GroundDetail" type="Panel" parent="Ground"]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -300.0
+offset_bottom = -287.0
+grow_horizontal = 2
+grow_vertical = 0
+size_flags_vertical = 0
+theme_override_styles/panel = SubResource("StyleBoxFlat_uo3qo")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+visible = false
+layout_mode = 0
+offset_left = 1992.0
+offset_top = 2.0
+offset_right = 3919.0
+offset_bottom = 1088.0
+texture = ExtResource("3_hj17w")
+
+[node name="CharacterSelect" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 14
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_top = -328.0
+offset_bottom = 91.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxEmpty_bmqwt")
+
+[node name="Democrats" type="Panel" parent="CharacterSelect"]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 64.0
+offset_top = -207.0
+offset_right = 851.0
+offset_bottom = 207.0
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxEmpty_qxbmv")
+
+[node name="Char1" type="TextureRect" parent="CharacterSelect/Democrats"]
+texture_filter = 1
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_top = -287.0
+offset_right = 248.0
+grow_vertical = 0
+texture = ExtResource("1_jdfda")
+expand_mode = 1
+
+[node name="Char2" type="TextureRect" parent="CharacterSelect/Democrats"]
+texture_filter = 1
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -124.0
+offset_top = -287.0
+offset_right = 124.0
+grow_horizontal = 2
+grow_vertical = 0
+texture = ExtResource("1_jdfda")
+expand_mode = 1
+
+[node name="Char3" type="TextureRect" parent="CharacterSelect/Democrats"]
+texture_filter = 1
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -248.0
+offset_top = -287.0
+grow_horizontal = 0
+grow_vertical = 0
+texture = ExtResource("1_jdfda")
+expand_mode = 1
+
+[node name="DemocratLabel" type="Panel" parent="CharacterSelect/Democrats"]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_top = 25.0
+offset_bottom = 109.0
+grow_horizontal = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_0ajjg")
+
+[node name="Democrats" type="Label" parent="CharacterSelect/Democrats/DemocratLabel"]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 16.0
+offset_top = -38.0
+offset_right = 363.0
+offset_bottom = 34.0
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("2_400qc")
+theme_override_font_sizes/font_size = 40
+text = "DEMOCRATS"
+
+[node name="DemocratDetail" type="Panel" parent="CharacterSelect/Democrats"]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 13.0
+grow_horizontal = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_0ajjg")
+
+[node name="Republicans" type="Panel" parent="CharacterSelect"]
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -851.0
+offset_top = -207.0
+offset_right = -64.0
+offset_bottom = 207.0
+grow_horizontal = 0
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxEmpty_qxbmv")
+
+[node name="Char1" type="TextureRect" parent="CharacterSelect/Republicans"]
+texture_filter = 1
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_top = -287.0
+offset_right = 248.0
+grow_vertical = 0
+texture = ExtResource("4_l2y3p")
+expand_mode = 1
+
+[node name="Char2" type="TextureRect" parent="CharacterSelect/Republicans"]
+texture_filter = 1
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -124.0
+offset_top = -287.0
+offset_right = 124.0
+grow_horizontal = 2
+grow_vertical = 0
+texture = ExtResource("4_l2y3p")
+expand_mode = 1
+
+[node name="Char3" type="TextureRect" parent="CharacterSelect/Republicans"]
+texture_filter = 1
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -248.0
+offset_top = -287.0
+grow_horizontal = 0
+grow_vertical = 0
+texture = ExtResource("4_l2y3p")
+expand_mode = 1
+
+[node name="RepublicanLabel" type="Panel" parent="CharacterSelect/Republicans"]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_top = 25.0
+offset_bottom = 109.0
+grow_horizontal = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_rpbov")
+
+[node name="Republicans" type="Label" parent="CharacterSelect/Republicans/RepublicanLabel"]
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -425.0
+offset_top = -38.0
+offset_right = -16.0
+offset_bottom = 34.0
+grow_horizontal = 0
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("2_400qc")
+theme_override_font_sizes/font_size = 40
+text = "REPUBLICANS"
+
+[node name="RepublicanDetail" type="Panel" parent="CharacterSelect/Republicans"]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 13.0
+grow_horizontal = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_rpbov")
+
+[node name="VS" type="Panel" parent="CharacterSelect"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_top = -51.5
+offset_right = 117.0
+offset_bottom = 65.5
+grow_horizontal = 2
+grow_vertical = 2
+rotation = 0.785398
+theme_override_styles/panel = SubResource("StyleBoxFlat_8w226")
+
+[node name="VSText" type="Label" parent="CharacterSelect"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -48.5
+offset_top = -14.0
+offset_right = 48.5
+offset_bottom = 76.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("2_400qc")
+theme_override_font_sizes/font_size = 50
+text = "VS
+"
+
+[node name="TopBar" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 111.0
+grow_horizontal = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_onjp8")
+
+[node name="LobbyName" type="Panel" parent="TopBar"]
+layout_mode = 1
+anchors_preset = 9
+anchor_bottom = 1.0
+offset_right = 273.0
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_d502w")
+
+[node name="LobbyText" type="Label" parent="TopBar/LobbyName"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -89.0
+offset_top = -27.0
+offset_right = 89.0
+offset_bottom = 27.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("2_400qc")
+theme_override_font_sizes/font_size = 35
+text = "LOBBY 1
+"
+
+[node name="Timer" type="Panel" parent="TopBar"]
+layout_mode = 1
+anchors_preset = 13
+anchor_left = 0.5
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -92.0
+offset_right = 92.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_d502w")
+
+[node name="Timer" type="Label" parent="TopBar/Timer"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -55.0
+offset_top = -54.0
+offset_right = 55.0
+offset_bottom = 54.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("2_400qc")
+theme_override_font_sizes/font_size = 55
+text = "60"
