@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="CapitolPunishment"
-run/main_scene="res://Scenes/Characters/TrumpCharacterPlayground.tscn"
+run/main_scene="res://Scenes/Characters/CharacterPlayground.tscn"
 config/features=PackedStringArray("4.2", "Mobile")
 config/icon="res://icon.svg"
 
