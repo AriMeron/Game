@@ -29,13 +29,13 @@ func _physics_process(delta):
 			velocity.z -= 1
 			moving = true
 		if moving:
-			velocity = velocity.normalized() * speed
+			velocity = Utils.normalizeVelocity(velocity) * speed
 
 	if Input.is_action_just_pressed("roll") and not rolling:
 		rolling = true
 		roll_timer = 0.6  # Reset the roll timer
 		if moving:
-			roll_direction = velocity.normalized()  # Set roll direction to current movement direction
+			roll_direction = Utils.normalizeVelocity(velocity)  # Set roll direction to current movement direction
 		else:
 			# Default roll direction if not moving
 			roll_direction = Vector3(0, 0, 0.1667) 

@@ -2,20 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-<<<<<<< HEAD
-uid="uid://bk5ydjghqyayk"
-=======
-uid="uid://bfaaho7ljtf2g"
->>>>>>> main
-path="res://.godot/imported/obamaAbility copy.png-82256324656c595ef51e245f2a1117b9.ctex"
+uid="uid://dhayvs8kne7p2"
+path="res://.godot/imported/JFKUnavailable.png-429813f361d4e5e72705b9dd0d1fcc92.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Design/Ability/obamaAbility copy.png"
-dest_files=["res://.godot/imported/obamaAbility copy.png-82256324656c595ef51e245f2a1117b9.ctex"]
+source_file="res://Art/Assets/UI/JFKUnavailable.png"
+dest_files=["res://.godot/imported/JFKUnavailable.png-429813f361d4e5e72705b9dd0d1fcc92.ctex"]
 
 [params]
 
