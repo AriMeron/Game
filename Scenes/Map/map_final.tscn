@@ -556,10 +556,10 @@ transform = Transform3D(-1, 3.48787e-16, -8.74228e-08, 3.48787e-16, 1, -3.48787e
 transform = Transform3D(-1, 3.48787e-16, -8.74228e-08, 3.48787e-16, 1, -3.48787e-16, 8.74228e-08, -3.48787e-16, -1, -23, 1, 32)
 
 [node name="Healing_zone1" parent="." instance=ExtResource("16_w8csg")]
-transform = Transform3D(5, -1.74393e-15, 1.74393e-15, 1.74393e-15, 5, -1.74393e-15, -1.74393e-15, 1.74393e-15, 5, -0.015, -0.99, -1)
+transform = Transform3D(5, -1.74393e-15, 2.46592e-15, 1.74393e-15, 5, -2.46592e-15, -1.74393e-15, 1.74393e-15, 7.07, -0.015, -0.99, -1.5)
 
 [node name="Healing_zone2" parent="." instance=ExtResource("16_w8csg")]
-transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, 2.08165e-12, -0.99, 42)
+transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 7.07, 2.08165e-12, -0.99, 41)
 
 [node name="Node3D141" parent="." instance=ExtResource("17_sfnq3")]
 transform = Transform3D(-3.93403e-08, 3.48787e-16, 1, 3.13908e-16, 1, -3.48787e-16, -0.9, 3.48787e-16, -4.37114e-08, -51, -0.99, 20.1)
@@ -851,3 +851,6 @@ transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 32, 1, -6.5)
 
 [node name="Node3D158" parent="Floor" instance=ExtResource("21_hm32y")]
 transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 27.248, 1, 12.236)
+
+[node name="Node3D150" parent="." instance=ExtResource("18_oqi0h")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.39885, 2, 19.8251)

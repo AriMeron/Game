@@ -1,7 +1,10 @@
-[gd_scene load_steps=3 format=3 uid="uid://m0for5uhofoy"]
+[gd_scene load_steps=4 format=3 uid="uid://m0for5uhofoy"]
 
 [ext_resource type="Script" path="res://Scenes/Characters/Trump/Gun/bullet.gd" id="1_he747"]
 [ext_resource type="Texture2D" uid="uid://civ51iau5di63" path="res://Scenes/Characters/Joe Biden/greenBullet.png" id="2_c8a3y"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_qh01n"]
+size = Vector3(0.1, 0.1, 0.1)
 
 [node name="Bullet" type="CharacterBody3D"]
 transform = Transform3D(20, 0, 0, 0, 20, 0, 0, 0, 20, 0, 0, 0)
@@ -12,3 +15,9 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.0253295, 0)
 texture_filter = 0
 render_priority = -1
 texture = ExtResource("2_c8a3y")
+
+[node name="Area3D" type="Area3D" parent="."]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.0253295, 0)
+shape = SubResource("BoxShape3D_qh01n")
