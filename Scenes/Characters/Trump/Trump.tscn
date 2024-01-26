@@ -21,7 +21,7 @@ transform = Transform3D(0.0999979, 0.000641204, 6.64772e-11, -0.000370237, 0.057
 shape = SubResource("BoxShape3D_53677")
 
 [node name="AnimatedSprite3D" parent="." instance=ExtResource("6_5sifp")]
-animation = &"idle_side"
+animation = &"walk_up"
 frame_progress = 0.0
 
 [node name="Gun" parent="." instance=ExtResource("6_vfjov")]

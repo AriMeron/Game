@@ -324,7 +324,7 @@ animations = [{
 }],
 "loop": true,
 "name": &"idle_diag",
-"speed": 15.0
+"speed": 5.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -595,12 +595,12 @@ animations = [{
 }],
 "loop": true,
 "name": &"walk_up",
-"speed": 15.0
+"speed": 11.0
 }]
 
 [node name="AnimatedSprite3D2" type="AnimatedSprite3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.402, 0)
 texture_filter = 0
 sprite_frames = SubResource("SpriteFrames_lf7xo")
-animation = &"idle_forward"
+animation = &"roll_up"
 script = ExtResource("2_wy5lh")
