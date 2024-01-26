@@ -1,0 +1,53 @@
+[gd_scene load_steps=8 format=3 uid="uid://e8bi5jgawqdq"]
+
+[ext_resource type="FontFile" uid="uid://dp53cofy51leu" path="res://Scenes/Menus/PixCon (1).ttf" id="1_m8d00"]
+[ext_resource type="Script" path="res://Scenes/Menus/StartScreen.gd" id="1_urrx3"]
+[ext_resource type="Texture2D" uid="uid://b7wkbtcc8ot2b" path="res://Scenes/Menus/CapitolPunishmentLogo.png" id="3_ge4pf"]
+
+[sub_resource type="CanvasTexture" id="CanvasTexture_37t4d"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_p2dt8"]
+texture = SubResource("CanvasTexture_37t4d")
+modulate_color = Color(0, 0, 1, 1)
+
+[sub_resource type="CanvasTexture" id="CanvasTexture_ae5yc"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_l8qyw"]
+texture = SubResource("CanvasTexture_ae5yc")
+modulate_color = Color(1, 0, 0, 1)
+
+[node name="StartScreen" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_urrx3")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 0
+offset_left = 1.0
+offset_top = 510.0
+offset_right = 1918.0
+offset_bottom = 601.0
+
+[node name="start" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_m8d00")
+theme_override_styles/normal = SubResource("StyleBoxTexture_p2dt8")
+text = "Start Game"
+
+[node name="quit" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_m8d00")
+theme_override_styles/normal = SubResource("StyleBoxTexture_l8qyw")
+text = "Quit"
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(494, 551)
+scale = Vector2(8.38095, 9.80645)
+texture = ExtResource("3_ge4pf")
+
+[connection signal="button_down" from="VBoxContainer/start" to="." method="_on_start_button_down"]
+[connection signal="button_down" from="VBoxContainer/quit" to="." method="_on_quit_button_down"]
