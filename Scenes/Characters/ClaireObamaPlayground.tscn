@@ -32,7 +32,7 @@ size = Vector2(17, 5)
 [sub_resource type="BoxShape3D" id="BoxShape3D_sgtiu"]
 size = Vector3(16.9229, 2.14514, 3.63179)
 
-[node name="Node3D" type="Node3D"]
+[node name="Node3D2" type="Node3D"]
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource("Environment_arj20")
@@ -57,3 +57,4 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.027832, 0.529782, -0.240051
 size = Vector3(40.1436, 2, 40.7084)
 
 [node name="Obama" parent="." instance=ExtResource("1_htq5y")]
+transform = Transform3D(10, 0, 0, 0, 14.14, 0, 0, 0, 10, 0, 3.09444, 0)
