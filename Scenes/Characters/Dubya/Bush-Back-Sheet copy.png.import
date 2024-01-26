@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://p2tkl0rnk6fx"
-path="res://.godot/imported/Bush-Back-Sheet copy.png-753f35d0993268976dc12e43a8ab2190.ctex"
+uid="uid://biydbawvsmtys"
+path="res://.godot/imported/Bush-Back-Sheet copy.png-293a90cff2536999ab18eece6cbcf155.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Scenes/Characters/Dubya/Bush-Back-Sheet copy.png"
-dest_files=["res://.godot/imported/Bush-Back-Sheet copy.png-753f35d0993268976dc12e43a8ab2190.ctex"]
+source_file="res://Scenes/Characters/Bush-Back-Sheet copy.png"
+dest_files=["res://.godot/imported/Bush-Back-Sheet copy.png-293a90cff2536999ab18eece6cbcf155.ctex"]
 
 [params]
 
@@ -31,4 +31,4 @@ process/normal_map_invert_y=false
 process/hdr_as_srgb=false
 process/hdr_clamp_exposure=false
 process/size_limit=0
-detect_3d/compress_to=0
+detect_3d/compress_to=1
