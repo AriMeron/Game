@@ -1,0 +1,11 @@
+[gd_scene load_steps=3 format=3 uid="uid://ee5xrt1b26ph"]
+
+[ext_resource type="Script" path="res://Scenes/Characters/Obama/Gun/bullet.gd" id="1_sluqp"]
+[ext_resource type="Texture2D" uid="uid://mlfeo3uc0wb0" path="res://Scenes/Characters/Obama/Gun/missle.png" id="2_t8nhk"]
+
+[node name="Missile" type="CharacterBody3D"]
+script = ExtResource("1_sluqp")
+
+[node name="Sprite3D" type="Sprite3D" parent="."]
+transform = Transform3D(0.4, 0, 0, 0, 0.4, 0, 0, 0, 0.4, 0, 0, 0)
+texture = ExtResource("2_t8nhk")

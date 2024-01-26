@@ -1,7 +1,7 @@
-[gd_scene load_steps=10 format=3 uid="uid://cqfq67eyr6qy6"]
+[gd_scene load_steps=10 format=3 uid="uid://cax8rcv8d3y8x"]
 
-[ext_resource type="Texture2D" uid="uid://bock3qn4qawmv" path="res://Scenes/Particles/spark.png" id="1_5p5lw"]
-[ext_resource type="Script" path="res://Scenes/Characters/Trump/Particles/Particle.gd" id="2_t3nq5"]
+[ext_resource type="Texture2D" uid="uid://bock3qn4qawmv" path="res://Scenes/Particles/spark.png" id="1_5b41y"]
+[ext_resource type="Script" path="res://Scenes/Characters/Obama/Particles/Particle.gd" id="2_ar7b7"]
 
 [sub_resource type="Gradient" id="Gradient_p4ee5"]
 colors = PackedColorArray(1, 1, 1, 1, 1, 1, 1, 0)
@@ -29,7 +29,7 @@ transparency = 1
 cull_mode = 2
 vertex_color_use_as_albedo = true
 albedo_color = Color(0.278431, 1, 0.254902, 1)
-albedo_texture = ExtResource("1_5p5lw")
+albedo_texture = ExtResource("1_5b41y")
 texture_filter = 2
 
 [sub_resource type="QuadMesh" id="QuadMesh_xujq6"]
@@ -44,4 +44,4 @@ lifetime = 0.3
 explosiveness = 1.0
 process_material = SubResource("ParticleProcessMaterial_kejqo")
 draw_pass_1 = SubResource("QuadMesh_xujq6")
-script = ExtResource("2_t3nq5")
+script = ExtResource("2_ar7b7")

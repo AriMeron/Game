@@ -1,7 +1,7 @@
 [gd_scene load_steps=80 format=3 uid="uid://c6ti1w3mnkgp0"]
 
 [ext_resource type="Texture2D" uid="uid://c7tm6v12jwbvr" path="res://Scenes/Characters/Trump/TrumpSpritesheet.png" id="1_8rlos"]
-[ext_resource type="Script" path="res://Scenes/Characters/Joe Biden/bidenAnimation.gd" id="2_n308d"]
+[ext_resource type="Script" path="res://Scenes/Characters/Trump/trumpAnimation.gd" id="2_jfp2n"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_am2hj"]
 atlas = ExtResource("1_8rlos")
@@ -604,4 +604,4 @@ texture_filter = 0
 sprite_frames = SubResource("SpriteFrames_lf7xo")
 animation = &"idle_diag"
 frame_progress = 0.688776
-script = ExtResource("2_n308d")
+script = ExtResource("2_jfp2n")

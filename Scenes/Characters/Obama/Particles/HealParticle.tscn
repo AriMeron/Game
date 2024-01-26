@@ -1,7 +1,7 @@
-[gd_scene load_steps=8 format=3 uid="uid://15wh2br3fxo1"]
+[gd_scene load_steps=8 format=3 uid="uid://wp621ey5o2jt"]
 
-[ext_resource type="Texture2D" uid="uid://dfs00vldfjm6m" path="res://Scenes/Particles/heal.png" id="1_0flpi"]
-[ext_resource type="Script" path="res://Scenes/Characters/Trump/Particles/Particle.gd" id="2_q7sha"]
+[ext_resource type="Texture2D" uid="uid://dfs00vldfjm6m" path="res://Scenes/Particles/heal.png" id="1_h6sq1"]
+[ext_resource type="Script" path="res://Scenes/Characters/Obama/Particles/Particle.gd" id="2_d5jty"]
 
 [sub_resource type="Curve" id="Curve_osols"]
 _data = [Vector2(0, 1), 0.0, -3.23256, 0, 0, Vector2(1, 0), 0.0, 0.0, 0, 0]
@@ -24,7 +24,7 @@ scale_curve = SubResource("CurveTexture_0tyqd")
 transparency = 1
 cull_mode = 2
 vertex_color_use_as_albedo = true
-albedo_texture = ExtResource("1_0flpi")
+albedo_texture = ExtResource("1_h6sq1")
 texture_filter = 2
 
 [sub_resource type="QuadMesh" id="QuadMesh_c6w8h"]
@@ -38,4 +38,4 @@ amount = 10
 lifetime = 2.0
 process_material = SubResource("ParticleProcessMaterial_ke7if")
 draw_pass_1 = SubResource("QuadMesh_c6w8h")
-script = ExtResource("2_q7sha")
+script = ExtResource("2_d5jty")
