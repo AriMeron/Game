@@ -6,6 +6,7 @@ var timer
 var label
 var forLoop = false
 var found = false
+var bodyLocal
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -19,11 +20,11 @@ func _ready():
 	timer.set_one_shot(false)  # Only call the function once per timer
 	timer.connect("timeout", Callable(self, "_addHealth"))  # Connect the timeout signal to the other_function
 	add_child(timer)  # Add the timer to the scene tree to start it
-
+	
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _on_Area_body_entered(body:Node) -> void:
+	bodyLocal = body
 	if (body.is_in_group("Player")):
-		body.health += 100
 		timer.start()
 		print("in")
 	
@@ -33,9 +34,8 @@ func _on_Area_body_exited(body:Node) -> void:
 		timer.stop()
 		print("out")
 
-func _addHealth(body:Node):
-	body.health += 5
-	print("adding health")
-	health += 5
-	label.text = "Health: " + str(health)
+func _addHealth():
+	print(bodyLocal.health)
+	if (bodyLocal.health < 100):
+		bodyLocal.health += 5
 	

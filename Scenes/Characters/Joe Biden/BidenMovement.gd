@@ -15,7 +15,6 @@ var BloodParticle = preload("res://Scenes/Characters/Joe Biden/Particles/BloodPa
 var HealParticle = preload("res://Scenes/Characters/Joe Biden/Particles/HealParticle.tscn")
 
 func _physics_process(delta):
-	print(health)
 	var velocity = Vector3.ZERO
 	var moving = false
 	if Input.is_action_just_pressed("ability"):
