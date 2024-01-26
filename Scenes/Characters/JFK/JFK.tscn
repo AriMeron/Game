@@ -3,7 +3,7 @@
 [ext_resource type="Script" path="res://Scenes/Characters/JFK/JFKMovement.gd" id="1_qttkb"]
 [ext_resource type="Script" path="res://Scenes/Characters/JFK/Gun/GunScript.gd" id="4_vshbh"]
 [ext_resource type="PackedScene" uid="uid://cbwfpfxkvu24b" path="res://Scenes/Characters/JFK/Particles/DustTrail.tscn" id="5_gjxe6"]
-[ext_resource type="PackedScene" uid="uid://cg8wi4fqobc8l" path="res://Scenes/Characters/JFK/Gun/JFKGun.tscn" id="5_vhnsn"]
+[ext_resource type="PackedScene" uid="uid://cg8wi4fqobc8l" path="res://Scenes/Characters/Joe Biden/Gun/BidenGun1.tscn" id="5_ydrru"]
 [ext_resource type="PackedScene" uid="uid://2pfqr2n2rw3r" path="res://Scenes/Characters/JFK/JFKSprite.tscn" id="6_4adhg"]
 [ext_resource type="PackedScene" uid="uid://bucqpy522u028" path="res://Scenes/Characters/JFK/JFKCam.tscn" id="7_a7fwh"]
 
@@ -24,9 +24,9 @@ shape = SubResource("BoxShape3D_53677")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
 animation = &"idle_side"
 
-[node name="Gun" parent="." instance=ExtResource("5_vhnsn")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.069, -0.038, 0)
-script = ExtResource("4_vshbh")
-
 [node name="DustTrail" parent="." instance=ExtResource("5_gjxe6")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.105, 0)
+
+[node name="Gun" parent="." instance=ExtResource("5_ydrru")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.069, -0.038, 0)
+script = ExtResource("4_vshbh")
