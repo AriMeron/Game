@@ -11,7 +11,7 @@ var body = get_parent()
 @onready
 var hand = get_node(".")
 @onready
-var cam = get_parent().get_node("BidenCam")
+var cam = get_parent().get_node("ObamaCam")
 
 var flipGun = false
 
