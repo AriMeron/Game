@@ -1,9 +1,10 @@
-[gd_scene load_steps=8 format=3 uid="uid://s1bvch6mycde"]
+[gd_scene load_steps=9 format=3 uid="uid://s1bvch6mycde"]
 
 [ext_resource type="Script" path="res://Scenes/Characters/Trump/TrumpMovement.gd" id="1_5g2ow"]
 [ext_resource type="PackedScene" uid="uid://c6ti1w3mnkgp0" path="res://Scenes/Characters/Trump/trumpSprite.tscn" id="6_5sifp"]
 [ext_resource type="PackedScene" uid="uid://cxo1mtx6iwv6u" path="res://Scenes/Characters/Trump/trumpCam.tscn" id="6_f5qmp"]
 [ext_resource type="PackedScene" uid="uid://b1goyj6ukd4bc" path="res://Scenes/Characters/Trump/Gun/TrumpGun.tscn" id="6_vfjov"]
+[ext_resource type="Script" path="res://Scenes/Characters/Trump/WallAbility.gd" id="7_26th8"]
 [ext_resource type="Script" path="res://Scenes/Characters/Trump/Gun/GunScript.gd" id="7_bgqwr"]
 [ext_resource type="PackedScene" uid="uid://djxpqvecrigvu" path="res://Scenes/Characters/Trump/Particles/DustTrail.tscn" id="7_c6hdt"]
 
@@ -28,5 +29,8 @@ frame_progress = 0.0
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.069, -0.038, 2.08165e-12)
 script = ExtResource("7_bgqwr")
 
-[node name="DustTrail" parent="." instance=ExtResource("7_c6hdt")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.08165e-12, -0.105, 2.08165e-12)
+[node name="WallRotation" type="Node3D" parent="."]
+script = ExtResource("7_26th8")
+
+[node name="WallSpawn" type="Node3D" parent="WallRotation"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.370585)
