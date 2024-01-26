@@ -1,6 +1,6 @@
 [gd_scene load_steps=10 format=3 uid="uid://ci4tam0bx8dba"]
 
-[ext_resource type="PackedScene" uid="uid://s1bvch6mycde" path="res://Scenes/Characters/Trump/Trump.tscn" id="1_d8rws"]
+[ext_resource type="PackedScene" uid="uid://s1bvch6mycde" path="res://Scenes/Characters/Trump/Trump.tscn" id="1_h8coy"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_fdkgt"]
 sky_top_color = Color(0.709804, 0, 0.772549, 1)
@@ -56,5 +56,5 @@ shape = SubResource("BoxShape3D_sgtiu")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.027832, 0.529782, -0.240051)
 size = Vector3(40.1436, 2, 40.7084)
 
-[node name="Trump" parent="." instance=ExtResource("1_d8rws")]
-transform = Transform3D(10, 0, 0, 0, 14.14, 0, 0, 0, 10, 0, 2.4616, 0)
+[node name="Trump" parent="." instance=ExtResource("1_h8coy")]
+transform = Transform3D(10, 0, 0, 0, 14.14, 0, 0, 0, 10, 0, 2.46982, 0)
