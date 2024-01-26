@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://c4bsckl0j3cq"]
+[gd_scene load_steps=10 format=3 uid="uid://c4bsckl0j3cq"]
 
 [ext_resource type="Script" path="res://Scenes/Characters/Obama/ObamaMovement.gd" id="1_7b4fe"]
 [ext_resource type="PackedScene" uid="uid://ctpm1runv2o2w" path="res://Scenes/Characters/Obama/obamaCam.tscn" id="5_5fful"]
@@ -7,6 +7,7 @@
 [ext_resource type="Script" path="res://Scenes/Characters/Obama/Gun/GunScript.gd" id="7_4po4t"]
 [ext_resource type="PackedScene" uid="uid://cme8d41r1rvba" path="res://Scenes/Characters/Obama/Particles/DustTrail.tscn" id="7_du3c5"]
 [ext_resource type="Script" path="res://Scenes/Characters/Obama/obamaAnimation.gd" id="7_w2yij"]
+[ext_resource type="Script" path="res://Scenes/Characters/Obama/Gun/DroneScript.gd" id="8_8hidx"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_53677"]
 size = Vector3(0.228257, 0.257697, 0.164541)
@@ -30,3 +31,7 @@ script = ExtResource("7_4po4t")
 [node name="AnimatedSprite3D" parent="." instance=ExtResource("6_1awkk")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
 script = ExtResource("7_w2yij")
+
+[node name="DroneSpawn" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.999996, 0, 0, 0, 1, 0, 0.00771866, -0.0013867)
+script = ExtResource("8_8hidx")
