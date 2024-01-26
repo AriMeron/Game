@@ -16,8 +16,8 @@ transform = Transform3D(10, 0, 0, 0, 14.14, 0, 0, 0, 10, 0.00284958, 0.0452595, 
 script = ExtResource("1_tc1ea")
 
 [node name="BidenCam" parent="." instance=ExtResource("4_x80xi")]
-transform = Transform3D(0.0999979, 0.000641204, -2.91739e-10, -0.000370236, 0.0577396, 0.0408352, 0.000370237, -0.0577397, 0.0816455, 0, 0.999999, 1.9)
-size = 8.06662
+transform = Transform3D(0.0999979, 0.000641204, -2.91739e-10, -0.000370236, 0.0577396, 0.0408352, 0.000370237, -0.0577397, 0.0816455, 0, 0.566, 1.196)
+current = true
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 0.999999, 0, 0, 0, 1, 0, 0, -0.0315285)
@@ -29,7 +29,7 @@ animation = &"idle_side"
 frame_progress = 0.0
 
 [node name="Gun" parent="." instance=ExtResource("5_gkqed")]
-transform = Transform3D(1, 0, 0, 0, 0.999998, 0, 0, 0, 1, 0.0689902, -0.0381989, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.069, -0.038, 0)
 script = ExtResource("6_7k20f")
 
 [node name="DustTrail" parent="." instance=ExtResource("7_srlcm")]
