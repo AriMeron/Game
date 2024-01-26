@@ -1,9 +1,10 @@
-[gd_scene load_steps=8 format=3 uid="uid://cwt7q7ulkdjtg"]
+[gd_scene load_steps=9 format=3 uid="uid://cwt7q7ulkdjtg"]
 
 [ext_resource type="Script" path="res://Scenes/Characters/Joe Biden/BidenMovement.gd" id="1_tc1ea"]
 [ext_resource type="PackedScene" uid="uid://cx5uoe48sp0kc" path="res://Scenes/Characters/Joe Biden/bidenSprite.tscn" id="3_7f0oe"]
-[ext_resource type="PackedScene" uid="uid://dirk4w0whdmgd" path="res://Scenes/Characters/Joe Biden/Gun/BidenGun.tscn" id="4_gexbd"]
+[ext_resource type="PackedScene" uid="uid://cg8wi4fqobc8l" path="res://Scenes/Characters/Joe Biden/Gun/BidenGun.tscn" id="4_gexbd"]
 [ext_resource type="PackedScene" uid="uid://b4mcxh0bgbjjo" path="res://Scenes/Characters/Joe Biden/bidenCam.tscn" id="4_x80xi"]
+[ext_resource type="Script" path="res://Scenes/Characters/Joe Biden/Gun/GunScript.gd" id="5_sme4c"]
 [ext_resource type="PackedScene" uid="uid://fkoqs8yhxfnp" path="res://Scenes/Characters/Joe Biden/Particles/DustTrail.tscn" id="7_srlcm"]
 [ext_resource type="PackedScene" uid="uid://diyxymhdnb2dj" path="res://Scenes/Characters/Joe Biden/brandonWave.tscn" id="7_ya4uv"]
 
@@ -28,9 +29,10 @@ frame_progress = 0.0
 
 [node name="Gun" parent="." instance=ExtResource("4_gexbd")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.069, -0.038, 0)
+script = ExtResource("5_sme4c")
 
 [node name="DustTrail" parent="." instance=ExtResource("7_srlcm")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.0736615, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.104684, 0)
 
 [node name="BidenWave" parent="." instance=ExtResource("7_ya4uv")]
 transform = Transform3D(0.6, 0, 0, 0, 0.6, 0, 0, 0, 0.6, 0, 0, 0)
