@@ -2,20 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-<<<<<<< HEAD
-uid="uid://c23rmh6ql44eb"
-=======
-uid="uid://bc8emir20keyl"
->>>>>>> main
-path="res://.godot/imported/JFK ability icon-1 copy.png-f99975d5eb60e5d13ecc9c1d0ad9efe3.ctex"
+uid="uid://c0i0da0b37ky1"
+path="res://.godot/imported/JFKSelected.png-8b81628ead652c9da1165ef72d3ed2a9.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Design/Ability/JFK ability icon-1 copy.png"
-dest_files=["res://.godot/imported/JFK ability icon-1 copy.png-f99975d5eb60e5d13ecc9c1d0ad9efe3.ctex"]
+source_file="res://Art/Assets/UI/JFKSelected.png"
+dest_files=["res://.godot/imported/JFKSelected.png-8b81628ead652c9da1165ef72d3ed2a9.ctex"]
 
 [params]
 
