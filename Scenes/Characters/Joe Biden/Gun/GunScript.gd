@@ -48,7 +48,7 @@ func _process(delta):
 	else:
 		fireRate = 0.2
 	var window_size = get_viewport().get_size()
-	var hand_pos = Vector2( hand_pos_relative.x * window_size.x, hand_pos_relative.y * window_size.y )
+	var hand_pos = Vector2( hand_pos_relative.x * window_size.x, hand_pos_relative.y * window_size.y)
 	# Calculate the hand positions based on the current window size
 
 	var mouse_pos = get_viewport().get_mouse_position()
@@ -58,6 +58,7 @@ func _process(delta):
 	# Convert the angle to degrees and clamp it
 	angle_degrees = rad_to_deg(-1 * angle_to_mouse)
 
+	print(angle_degrees)
 	rotationHelp.rotation.z = deg_to_rad(angle_degrees)
 
 	if Input.is_action_pressed("click"):
@@ -100,7 +101,7 @@ const RAY_LENGTH = 1000
 
 func shoot_bullet(mouse_pos, angle):
 	#YOU HAVE TO USE THE CAMERA :(((((
-	var y_height = 2
+	var y_height = -0.6
 	var bullet_instance = BULLET_SCENE.instantiate()
 	get_tree().get_root().add_child(bullet_instance)
 	# Extract only the global X and Z position
