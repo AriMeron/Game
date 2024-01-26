@@ -27,8 +27,8 @@ vertex_color_use_as_albedo = true
 
 [sub_resource type="CapsuleMesh" id="CapsuleMesh_tnvc5"]
 material = SubResource("StandardMaterial3D_lbb0y")
-radius = 0.1
-height = 0.2
+radius = 0.05
+height = 0.1
 
 [node name="TestParticle" type="Node3D"]
 
