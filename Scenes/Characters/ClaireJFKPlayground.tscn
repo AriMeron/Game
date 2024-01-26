@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://ds06474ibvy7r"]
+[gd_scene load_steps=10 format=3 uid="uid://d1hvhc3v0fjw5"]
 
 [ext_resource type="PackedScene" uid="uid://j1dkdwihf3xl" path="res://Scenes/Characters/JFK/JFK.tscn" id="1_nhm54"]
 
@@ -57,4 +57,4 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.027832, 0.529782, -0.240051
 size = Vector3(40.1436, 2, 40.7084)
 
 [node name="JFK" parent="." instance=ExtResource("1_nhm54")]
-transform = Transform3D(10, 0, 0, 0, 14.14, 0, 0, 0, 10, 0, 2.30647, 0)
+transform = Transform3D(10, 0, 0, 0, 14.14, 0, 0, 0, 10, 0, 1.96219, 0)

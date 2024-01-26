@@ -2,26 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-<<<<<<<< HEAD:Scenes/Characters/JFK/Gun/JFKGun.png.import
-uid="uid://btlpb4ci3fytp"
-path="res://.godot/imported/JFKGun.png-e19c1526d05bdfeb5c583c23f086fc36.ctex"
-========
-uid="uid://blq0suxuofjn1"
-path.s3tc="res://.godot/imported/drone.png-1e63f126b2dba41b3b60aa3b9825ff1c.s3tc.ctex"
->>>>>>>> main:Scenes/Characters/Obama/Gun/drone.png.import
+uid="uid://b15p2faq8w4bc"
+path="res://.godot/imported/drone.png-1e63f126b2dba41b3b60aa3b9825ff1c.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-<<<<<<<< HEAD:Scenes/Characters/JFK/Gun/JFKGun.png.import
-source_file="res://Scenes/Characters/JFK/Gun/JFKGun.png"
-dest_files=["res://.godot/imported/JFKGun.png-e19c1526d05bdfeb5c583c23f086fc36.ctex"]
-========
 source_file="res://Scenes/Characters/Obama/Gun/drone.png"
-dest_files=["res://.godot/imported/drone.png-1e63f126b2dba41b3b60aa3b9825ff1c.s3tc.ctex"]
->>>>>>>> main:Scenes/Characters/Obama/Gun/drone.png.import
+dest_files=["res://.godot/imported/drone.png-1e63f126b2dba41b3b60aa3b9825ff1c.ctex"]
 
 [params]
 
@@ -41,4 +31,4 @@ process/normal_map_invert_y=false
 process/hdr_as_srgb=false
 process/hdr_clamp_exposure=false
 process/size_limit=0
-detect_3d/compress_to=0
+detect_3d/compress_to=1
