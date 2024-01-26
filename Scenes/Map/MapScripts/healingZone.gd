@@ -23,6 +23,7 @@ func _ready():
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _on_Area_body_entered(body:Node) -> void:
 	if (body.is_in_group("Player")):
+		body.health += 100
 		timer.start()
 		print("in")
 	
@@ -32,7 +33,8 @@ func _on_Area_body_exited(body:Node) -> void:
 		timer.stop()
 		print("out")
 
-func _addHealth():
+func _addHealth(body:Node):
+	body.health += 5
 	print("adding health")
 	health += 5
 	label.text = "Health: " + str(health)

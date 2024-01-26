@@ -1,10 +1,13 @@
 extends Node3D # or extends Node3D for 3D scenes
 
 # Define common variables
-var health : int = 100
+var health
 var player_choice: String
-var party : int #0 is republican, 1 is democrat
+var party #0 is republican, 1 is democrat
 var ID
+
+func _ready():
+	health = 100
 
 # Add common functionality
 func take_damage(damage_amount: int) -> void:
@@ -13,4 +16,9 @@ func take_damage(damage_amount: int) -> void:
 		# Implement logic for when the player's health reaches zero
 		queue_free()  # Destroy the player instance, for example
 
+func setParty(p: int) -> void:
+	party = p
+
+func setPlayerChoice(player: String) -> void:
+	player_choice = player
 # Add other common methods or signals as needed

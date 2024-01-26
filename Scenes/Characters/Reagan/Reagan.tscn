@@ -10,12 +10,12 @@
 [sub_resource type="BoxShape3D" id="BoxShape3D_53677"]
 size = Vector3(0.118399, 0.257697, 0.107324)
 
-[node name="Reagan" type="CharacterBody3D"]
+[node name="Reagan" type="CharacterBody3D" groups=["Player", "Reagan"]]
 transform = Transform3D(10, 0, 0, 0, 14.14, 0, 0, 0, 10, 0.00284958, 0.0452595, -0.0220184)
 script = ExtResource("1_mky1e")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 0.999999, 0, 0, 0, 1, 0, 0, -0.0315285)
+transform = Transform3D(1, 0, 0, 0, 0.999999, 0, 0, 0, 1, -0.0497914, 0, -0.0315285)
 shape = SubResource("BoxShape3D_53677")
 
 [node name="ReaganCam" parent="." instance=ExtResource("6_4jvqf")]

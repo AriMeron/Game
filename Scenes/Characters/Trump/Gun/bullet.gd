@@ -21,7 +21,12 @@ func _process(delta):
 		queue_free()  # Remove the bullet from the scene
 	
 func _on_Area_body_entered(body:Node) -> void:
-	if(body.is_in_group("Player")):
-		pass
 	print("test")
 	queue_free()
+	if (body.is_in_group("Player")):
+		if (body.is_in_group("Trump")):
+			pass
+		else:
+			body.health -= 20
+			body.hide()
+ 

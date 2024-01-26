@@ -9,13 +9,14 @@
 [ext_resource type="PackedScene" uid="uid://djxpqvecrigvu" path="res://Scenes/Characters/Trump/Particles/DustTrail.tscn" id="7_c6hdt"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_53677"]
-size = Vector3(0.228257, 0.257697, 0.164541)
+size = Vector3(0.119197, 0.257697, 0.164541)
 
-[node name="Trump" type="CharacterBody3D" groups=["Player"]]
+[node name="Trump" type="CharacterBody3D" groups=["Player", "Trump"]]
 transform = Transform3D(10, 0, 0, 0, 14.14, 0, 0, 0, 10, 0, 0, 0)
 script = ExtResource("1_5g2ow")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0206037, 0, 0)
 shape = SubResource("BoxShape3D_53677")
 
 [node name="TrumpCam" parent="." instance=ExtResource("6_f5qmp")]

@@ -10,13 +10,14 @@
 [ext_resource type="Script" path="res://Scenes/Characters/Obama/Gun/DroneScript.gd" id="8_8hidx"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_53677"]
-size = Vector3(0.228257, 0.257697, 0.164541)
+size = Vector3(0.121266, 0.257697, 0.164541)
 
-[node name="Obama" type="CharacterBody3D"]
+[node name="Obama" type="CharacterBody3D" groups=["Obama", "Player"]]
 transform = Transform3D(10, 0, 0, 0, 14.14, 0, 0, 0, 10, 0, 0, 0)
 script = ExtResource("1_7b4fe")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0250312, 0, 0)
 shape = SubResource("BoxShape3D_53677")
 
 [node name="ObamaCam" parent="." instance=ExtResource("5_5fful")]

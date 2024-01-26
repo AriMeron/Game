@@ -11,6 +11,9 @@ var DirtParticle = preload("res://Scenes/Characters/Joe Biden/Particles/DirtPart
 var BloodParticle = preload("res://Scenes/Characters/Joe Biden/Particles/BloodParticle.tscn")
 var HealParticle = preload("res://Scenes/Characters/Joe Biden/Particles/HealParticle.tscn")
 
+func _ready():
+	pass
+
 func _physics_process(delta):
 	var velocity = Vector3.ZERO
 	var moving = false
@@ -87,4 +90,3 @@ func create_blood_particle():
 func create_heal_particle():
 	var particle = HealParticle.instantiate()
 	add_child(particle)
-

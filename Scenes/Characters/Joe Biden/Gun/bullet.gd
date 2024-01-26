@@ -10,6 +10,7 @@ func _ready():
 	active = true
 	bullet = $Area3D
 	bullet.connect("body_entered", Callable(self, "_on_Area_body_entered"))
+	
 
 func _process(delta):
 	if active:
@@ -18,7 +19,13 @@ func _process(delta):
 	lifetime -= delta
 	if lifetime <= 0:
 		queue_free()  # Remove the bullet from the scene
-
+	
 func _on_Area_body_entered(body:Node) -> void:
 	print("test")
 	queue_free()
+	if (body.is_in_group("Player")):
+		if (body.is_in_group("Biden")):
+			pass
+		else:
+			body.health -= 20
+			body.hide()
