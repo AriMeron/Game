@@ -2,20 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-<<<<<<< HEAD
-uid="uid://ds5cijsdjstbt"
-=======
-uid="uid://dkol5lkil8bg8"
->>>>>>> main
-path="res://.godot/imported/obamaAbility copy.png-82256324656c595ef51e245f2a1117b9.ctex"
+uid="uid://dku2lgyjcgds2"
+path="res://.godot/imported/Bush-DodgeRoll-Back-Sheet.png-4f0d52931cafefbb314507ca3a5fffda.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Design/Ability/obamaAbility copy.png"
-dest_files=["res://.godot/imported/obamaAbility copy.png-82256324656c595ef51e245f2a1117b9.ctex"]
+source_file="res://Scenes/Characters/Dubya/Bush-DodgeRoll-Back-Sheet.png"
+dest_files=["res://.godot/imported/Bush-DodgeRoll-Back-Sheet.png-4f0d52931cafefbb314507ca3a5fffda.ctex"]
 
 [params]
 

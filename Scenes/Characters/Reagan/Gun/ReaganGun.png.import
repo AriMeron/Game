@@ -2,20 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-<<<<<<< HEAD
-uid="uid://ds5cijsdjstbt"
-=======
-uid="uid://dkol5lkil8bg8"
->>>>>>> main
-path="res://.godot/imported/obamaAbility copy.png-82256324656c595ef51e245f2a1117b9.ctex"
+uid="uid://bcwnw8h0h6ckh"
+path="res://.godot/imported/ReaganGun.png-ee7c9b2e10e57204929e76fbb724c124.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Design/Ability/obamaAbility copy.png"
-dest_files=["res://.godot/imported/obamaAbility copy.png-82256324656c595ef51e245f2a1117b9.ctex"]
+source_file="res://Scenes/Characters/Reagan/Gun/ReaganGun.png"
+dest_files=["res://.godot/imported/ReaganGun.png-ee7c9b2e10e57204929e76fbb724c124.ctex"]
 
 [params]
 
@@ -35,4 +31,4 @@ process/normal_map_invert_y=false
 process/hdr_as_srgb=false
 process/hdr_clamp_exposure=false
 process/size_limit=0
-detect_3d/compress_to=1
+detect_3d/compress_to=0
