@@ -28,7 +28,6 @@ func _process(delta):
 
 	# Create a target position using the mouse's x, a constant y, and the calculated z
 		var target_pos_3d = Vector3(from.x, y_height, projected_z)
-		print(target_pos_3d)
 
 		var direction = (target_pos_3d - spawn_pos).normalized()
 		
