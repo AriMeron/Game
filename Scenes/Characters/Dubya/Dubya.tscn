@@ -1,0 +1,36 @@
+[gd_scene load_steps=9 format=3 uid="uid://cqlgycx7xeu1k"]
+
+[ext_resource type="Script" path="res://Scenes/Characters/Dubya/DubyaMovement.gd" id="1_wkixf"]
+[ext_resource type="PackedScene" uid="uid://bmhvvmoris0xy" path="res://Scenes/Characters/Dubya/dubyaSprite.tscn" id="4_8u4xs"]
+[ext_resource type="PackedScene" uid="uid://bthsck5sovquy" path="res://Scenes/Characters/Dubya/Particles/DustTrail.tscn" id="5_5jvbj"]
+[ext_resource type="Script" path="res://Scenes/Characters/Dubya/dubyaAnimation.gd" id="5_risgc"]
+[ext_resource type="PackedScene" uid="uid://dau22ksshu7gt" path="res://Scenes/Characters/Dubya/Gun/DubyaGun.tscn" id="6_285op"]
+[ext_resource type="Script" path="res://Scenes/Characters/Dubya/Gun/GunScript.gd" id="7_qlnsr"]
+[ext_resource type="PackedScene" uid="uid://dua68plgel67v" path="res://Scenes/Characters/Dubya/dubyaCam.tscn" id="7_vx7vm"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_53677"]
+size = Vector3(0.118399, 0.257697, 0.107324)
+
+[node name="Dubya" type="CharacterBody3D"]
+transform = Transform3D(10, 0, 0, 0, 14.14, 0, 0, 0, 10, 0.00284958, 0.0452595, -0.0220184)
+script = ExtResource("1_wkixf")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.999999, 0, 0, 0, 1, 0, 0, -0.0315285)
+shape = SubResource("BoxShape3D_53677")
+
+[node name="AnimatedSprite3D" parent="." instance=ExtResource("4_8u4xs")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.08165e-12, 2.08165e-12, 2.08165e-12)
+animation = &"idle_side"
+frame = 3
+frame_progress = 0.169929
+script = ExtResource("5_risgc")
+
+[node name="DustTrail" parent="." instance=ExtResource("5_5jvbj")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.08165e-12, -0.105, 2.08165e-12)
+
+[node name="Gun" parent="." instance=ExtResource("6_285op")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0689944, -0.0376184, 0)
+script = ExtResource("7_qlnsr")
+
+[node name="DubyaCam" parent="." instance=ExtResource("7_vx7vm")]
