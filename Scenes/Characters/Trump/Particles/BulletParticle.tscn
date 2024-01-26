@@ -1,7 +1,7 @@
 [gd_scene load_steps=10 format=3 uid="uid://cqfq67eyr6qy6"]
 
 [ext_resource type="Texture2D" uid="uid://bock3qn4qawmv" path="res://Scenes/Particles/spark.png" id="1_5p5lw"]
-[ext_resource type="Script" path="res://Scenes/Characters/Joe Biden/Particles/Particle.gd" id="2_y4acy"]
+[ext_resource type="Script" path="res://Scenes/Characters/Trump/Particles/Particle.gd" id="2_t3nq5"]
 
 [sub_resource type="Gradient" id="Gradient_p4ee5"]
 colors = PackedColorArray(1, 1, 1, 1, 1, 1, 1, 0)
@@ -18,9 +18,9 @@ curve = SubResource("Curve_gs3qb")
 
 [sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_kejqo"]
 spread = 25.0
-gravity = Vector3(0, 0, 0)
 initial_velocity_min = 0.7
 initial_velocity_max = 0.7
+gravity = Vector3(0, 0, 0)
 scale_curve = SubResource("CurveTexture_lydgm")
 color_ramp = SubResource("GradientTexture1D_f8q65")
 
@@ -44,4 +44,4 @@ lifetime = 0.3
 explosiveness = 1.0
 process_material = SubResource("ParticleProcessMaterial_kejqo")
 draw_pass_1 = SubResource("QuadMesh_xujq6")
-script = ExtResource("2_y4acy")
+script = ExtResource("2_t3nq5")

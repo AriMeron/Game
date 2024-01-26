@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://dyq10fgrdkjq0"]
+
+[ext_resource type="Script" path="res://Scenes/Characters/Obama/Gun/bullet.gd" id="1_6w1b6"]
+[ext_resource type="Texture2D" uid="uid://civ51iau5di63" path="res://Scenes/Characters/Joe Biden/greenBullet.png" id="2_xiecq"]
+
+[node name="Bullet" type="CharacterBody3D"]
+transform = Transform3D(20, 0, 0, 0, 20, 0, 0, 0, 20, 0, 0, 0)
+script = ExtResource("1_6w1b6")
+
+[node name="Sprite3D" type="Sprite3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.0253295, 0)
+texture_filter = 0
+render_priority = -1
+texture = ExtResource("2_xiecq")

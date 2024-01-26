@@ -1,0 +1,41 @@
+[gd_scene load_steps=7 format=3 uid="uid://dsoafoc6jqir5"]
+
+[ext_resource type="Script" path="res://Scenes/Characters/Joe Biden/Particles/Particle.gd" id="1_887il"]
+
+[sub_resource type="Gradient" id="Gradient_1mb0c"]
+colors = PackedColorArray(1, 1, 1, 1, 1, 1, 1, 0)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_dcpha"]
+gradient = SubResource("Gradient_1mb0c")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_3dlnq"]
+direction = Vector3(1, 5, 1)
+initial_velocity_min = -0.5
+initial_velocity_max = -0.5
+gravity = Vector3(0, -20, 0)
+linear_accel_min = -5.0
+linear_accel_max = -5.0
+color = Color(0, 0, 0, 1)
+color_ramp = SubResource("GradientTexture1D_dcpha")
+collision_mode = 1
+collision_friction = 0.1
+collision_bounce = 0.5
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_lbb0y"]
+transparency = 1
+vertex_color_use_as_albedo = true
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_tnvc5"]
+material = SubResource("StandardMaterial3D_lbb0y")
+radius = 0.1
+height = 0.2
+
+[node name="TestParticle" type="Node3D"]
+
+[node name="Particle" type="GPUParticles3D" parent="."]
+layers = 2
+amount = 5
+explosiveness = 0.9
+process_material = SubResource("ParticleProcessMaterial_3dlnq")
+draw_pass_1 = SubResource("CapsuleMesh_tnvc5")
+script = ExtResource("1_887il")

@@ -1,0 +1,11 @@
+[gd_scene load_steps=3 format=3 uid="uid://c7e2mjqpmsbku"]
+
+[ext_resource type="Script" path="res://Scenes/Characters/Obama/Gun/Drone.gd" id="1_pqkvo"]
+[ext_resource type="Texture2D" uid="uid://bmt25fjnp6n4s" path="res://Scenes/Characters/Obama/Gun/drone.png" id="2_l0j6f"]
+
+[node name="Drone" type="CharacterBody3D"]
+script = ExtResource("1_pqkvo")
+
+[node name="Sprite3D" type="Sprite3D" parent="."]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0, 0)
+texture = ExtResource("2_l0j6f")

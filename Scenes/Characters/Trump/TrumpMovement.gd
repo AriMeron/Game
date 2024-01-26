@@ -7,9 +7,9 @@ var roll_timer = 0.5
 var roll_direction = Vector3.ZERO
 var health = 100
 var velo = 0
-var DirtParticle = preload("res://Scenes/Characters/Joe Biden/Particles/DirtParticle.tscn")
-var BloodParticle = preload("res://Scenes/Characters/Joe Biden/Particles/BloodParticle.tscn")
-var HealParticle = preload("res://Scenes/Characters/Joe Biden/Particles/HealParticle.tscn")
+var DirtParticle = preload("res://Scenes/Characters/Trump/Particles/DirtParticle.tscn")
+var BloodParticle = preload("res://Scenes/Characters/Trump/Particles/BloodParticle.tscn")
+var HealParticle = preload("res://Scenes/Characters/Trump/Particles/HealParticle.tscn")
 
 func _physics_process(delta):
 	var velocity = Vector3.ZERO
@@ -29,13 +29,13 @@ func _physics_process(delta):
 			velocity.z -= 1
 			moving = true
 		if moving:
-			velocity = velocity.normalized() * speed
+			velocity = Utils.normalizeVelocity(velocity) * speed
 
 	if Input.is_action_just_pressed("roll") and not rolling:
 		rolling = true
 		roll_timer = 0.6  # Reset the roll timer
 		if moving:
-			roll_direction = velocity.normalized()  # Set roll direction to current movement direction
+			roll_direction = Utils.normalizeVelocity(velocity)  # Set roll direction to current movement direction
 		else:
 			# Default roll direction if not moving
 			roll_direction = Vector3(0, 0, 0.1667) 

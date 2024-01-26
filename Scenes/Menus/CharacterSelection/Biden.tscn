@@ -1,6 +1,6 @@
 [gd_scene load_steps=5 format=3 uid="uid://b0iygl7wuy6ga"]
 
-[ext_resource type="Texture2D" uid="uid://bqid4wqunseuv" path="res://Design/Character Selection UI/Biden.png" id="1_pjr5o"]
+[ext_resource type="Texture2D" uid="uid://c8aprxpeglt8o" path="res://Art/Design/Character Select/Initial Design/Biden.png" id="1_pjr5o"]
 [ext_resource type="Script" path="res://Scripts/CharacterSelection/LoadObama.gd" id="2_l4oe8"]
 [ext_resource type="Script" path="res://Scripts/CharacterSelection/LoadJFK.gd" id="3_4hjod"]
 [ext_resource type="Script" path="res://Scripts/CharacterSelection/LoadTrump.gd" id="4_v4i0f"]
