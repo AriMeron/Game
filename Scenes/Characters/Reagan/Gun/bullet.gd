@@ -24,7 +24,7 @@ func _on_Area_body_entered(body:Node) -> void:
 	print("test")
 	queue_free()
 	if (body.is_in_group("Player")):
-		if (body.is_in_group("Reagan")):
+		if (body.is_in_group("Republican")):
 			pass
 		else:
 			body.health -= 20
