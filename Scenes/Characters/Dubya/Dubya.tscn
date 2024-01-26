@@ -20,7 +20,7 @@ transform = Transform3D(1, 0, 0, 0, 0.999999, 0, 0, 0, 1, 0, 0, -0.0315285)
 shape = SubResource("BoxShape3D_53677")
 
 [node name="AnimatedSprite3D" parent="." instance=ExtResource("4_8u4xs")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.08165e-12, 2.08165e-12, 2.08165e-12)
+transform = Transform3D(1, 0, 0, 0, 0.999999, 0, 0, 0, 1, 0, 0.0526148, 0)
 animation = &"walk_side"
 frame_progress = 0.657627
 script = ExtResource("5_risgc")
@@ -29,7 +29,7 @@ script = ExtResource("5_risgc")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.08165e-12, -0.105, 2.08165e-12)
 
 [node name="Gun" parent="." instance=ExtResource("6_285op")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0689944, -0.0376184, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.069, 2.08165e-12, 2.08165e-12)
 script = ExtResource("7_qlnsr")
 
 [node name="DubyaCam" parent="." instance=ExtResource("7_vx7vm")]

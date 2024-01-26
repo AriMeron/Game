@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bl0hj3o8j7uj4"
-path="res://.godot/imported/FinalBushSpritesheet.png-f2edcb4e9c208ff3e2e6ea8ced72ec88.ctex"
+uid="uid://c00vb5l2mipc4"
+path="res://.godot/imported/Bush-DodgeRoll-DiagonalBack-Sheet copy 2.png-9a5e6e7fcdf74b2c1f7cfc64d0049ecb.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Scenes/Characters/Dubya/FinalBushSpritesheet.png"
-dest_files=["res://.godot/imported/FinalBushSpritesheet.png-f2edcb4e9c208ff3e2e6ea8ced72ec88.ctex"]
+source_file="res://Scenes/Characters/Dubya/Bush-DodgeRoll-DiagonalBack-Sheet copy 2.png"
+dest_files=["res://.godot/imported/Bush-DodgeRoll-DiagonalBack-Sheet copy 2.png-9a5e6e7fcdf74b2c1f7cfc64d0049ecb.ctex"]
 
 [params]
 

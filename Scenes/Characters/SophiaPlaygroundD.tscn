@@ -57,4 +57,4 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.027832, 0.529782, -0.240051
 size = Vector3(40.1436, 2, 40.7084)
 
 [node name="Dubya" parent="." instance=ExtResource("1_u2qoy")]
-transform = Transform3D(10, 0, 0, 0, 14.14, 0, 0, 0, 10, 0.00284958, 2.35043, -0.0220184)
+transform = Transform3D(10, 0, 0, 0, 14.14, 0, 0, 0, 10, -0.00872666, 2.32951, -0.00203892)
