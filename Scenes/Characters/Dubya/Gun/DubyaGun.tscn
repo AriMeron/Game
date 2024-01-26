@@ -19,4 +19,4 @@ texture_filter = 0
 texture = ExtResource("2_cbibn")
 
 [node name="BulletSpawn" type="Marker3D" parent="RotationHelper/Gun"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0457839, -0.00606821, -2.08165e-12)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0598815, 0.0214815, -0.0179784)
