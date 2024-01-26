@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://biydbawvsmtys"
-path="res://.godot/imported/Bush-Back-Sheet copy.png-753f35d0993268976dc12e43a8ab2190.ctex"
+uid="uid://boxgqpd05pgkj"
+path="res://.godot/imported/TrumpAvailable.png-507c8c8a85f30fa9838f74e9ae244057.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Scenes/Characters/Dubya/Bush-Back-Sheet copy.png"
-dest_files=["res://.godot/imported/Bush-Back-Sheet copy.png-753f35d0993268976dc12e43a8ab2190.ctex"]
+source_file="res://Art/Assets/Characters/TrumpAvailable.png"
+dest_files=["res://.godot/imported/TrumpAvailable.png-507c8c8a85f30fa9838f74e9ae244057.ctex"]
 
 [params]
 

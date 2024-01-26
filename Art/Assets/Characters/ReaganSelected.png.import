@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://biydbawvsmtys"
-path="res://.godot/imported/Bush-Back-Sheet copy.png-753f35d0993268976dc12e43a8ab2190.ctex"
+uid="uid://cs1uphcuh00og"
+path="res://.godot/imported/ReaganSelected.png-f1335028a16e6decb6b941ac2a679b20.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Scenes/Characters/Dubya/Bush-Back-Sheet copy.png"
-dest_files=["res://.godot/imported/Bush-Back-Sheet copy.png-753f35d0993268976dc12e43a8ab2190.ctex"]
+source_file="res://Art/Assets/Characters/ReaganSelected.png"
+dest_files=["res://.godot/imported/ReaganSelected.png-f1335028a16e6decb6b941ac2a679b20.ctex"]
 
 [params]
 
