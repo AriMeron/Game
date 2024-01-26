@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://4sppoerlakyh"
-path="res://.godot/imported/ReaganFinalSpritesheet.png-5ef42bc459a10875c6860cf0d45a32e6.ctex"
+uid="uid://biydbawvsmtys"
+path="res://.godot/imported/Bush-Back-Sheet copy.png-293a90cff2536999ab18eece6cbcf155.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Scenes/Characters/ReaganFinalSpritesheet.png"
-dest_files=["res://.godot/imported/ReaganFinalSpritesheet.png-5ef42bc459a10875c6860cf0d45a32e6.ctex"]
+source_file="res://Scenes/Characters/Bush-Back-Sheet copy.png"
+dest_files=["res://.godot/imported/Bush-Back-Sheet copy.png-293a90cff2536999ab18eece6cbcf155.ctex"]
 
 [params]
 
