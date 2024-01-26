@@ -1,0 +1,22 @@
+[gd_scene load_steps=3 format=3 uid="uid://c2dspido6ynie"]
+
+[ext_resource type="Texture2D" uid="uid://bo2h1ao7ig66u" path="res://Scenes/Characters/Reagan/Gun/ReaganHand.png" id="1_0vxeg"]
+[ext_resource type="Texture2D" uid="uid://bcwnw8h0h6ckh" path="res://Scenes/Characters/Reagan/Gun/ReaganGun.png" id="2_whfpx"]
+
+[node name="Hand" type="Sprite3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.08165e-12, 2.08165e-12, 2.08165e-12)
+texture_filter = 0
+render_priority = 1
+texture = ExtResource("1_0vxeg")
+
+[node name="RotationHelper" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00235889, 0.00962154, 2.08165e-12)
+
+[node name="Gun" type="Sprite3D" parent="RotationHelper"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.038835, 0.0150877, 0)
+flip_h = true
+texture_filter = 0
+texture = ExtResource("2_whfpx")
+
+[node name="BulletSpawn" type="Marker3D" parent="RotationHelper/Gun"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0457839, -0.00606821, -2.08165e-12)

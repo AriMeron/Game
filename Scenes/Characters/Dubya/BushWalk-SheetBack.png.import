@@ -2,20 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-<<<<<<< HEAD
-uid="uid://ds5cijsdjstbt"
-=======
-uid="uid://dkol5lkil8bg8"
->>>>>>> origin/main
-path="res://.godot/imported/obamaAbility copy.png-82256324656c595ef51e245f2a1117b9.ctex"
+uid="uid://dg84ff8ggpdd"
+path="res://.godot/imported/BushWalk-SheetBack.png-25854e8528161052307cef663264f7e7.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Design/Ability/obamaAbility copy.png"
-dest_files=["res://.godot/imported/obamaAbility copy.png-82256324656c595ef51e245f2a1117b9.ctex"]
+source_file="res://Scenes/Characters/Dubya/BushWalk-SheetBack.png"
+dest_files=["res://.godot/imported/BushWalk-SheetBack.png-25854e8528161052307cef663264f7e7.ctex"]
 
 [params]
 
@@ -35,4 +31,4 @@ process/normal_map_invert_y=false
 process/hdr_as_srgb=false
 process/hdr_clamp_exposure=false
 process/size_limit=0
-detect_3d/compress_to=1
+detect_3d/compress_to=0

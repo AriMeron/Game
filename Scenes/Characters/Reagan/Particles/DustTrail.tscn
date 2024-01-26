@@ -1,6 +1,6 @@
-[gd_scene load_steps=7 format=3 uid="uid://fkoqs8yhxfnp"]
+[gd_scene load_steps=7 format=3 uid="uid://b5wsoxsrjmb1v"]
 
-[ext_resource type="Script" path="res://Scenes/Characters/Joe Biden/Particles/Particle.gd" id="1_ahb7t"]
+[ext_resource type="Script" path="res://Scenes/Characters/Reagan/Particles/Particle.gd" id="1_guaob"]
 
 [sub_resource type="Gradient" id="Gradient_1nhru"]
 offsets = PackedFloat32Array(0, 0.818182, 0.981818)
@@ -34,8 +34,8 @@ albedo_color = Color(0, 0, 0, 1)
 
 [sub_resource type="SphereMesh" id="SphereMesh_1c54m"]
 material = SubResource("StandardMaterial3D_q5e4g")
-radius = 0.05
-height = 0.1
+radius = 0.1
+height = 0.2
 
 [node name="DustTrail" type="Node3D"]
 
@@ -45,4 +45,4 @@ amount = 4
 lifetime = 0.5
 process_material = SubResource("ParticleProcessMaterial_7cxwk")
 draw_pass_1 = SubResource("SphereMesh_1c54m")
-script = ExtResource("1_ahb7t")
+script = ExtResource("1_guaob")

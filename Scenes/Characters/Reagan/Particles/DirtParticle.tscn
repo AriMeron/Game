@@ -1,6 +1,6 @@
-[gd_scene load_steps=7 format=3 uid="uid://cwhxvx6bgqsx3"]
+[gd_scene load_steps=7 format=3 uid="uid://dsoafoc6jqir5"]
 
-[ext_resource type="Script" path="res://Scenes/Characters/Joe Biden/Particles/Particle.gd" id="1_ank7x"]
+[ext_resource type="Script" path="res://Scenes/Characters/Joe Biden/Particles/Particle.gd" id="1_887il"]
 
 [sub_resource type="Gradient" id="Gradient_1mb0c"]
 colors = PackedColorArray(1, 1, 1, 1, 1, 1, 1, 0)
@@ -27,8 +27,8 @@ vertex_color_use_as_albedo = true
 
 [sub_resource type="CapsuleMesh" id="CapsuleMesh_tnvc5"]
 material = SubResource("StandardMaterial3D_lbb0y")
-radius = 0.05
-height = 0.1
+radius = 0.1
+height = 0.2
 
 [node name="TestParticle" type="Node3D"]
 
@@ -38,4 +38,4 @@ amount = 5
 explosiveness = 0.9
 process_material = SubResource("ParticleProcessMaterial_3dlnq")
 draw_pass_1 = SubResource("CapsuleMesh_tnvc5")
-script = ExtResource("1_ank7x")
+script = ExtResource("1_887il")

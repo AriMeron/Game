@@ -11,7 +11,7 @@ var body = get_parent()
 @onready
 var hand = get_node(".")
 @onready
-var cam = get_parent().get_node("BidenCam")
+var cam = get_parent().get_node("ReaganCam")
 
 var flipGun = false
 
@@ -43,22 +43,18 @@ func _ready():
 	ogHandPos = hand.position
 
 func _process(delta):
-	if body.isDark:
-		fireRate = 0.1
-	else:
-		fireRate = 0.2
 	var window_size = get_viewport().get_size()
-	var hand_pos = Vector2( hand_pos_relative.x * window_size.x, hand_pos_relative.y * window_size.y)
+	var hand_pos = Vector2( hand_pos_relative.x * window_size.x, hand_pos_relative.y * window_size.y )
 	# Calculate the hand positions based on the current window size
 
 	var mouse_pos = get_viewport().get_mouse_position()
 	var angle_to_mouse = 0
 	angle_to_mouse = atan2(mouse_pos.y - hand_pos.y, mouse_pos.x - hand_pos.x)
 
+
 	# Convert the angle to degrees and clamp it
 	angle_degrees = rad_to_deg(-1 * angle_to_mouse)
 
-	print(angle_degrees)
 	rotationHelp.rotation.z = deg_to_rad(angle_degrees)
 
 	if Input.is_action_pressed("click"):
@@ -70,7 +66,7 @@ func _process(delta):
 			canShoot = false
 			if body.rolling == false: 
 				shoot_bullet(mouse_pos, angle_degrees)
-				create_bullet_explosion_particle()
+				#create_bullet_explosion_particle()
 	if current_recoil > 0.0 or current_recoil_rotation > 0.0:
 		current_recoil -= recoil_recovery_speed * delta
 		current_recoil = max(current_recoil, 0.0)
@@ -101,7 +97,7 @@ const RAY_LENGTH = 1000
 
 func shoot_bullet(mouse_pos, angle):
 	#YOU HAVE TO USE THE CAMERA :(((((
-	var y_height = -0.6
+	var y_height = 2
 	var bullet_instance = BULLET_SCENE.instantiate()
 	get_tree().get_root().add_child(bullet_instance)
 	# Extract only the global X and Z position
@@ -124,7 +120,7 @@ func shoot_bullet(mouse_pos, angle):
 	var bloom_amount = 0.09  # Adjust this value for more/less bloom
 	direction.x += randf_range(-bloom_amount, bloom_amount)
 	direction.z += randf_range(-bloom_amount, bloom_amount)
-	direction = Utils.normalizeVelocity(direction) # Re-normalize the direction vector
+	direction = direction.normalized()  # Re-normalize the direction vector
 	if angle < 90 and angle > -90 and direction.x < 0:
 		direction.x *= -1
 	elif (angle > 90 or angle < -90) and direction.x > 0:
