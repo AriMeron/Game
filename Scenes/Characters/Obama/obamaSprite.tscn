@@ -1,7 +1,7 @@
 [gd_scene load_steps=80 format=3 uid="uid://bo1jc7jbxc67i"]
 
 [ext_resource type="Texture2D" uid="uid://dunrb5kergmgp" path="res://Scenes/Characters/Obama/ObamaSpritesheet.png" id="1_3sg06"]
-[ext_resource type="Script" path="res://Scenes/Characters/Joe Biden/bidenAnimation.gd" id="2_8d45u"]
+[ext_resource type="Script" path="res://Scenes/Characters/Obama/obamaAnimation.gd" id="2_r4ois"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_2ql6g"]
 atlas = ExtResource("1_3sg06")
@@ -324,7 +324,7 @@ animations = [{
 }],
 "loop": true,
 "name": &"idle_diag",
-"speed": 15.0
+"speed": 5.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -595,12 +595,12 @@ animations = [{
 }],
 "loop": true,
 "name": &"walk_up",
-"speed": 15.0
+"speed": 11.0
 }]
 
 [node name="AnimatedSprite3D2" type="AnimatedSprite3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.058, 0, 0)
 texture_filter = 0
 sprite_frames = SubResource("SpriteFrames_lf7xo")
-animation = &"idle_diag"
-script = ExtResource("2_8d45u")
+animation = &"roll_up"
+script = ExtResource("2_r4ois")

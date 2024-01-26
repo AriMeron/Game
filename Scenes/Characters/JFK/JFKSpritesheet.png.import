@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b15p2faq8w4bc"
-path="res://.godot/imported/drone.png-1e63f126b2dba41b3b60aa3b9825ff1c.ctex"
+uid="uid://bkipexernsc3a"
+path="res://.godot/imported/JFKSpritesheet.png-d8dc402f2c0848688e09019d6c6594de.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Scenes/Characters/Obama/Gun/drone.png"
-dest_files=["res://.godot/imported/drone.png-1e63f126b2dba41b3b60aa3b9825ff1c.ctex"]
+source_file="res://Scenes/Characters/JFK/JFKSpritesheet.png"
+dest_files=["res://.godot/imported/JFKSpritesheet.png-d8dc402f2c0848688e09019d6c6594de.ctex"]
 
 [params]
 
@@ -31,4 +31,4 @@ process/normal_map_invert_y=false
 process/hdr_as_srgb=false
 process/hdr_clamp_exposure=false
 process/size_limit=0
-detect_3d/compress_to=1
+detect_3d/compress_to=0

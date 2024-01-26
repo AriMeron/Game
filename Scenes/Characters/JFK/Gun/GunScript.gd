@@ -11,7 +11,7 @@ var body = get_parent()
 @onready
 var hand = get_node(".")
 @onready
-var cam = get_parent().get_node("ObamaCam")
+var cam = get_parent().get_node("JFKCam")
 
 var flipGun = false
 
@@ -44,25 +44,18 @@ func _ready():
 
 func _process(delta):
 	var window_size = get_viewport().get_size()
-	var hand_pos = Vector2(hand_pos_relative.x * window_size.x, hand_pos_relative.y * window_size.y)
+	var hand_pos = Vector2( hand_pos_relative.x * window_size.x, hand_pos_relative.y * window_size.y )
+	# Calculate the hand positions based on the current window size
 
 	var mouse_pos = get_viewport().get_mouse_position()
+	var angle_to_mouse = 0
+	angle_to_mouse = atan2(mouse_pos.y - hand_pos.y, mouse_pos.x - hand_pos.x)
 
-	# Use the camera to project the mouse position into 3D space
-	var from = cam.project_ray_origin(mouse_pos)
-	var to = from + cam.project_ray_normal(mouse_pos) * 1000  # Arbitrary large number for ray length
 
-	# Find the 3D point where the ray intersects with the plane at hand's y height
-	var y_plane = hand.global_transform.origin.y
-	var intersect_point = from + (to - from) * ((y_plane - from.y) / (to.y - from.y))
+	# Convert the angle to degrees and clamp it
+	angle_degrees = rad_to_deg(-1 * angle_to_mouse)
 
-	# Now calculate the angle between the hand's position and this point
-	var direction = (intersect_point - hand.global_transform.origin).normalized()
-	var angle_to_mouse = atan2(direction.z, direction.x)
-
-	# Convert the angle to degrees
-	angle_degrees = -1 * rad_to_deg(angle_to_mouse)
-	rotationHelp.rotation.z = deg_to_rad(angle_degrees)  # Assuming Y is the up-axis in your 3D space)
+	rotationHelp.rotation.z = deg_to_rad(angle_degrees)
 
 	if Input.is_action_pressed("click"):
 		if canShoot:
@@ -72,8 +65,8 @@ func _process(delta):
 			current_recoil_rotation = min(current_recoil_rotation, max_recoil_rotation)
 			canShoot = false
 			if body.rolling == false: 
-				shoot_bullet(angle_degrees)
-				create_bullet_explosion_particle()
+				shoot_bullet(mouse_pos, angle_degrees)
+				#create_bullet_explosion_particle()
 	if current_recoil > 0.0 or current_recoil_rotation > 0.0:
 		current_recoil -= recoil_recovery_speed * delta
 		current_recoil = max(current_recoil, 0.0)
@@ -99,36 +92,35 @@ func _process(delta):
 		#gunModel.rotation.z = - deg_to_rad(current_recoil_rotation)
 
 var BULLET_SCENE = preload("res://Scenes/Characters/Joe Biden/Gun/bullet.tscn")
-const BULLET_SPEED = 10
+const BULLET_SPEED = 20
 const RAY_LENGTH = 1000
 
-func shoot_bullet( angle):
-	var mouse_pos = get_viewport().get_mouse_position()
+func shoot_bullet(mouse_pos, angle):
+	#YOU HAVE TO USE THE CAMERA :(((((
+	var y_height = 2
+	var bullet_instance = BULLET_SCENE.instantiate()
+	get_tree().get_root().add_child(bullet_instance)
+	# Extract only the global X and Z position
 	var spawn_pos = bullet_spawn.global_transform.origin
-	var y_height = 0
 	spawn_pos.y = y_height  # Set Y to a constant value
-
+	# Apply the position to the bullet instance
+	var window_size = get_viewport().get_size()
+	bullet_instance.global_transform.origin = Vector3(spawn_pos.x, y_height, spawn_pos.z)
 	var from = cam.project_ray_origin(mouse_pos)
 	var to = from + cam.project_ray_normal(mouse_pos) * RAY_LENGTH
+	# Use the camera's projection to find the z-coordinate in 3D space
+	var projected_z = (from.z + (to.z - from.z) * ((y_height - from.y) / (to.y - from.y)))
 
-	# Calculate the point where the ray intersects with the horizontal plane at y_height
-	var projected_z = from.z + (to.z - from.z) * ((y_height - from.y) / (to.y - from.y))
+	# Create a target position using the mouse's x, a constant y, and the calculated z
 	var target_pos_3d = Vector3(from.x, y_height, projected_z)
 
-	# Spawn the bullet and set its direction
-	var bullet_instance = BULLET_SCENE.instantiate()
-	bullet_instance.global_transform.origin = spawn_pos
 	var direction = (target_pos_3d - spawn_pos).normalized()
-	# Set the bullet's direction here, depending on how your bullet logic is handled
-
-	# Add the bullet to the scene tree
-	get_tree().get_root().add_child(bullet_instance)
 
 	# Add a random bloom to the direction
 	var bloom_amount = 0.09  # Adjust this value for more/less bloom
 	direction.x += randf_range(-bloom_amount, bloom_amount)
 	direction.z += randf_range(-bloom_amount, bloom_amount)
-	direction = Utils.normalizeVelocity(direction) # Re-normalize the direction vector
+	direction = direction.normalized()  # Re-normalize the direction vector
 	if angle < 90 and angle > -90 and direction.x < 0:
 		direction.x *= -1
 	elif (angle > 90 or angle < -90) and direction.x > 0:
@@ -137,8 +129,12 @@ func shoot_bullet( angle):
 		
 	
 	# Store the direction for use in the bullet's script
-
-	bullet_instance.initial_direction = direction * BULLET_SPEED
+	if typeof(body.velo) == 2:
+		bullet_instance.initial_direction = direction * BULLET_SPEED
+	elif body.velo.x != 0 or body.velo.y != 0:
+		bullet_instance.initial_direction = direction * BULLET_SPEED * (abs(sqrt(body.velo.x * body.velo.x + body.velo.z * body.velo.z)) * .1)
+	else:
+		bullet_instance.initial_direction = direction * BULLET_SPEED
 	
 
 
