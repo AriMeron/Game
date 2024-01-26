@@ -1,6 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://dp7p2duond8my"]
-
-[ext_resource type="Script" path="res://Scenes/Characters/Joe Biden/Particles/Particle.gd" id="1_7g8oe"]
+[gd_scene load_steps=8 format=3 uid="uid://dp7p2duond8my"]
 
 [sub_resource type="Gradient" id="Gradient_ikm4c"]
 offsets = PackedFloat32Array(0.809091, 1)
@@ -19,9 +17,9 @@ curve = SubResource("Curve_vj7q2")
 [sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_krrwi"]
 direction = Vector3(0, 1, 0)
 spread = 15.0
-gravity = Vector3(0, -100, 0)
 initial_velocity_min = 1.0
 initial_velocity_max = 1.0
+gravity = Vector3(0, -100, 0)
 scale_curve = SubResource("CurveTexture_4m63m")
 color = Color(1, 0, 0, 1)
 color_ramp = SubResource("GradientTexture1D_oipeu")
@@ -46,4 +44,3 @@ lifetime = 0.6
 explosiveness = 1.0
 process_material = SubResource("ParticleProcessMaterial_krrwi")
 draw_pass_1 = SubResource("QuadMesh_gg2dh")
-script = ExtResource("1_7g8oe")

@@ -1,0 +1,22 @@
+[gd_scene load_steps=3 format=3 uid="uid://b2lmr3qnoact2"]
+
+[ext_resource type="Texture2D" uid="uid://dqrpywv4friuw" path="res://Scenes/Characters/Obama/Gun/ObamaHand.png" id="1_tp1fy"]
+[ext_resource type="Texture2D" uid="uid://cnvkipent1u20" path="res://Scenes/Characters/Obama/Gun/ObamaGun.png" id="2_mgbps"]
+
+[node name="Hand" type="Sprite3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.08165e-12, 2.08165e-12, 2.08165e-12)
+texture_filter = 0
+render_priority = 1
+texture = ExtResource("1_tp1fy")
+
+[node name="RotationHelper" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00235889, 0.00962154, 2.08165e-12)
+
+[node name="Gun" type="Sprite3D" parent="RotationHelper"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.038835, 0.0150877, 0)
+flip_h = true
+texture_filter = 0
+texture = ExtResource("2_mgbps")
+
+[node name="BulletSpawn" type="Marker3D" parent="RotationHelper/Gun"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0457839, -0.00606821, -2.08165e-12)

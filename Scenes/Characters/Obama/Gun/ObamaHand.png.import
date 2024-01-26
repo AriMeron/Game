@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ct6i1xwiyf4e8"
-path="res://.godot/imported/obamaAbility copy.png-82256324656c595ef51e245f2a1117b9.ctex"
+uid="uid://dqrpywv4friuw"
+path="res://.godot/imported/ObamaHand.png-692094cf01566c9b5ec6bc1b54b5a99d.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Design/Ability/obamaAbility copy.png"
-dest_files=["res://.godot/imported/obamaAbility copy.png-82256324656c595ef51e245f2a1117b9.ctex"]
+source_file="res://Scenes/Characters/Obama/Gun/ObamaHand.png"
+dest_files=["res://.godot/imported/ObamaHand.png-692094cf01566c9b5ec6bc1b54b5a99d.ctex"]
 
 [params]
 
@@ -31,4 +31,4 @@ process/normal_map_invert_y=false
 process/hdr_as_srgb=false
 process/hdr_clamp_exposure=false
 process/size_limit=0
-detect_3d/compress_to=1
+detect_3d/compress_to=0

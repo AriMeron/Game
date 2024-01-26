@@ -1,6 +1,6 @@
-[gd_scene load_steps=7 format=3 uid="uid://eimpjqcc2756"]
+[gd_scene load_steps=7 format=3 uid="uid://cbh1ypusmymje"]
 
-[ext_resource type="Script" path="res://Scenes/Characters/Trump/Particles/Particle.gd" id="1_x2blo"]
+[ext_resource type="Script" path="res://Scenes/Characters/Obama/Particles/Particle.gd" id="1_a6hy5"]
 
 [sub_resource type="Gradient" id="Gradient_1mb0c"]
 colors = PackedColorArray(1, 1, 1, 1, 1, 1, 1, 0)
@@ -38,4 +38,4 @@ amount = 5
 explosiveness = 0.9
 process_material = SubResource("ParticleProcessMaterial_3dlnq")
 draw_pass_1 = SubResource("CapsuleMesh_tnvc5")
-script = ExtResource("1_x2blo")
+script = ExtResource("1_a6hy5")

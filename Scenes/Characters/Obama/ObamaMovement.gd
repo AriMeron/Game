@@ -7,9 +7,9 @@ var roll_timer = 0.5
 var roll_direction = Vector3.ZERO
 var health = 100
 var velo = 0
-var DirtParticle = preload("res://Scenes/Characters/Trump/Particles/DirtParticle.tscn")
-var BloodParticle = preload("res://Scenes/Characters/Trump/Particles/BloodParticle.tscn")
-var HealParticle = preload("res://Scenes/Characters/Trump/Particles/HealParticle.tscn")
+var DirtParticle = preload("res://Scenes/Characters/Obama/Particles/DirtParticle.tscn")
+var BloodParticle = preload("res://Scenes/Characters/Obama/Particles/BloodParticle.tscn")
+var HealParticle = preload("res://Scenes/Characters/Obama/Particles/HealParticle.tscn")
 
 func _physics_process(delta):
 	var velocity = Vector3.ZERO
@@ -29,13 +29,13 @@ func _physics_process(delta):
 			velocity.z -= 1
 			moving = true
 		if moving:
-			velocity = Utils.normalizeVelocity(velocity) * speed
+			velocity = velocity.normalized() * speed
 
 	if Input.is_action_just_pressed("roll") and not rolling:
 		rolling = true
 		roll_timer = 0.6  # Reset the roll timer
 		if moving:
-			roll_direction = Utils.normalizeVelocity(velocity)  # Set roll direction to current movement direction
+			roll_direction = velocity.normalized()  # Set roll direction to current movement direction
 		else:
 			# Default roll direction if not moving
 			roll_direction = Vector3(0, 0, 0.1667) 
@@ -69,7 +69,7 @@ func _physics_process(delta):
 	
 # Adjust the update_animation function as needed for the new setup.
 func get_player_type():
-	return "republican"
+	return "democrat"
 
 func set_dust_trail_particle(b : bool, velocity_direction : Vector3):
 	$DustTrail.get_child(0).emitting = b
