@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://cwt7q7ulkdjtg"]
+[gd_scene load_steps=10 format=3 uid="uid://cwt7q7ulkdjtg"]
 
 [ext_resource type="Script" path="res://Scenes/Characters/Joe Biden/BidenMovement.gd" id="1_tc1ea"]
 [ext_resource type="PackedScene" uid="uid://cx5uoe48sp0kc" path="res://Scenes/Characters/Joe Biden/bidenSprite.tscn" id="3_7f0oe"]
@@ -10,6 +10,14 @@
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_53677"]
 size = Vector3(0.0607566, 0.257697, 0.150861)
+
+[sub_resource type="SceneReplicationConfig" id="SceneReplicationConfig_rlre7"]
+properties/0/path = NodePath(".:position")
+properties/0/spawn = true
+properties/0/replication_mode = 1
+properties/1/path = NodePath(".:rotation")
+properties/1/spawn = true
+properties/1/replication_mode = 1
 
 [node name="Biden" type="CharacterBody3D" groups=["Biden", "Democrat", "Player"]]
 transform = Transform3D(10, 0, 0, 0, 14.14, 0, 0, 0, 10, 0.00284958, 0.0452595, -0.0220184)
@@ -37,3 +45,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.0736615, 0)
 
 [node name="BidenWave" parent="." instance=ExtResource("7_ya4uv")]
 transform = Transform3D(0.6, 0, 0, 0, 0.6, 0, 0, 0, 0.6, 0, 0, 0)
+
+[node name="MultiplayerSynchronizer" type="MultiplayerSynchronizer" parent="."]
+replication_config = SubResource("SceneReplicationConfig_rlre7")

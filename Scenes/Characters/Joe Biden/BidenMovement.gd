@@ -15,11 +15,20 @@ var BloodParticle = preload("res://Scenes/Characters/Joe Biden/Particles/BloodPa
 var HealParticle = preload("res://Scenes/Characters/Joe Biden/Particles/HealParticle.tscn")
 var Biden
 
+@onready var camera = $BidenCam
+ 
+func _enter_tree():
+	set_multiplayer_authority(str(name).to_int())
+
 func _ready():
+	if not is_multiplayer_authority() : return
+	camera.current = true
+	
 	Biden = $CollisionShape3D.get_parent_node_3d()
 	health = 100
 
 func _physics_process(delta):
+	if not is_multiplayer_authority() : return
 	var velocity = Vector3.ZERO
 	var moving = false
 	if Input.is_action_just_pressed("ability"):
