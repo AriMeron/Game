@@ -10,6 +10,13 @@ var velo = 0
 var DirtParticle = preload("res://Scenes/Characters/Trump/Particles/DirtParticle.tscn")
 var BloodParticle = preload("res://Scenes/Characters/Trump/Particles/BloodParticle.tscn")
 var HealParticle = preload("res://Scenes/Characters/Trump/Particles/HealParticle.tscn")
+var Trump
+
+func _ready():
+	Trump = $CollisionShape3D.get_parent_node_3d()
+	
+func dead():
+	Trump.position = Vector3(0, 0, 0)
 
 func _physics_process(delta):
 	var velocity = Vector3.ZERO

@@ -37,5 +37,5 @@ func _on_Area_body_exited(body:Node) -> void:
 func _addHealth():
 	print(bodyLocal.health)
 	if (bodyLocal.health < 100):
-		bodyLocal.health += 5
+		bodyLocal.health += 50
 	

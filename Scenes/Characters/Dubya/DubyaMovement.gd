@@ -10,9 +10,10 @@ var velo = 0
 var DirtParticle = preload("res://Scenes/Characters/Joe Biden/Particles/DirtParticle.tscn")
 var BloodParticle = preload("res://Scenes/Characters/Joe Biden/Particles/BloodParticle.tscn")
 var HealParticle = preload("res://Scenes/Characters/Joe Biden/Particles/HealParticle.tscn")
+var Dubya
 
 func _ready():
-	pass
+	Dubya = $CollisionShape3D.get_parent_node_3d()
 
 func _physics_process(delta):
 	var velocity = Vector3.ZERO
@@ -90,3 +91,6 @@ func create_blood_particle():
 func create_heal_particle():
 	var particle = HealParticle.instantiate()
 	add_child(particle)
+
+func dead():
+	Dubya.position = Vector3(0, 0, 0)

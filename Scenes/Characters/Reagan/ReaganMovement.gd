@@ -10,7 +10,14 @@ var velo = 0
 var DirtParticle = preload("res://Scenes/Characters/Joe Biden/Particles/DirtParticle.tscn")
 var BloodParticle = preload("res://Scenes/Characters/Joe Biden/Particles/BloodParticle.tscn")
 var HealParticle = preload("res://Scenes/Characters/Joe Biden/Particles/HealParticle.tscn")
+var Reagan
 
+func _ready():
+	Reagan = $CollisionShape3D.get_parent_node_3d()
+	
+func dead():
+	Reagan.position = Vector3(0, 0, 0)
+	
 func _physics_process(delta):
 	var velocity = Vector3.ZERO
 	var moving = false
