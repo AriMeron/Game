@@ -5,7 +5,7 @@ var roll_speed = 23
 var rolling = false
 var roll_timer = 0.5
 var roll_direction = Vector3.ZERO
-var health = 100
+var health
 var velo = 0
 var DirtParticle = preload("res://Scenes/Characters/Obama/Particles/DirtParticle.tscn")
 var BloodParticle = preload("res://Scenes/Characters/Obama/Particles/BloodParticle.tscn")
@@ -14,9 +14,11 @@ var Obama
 
 func _ready():
 	Obama = $CollisionShape3D.get_parent_node_3d()
+	health = 100
 	
 func dead():
-	Obama.position = Vector3(0, 0, 0)
+	Obama.position = Vector3(-51, 0, 0)
+	health = 100
 
 func _physics_process(delta):
 	var velocity = Vector3.ZERO

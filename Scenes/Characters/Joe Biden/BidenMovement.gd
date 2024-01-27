@@ -8,7 +8,7 @@ var roll_direction = Vector3.ZERO
 var brandonTimer = 0
 var brandonScale = 1
 var isDark = false
-var health = 100
+var health
 var velo = 0
 var DirtParticle = preload("res://Scenes/Characters/Joe Biden/Particles/DirtParticle.tscn")
 var BloodParticle = preload("res://Scenes/Characters/Joe Biden/Particles/BloodParticle.tscn")
@@ -17,6 +17,7 @@ var Biden
 
 func _ready():
 	Biden = $CollisionShape3D.get_parent_node_3d()
+	health = 100
 
 func _physics_process(delta):
 	var velocity = Vector3.ZERO
@@ -105,6 +106,7 @@ func create_heal_particle():
 	add_child(particle)
 
 func dead():
-	Biden.position = Vector3(0, 0, 0)
+	Biden.position = Vector3(-51, 0, 0)
+	health = 100
 
 

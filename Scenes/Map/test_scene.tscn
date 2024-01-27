@@ -11,6 +11,9 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1.1, 2.08165e-12, 2.08165e-12, -
 [node name="Biden" parent="." instance=ExtResource("2_82mqj")]
 transform = Transform3D(4, 0, 0, 0, 5.65694, -0.0185702, 0, 0.026263, 3.99996, -9.9498, 2.08165e-12, 18.5833)
 
+[node name="Biden2" parent="." instance=ExtResource("2_82mqj")]
+transform = Transform3D(4, 0, 0, 0, 5.65694, -0.0185702, 0, 0.026263, 3.99996, -5.73565, 2.08165e-12, 18.5833)
+
 [node name="GPUParticlesCollisionBox3D" type="GPUParticlesCollisionBox3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.899872, -1.72159, 1.88528)
 size = Vector3(115.371, 2, 71.6335)

@@ -5,7 +5,7 @@ var roll_speed = 23
 var rolling = false
 var roll_timer = 0.5
 var roll_direction = Vector3.ZERO
-var health = 100
+var health
 var velo = 0
 var DirtParticle = preload("res://Scenes/Characters/Joe Biden/Particles/DirtParticle.tscn")
 var BloodParticle = preload("res://Scenes/Characters/Joe Biden/Particles/BloodParticle.tscn")
@@ -14,9 +14,11 @@ var Reagan
 
 func _ready():
 	Reagan = $CollisionShape3D.get_parent_node_3d()
+	health = 100
 	
 func dead():
-	Reagan.position = Vector3(0, 0, 0)
+	Reagan.position = Vector3(51, 0, 0)
+	health = 100
 	
 func _physics_process(delta):
 	var velocity = Vector3.ZERO
