@@ -11,10 +11,15 @@ var DirtParticle = preload("res://Scenes/Characters/Joe Biden/Particles/DirtPart
 var BloodParticle = preload("res://Scenes/Characters/Joe Biden/Particles/BloodParticle.tscn")
 var HealParticle = preload("res://Scenes/Characters/Joe Biden/Particles/HealParticle.tscn")
 var Dubya
+var healthBar
 
 func _ready():
 	Dubya = $CollisionShape3D.get_parent_node_3d()
 	health = 100
+	healthBar = $SubViewport/Node3D
+
+func updateHealthBar():
+	healthBar.value = health
 
 func _physics_process(delta):
 	var velocity = Vector3.ZERO
@@ -96,8 +101,10 @@ func create_heal_particle():
 func dead():
 	Dubya.position = Vector3(-51, 0, 0)
 	health = 100
+	updateHealthBar()
 
 func dealDamage():
 	health -= 20
+	updateHealthBar()
 	if (health <= 0):
 		dead()

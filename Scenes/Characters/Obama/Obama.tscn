@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://c4bsckl0j3cq"]
+[gd_scene load_steps=12 format=3 uid="uid://c4bsckl0j3cq"]
 
 [ext_resource type="Script" path="res://Scenes/Characters/Obama/ObamaMovement.gd" id="1_7b4fe"]
 [ext_resource type="PackedScene" uid="uid://ctpm1runv2o2w" path="res://Scenes/Characters/Obama/obamaCam.tscn" id="5_5fful"]
@@ -8,9 +8,13 @@
 [ext_resource type="PackedScene" uid="uid://cme8d41r1rvba" path="res://Scenes/Characters/Obama/Particles/DustTrail.tscn" id="7_du3c5"]
 [ext_resource type="Script" path="res://Scenes/Characters/Obama/obamaAnimation.gd" id="7_w2yij"]
 [ext_resource type="Script" path="res://Scenes/Characters/Obama/Gun/DroneScript.gd" id="8_8hidx"]
+[ext_resource type="PackedScene" uid="uid://bnx4mtgnl8xyt" path="res://Scenes/Characters/healthBar.tscn" id="9_4fkoj"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_53677"]
 size = Vector3(0.121266, 0.257697, 0.164541)
+
+[sub_resource type="ViewportTexture" id="ViewportTexture_nfxsy"]
+viewport_path = NodePath("SubViewport")
 
 [node name="Obama" type="CharacterBody3D" groups=["Democrat", "Obama", "Player"]]
 transform = Transform3D(10, 0, 0, 0, 14.14, 0, 0, 0, 10, 0, 0, 0)
@@ -37,3 +41,13 @@ script = ExtResource("7_w2yij")
 [node name="DroneSpawn" type="Node3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 0.999996, 0, 0, 0, 1, 0, 0.00771866, -0.0013867)
 script = ExtResource("8_8hidx")
+
+[node name="SubViewport" type="SubViewport" parent="."]
+disable_3d = true
+transparent_bg = true
+
+[node name="Node3D" parent="SubViewport" instance=ExtResource("9_4fkoj")]
+
+[node name="Sprite3D" type="Sprite3D" parent="."]
+transform = Transform3D(0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, 2.08165e-12, 0.425, 2.08165e-12)
+texture = SubResource("ViewportTexture_nfxsy")

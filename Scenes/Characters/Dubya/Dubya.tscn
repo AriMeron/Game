@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://cqlgycx7xeu1k"]
+[gd_scene load_steps=11 format=3 uid="uid://cqlgycx7xeu1k"]
 
 [ext_resource type="Script" path="res://Scenes/Characters/Dubya/DubyaMovement.gd" id="1_wkixf"]
 [ext_resource type="PackedScene" uid="uid://bmhvvmoris0xy" path="res://Scenes/Characters/Dubya/dubyaSprite.tscn" id="4_8u4xs"]
@@ -7,9 +7,13 @@
 [ext_resource type="PackedScene" uid="uid://dau22ksshu7gt" path="res://Scenes/Characters/Dubya/Gun/DubyaGun.tscn" id="6_285op"]
 [ext_resource type="Script" path="res://Scenes/Characters/Dubya/Gun/GunScript.gd" id="7_qlnsr"]
 [ext_resource type="PackedScene" uid="uid://dua68plgel67v" path="res://Scenes/Characters/Dubya/dubyaCam.tscn" id="7_vx7vm"]
+[ext_resource type="PackedScene" uid="uid://bnx4mtgnl8xyt" path="res://Scenes/Characters/healthBar.tscn" id="8_w81t5"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_53677"]
 size = Vector3(0.118399, 0.257697, 0.107324)
+
+[sub_resource type="ViewportTexture" id="ViewportTexture_6ay5d"]
+viewport_path = NodePath("SubViewport")
 
 [node name="Dubya" type="CharacterBody3D" groups=["Democrat", "Dubaya", "Player"]]
 transform = Transform3D(10, 0, 0, 0, 14.14, 0, 0, 0, 10, 0.00284958, 0.0452595, -0.0220184)
@@ -34,3 +38,13 @@ script = ExtResource("7_qlnsr")
 
 [node name="DubyaCam" parent="." instance=ExtResource("7_vx7vm")]
 transform = Transform3D(0.0999986, 0.000429349, 2.24433e-17, -0.000370239, 0.057982, 0.0643467, 0.000370239, -0.057982, 0.0643467, 2.08165e-12, 0.566, 1.196)
+
+[node name="SubViewport" type="SubViewport" parent="."]
+disable_3d = true
+transparent_bg = true
+
+[node name="Node3D" parent="SubViewport" instance=ExtResource("8_w81t5")]
+
+[node name="healthBar" type="Sprite3D" parent="."]
+transform = Transform3D(0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, 2.08165e-12, 0.425, 2.08165e-12)
+texture = SubResource("ViewportTexture_6ay5d")

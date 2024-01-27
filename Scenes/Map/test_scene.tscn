@@ -1,7 +1,9 @@
-[gd_scene load_steps=3 format=3 uid="uid://kcd7m74ajc42"]
+[gd_scene load_steps=5 format=3 uid="uid://kcd7m74ajc42"]
 
 [ext_resource type="PackedScene" uid="uid://2av05i1wqd7w" path="res://Scenes/Map/map_final.tscn" id="1_8ihtv"]
 [ext_resource type="PackedScene" uid="uid://cwt7q7ulkdjtg" path="res://Scenes/Characters/Joe Biden/Biden.tscn" id="2_82mqj"]
+[ext_resource type="PackedScene" uid="uid://s1bvch6mycde" path="res://Scenes/Characters/Trump/Trump.tscn" id="3_d0qw6"]
+[ext_resource type="PackedScene" uid="uid://cqlgycx7xeu1k" path="res://Scenes/Characters/Dubya/Dubya.tscn" id="3_uv8cq"]
 
 [node name="Node3D" type="Node3D"]
 
@@ -13,7 +15,10 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.899872, -1.72159, 1.88528)
 size = Vector3(115.371, 2, 71.6335)
 
 [node name="Biden" parent="." instance=ExtResource("2_82mqj")]
-transform = Transform3D(5, 0, 0, 0, 7.07, 0, 0, 0, 5, -3.136, 2.08165e-12, 6.80315)
+transform = Transform3D(5, 0, 0, 0, 7.07, 0, 0, 0, 5, -22.7288, 0, 3.88066)
 
-[node name="Biden2" parent="." instance=ExtResource("2_82mqj")]
-transform = Transform3D(5, 0, 0, 0, 7.07, 0, 0, 0, 5, 2.79737, 2.08165e-12, 6.80315)
+[node name="Dubya" parent="." instance=ExtResource("3_uv8cq")]
+transform = Transform3D(5, 0, 0, 0, 7.07, 0, 0, 0, 5, -15.517, 0, 5.94891)
+
+[node name="Trump" parent="." instance=ExtResource("3_d0qw6")]
+transform = Transform3D(5, 0, 0, 0, 7.07, 0, 0, 0, 5, -8.65949, 0, 6.65132)

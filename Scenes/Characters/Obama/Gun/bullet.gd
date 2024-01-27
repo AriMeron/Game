@@ -19,12 +19,13 @@ func _process(delta):
 	lifetime -= delta
 	if lifetime <= 0:
 		queue_free()  # Remove the bullet from the scene
-	
+
 func _on_Area_body_entered(body:Node) -> void:
-	print("test")
+	print("Obama")
 	queue_free()
 	if (body.is_in_group("Player")):
 		if (body.is_in_group("Democrat")):
 			pass
 		else:
+			print("ObamaDealDamage")
 			body.dealDamage()
