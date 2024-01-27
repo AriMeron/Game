@@ -108,5 +108,10 @@ func create_heal_particle():
 func dead():
 	Biden.position = Vector3(-51, 0, 0)
 	health = 100
+	
+func dealDamage():
+	health -= 20
+	if (health <= 0):
+		dead()
 
 

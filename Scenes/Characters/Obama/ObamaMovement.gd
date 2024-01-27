@@ -20,6 +20,11 @@ func dead():
 	Obama.position = Vector3(-51, 0, 0)
 	health = 100
 
+func dealDamage():
+	health -= 20
+	if (health <= 0):
+		dead()
+
 func _physics_process(delta):
 	var velocity = Vector3.ZERO
 	var moving = false
