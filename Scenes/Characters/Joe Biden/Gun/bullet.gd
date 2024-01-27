@@ -24,7 +24,7 @@ func _on_Area_body_entered(body:Node) -> void:
 	print("test")
 	queue_free()
 	if (body.is_in_group("Player")):
-		if (body.is_in_group("Democrat")):
-			pass
-		else:
-			body.dealDamage()
+		#if (body.is_in_group("Democrat")):
+		#pass
+		#else:
+		body.dealDamage()

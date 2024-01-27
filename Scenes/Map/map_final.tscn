@@ -851,6 +851,3 @@ transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 32, 1, -6.5)
 
 [node name="Node3D158" parent="Floor" instance=ExtResource("21_hm32y")]
 transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 27.248, 1, 12.236)
-
-[node name="Node3D150" parent="." instance=ExtResource("18_oqi0h")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.39885, 2, 19.8251)

@@ -14,9 +14,11 @@ var DirtParticle = preload("res://Scenes/Characters/Joe Biden/Particles/DirtPart
 var BloodParticle = preload("res://Scenes/Characters/Joe Biden/Particles/BloodParticle.tscn")
 var HealParticle = preload("res://Scenes/Characters/Joe Biden/Particles/HealParticle.tscn")
 var Biden
+var healthBar
 
 func _ready():
 	Biden = $CollisionShape3D.get_parent_node_3d()
+	healthBar = $SubViewport/Node3D
 	health = 100
 
 func _physics_process(delta):
@@ -106,12 +108,16 @@ func create_heal_particle():
 	add_child(particle)
 
 func dead():
+	updateHealthBar()
 	Biden.position = Vector3(-51, 0, 0)
 	health = 100
 	
 func dealDamage():
 	health -= 20
+	updateHealthBar()
 	if (health <= 0):
 		dead()
 
+func updateHealthBar():
+	healthBar.value = health
 
