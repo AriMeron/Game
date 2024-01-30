@@ -98,7 +98,7 @@ func _process(delta):
 		rotationHelp.rotation.z = deg_to_rad(angle_degrees) - deg_to_rad(current_recoil_rotation)
 		#gunModel.rotation.z = - deg_to_rad(current_recoil_rotation)
 
-var BULLET_SCENE = preload("res://Scenes/Characters/Joe Biden/Gun/bullet.tscn")
+var BULLET_SCENE = preload("res://Scenes/Characters/Obama/Gun/bullet.tscn")
 const BULLET_SPEED = 10
 const RAY_LENGTH = 1000
 
@@ -148,9 +148,9 @@ func shoot_bullet( angle):
 
 
 
-var BulletCasingParticle = preload("res://Scenes/Characters/Joe Biden/Particles/BulletCasingParticle.tscn")
+var BulletCasingParticle = preload("res://Scenes/Characters/Obama/Particles/BulletCasingParticle.tscn")
 
-var BulletExplosionParticle = preload("res://Scenes/Characters/Joe Biden/Particles/BulletParticle.tscn")
+var BulletExplosionParticle = preload("res://Scenes/Characters/Obama/Particles/BulletParticle.tscn")
 func create_bullet_casing_particle():
 	var particle = BulletCasingParticle.instantiate()
 	particle.position.z = 0.1
