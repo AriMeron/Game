@@ -1,0 +1,66 @@
+[gd_scene load_steps=7 format=3 uid="uid://dmmqbopsvwpyl"]
+
+[ext_resource type="Script" path="res://Scenes/Player/gun.gd" id="1_7isgs"]
+[ext_resource type="Texture2D" uid="uid://dfb05oyibnwh1" path="res://Design/BidenGun.png" id="4_a0cvh"]
+[ext_resource type="Texture2D" uid="uid://c4xsljf27yol1" path="res://Design/BidenGunFlipped.png" id="5_gv2c2"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_fqtbb"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_b8gd3"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_cn2j1"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("CompressedTexture2D_fqtbb")
+}, {
+"duration": 1.0,
+"texture": SubResource("CompressedTexture2D_b8gd3")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_a0cvh")
+}],
+"loop": true,
+"name": &"down",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_a0cvh")
+}],
+"loop": true,
+"name": &"left",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("5_gv2c2")
+}],
+"loop": true,
+"name": &"right",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_a0cvh")
+}],
+"loop": true,
+"name": &"up",
+"speed": 5.0
+}]
+
+[node name="Gun" type="CharacterBody3D"]
+script = ExtResource("1_7isgs")
+
+[node name="AnimatedSprite3D" type="AnimatedSprite3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.129721, -0.0511119, 0)
+centered = false
+texture_filter = 0
+render_priority = 1
+sprite_frames = SubResource("SpriteFrames_cn2j1")
+animation = &"left"

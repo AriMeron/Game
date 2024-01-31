@@ -1,0 +1,11 @@
+[gd_scene load_steps=3 format=3 uid="uid://cq02fvhwetsxi"]
+
+[ext_resource type="Script" path="res://Scenes/Player/bullet.gd" id="1_awivu"]
+[ext_resource type="Texture2D" uid="uid://cf0xh4ie6s4wr" path="res://Design/Weapon/bullet.png" id="1_nvl4t"]
+
+[node name="Bullet" type="CharacterBody3D"]
+script = ExtResource("1_awivu")
+
+[node name="Sprite3D" type="Sprite3D" parent="."]
+transform = Transform3D(0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, 0, 0, 0)
+texture = ExtResource("1_nvl4t")

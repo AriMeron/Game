@@ -1,0 +1,43 @@
+[gd_scene load_steps=7 format=3 uid="uid://1loif6ijwd14"]
+
+[ext_resource type="Texture2D" uid="uid://doqedowhemera" path="res://Design/VaccineGun.png" id="1_7oo3e"]
+[ext_resource type="Script" path="res://Scenes/Player/Marker3D.gd" id="1_utmoj"]
+[ext_resource type="Texture2D" uid="uid://b1ax1my02cch6" path="res://Design/Weapon/vaccineGun.png" id="2_dhdl4"]
+[ext_resource type="Script" path="res://Scenes/Player/AnimatedSprite3D.gd" id="4_3xt6c"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_1ikiy"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_7oo3e")
+}],
+"loop": true,
+"name": &"default",
+"speed": 15.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_dhdl4")
+}],
+"loop": true,
+"name": &"shoot",
+"speed": 5.0
+}]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_pilik"]
+size = Vector3(0.169697, 0.0623629, 0.0144927)
+
+[node name="CharacterBody3D" type="CharacterBody3D"]
+
+[node name="Marker3D" type="Marker3D" parent="."]
+script = ExtResource("1_utmoj")
+
+[node name="AnimatedSprite3D" type="AnimatedSprite3D" parent="Marker3D"]
+transform = Transform3D(0.947768, 0.318959, 3.48787e-16, -0.318959, 0.947768, -3.48787e-16, -4.41818e-16, 2.1932e-16, 1, 5.07757e-05, 0, 0)
+offset = Vector2(-13, 2.08165e-12)
+sprite_frames = SubResource("SpriteFrames_1ikiy")
+script = ExtResource("4_3xt6c")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.012672, -0.00430745, -0.00379074)
+shape = SubResource("BoxShape3D_pilik")
