@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cpw4j6xuc4kt2"
-path="res://.godot/imported/tilesheet_complete.png-ae187220e97d211eb63b98f7f3bb8e17.ctex"
+uid="uid://1ccyjkafsitd"
+path="res://.godot/imported/ObamaSpritesheet.png-814158253ab14d370b89549b82dc22af.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Scenes/Map/tilesheet_complete.png"
-dest_files=["res://.godot/imported/tilesheet_complete.png-ae187220e97d211eb63b98f7f3bb8e17.ctex"]
+source_file="res://Design/Idle/DiagonalFront/ObamaSpritesheet.png"
+dest_files=["res://.godot/imported/ObamaSpritesheet.png-814158253ab14d370b89549b82dc22af.ctex"]
 
 [params]
 
