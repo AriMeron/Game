@@ -1,0 +1,18 @@
+[gd_scene load_steps=2 format=3 uid="uid://cviqyyp1f55xc"]
+
+[ext_resource type="Script" path="res://Scenes/Menus/countdown.gd" id="1_0oa2q"]
+
+[node name="Countdown" type="CanvasLayer"]
+script = ExtResource("1_0oa2q")
+
+[node name="CenterContainer" type="CenterContainer" parent="."]
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="HBoxContainer" type="HBoxContainer" parent="CenterContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="CenterContainer/HBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 40
+text = "60"
