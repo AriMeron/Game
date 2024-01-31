@@ -1,16 +1,9 @@
-[gd_scene load_steps=21 format=3 uid="uid://cesmyobv1ysfo"]
+[gd_scene load_steps=14 format=3 uid="uid://btwikjbpbf47a"]
 
+[ext_resource type="Texture2D" uid="uid://c0i0da0b37ky1" path="res://Art/Assets/UI/JFKSelected.png" id="1_jdfda"]
 [ext_resource type="FontFile" uid="uid://bhxjlljme2ggl" path="res://Art/Assets/UI/Fonts/PixCon.ttf" id="2_400qc"]
-[ext_resource type="Texture2D" uid="uid://bxvq54njnh2yl" path="res://Art/Assets/Characters/JFKAvailable.png" id="3_gx1c5"]
 [ext_resource type="Texture2D" uid="uid://pumho2xyxsbh" path="res://Art/Assets/UI/Screenshot 2024-01-24 at 9.29.20 PM.png" id="3_hj17w"]
-[ext_resource type="Texture2D" uid="uid://c5ie3y3gl3lnl" path="res://Art/Assets/Characters/JFKUnavailable.png" id="4_eogqj"]
 [ext_resource type="Texture2D" uid="uid://7hw2w6wxa1vo" path="res://Art/Assets/UI/ReaganSelected.png" id="4_l2y3p"]
-[ext_resource type="Texture2D" uid="uid://i0vdd3ujcl05" path="res://Art/Assets/Characters/JFKSelected.png" id="5_sda0x"]
-[ext_resource type="Texture2D" uid="uid://cf82dqqbgu4kn" path="res://Art/Assets/Characters/BidenAvailable.png" id="6_8tx7g"]
-[ext_resource type="Texture2D" uid="uid://f8m5umci6mby" path="res://Art/Assets/Characters/ObamaAvailable.png" id="7_p05et"]
-[ext_resource type="Texture2D" uid="uid://idxksqkrb6qm" path="res://Art/Assets/Characters/BidenSelected.png" id="8_83c18"]
-[ext_resource type="Texture2D" uid="uid://d3b7paork5rc0" path="res://Art/Assets/Characters/ObamaUnavailable.png" id="8_kr77m"]
-[ext_resource type="Texture2D" uid="uid://dxptncxgxhru0" path="res://Art/Assets/Characters/ObamaSelected.png" id="9_u3ev0"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ssgtu"]
 bg_color = Color(0.192157, 0.192157, 0.192157, 1)
@@ -111,6 +104,49 @@ offset_bottom = 207.0
 grow_vertical = 2
 theme_override_styles/panel = SubResource("StyleBoxEmpty_qxbmv")
 
+[node name="Char1" type="TextureRect" parent="CharacterSelect/Democrats"]
+texture_filter = 1
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_top = -287.0
+offset_right = 248.0
+grow_vertical = 0
+texture = ExtResource("1_jdfda")
+expand_mode = 1
+
+[node name="Char2" type="TextureRect" parent="CharacterSelect/Democrats"]
+texture_filter = 1
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -124.0
+offset_top = -287.0
+offset_right = 124.0
+grow_horizontal = 2
+grow_vertical = 0
+texture = ExtResource("1_jdfda")
+expand_mode = 1
+
+[node name="Char3" type="TextureRect" parent="CharacterSelect/Democrats"]
+texture_filter = 1
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -248.0
+offset_top = -287.0
+grow_horizontal = 0
+grow_vertical = 0
+texture = ExtResource("1_jdfda")
+expand_mode = 1
+
 [node name="DemocratLabel" type="Panel" parent="CharacterSelect/Democrats"]
 layout_mode = 1
 anchors_preset = 10
@@ -141,55 +177,6 @@ anchor_right = 1.0
 offset_bottom = 13.0
 grow_horizontal = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_0ajjg")
-
-[node name="JFKButton" type="TextureButton" parent="CharacterSelect/Democrats"]
-layout_mode = 1
-anchors_preset = 2
-anchor_top = 1.0
-anchor_bottom = 1.0
-offset_top = -287.0
-offset_right = 248.0
-grow_vertical = 0
-texture_normal = ExtResource("3_gx1c5")
-texture_disabled = ExtResource("4_eogqj")
-texture_focused = ExtResource("5_sda0x")
-ignore_texture_size = true
-stretch_mode = 5
-
-[node name="BidenButton" type="TextureButton" parent="CharacterSelect/Democrats"]
-layout_mode = 1
-anchors_preset = 7
-anchor_left = 0.5
-anchor_top = 1.0
-anchor_right = 0.5
-anchor_bottom = 1.0
-offset_left = -124.0
-offset_top = -287.0
-offset_right = 124.0
-grow_horizontal = 2
-grow_vertical = 0
-texture_normal = ExtResource("6_8tx7g")
-texture_disabled = ExtResource("8_kr77m")
-texture_focused = ExtResource("8_83c18")
-ignore_texture_size = true
-stretch_mode = 5
-
-[node name="ObamaButton" type="TextureButton" parent="CharacterSelect/Democrats"]
-layout_mode = 1
-anchors_preset = 3
-anchor_left = 1.0
-anchor_top = 1.0
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_left = -248.0
-offset_top = -287.0
-grow_horizontal = 0
-grow_vertical = 0
-texture_normal = ExtResource("7_p05et")
-texture_disabled = ExtResource("8_kr77m")
-texture_focused = ExtResource("9_u3ev0")
-ignore_texture_size = true
-stretch_mode = 5
 
 [node name="Republicans" type="Panel" parent="CharacterSelect"]
 layout_mode = 1
