@@ -1,6 +1,6 @@
-[gd_scene load_steps=9 format=3 uid="uid://ci4tam0bx8dba"]
+[gd_scene load_steps=10 format=3 uid="uid://ci4tam0bx8dba"]
 
-[ext_resource type="PackedScene" uid="uid://s1bvch6mycde" path="res://Scenes/Characters/Trump/Trump.tscn" id="1_v62rn"]
+[ext_resource type="PackedScene" uid="uid://cwt7q7ulkdjtg" path="res://Scenes/Characters/Joe Biden/Biden.tscn" id="1_yhuv3"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_fdkgt"]
 sky_top_color = Color(0.709804, 0, 0.772549, 1)
@@ -32,7 +32,7 @@ size = Vector2(17, 5)
 [sub_resource type="BoxShape3D" id="BoxShape3D_sgtiu"]
 size = Vector3(16.9229, 2.14514, 3.63179)
 
-[node name="Node3D2" type="Node3D"]
+[node name="Node3D" type="Node3D"]
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource("Environment_arj20")
@@ -52,9 +52,5 @@ physics_material_override = SubResource("PhysicsMaterial_sugad")
 transform = Transform3D(1, 0, 0, 0, 1, 0, -1.4013e-45, 0, 1, 0, 0, 0)
 shape = SubResource("BoxShape3D_sgtiu")
 
-[node name="GPUParticlesCollisionBox3D" type="GPUParticlesCollisionBox3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.027832, 0.529782, -0.240051)
-size = Vector3(40.1436, 2, 40.7084)
-
-[node name="Obama" parent="." instance=ExtResource("2_mls6l")]
-transform = Transform3D(10, 0, 0, 0, 14.14, 0, 0, 0, 10, 0, 3.05567, 0)
+[node name="Biden" parent="." instance=ExtResource("1_yhuv3")]
+transform = Transform3D(10, 0, 0, 0, 14.14, 0, 0, 0, 10, 0, 2.23281, 0)

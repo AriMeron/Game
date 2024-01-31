@@ -1,0 +1,33 @@
+[gd_scene load_steps=8 format=3 uid="uid://j1dkdwihf3xl"]
+
+[ext_resource type="Script" path="res://Scenes/Characters/JFK/JFKMovement.gd" id="1_qttkb"]
+[ext_resource type="Script" path="res://Scenes/Characters/JFK/Gun/GunScript.gd" id="4_vshbh"]
+[ext_resource type="PackedScene" uid="uid://cbwfpfxkvu24b" path="res://Scenes/Characters/JFK/Particles/DustTrail.tscn" id="5_gjxe6"]
+[ext_resource type="PackedScene" uid="uid://cg8wi4fqobc8l" path="res://Scenes/Characters/JFK/Gun/JFKGun.tscn" id="5_sg3cr"]
+[ext_resource type="PackedScene" uid="uid://2pfqr2n2rw3r" path="res://Scenes/Characters/JFK/JFKSprite.tscn" id="6_4adhg"]
+[ext_resource type="PackedScene" uid="uid://bucqpy522u028" path="res://Scenes/Characters/JFK/JFKCam.tscn" id="7_a7fwh"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_53677"]
+size = Vector3(0.228257, 0.257697, 0.164541)
+
+[node name="JFK" type="CharacterBody3D"]
+transform = Transform3D(10, 0, 0, 0, 14.14, 0, 0, 0, 10, 0, 0, 0)
+script = ExtResource("1_qttkb")
+
+[node name="JFKCam" parent="." instance=ExtResource("7_a7fwh")]
+transform = Transform3D(0.0999979, 0.000641204, 1.14739e-12, -0.000370237, 0.0577396, 0.0408351, 0.000370237, -0.0577397, 0.0816455, 0, 0.566, 1.196)
+current = false
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("BoxShape3D_53677")
+
+[node name="AnimatedSprite3D2" parent="." instance=ExtResource("6_4adhg")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
+animation = &"idle_side"
+
+[node name="DustTrail" parent="." instance=ExtResource("5_gjxe6")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.105, 0)
+
+[node name="Gun" parent="." instance=ExtResource("5_sg3cr")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.069, -0.038, 0)
+script = ExtResource("4_vshbh")

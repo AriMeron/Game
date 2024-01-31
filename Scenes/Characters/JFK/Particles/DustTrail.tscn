@@ -1,0 +1,48 @@
+[gd_scene load_steps=7 format=3 uid="uid://cbwfpfxkvu24b"]
+
+[ext_resource type="Script" path="res://Scenes/Characters/JFK/Particles/Particle.gd" id="1_hegay"]
+
+[sub_resource type="Gradient" id="Gradient_1nhru"]
+offsets = PackedFloat32Array(0, 0.818182, 0.981818)
+colors = PackedColorArray(0, 0, 0, 1, 0, 0, 0, 0.772549, 0, 0, 0, 0)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_lkncj"]
+gradient = SubResource("Gradient_1nhru")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_7cxwk"]
+emission_shape = 2
+emission_sphere_radius = 0.1
+angle_min = -20.0
+angle_max = 20.0
+direction = Vector3(0, 0, 0)
+initial_velocity_min = -0.5
+initial_velocity_max = -0.5
+gravity = Vector3(0, -20, 0)
+linear_accel_min = -5.0
+linear_accel_max = -5.0
+color = Color(0, 0, 0, 1)
+color_ramp = SubResource("GradientTexture1D_lkncj")
+collision_mode = 1
+collision_friction = 0.1
+collision_bounce = 0.5
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_q5e4g"]
+transparency = 1
+vertex_color_use_as_albedo = true
+albedo_color = Color(0, 0, 0, 1)
+
+[sub_resource type="SphereMesh" id="SphereMesh_1c54m"]
+material = SubResource("StandardMaterial3D_q5e4g")
+radius = 0.1
+height = 0.2
+
+[node name="DustTrail" type="Node3D"]
+
+[node name="Particle" type="GPUParticles3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.105, 0)
+layers = 2
+amount = 4
+lifetime = 0.5
+process_material = SubResource("ParticleProcessMaterial_7cxwk")
+draw_pass_1 = SubResource("SphereMesh_1c54m")
+script = ExtResource("1_hegay")

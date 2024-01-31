@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b15p2faq8w4bc"
-path="res://.godot/imported/drone.png-1e63f126b2dba41b3b60aa3b9825ff1c.ctex"
+uid="uid://f8m5umci6mby"
+path="res://.godot/imported/ObamaAvailable.png-3c9d123e3f3b4374c35837a8ed6b376f.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Scenes/Characters/Obama/Gun/drone.png"
-dest_files=["res://.godot/imported/drone.png-1e63f126b2dba41b3b60aa3b9825ff1c.ctex"]
+source_file="res://Art/Assets/Characters/ObamaAvailable.png"
+dest_files=["res://.godot/imported/ObamaAvailable.png-3c9d123e3f3b4374c35837a8ed6b376f.ctex"]
 
 [params]
 

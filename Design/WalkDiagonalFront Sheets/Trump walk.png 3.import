@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b15p2faq8w4bc"
-path="res://.godot/imported/drone.png-1e63f126b2dba41b3b60aa3b9825ff1c.ctex"
+uid="uid://b11oqumila8rv"
+path="res://.godot/imported/Trump walk.png-0b1e0753e755a63c10304ac642dc2621.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Scenes/Characters/Obama/Gun/drone.png"
-dest_files=["res://.godot/imported/drone.png-1e63f126b2dba41b3b60aa3b9825ff1c.ctex"]
+source_file="res://Design/WalkDiagonalFront Sheets/Trump walk.png"
+dest_files=["res://.godot/imported/Trump walk.png-0b1e0753e755a63c10304ac642dc2621.ctex"]
 
 [params]
 
