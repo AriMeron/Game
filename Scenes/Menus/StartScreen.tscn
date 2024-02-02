@@ -1,20 +1,59 @@
-[gd_scene load_steps=8 format=3 uid="uid://e8bi5jgawqdq"]
+[gd_scene load_steps=13 format=3 uid="uid://e8bi5jgawqdq"]
 
 [ext_resource type="FontFile" uid="uid://dp53cofy51leu" path="res://Scenes/Menus/PixCon (1).ttf" id="1_m8d00"]
 [ext_resource type="Script" path="res://Scenes/Menus/StartScreen.gd" id="1_urrx3"]
-[ext_resource type="Texture2D" uid="uid://b7wkbtcc8ot2b" path="res://Scenes/Menus/CapitolPunishmentLogo.png" id="3_ge4pf"]
+[ext_resource type="Texture2D" uid="uid://mcakbh7x5nbe" path="res://Scenes/Menus/CapitolPunishmentLogoTest.png" id="3_754w6"]
+[ext_resource type="Texture2D" uid="uid://b7vb0fyhp0qkh" path="res://Scenes/Player/Screenshot 2024-01-23 at 10.56.29 PM (1).png" id="4_afnqm"]
 
-[sub_resource type="CanvasTexture" id="CanvasTexture_37t4d"]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_jdx5q"]
+bg_color = Color(0.192157, 0.192157, 0.192157, 1)
+corner_radius_top_left = 420
+corner_radius_top_right = 420
+corner_radius_bottom_right = 420
+corner_radius_bottom_left = 420
 
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_p2dt8"]
-texture = SubResource("CanvasTexture_37t4d")
-modulate_color = Color(0, 0, 1, 1)
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_yik8m"]
+bg_color = Color(0.0980392, 0.0980392, 0.0980392, 1)
+border_width_left = 16
+border_width_top = 16
+border_width_right = 16
+border_width_bottom = 16
+border_color = Color(0.192157, 0.192157, 0.192157, 1)
+corner_radius_top_left = 810
+corner_radius_top_right = 810
+corner_radius_bottom_right = 810
+corner_radius_bottom_left = 810
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_fqk4f"]
+bg_color = Color(0.192157, 0.192157, 0.192157, 1)
+border_width_left = 20
+border_width_top = 20
+border_width_right = 20
+border_width_bottom = 20
+border_color = Color(0.0980392, 0.0980392, 0.0980392, 1)
+corner_radius_top_left = 810
+corner_radius_top_right = 810
+corner_radius_bottom_right = 810
+corner_radius_bottom_left = 810
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_37d37"]
+bg_color = Color(0.0980392, 0.0980392, 0.0980392, 1)
+corner_radius_top_left = 750
+corner_radius_top_right = 750
+corner_radius_bottom_right = 750
+corner_radius_bottom_left = 750
 
 [sub_resource type="CanvasTexture" id="CanvasTexture_ae5yc"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_l8qyw"]
 texture = SubResource("CanvasTexture_ae5yc")
 modulate_color = Color(1, 0, 0, 1)
+
+[sub_resource type="CanvasTexture" id="CanvasTexture_37t4d"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_p2dt8"]
+texture = SubResource("CanvasTexture_37t4d")
+modulate_color = Color(0.0026959, 0.223637, 1, 1)
 
 [node name="StartScreen" type="Control"]
 layout_mode = 3
@@ -25,29 +64,78 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_urrx3")
 
-[node name="VBoxContainer" type="VBoxContainer" parent="."]
+[node name="TextureRect" type="TextureRect" parent="."]
 layout_mode = 0
-offset_left = 1.0
-offset_top = 510.0
-offset_right = 1918.0
-offset_bottom = 601.0
+offset_left = -2051.0
+offset_top = 18.0
+offset_right = -118.0
+offset_bottom = 1098.0
+texture = ExtResource("4_afnqm")
 
-[node name="start" type="Button" parent="VBoxContainer"]
-layout_mode = 2
-theme_override_fonts/font = ExtResource("1_m8d00")
-theme_override_styles/normal = SubResource("StyleBoxTexture_p2dt8")
-text = "Start Game"
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 0
+offset_left = 127.0
+offset_top = 117.0
+offset_right = 967.0
+offset_bottom = 957.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_jdx5q")
 
-[node name="quit" type="Button" parent="VBoxContainer"]
+[node name="Panel2" type="Panel" parent="Panel"]
+show_behind_parent = true
+layout_mode = 0
+offset_left = -27.0
+offset_top = -23.0
+offset_right = 865.0
+offset_bottom = 869.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_yik8m")
+
+[node name="Panel3" type="Panel" parent="Panel/Panel2"]
+show_behind_parent = true
+z_index = -12
+layout_mode = 0
+offset_left = -321.0
+offset_top = -365.0
+offset_right = 1299.0
+offset_bottom = 1255.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_fqk4f")
+
+[node name="Panel" type="Panel" parent="Panel/Panel2/Panel3"]
+layout_mode = 0
+offset_left = 78.0
+offset_top = 51.0
+offset_right = 1578.0
+offset_bottom = 1551.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_37d37")
+
+[node name="Sprite2D" type="Sprite2D" parent="Panel"]
+z_index = 5
+position = Vector2(424, 433)
+scale = Vector2(8.38095, 8.70968)
+texture = ExtResource("3_754w6")
+
+[node name="quit" type="Button" parent="."]
+show_behind_parent = true
 layout_mode = 2
+offset_left = -1.0
+offset_top = 595.0
+offset_right = 1919.0
+offset_bottom = 661.0
 theme_override_fonts/font = ExtResource("1_m8d00")
 theme_override_styles/normal = SubResource("StyleBoxTexture_l8qyw")
 text = "Quit"
+alignment = 2
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(494, 551)
-scale = Vector2(8.38095, 9.80645)
-texture = ExtResource("3_ge4pf")
+[node name="start" type="Button" parent="."]
+show_behind_parent = true
+layout_mode = 2
+offset_left = 1.0
+offset_top = 510.0
+offset_right = 1920.0
+offset_bottom = 585.0
+theme_override_fonts/font = ExtResource("1_m8d00")
+theme_override_styles/normal = SubResource("StyleBoxTexture_p2dt8")
+text = "Start Game"
+alignment = 2
 
-[connection signal="button_down" from="VBoxContainer/start" to="." method="_on_start_button_down"]
-[connection signal="button_down" from="VBoxContainer/quit" to="." method="_on_quit_button_down"]
+[connection signal="button_down" from="quit" to="." method="_on_quit_button_down"]
+[connection signal="button_down" from="start" to="." method="_on_start_button_down"]
