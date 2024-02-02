@@ -1,11 +1,12 @@
-[gd_scene load_steps=24 format=3 uid="uid://dlf0t6fb10f8g"]
+[gd_scene load_steps=25 format=3 uid="uid://dlf0t6fb10f8g"]
 
 [ext_resource type="Script" path="res://Scenes/Menus/VictoryScenes/Wins.gd" id="1_6eht5"]
 [ext_resource type="Texture2D" uid="uid://ctqp0h23u8es7" path="res://Art/Assets/UI/CapitolPunishmentLogo.png" id="1_7j8ss"]
 [ext_resource type="Texture2D" uid="uid://dd6g2bs26l2qs" path="res://Art/Assets/Environment/FloorTileset.png" id="2_gse42"]
 [ext_resource type="Texture2D" uid="uid://bkipexernsc3a" path="res://Scenes/Characters/JFK/JFKSpritesheet.png" id="3_kuric"]
 [ext_resource type="Texture2D" uid="uid://vbix6p2uktw2" path="res://Art/Assets/Characters/Biden/BidenSpritesheet.png" id="3_nijx4"]
-[ext_resource type="Texture2D" uid="uid://dunrb5kergmgp" path="res://Scenes/Characters/Obama/ObamaSpritesheet.png" id="4_lcpeq"]
+[ext_resource type="Texture2D" uid="uid://bh4exfrrntpd" path="res://Scenes/Characters/Obama/ObamaSpritesheet.png" id="4_lcpeq"]
+[ext_resource type="PackedScene" uid="uid://cviqyyp1f55xc" path="res://Scenes/Menus/countdown.tscn" id="7_irjvs"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_8gmg1"]
 atlas = ExtResource("3_kuric")
@@ -231,3 +232,5 @@ theme_override_font_sizes/font_size = 100
 text = "VICTORY"
 horizontal_alignment = 1
 vertical_alignment = 1
+
+[node name="Countdown" parent="." instance=ExtResource("7_irjvs")]
